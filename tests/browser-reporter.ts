@@ -73,7 +73,7 @@ export default class BrowserReporter implements Reporter {
       artifactIdentity, engines: [...new Set(this.tests.map(t => String(t.project)))],
       coverage: complete ? 'production journeys' : representative ? 'representative Home and Atlas only' : 'partial browser journeys',
       expectedJourneysPerEngine: EXPECTED_JOURNEYS.length,
-      environment: 'Playwright browser engines on macOS; WebKit is not a real Safari/device check',
+      environment: `Playwright browser engines on ${process.platform}/${process.arch}; WebKit is not a real Safari/device check`,
       diagnostics: 'Call/source traces retained on failure; explicit journey and failure screenshots retained; per-action DOM/screencast disabled after controlled trace-overhead comparison. Assertions and timeouts unchanged.',
       passed: this.tests.filter(t => t.status === 'passed').length, failed: this.tests.filter(t => !['passed', 'skipped'].includes(String(t.status))).length,
       skipped: this.tests.filter(t => t.status === 'skipped').length, tests: this.tests};
