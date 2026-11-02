@@ -1,53 +1,127 @@
 # Ardor Lite
 
-A static research publication explaining six bounded research decisions, their
-controlling gates, aggregate evidence and independent synthetic teaching models.
-The 114 catalog records overlap; they are not independent strategy trials.
-No certified strategy, independent alpha or completed scientific/reader acceptance
-is claimed. Publication target: https://ardorlite.onrender.com (release status is recorded in the release evidence; a target URL alone does not establish deployment).
+A static research publication that follows six Indian-equity investigations from question to experiment, evidence and recorded decision. It is the reading and inspection layer for **Ardor**, an independently built personal research system.
 
-Use Node **24.21.0**, pnpm **10.14.0** and ordinary Python **3.12** with bytecode
-disabled. No private sibling checkout, source captures, credentials or financial
-service is needed. From the repository root:
+**Website:** [ardorlite.onrender.com](https://ardorlite.onrender.com/) · **Public source:** [ArdorLite-Public](https://github.com/sumnlikeshane/ArdorLite-Public)
+
+The project makes failed hypotheses, intermediate successes and unresolved limits inspectable. Its reviewed evidence supports **no certified or live strategy**. Synthetic demonstrations explain software behavior; they do not reproduce historical returns.
+
+![Ardor Lite home page](docs/images/readme/home.png)
+
+## What to inspect
+
+Start with a case, follow its figures and exact-value references, then inspect the implementation that preserves those relationships.
+
+| Investigation | Bounded outcome |
+| --- | --- |
+| [Atlas & SSF](reviewed/2026-10-11/content/cases/atlas-ssf.md) | Discovery did not nominate a strategy; futures translation failed execution, cost and capacity requirements. |
+| [Momentum v2](reviewed/2026-10-11/content/cases/momentum-v2.md) | Intermediate execution stress passed; attribution rejected an independent residual edge. |
+| [Swing autopsy](reviewed/2026-10-11/content/cases/swing-autopsy.md) | Corrected accounting and exit diagnostics did not establish an edge. |
+| [Trend quality](reviewed/2026-10-11/content/cases/trend-quality.md) | Selected metrics failed incremental-information and familywise gates; complete and partial folds remain separate. |
+| [Delivery & insider](reviewed/2026-10-11/content/cases/delivery-insider.md) | Co-occurrence did not establish predictive forward interaction; historical source binding remains unresolved. |
+| [Price Bridge](reviewed/2026-10-11/content/cases/price-bridge.md) | Numerical repair and exact linkage passed technical checks; source-rights certification failed. |
+
+The site contains six cases, **114 overlapping catalog records** (not independent strategy trials), 204 claims, 18 figure/table relationships, five synthetic method explanations and 110 individually mapped reviewed exports. The immutable evidence snapshot is dated 11 October 2026. Authored explanations and metadata-only source provenance are separate layers. Private source captures and the local-only Trend supplement are excluded from this public repository.
+
+After starting the local preview:
+
+- `/research/cases/trend-quality/`: argument-led reading with figures, equivalent tables and complete references.
+- `/research/walkthrough/`: a fictional TypeScript momentum model with source-reference metadata; private Python excerpts are omitted.
+- `/research/cases/price-bridge/#bridge-experience`: fictional repair/linkage/rights presets.
+- `/engineering/`: source-backed explanations of the research pipeline and its limits.
+- `/evidence/claims/`, `/evidence/sources/` and `/research/catalog/`: exact identities and links back to consuming evidence.
+- `/search/`: Pagefind topic search, exact-ID lookup and filters, using a production build.
+
+<details>
+<summary>More interface screenshots</summary>
+
+These are Chromium captures of the public website from 2 November 2026. They document the interface; they do not establish scientific, human-reader or accessibility acceptance.
+
+![Trend quality reading experience](docs/images/readme/trend-quality.png)
+![Synthetic momentum walkthrough](docs/images/readme/momentum-walkthrough.png)
+![Publication search](docs/images/readme/search.png)
+
+</details>
+
+## Run locally
+
+Use **Node 24.21.0**, **pnpm 10.14.0** and ordinary, nonoptimized **Python 3.12**. Python build checks use the standard library. Put the pinned runtimes on `PATH`; pnpm can be installed with `npm install --global pnpm@10.14.0`.
+
+From the root of your cloned repository:
 
 ```sh
 export PYTHONDONTWRITEBYTECODE=1
 ./scripts/run.sh install --frozen-lockfile
 ./scripts/run.sh build
-./scripts/run.sh test:e2e --output receipts/playwright-public-source
 ./scripts/run.sh preview --port 4321 --ignore-lock
 ```
 
-The Astro site renders six case routes, evidence registries, synthetic instruments
-and local Pagefind search. `src/` contains the complete website presentation and shared content validation;
-`reviewed/2026-10-11/` is the exact 135-file frozen derivative snapshot;
-`config/publication-assets.json` alone selects 110 byte-preserved downloads.
-The static app has no editing API, server adapter, database or CMS. Owner-only authoring and deployment commands are kept in the private operational repository. You may edit/build your own clone or fork; this grants no upstream or live-site access. Keep research outcomes, nulls, units, source dates and notices.
+Open the exact loopback URL printed by Astro; stop preview with Ctrl-C. The wrapper prefers the prepared Mac's working Node 24 installation, otherwise it uses `PATH`. The complete build checks exact Node/pnpm versions. Installation uses the package registry; building and reading then use local assets. No environment file, API key, account, database, broker, market-data service or private Ardor checkout is needed.
 
-This is an explicit **public-source engineering profile**, not the private archive
-or a deployment-authorized release. It includes metadata-only source provenance;
-28 original captures and the local-only Trend supplement and approval are absent. Local-only explanatory prose and private assertion expectations are omitted too.
-It never reconstructs the omitted rates, dates or condition outcomes. The build
-checks the entire frozen snapshot, public provenance, material assignments,
-content joins, synthetic models, types, search, links, numeric values and complete
-output inventory. Private original-content checks remain in the private pipeline
-and are reported as excluded, not passed. Scientific, reader, manual/device and
-full performance acceptance remain incomplete.
+For UI work, use `./scripts/run.sh dev`. Test search through the built HTTP preview: development mode does not generate its index. See [BUILD.md](docs/BUILD.md) for the full pipeline and browser setup.
 
-The public metadata selects the actual Render service origin. A configured origin
-is not evidence of a successful deployment; consult the owner release receipt.
-The private Render entry point and release authorization refuse this engineering profile.
-The canonical private pipeline must bind a real origin, provider build, browser
-evidence and exact release instruction before deployment. Merely changing a
-profile or URL never provides that authority.
+## Architecture and decisions
 
-Material retains its existing reserved rights. See `NOTICE.md`, the frozen notice,
-material dispositions and shipped dependency/font licences. No blanket open-source
-licence or redistribution permission for excluded originals is granted.
+```text
+Frozen evidence + authored overlays + public provenance
+                ↓ schema, identity and reference validation
+Allowlisted assets → Astro static HTML/CSS/TypeScript → Pagefind index
+                ↓ route, value, link and byte audit
+                      dist/ → local preview
+```
 
-CI uses pinned actions, read-only tokens and separate build/secrets/dependency
-checks. No deployment workflow, mutation CLI, release command or credential is supplied. Upstream writes and merges remain owner-only. See CONTRIBUTING.md and SECURITY.md.
+| Layer | Implementation and tradeoff |
+| --- | --- |
+| Reading UI | Astro, strict TypeScript, semantic HTML and custom CSS. Core reading works without JavaScript; search and teaching controls require it. No server adapter or editing endpoint. |
+| Evidence | JSON/Markdown, Zod schemas and a typed crosswalk join records, claims, sources and figures. Immutable originals require authored overlays for corrections. |
+| Teaching | TypeScript models and Observable Plot, with explicit fictional inputs. Source-reference metadata preserves provenance; private excerpts are omitted and the browser does not run the original strategies. |
+| Search | Pagefind generates a local index and canonical anchored destinations. No hosted search service, but every content change needs a rebuild. |
+| Integrity | Python/Node tools enforce snapshot hashes, material boundaries, guarded exports and source/build/output bindings. These checks cannot establish research validity or grant rights. |
+| Verification | Node/Python regressions, output-boundary tests, Playwright and axe diagnostics. Vale is advisory; scientific and independent-human acceptance remain distinct. |
 
-Search uses Pagefind 1.5.2 with canonically ordered metadata/filter tables and one checksum-pinned, unmodified upstream WASM pair on supported Darwin/Linux toolchains. The upstream MIT notices are retained under `vendor/pagefind-1.5.2/`; that licence does not apply to Ardor research. Unknown emitted WASM bytes fail closed. Actual browser judgments still verify search behavior.
+```text
+src/                       Static pages, components, content, models and browser code
+reviewed/2026-10-11/        Immutable evidence snapshot (135 files)
+snapshots/                 Frozen-tree identity contract
+config/                    Routes, asset map, material and release policies
+scripts/                   Build and shared validation tools
+tests/                     Model, contract, output and browser regressions
+public/                    Static assets/notices and generated allowed derivatives
+docs/                      Build, architecture and project screenshots
+receipts/                  Locally generated verification evidence
+.github/                   Pinned CI, dependency updates and security reporting policy
+```
 
-Build details: [BUILD.md](docs/BUILD.md). Source and evidence boundary: [ARCHITECTURE.md](docs/ARCHITECTURE.md). [Contribution rules](CONTRIBUTING.md), [security](SECURITY.md), [notices](NOTICE.md).
+`dist/`, `generated/`, dependencies, packages and browser recordings are generated and ignored. The [architecture guide](docs/ARCHITECTURE.md) explains the static build, public provenance and excluded private inputs.
+
+## Validate and maintain
+
+```sh
+./scripts/run.sh check              # Evidence/content and Astro/TypeScript checks
+./scripts/run.sh build              # Complete pipeline, including regressions
+```
+
+Browser checks require matching engines and local process/loopback access:
+
+```sh
+./scripts/run.sh exec playwright install chromium firefox webkit
+./scripts/run.sh test:e2e --output receipts/playwright-my-check
+```
+
+Use a fresh browser-output directory to preserve prior runs. Receipts apply only to their recorded source/output identities. GitHub CI runs the public build, history secret scan and dependency audit with pinned actions and read-only tokens. These technical checks do not supply scientific or human acceptance.
+
+You can inspect and build your own clone or fork. Shared validation is included; owner-only authoring, release, deployment and recovery commands stay in the private operational repository. Public read/clone access grants no upstream write, merge, administrative or deployment authority. There is no browser admin, CMS, production write service or runtime database. See [contribution rules](CONTRIBUTING.md) and [security](SECURITY.md).
+
+## Status and limits
+
+The website is available at [ardorlite.onrender.com](https://ardorlite.onrender.com/). This repository provides the complete website presentation with an independently buildable **public-source engineering profile**. It includes metadata-only provenance; original source captures, the local-only Trend supplement and its approval, private explanatory inputs and owner-only commands are excluded. Missing original-input verification is reported as absent, not passed. Deployment remains controlled through the private canonical pipeline; this public profile is not a deployment-authorized release.
+
+Full independent scientific, human-reader, assistive/device, zoom/print and remaining browser/performance acceptance is incomplete. Technical checks and agent diagnostics do not fill those gaps. Research limitations include unrecovered historical source identities, reconstructed artifacts and absent daily Trend NAV; no replacement evidence is synthesized.
+
+Useful references: [instructions](AGENTS.md), [build guide](docs/BUILD.md), [architecture and evidence boundary](docs/ARCHITECTURE.md), [public source profile](config/source-profile.json), [contribution rules](CONTRIBUTING.md) and [security](SECURITY.md). Search uses Pagefind 1.5.2 with a checksum-pinned, unmodified upstream WASM pair and canonically ordered metadata/filter tables. Its MIT notices remain under `vendor/pagefind-1.5.2/`; they do not license Ardor research.
+
+## Rights
+
+**Reserved rights; no blanket open-source licence is granted.** See [NOTICE.md](NOTICE.md), the immutable snapshot's notices and material-specific attribution. Fonts, icons and dependencies retain their own licences. A reviewed derivative or source excerpt does not license its original source, and website-export clearance does not clear the whole source repository or Git history.
+
+Original reports, raw market rows, private ledgers and complete source engines remain outside website exports. Historical filesystem paths are provenance labels, not runtime dependencies. Retain all shipped material, dependency and font notices. See the [architecture guide](docs/ARCHITECTURE.md) for the public/private evidence boundary.
