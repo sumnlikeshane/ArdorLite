@@ -1,0 +1,92 @@
+{
+  "id": "trend-selection",
+  "title": "Trend quality familywise selection adjustment",
+  "case_id": "trend-quality",
+  "status": "tested_killed",
+  "units": "p-value",
+  "source_paths": [
+    "data/research/trend_quality_immediate_entry_v1/selection_adjustment.csv"
+  ],
+  "source_artifact_ids": [
+    "src-6d49d801b740"
+  ],
+  "claim_ids": [
+    "trend-selection-01",
+    "trend-selection-01-raw-bootstrap-p",
+    "trend-selection-02",
+    "trend-selection-02-raw-bootstrap-p",
+    "trend-selection-03",
+    "trend-selection-03-raw-bootstrap-p",
+    "trend-selection-04",
+    "trend-selection-04-raw-bootstrap-p",
+    "trend-selection-05",
+    "trend-selection-05-raw-bootstrap-p"
+  ],
+  "extraction_rule": "Select recorded familywise max-t and raw bootstrap p for V1\u2013V5, no new inference. Familywise pass threshold 0.05.",
+  "study_context": {
+    "window": "panel 2015-01-01 through 2026-06-05; walk-forward test 2018-01-01 through 2026-06-05",
+    "universe": "liquid cash after minimum history, positive OHLC and prior traded-value filters",
+    "instrument": "unlevered integer-share delivery equities; cash retained when underinvested",
+    "benchmark": "unfiltered S0, binding unfiltered EMA20/50 comparator; NIFTYBEES buy-and-hold reference",
+    "costs": "recorded delivery-equity statutory costs, DP charge and base 5 bps slippage per side",
+    "execution": "weekly after-close decision; exact next-session open; quality strictly through t-1; fold training-only quality boundaries",
+    "inference": "direct quality date/symbol two-way clustered regression with controls; moving-block familywise max-t versus S0",
+    "source_verdict": "kill-quality-family; HQ falsified; HR falsified; priority-selected variant none"
+  },
+  "caveats": [
+    "Post-hoc historical development; no live/shadow authorization.",
+    "V0 already-observed reference and EMA quality-filter diagnostic are not selectable variants or binding controls.",
+    "Only wf1\u2013wf4 count as complete folds; wf5_partial is excluded from the fold gate.",
+    "Full-capital NIFTYBEES CAGR has materially greater exposure and volatility; compare risks before interpreting returns.",
+    "Daily NAV was not persisted; no equity, underwater or rolling-Sharpe curves can be reconstructed from summary metrics.",
+    "Archived TSS diagnosis seal points to an engine whose bytes later changed; current-code parity is not promised.",
+    "Moving blocks and HAC lag are each 63 sessions; 10,000 archived resamples."
+  ],
+  "rows": [
+    {
+      "label": "V1_S0_Q80",
+      "value": 0.8947105289471053,
+      "claim_id": "trend-selection-01",
+      "raw_bootstrap_p": 0.6077392260773923,
+      "additional_claim_ids": {
+        "raw_bootstrap_p": "trend-selection-01-raw-bootstrap-p"
+      }
+    },
+    {
+      "label": "V2_S0_Q90",
+      "value": 0.7443255674432556,
+      "claim_id": "trend-selection-02",
+      "raw_bootstrap_p": 0.42705729427057293,
+      "additional_claim_ids": {
+        "raw_bootstrap_p": "trend-selection-02-raw-bootstrap-p"
+      }
+    },
+    {
+      "label": "V3_S0_Q67_DUAL",
+      "value": 0.5802419758024198,
+      "claim_id": "trend-selection-03",
+      "raw_bootstrap_p": 0.2725727427257274,
+      "additional_claim_ids": {
+        "raw_bootstrap_p": "trend-selection-03-raw-bootstrap-p"
+      }
+    },
+    {
+      "label": "V4_S0_COMPOSITE",
+      "value": 0.48665133486651335,
+      "claim_id": "trend-selection-04",
+      "raw_bootstrap_p": 0.22707729227077292,
+      "additional_claim_ids": {
+        "raw_bootstrap_p": "trend-selection-04-raw-bootstrap-p"
+      }
+    },
+    {
+      "label": "V5_S0_Q67_DIVERSIFIED",
+      "value": 0.2635736426357364,
+      "claim_id": "trend-selection-05",
+      "raw_bootstrap_p": 0.08459154084591541,
+      "additional_claim_ids": {
+        "raw_bootstrap_p": "trend-selection-05-raw-bootstrap-p"
+      }
+    }
+  ]
+}

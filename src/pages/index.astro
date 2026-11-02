@@ -1,0 +1,41 @@
+---
+import { isPublicPublication } from '../lib/publication/scope';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import ResearchMap from '../components/experiences/ResearchMap.astro';
+import CaseRoutes from '../components/experiences/CaseRoutes.astro';
+import authorship from '../content/project-authorship.json';
+---
+<SiteLayout title="Ardor Lite" description="A public showcase of selected research from Ardor, my personal research system. Explore six investigations through their data, code, experiments and recorded conclusions." type="overview">
+  <section class="exp-home-intro" aria-labelledby="hero-title">
+    <div>
+      <span class="eyebrow"><span class="section-index">FIELD NOTES / 001</span> Indian-equity research</span>
+      <h1 id="hero-title">Follow a research idea all the way to the <em>decision.</em></h1>
+      <p class="lede">Ardor is my personal research system. Ardor Lite showcases six selected investigations through their data, code, experiments and recorded conclusions.</p>
+      <p>For example, a futures pattern can earn positive gross excess and still stop when costs, unfillable signals and limited capacity defeat the trading case. Ardor Lite connects that decision to its preserved evidence.</p><div class="hero-actions"><a class="button-link" href="#research-map">Explore a case</a><a class="text-link" href="/engineering/">Inside Ardor</a></div>
+    </div>
+    <aside class="exp-project-note" aria-label="Project ownership and research outcome">
+      <span class="eyebrow">The work behind the record</span>
+      <p class="exp-ownership">{authorship.ownership}</p>
+      <p class="exp-note-detail">From clean data boundaries and execution guards to corrected accounting and retained stop decisions.</p>
+      <div class="exp-fixed-outcome"><span class="eyebrow">Research outcome</span><p>The Indian-equity evidence supports this conclusion: <strong>no strategy is certified or live.</strong></p><p class="small">The stories show how those decisions were reached.</p><a href="/evidence/">Evidence & reproduction policy</a></div>
+    </aside>
+  </section>
+  <ResearchMap />
+  <section class="section" aria-labelledby="system-title">
+    <div class="section-heading"><div><span class="eyebrow"><span class="section-index">01 /</span> Inside Ardor</span><h2 id="system-title">The research shares an engineering system.</h2></div><a class="text-link" href="/engineering/">Inspect the implementation</a></div>
+    <ol class="exp-system-preview">
+      <li><span class="case-number">01 / VALIDATED INPUTS</span><h3>Read the right observation.</h3><p>A knowledge cutoff selects an available vintage. Latest-known data and data known at a historical cutoff are different inputs.</p><a href="/engineering/#observation">Inspect the observation boundary</a></li>
+      <li><span class="case-number">02 / EXPLICIT CONTRACTS</span><h3>Keep gates separate.</h3><p>A comparison can return GO without being capable of certification. The profile and its required evidence remain visible.</p><a href="/engineering/#certification">Inspect comparison and certification</a></li>
+      <li><span class="case-number">03 / RETAINED DECISIONS</span><h3>Keep the answer.</h3><p>Invalid predecessors, numerical corrections and failed gates stay attached to the research record.</p><a href="/research/cases/atlas-ssf/">Read Atlas & SSF</a></li>
+    </ol>
+  </section>
+  <section class="section exp-walkthrough-entry" aria-labelledby="walkthrough-title">
+    <div><span class="eyebrow"><span class="section-index">02 /</span> A working teaching instrument</span><h2 id="walkthrough-title">See a signal become a candidate.</h2><p>Step through Momentum v2's information clock, price endpoints, rank buckets and short-opening guards. {isPublicPublication ? 'A separately authored browser adaptation illustrates the rules; original source excerpts are omitted.' : 'Exact Python excerpts sit beside a separately authored browser adaptation.'}</p><a class="text-link" href="/research/walkthrough/">Explore the visual walkthrough</a></div>
+    <aside><span class="eyebrow">Synthetic inputs / fixed historical decision</span><p class="exp-walkthrough-thesis">Change the teaching inputs.<br />Keep the research conclusion.</p><p class="small">The small fictional universe explains selected mechanics. It does not execute the original Python or reproduce historical returns.</p></aside>
+  </section>
+  <section class="section" aria-labelledby="routes-title"><span class="eyebrow"><span class="section-index">03 /</span> Follow an interest</span><h2 id="routes-title" class="exp-section-title">Start with a question you want to inspect.</h2><CaseRoutes heading={false} /><a class="text-link" href="/research/">All six research cases</a></section>
+  <section class="section exp-retained-record" aria-labelledby="record-title">
+    <div><span class="eyebrow"><span class="section-index">04 /</span> The retained record</span><h2 id="record-title">Read the original evidence.</h2><p>The publication preserves the reviewed narratives, original figures, exact-value tables and source identities. Its 114 catalog records cover overlapping designs, versions and preview paths; they are not independent strategy trials.</p></div>
+    <ul><li><a href="/research/catalog/">Research catalog</a><span>Designs, versions and recorded decisions</span></li><li><a href="/methods/">Synthetic methods</a><span>Small demonstrations with visible assumptions</span></li><li><a href="/evidence/claims/">Claim registry</a><span>Reviewed values, units and controlling caveats</span></li><li><a href="/evidence/sources/">Source index</a><span>Material-specific provenance and reproduction labels</span></li><li><a href="/research/previews/">Other research directions</a><span>Existing work and unfinished prerequisites, kept distinct from the six cases</span></li><li><a href="/about/">About the project</a><span>Independent work, scope and attribution</span></li></ul>
+  </section>
+</SiteLayout>

@@ -1,0 +1,23 @@
+{
+  "mode": "public",
+  "publicOrigin": "https://ardorlite.onrender.com",
+  "snapshot": "2026-10-11",
+  "editorialRevision": "2026-10-31",
+  "author": {
+    "type": "project",
+    "name": "Ardor Lite",
+    "role": "Independent research publication",
+    "biography": null,
+    "contributions": "The Ardor Lite developer created the original project-authored derivatives and independently built and directed the research, implementation, experimentation and engineering.",
+    "attribution": {
+      "project": "Original project-authored material: Ardor Lite developer; public personal identity is not supplied.",
+      "upstream": "Existing source provenance, method attribution, reserved-rights notices, font licences and dependency notices remain authoritative. No third-party authorship is claimed.",
+      "currentReleaseAssistance": "Codex assists with this release implementation, validation and deployment. Historical AI/collaborator contributions are not inferred."
+    },
+    "contact": null,
+    "profiles": [],
+    "resume": null
+  },
+  "hosting": null,
+  "launchPolicy": null
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "prepared_date": "2026-10-11",
+  "status": "passed",
+  "python_version": "3.14.7",
+  "test_count": 23,
+  "checks": [
+    {
+      "check": "independent_copied_tree_unittest",
+      "command": "python3 -I -B -c <included isolated_runner>",
+      "isolated_runner": "import sys, unittest\nfrom pathlib import Path\nsys.path.insert(0, \".\")\nimport methods.bridge, methods.cluster_mean, methods.lagged_quality, methods.multiple_testing, methods.units\nroot = Path.cwd().resolve()\nfor module in (methods.bridge, methods.cluster_mean, methods.lagged_quality, methods.multiple_testing, methods.units):\n    assert Path(module.__file__).resolve().is_relative_to(root), \"method import escaped standalone root\"\nsuite = unittest.defaultTestLoader.discover(\"tests\", pattern=\"test_methods.py\")\nresult = unittest.TextTestRunner(verbosity=2).run(suite)\nraise SystemExit(0 if result.wasSuccessful() else 1)\n",
+      "exit_code": 0,
+      "tests_run": 23,
+      "passed": true,
+      "stdout": "",
+      "stderr": "test_repair_rejects_float_zero_missing_or_infinite_factors (test_methods.TestBridge.test_repair_rejects_float_zero_missing_or_infinite_factors) ... ok\ntest_rounding_failure_repaired_only_from_explicit_unrounded_inputs (test_methods.TestBridge.test_rounding_failure_repaired_only_from_explicit_unrounded_inputs) ... ok\ntest_undefined_nonpositive_nonfinite_and_overflow_ratios (test_methods.TestBridge.test_undefined_nonpositive_nonfinite_and_overflow_ratios) ... ok\ntest_empty_and_one_cluster_keep_undefined_uncertainty (test_methods.TestClusterMean.test_empty_and_one_cluster_keep_undefined_uncertainty) ... ok\ntest_exact_dependent_pair_example_and_replication_invariance (test_methods.TestClusterMean.test_exact_dependent_pair_example_and_replication_invariance) ... ok\ntest_missing_and_bad_pairing_rejected (test_methods.TestClusterMean.test_missing_and_bad_pairing_rejected) ... ok\ntest_unique_clusters_equal_sample_mean_standard_error (test_methods.TestClusterMean.test_unique_clusters_equal_sample_mean_standard_error) ... ok\ntest_current_and_future_price_changes_do_not_change_prior_feature (test_methods.TestLaggedQuality.test_current_and_future_price_changes_do_not_change_prior_feature) ... ok\ntest_flat_and_missing_windows_are_undefined (test_methods.TestLaggedQuality.test_flat_and_missing_windows_are_undefined) ... ok\ntest_fold_overlap_unavailable_features_and_insufficient_sample_fail (test_methods.TestLaggedQuality.test_fold_overlap_unavailable_features_and_insufficient_sample_fail) ... ok\ntest_hand_calibrated_training_only_terciles_and_counted_missing (test_methods.TestLaggedQuality.test_hand_calibrated_training_only_terciles_and_counted_missing) ... ok\ntest_log_linear_path_has_one_r2_and_no_initial_values (test_methods.TestLaggedQuality.test_log_linear_path_has_one_r2_and_no_initial_values) ... ok\ntest_zero_training_variance_keeps_undefined_standardization (test_methods.TestLaggedQuality.test_zero_training_variance_keeps_undefined_standardization) ... ok\ntest_by_hand_computed_harmonic_factor (test_methods.TestMultipleTesting.test_by_hand_computed_harmonic_factor) ... ok\ntest_empty_and_singleton (test_methods.TestMultipleTesting.test_empty_and_singleton) ... ok\ntest_hand_computed_family_and_input_order (test_methods.TestMultipleTesting.test_hand_computed_family_and_input_order) ... ok\ntest_rejects_invalid_or_missing_p_instead_of_shrinking_family (test_methods.TestMultipleTesting.test_rejects_invalid_or_missing_p_instead_of_shrinking_family) ... ok\ntest_ties_monotonicity_and_by_is_no_less_conservative (test_methods.TestMultipleTesting.test_ties_monotonicity_and_by_is_no_less_conservative) ... ok\ntest_basis_points_and_percent_are_distinct (test_methods.TestUnits.test_basis_points_and_percent_are_distinct) ... ok\ntest_invalid_risk_cost_and_units_fail_explicitly (test_methods.TestUnits.test_invalid_risk_cost_and_units_fail_explicitly) ... ok\ntest_long_and_short_use_signed_initial_risk_and_cost_once (test_methods.TestUnits.test_long_and_short_use_signed_initial_risk_and_cost_once) ... ok\ntest_net_loss_can_exceed_one_r (test_methods.TestUnits.test_net_loss_can_exceed_one_r) ... ok\ntest_scaling_prices_and_cost_preserves_r (test_methods.TestUnits.test_scaling_prices_and_cost_preserves_r) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.001s\n\nOK\n",
+      "isolation": "Only the authored methods package and test file copied; Python isolated mode ignores PYTHONPATH and user site; imports asserted inside the standalone root."
+    },
+    {
+      "check": "independent_copied_tree_strict_json_demo",
+      "command": "python3 -I -B -c <included isolated_runner>",
+      "isolated_runner": "import sys; sys.path.insert(0, \".\"); from methods.demo import main; main()",
+      "exit_code": 0,
+      "passed": true,
+      "output_sha256": "7d3f65457b1592ba75a7d0f462f26323b1b3616f9b2bbf1fcaf0a82ef84344e6",
+      "visible_synthetic_label_verified": true,
+      "undefined_bridge_json_null_verified": true
+    }
+  ],
+  "verified_files": [
+    {
+      "path": "methods/__init__.py",
+      "sha256": "49675fb59899e3cba1c51911b0d9a60501aa93abf023ab38b9226ac2f3657b11"
+    },
+    {
+      "path": "methods/bridge.py",
+      "sha256": "290d6a81548f53f85bbb70cbfb06e38bd232c06b716fa866dce5c27dcc77b13b"
+    },
+    {
+      "path": "methods/cluster_mean.py",
+      "sha256": "2a11da83790f88d8fe54544168c893cf9de67bc8573abb251fa7407582b1ce56"
+    },
+    {
+      "path": "methods/demo.py",
+      "sha256": "a462052a1fba4a66e0abb97b8844a3ac7baa9d48de7debe829fc3aa5d1a064e6"
+    },
+    {
+      "path": "methods/lagged_quality.py",
+      "sha256": "dc007f1ad4487cb30e94df271a992baf635d25ab5987135e087c984085f48577"
+    },
+    {
+      "path": "methods/multiple_testing.py",
+      "sha256": "0fc7317b8876f102bac98633436cd9c8910d3f8b0732f172e565bcc5027d905c"
+    },
+    {
+      "path": "methods/units.py",
+      "sha256": "80d92b2e1ffc755c9bf1a9e3fedac3ea3c4ddcc75eda9a57d745665f6deaf336"
+    },
+    {
+      "path": "tests/test_methods.py",
+      "sha256": "63b3ba27984d9abf50f35346ecd5e4f7fcd069f9c664e3c3736902271044b6ba"
+    }
+  ],
+  "limits": [
+    "Checks verify synthetic software contracts only.",
+    "Historical Ardor source methods were inspected and hashed, not executed.",
+    "No market evidence, historical study parity, trading capability or source rights certification was inferred."
+  ]
+}

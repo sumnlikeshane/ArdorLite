@@ -1,0 +1,546 @@
+{
+  "schema_version": 1,
+  "observation_date": "2026-10-11",
+  "files": [
+    {
+      "path": ".gitignore",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "AGENTS.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "NOTICE.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "README.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "charts/explorer.html",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "charts/generated/atlas-gates.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/atlas-gates.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/bridge-certification.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/bridge-certification.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/bridge-invalid.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/bridge-invalid.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/bridge-linkage.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/bridge-linkage.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/delivery-cash.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/delivery-cash.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/delivery-interaction.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/delivery-interaction.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/delivery-ssf.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/delivery-ssf.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/momentum-alpha.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/momentum-alpha.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/momentum-execution.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/momentum-execution.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/momentum-exposures.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/momentum-exposures.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/ssf-capacity.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/ssf-capacity.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/ssf-economics.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/ssf-economics.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/swing-excursion.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/swing-excursion.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/swing-expectancy.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/swing-expectancy.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/swing-policies.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/swing-policies.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/trend-controls.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/trend-controls.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/trend-folds.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/trend-folds.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/trend-selection.png",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/generated/trend-selection.svg",
+      "classification": "authored_figure_from_reviewed_table"
+    },
+    {
+      "path": "charts/specs/atlas-gates.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/bridge-certification.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/bridge-invalid.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/bridge-linkage.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/delivery-cash.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/delivery-interaction.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/delivery-ssf.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/momentum-alpha.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/momentum-execution.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/momentum-exposures.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/ssf-capacity.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/ssf-economics.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/swing-excursion.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/swing-expectancy.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/swing-policies.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/trend-controls.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/trend-folds.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "charts/specs/trend-selection.json",
+      "classification": "chart_provenance_and_transformation"
+    },
+    {
+      "path": "content/cases/atlas-ssf.md",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "content/cases/delivery-insider.md",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "content/cases/momentum-v2.md",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "content/cases/price-bridge.md",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "content/cases/swing-autopsy.md",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "content/cases/trend-quality.md",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "content/methods.json",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "content/previews.json",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "content/project.json",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "content/research.json",
+      "classification": "authored_research_catalog_or_narrative"
+    },
+    {
+      "path": "docs/EVIDENCE_POLICY.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "docs/HANDOFF.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "docs/METHODS.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "docs/PLAN_ardor_lite.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "docs/REPRODUCIBILITY.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/allowlist.json",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/claims.json",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/exclusion-receipt.json",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/manifest.json",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/preparation-receipt.json",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/publication-inventory.json",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/source-verification.json",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/summaries/catalog-reconciliation.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/summaries/featured-evidence.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/summaries/source-index.md",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "evidence/tables/atlas-gates.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/atlas-gates.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/bridge-certification.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/bridge-certification.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/bridge-invalid.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/bridge-invalid.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/bridge-linkage.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/bridge-linkage.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/delivery-cash.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/delivery-cash.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/delivery-interaction.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/delivery-interaction.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/delivery-ssf.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/delivery-ssf.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/momentum-alpha.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/momentum-alpha.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/momentum-execution.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/momentum-execution.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/momentum-exposures.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/momentum-exposures.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/ssf-capacity.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/ssf-capacity.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/ssf-economics.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/ssf-economics.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/swing-excursion.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/swing-excursion.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/swing-expectancy.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/swing-expectancy.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/swing-policies.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/swing-policies.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/trend-controls.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/trend-controls.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/trend-folds.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/trend-folds.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/trend-selection.json",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "evidence/tables/trend-selection.md",
+      "classification": "reviewed_aggregate_analytical_values"
+    },
+    {
+      "path": "methods/ATTRIBUTION.json",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "methods/__init__.py",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "methods/bridge.py",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "methods/cluster_mean.py",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "methods/demo.py",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "methods/lagged_quality.py",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "methods/multiple_testing.py",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "methods/units.py",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "methods/validation.json",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "requirements-charts.txt",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "scripts/generate_charts.py",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "scripts/validate.py",
+      "classification": "authored_preparation_instructions_or_tool"
+    },
+    {
+      "path": "tests/test_evidence.py",
+      "classification": "independent_synthetic_method_or_verification"
+    },
+    {
+      "path": "tests/test_methods.py",
+      "classification": "independent_synthetic_method_or_verification"
+    }
+  ]
+}

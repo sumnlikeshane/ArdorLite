@@ -1,0 +1,300 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import ExperienceFrame from '../components/experiences/ExperienceFrame.astro';
+import SourcePanel from '../components/experiences/SourcePanel.astro';
+import { readingManifest } from '../lib/experiences/captures';
+import { engineeringStations, engineeringCasePaths } from '../content/experiences/engineering';
+import { COMPARISON_PRESETS, DEFAULT_ENGINEERING_STATE, OBSERVATION_ROWS, deriveEngineeringFrame } from '../lib/experiences/models/engineering';
+const frame = deriveEngineeringFrame(DEFAULT_ENGINEERING_STATE);
+const sources = [...readingManifest('src/content/source-excerpts/engineering.json').excerpts, ...readingManifest('src/content/source-excerpts/engineering-m2.json').excerpts];
+const registrationSources = sources.filter(source => frame.registration.sourceIds.includes(source.id));
+const comparisonSources = sources.filter(source => frame.comparison.sourceIds.includes(source.id));
+const ledgerSources = sources.filter(source => frame.ledger.sourceIds.includes(source.id));
+const comparisonReadings = COMPARISON_PRESETS.map(comparison => ({ id: comparison, ...deriveEngineeringFrame({ comparison }).comparison }));
+const observationSources = sources.filter(source => frame.observation.sourceIds.includes(source.id));
+const gateSources = sources.filter(source => frame.gate.sourceIds.includes(source.id));
+---
+<SiteLayout title="Inside Ardor" description="Inspect the data and research boundaries in Ardor: knowledge dates, traceable observations, explicit evidence contracts and retained decisions." type="engineering" wide>
+  <div data-engineering>
+    <header class="page-heading engineering-heading">
+      <span class="eyebrow">Inside Ardor · research engineering</span>
+      <h1>A system for asking a question, testing it, and keeping the answer.</h1>
+      <p class="lede">The cases share data boundaries and research controls. Their execution and statistical paths differ. Inspect one part of the system, then follow it into a case.</p>
+      <p class="engineering-ownership">Independently built and directed across research, implementation, data engineering and validation.</p>
+      <p class="engineering-outcome">The reviewed work supports <strong>no certified or live strategy</strong>. These boundaries explain how a result is inspected, without changing the recorded decisions.</p>
+    </header>
+
+    <nav class="engineering-stations" aria-label="Engineering stations">
+      <ol>{engineeringStations.map((station, index) => <li><a href={`#${station.id}`} data-engineering-station={station.id}><span class="engineering-number" aria-hidden="true">0{index + 1}</span><span>{station.label}</span></a></li>)}</ol>
+    </nav>
+    <p class="engineering-scope">The worked examples below use fictitious inputs and current source captures; the final station maps six documented implementations. They do not run original Python, read a database or reproduce a historical experiment.</p>
+    <div class="engineering-toolbar" data-engineering-controls hidden>
+      <button type="button" class="button button-secondary" data-engineering-reset>Reset engineering example</button>
+      <button type="button" class="button button-secondary" data-engineering-share>Copy example link</button>
+    </div>
+    <p class="small engineering-status" role="status" aria-live="polite" data-engineering-status></p>
+
+    <ExperienceFrame id="observation" title="01 · Read the right observation." description="Price history needs a knowledge date and a traceable origin." executionMode={frame.observation.executionMode} dataOrigin={frame.observation.dataOrigin}>
+      <p class="engineering-teaching-label">Synthetic teaching example — not market evidence</p>
+      <div class="engineering-worked">
+        <div>
+          <p><strong>Inputs.</strong> Three vintages describe the same fictional share and trade date, 1 June 2026. The knowledge date controls which revisions may enter the read.</p>
+          <div class="engineering-local-controls" data-engineering-controls hidden>
+            <label for="engineering-cutoff">Knowledge cutoff <code>as_of</code></label>
+            <select id="engineering-cutoff" data-cutoff>
+              <option value="2026-06-02" selected>2 June 2026</option>
+              <option value="2026-06-04">4 June 2026</option>
+              <option value="latest">Latest known · no explicit cutoff</option>
+              <option value="2026-05-31">31 May 2026 · no eligible row</option>
+            </select>
+          </div>
+          <div class="engineering-table-wrap"><table class="engineering-vintages">
+            <caption>Fictitious vintages · FICTION · trade date 2026-06-01</caption>
+            <thead><tr><th scope="col">Known from</th><th scope="col">Adjusted close (₹)</th><th scope="col">Source receipt</th><th scope="col">Selection</th></tr></thead>
+            <tbody>{OBSERVATION_ROWS.map(row => <tr data-vintage-id={row.id} class:list={{'is-selected': row.id === frame.observation.selected?.id}}><th scope="row">{row.asOf}</th><td>{row.close.toFixed(2)}</td><td>{row.sourceId ?? 'Unavailable'}</td><td data-vintage-selection>{row.id === frame.observation.selected?.id ? 'Selected' : 'Not selected'}</td></tr>)}</tbody>
+          </table></div>
+          <p><strong>Operation.</strong> Filter valid clean rows by <code>as_of ≤ cutoff</code>, then select the latest eligible vintage for each symbol and trade date.</p>
+        </div>
+        <div class="engineering-values">
+          <span class="eyebrow">One input state → one reading</span>
+          <dl class="engineering-ledger">
+            <div><dt>Knowledge cutoff</dt><dd data-observation-cutoff>{frame.observation.cutoffLabel}</dd></div>
+            <div><dt>Selected vintage · adjusted close</dt><dd data-observation-selected>{frame.observation.selectedLabel}</dd></div>
+            <div><dt>Source support</dt><dd data-observation-support>{frame.observation.supportLabel}</dd></div>
+          </dl>
+          <p data-observation-explanation>{frame.observation.explanation}</p>
+          <p><strong>Failure boundary.</strong> No eligible vintage means unavailable. A null source receipt leaves support unknown; selecting a valid price does not create provenance or permission.</p>
+        </div>
+      </div>
+      <p class="engineering-source-reading">Source reading: <code>load_adjusted_panel</code> selects clean rows and exposes source support. <code>as_of=None</code> means latest known; it is not an automatic historical knowledge cutoff. The quarantine, dividend and execution policies are outside this small example.</p>
+      <p><strong>Case example.</strong> <a href="/research/cases/price-bridge/">Price Bridge separates numerical validity, vintage/linkage and source rights →</a></p>
+      <div slot="source">{observationSources.map(excerpt => <SourcePanel excerpt={excerpt} />)}<p class="small">Inspected test boundary: <code>tests/test_no_raw_reads.py</code> checks intended clean-reader access. Test definitions do not prove a historical market result; the original tests were not run for this capture.</p></div>
+    </ExperienceFrame>
+
+    <ExperienceFrame id="question" title="02 · Declare the question." description="The hypothesis records what will count as a failure." executionMode={frame.registration.executionMode} dataOrigin={frame.registration.dataOrigin}>
+      <p class="engineering-teaching-label">Authored synthetic trace — no real registry writes</p>
+      <div class="engineering-worked">
+        <div>
+          <p><strong>Inputs.</strong> One fictional record, <code>fictional-quality-v1</code>, already exists. A proposed version declares a quality threshold of 0.50, bound to <code>quality_score</code> with comparator <code>GE</code> and value schema <code>FINITE_NUMBER</code>.</p>
+          <div class="engineering-local-controls" data-engineering-controls hidden>
+            <label for="engineering-registration">Registration trace</label>
+            <select id="engineering-registration" data-registration-preset>
+              <option value="new-name" selected>New name · valid typed threshold</option>
+              <option value="existing-name">Existing name · duplicate rejected</option>
+              <option value="invalid-schema">New name · missing typed binding</option>
+            </select>
+          </div>
+          <p><strong>Operation.</strong> <code>register_typed</code> validates threshold bindings. <code>register</code> constructs the record; <code>_append_unique</code> holds an exclusive lock while checking names and appending strict JSON, then flushes and synchronizes the file.</p>
+          <p><strong>Failure boundary.</strong> A repeated name is rejected before append. Incomplete or unknown typed semantics are rejected before registration. The browser trace cannot create, update or delete a real hypothesis.</p>
+        </div>
+        <div class="engineering-values">
+          <span class="eyebrow">One declared question</span>
+          <dl class="engineering-ledger">
+            <div><dt>Proposed name</dt><dd data-registration-name>{frame.registration.name}</dd></div>
+            <div><dt>Typed threshold metadata</dt><dd data-registration-schema>{frame.registration.schema}</dd></div>
+            <div><dt>Registration outcome</dt><dd data-registration-outcome>{frame.registration.outcome}</dd></div>
+            <div><dt>Retained fictional records</dt><dd data-registration-count>{frame.registration.retainedCount}</dd></div>
+          </dl>
+          <p data-registration-explanation>{frame.registration.explanation}</p>
+        </div>
+      </div>
+      <details class="engineering-reading"><summary>Read the rejected registration traces</summary><p>Existing name: <code>fictional-quality-v1</code> is rejected; the original one-record ledger remains. Missing binding: a new name with no typed binding for <code>quality_floor</code> is rejected before append; the ledger again remains one record. No trace overwrites an earlier question.</p></details>
+      <p class="engineering-source-reading">Current typed metadata is a versioned API. Historical rows may lack it and remain non-certifying; this page does not claim every earlier experiment used the latest registration helper.</p>
+      <p><strong>Case example.</strong> <a href="/research/cases/atlas-ssf/">Atlas follows a frozen discovery specification and retains its invalid predecessor →</a> A declared threshold next needs a precisely evaluated actual.</p>
+      <div slot="source">{registrationSources.map(excerpt => <SourcePanel excerpt={excerpt} />)}<p class="small">Inspected test boundaries: <code>tests/process/test_hypothesis_registry.py::test_duplicate_name_raises</code>, <code>test_concurrent_duplicate_registration_writes_once</code> and <code>test_typed_registration_rejects_unbound_or_unknown_semantics</code>. These original tests were inspected, not executed here; no historical result follows from their definitions.</p></div>
+    </ExperienceFrame>
+
+    <ExperienceFrame id="comparison" title="03 · Make comparisons explicit." description="A missing numeric result cannot pass its threshold." executionMode={frame.comparison.executionMode} dataOrigin={frame.comparison.dataOrigin}>
+      <p class="engineering-teaching-label">Authored synthetic trace — not an experiment evaluator</p>
+      <div class="engineering-worked">
+        <div>
+          <p><strong>Inputs.</strong> A registered threshold names a required metric, a comparator and a value schema. <code>GE</code> means greater than or equal; <code>LE</code> means less than or equal; <code>EQ</code> uses strict JSON-like equality.</p>
+          <div class="engineering-local-controls" data-engineering-controls hidden>
+            <label for="engineering-comparison">Typed comparison trace</label>
+            <select id="engineering-comparison" data-comparison-preset>
+              <option value="numeric-ge" selected>GE · valid numeric actual</option>
+              <option value="numeric-le">LE · actual above ceiling</option>
+              <option value="missing-numeric">GE · numeric actual missing</option>
+              <option value="nonfinite-numeric">GE · nonfinite actual</option>
+              <option value="unknown-comparator">Unknown free-form semantics</option>
+              <option value="exact-null">EQ · explicitly present null</option>
+              <option value="exact-absent">EQ · absent key against null</option>
+              <option value="legacy-min">Historical _min compatibility</option>
+            </select>
+          </div>
+          <p><strong>Operation.</strong> Resolve the threshold binding, then fetch <code>metrics.get(spec.metric)</code>. Ordered comparisons require finite numbers, excluding booleans. A free-form name without typed semantics fails closed; historical <code>_min</code>/<code>_max</code> names retain explicit GE/LE compatibility.</p>
+          <p><strong>Exact-null limitation.</strong> <code>metrics.get()</code> cannot distinguish an absent key from an explicit JSON null. An exact-null threshold can compare equal in both cases. Numeric missing-value rejection is not universal missing-value rejection.</p>
+        </div>
+        <div class="engineering-values">
+          <span class="eyebrow">Resolved threshold → named result</span>
+          <dl class="engineering-ledger">
+            <div><dt>Threshold key</dt><dd data-comparison-key>{frame.comparison.thresholdKey}</dd></div>
+            <div><dt>Required metric</dt><dd data-comparison-metric>{frame.comparison.requiredMetric}</dd></div>
+            <div><dt>Comparator · schema</dt><dd data-comparison-semantics>{frame.comparison.semantics}</dd></div>
+            <div><dt>Threshold</dt><dd data-comparison-threshold>{frame.comparison.threshold}</dd></div>
+            <div><dt>Actual</dt><dd data-comparison-actual>{frame.comparison.actual}</dd></div>
+            <div><dt>Comparison verdict</dt><dd data-comparison-verdict>{frame.comparison.verdict}</dd></div>
+            <div><dt>Failed threshold key</dt><dd data-comparison-failed>{frame.comparison.failedKey}</dd></div>
+          </dl>
+          <p data-comparison-explanation>{frame.comparison.explanation}</p>
+        </div>
+      </div>
+      <details class="engineering-reading"><summary>Read all eight bounded comparison traces</summary><dl class="engineering-traces">{comparisonReadings.map(reading => <div><dt>{reading.id} · {reading.verdict}</dt><dd><strong>{reading.actual}</strong> against {reading.threshold}; failed key: {reading.failedKey}. {reading.explanation}</dd></div>)}</dl></details>
+      <p><strong>Case example.</strong> <a href="/research/cases/swing-autopsy/">Swing shows why corrected accounting still needs independent robustness gates →</a> A passing comparison alone does not certify its evidence.</p>
+      <div slot="source">{comparisonSources.map(excerpt => <SourcePanel excerpt={excerpt} />)}<p class="small">Inspected test boundaries: <code>tests/process/test_experiment.py::test_freeform_threshold_without_typed_schema_fails_closed</code> and <code>test_nonfinite_metric_fails_closed</code>. Exact-null behavior follows the captured <code>metrics.get</code> and null-equality branches; it is disclosed as a limitation, not a tested historical guarantee. Original tests were not run.</p></div>
+    </ExperienceFrame>
+
+    <ExperienceFrame id="certification" title="04 · Keep gates separate." description="A successful comparison and a certification are different contracts." executionMode={frame.gate.executionMode} dataOrigin={frame.gate.dataOrigin}>
+      <p class="engineering-teaching-label">Synthetic teaching example — not market evidence</p>
+      <div class="engineering-worked">
+        <div>
+          <p><strong>Inputs.</strong> Choose one fixed authored trace of the current gate interfaces. The complete example uses a small <code>teaching_history_v1</code> profile that requires a history threshold and actual; it is not the production minimum profile.</p>
+          <div class="engineering-local-controls" data-engineering-controls hidden>
+            <label for="engineering-gate">Gate example</label>
+            <select id="engineering-gate" data-gate-preset>
+              <option value="legacy-empty" selected>Legacy comparison · empty inputs</option>
+              <option value="missing-profile">Certification · absent profile</option>
+              <option value="missing-evidence">Certification · required evidence absent</option>
+              <option value="complete-profile">Certification · complete teaching profile</option>
+            </select>
+          </div>
+          <p><strong>Operation.</strong> <code>check</code> evaluates legacy comparisons with certification disabled. <code>certify</code> also checks that a typed, non-empty profile and its required evidence are present.</p>
+          <p class="engineering-call"><code data-gate-api>{frame.gate.api}</code></p>
+          <p><strong>Failure boundary.</strong> A capability flag identifies the API contract, not a passing verdict. An absent profile yields <code>NO-GO</code> even when <code>certification_capable=true</code>.</p>
+        </div>
+        <div class="engineering-values">
+          <span class="eyebrow">Separate outputs</span>
+          <dl class="engineering-ledger">
+            <div><dt>verdict</dt><dd data-gate-verdict>{frame.gate.verdict}</dd></div>
+            <div><dt>certification_capable</dt><dd data-certification-capable>{String(frame.gate.certificationCapable)}</dd></div>
+            <div><dt>profile_name</dt><dd data-gate-profile>{frame.gate.profileName ?? 'null'}</dd></div>
+            <div><dt>Missing fields</dt><dd data-gate-missing>{frame.gate.missingFields.join(', ') || 'None'}</dd></div>
+          </dl>
+          <p data-gate-explanation>{frame.gate.explanation}</p>
+        </div>
+      </div>
+      <p class="engineering-source-reading">These are current interface contracts. They do not retroactively change any historical feasibility verdict, and a teaching <code>GO</code> cannot certify a reviewed strategy or grant source rights.</p>
+      <p><strong>Case example.</strong> <a href="/research/cases/momentum-v2/">Momentum asks separate execution and residual-alpha questions →</a></p>
+      <div slot="source">{gateSources.map(excerpt => <SourcePanel excerpt={excerpt} />)}<p class="small">Inspected test boundary: <code>tests/process/test_feasibility_gate.py</code> distinguishes the legacy empty GO from certification failures. The original tests were inspected, not executed for this capture.</p></div>
+    </ExperienceFrame>
+
+    <ExperienceFrame id="record" title="05 · Keep the record." description="The next investigation must not erase the previous result." executionMode={frame.ledger.executionMode} dataOrigin={frame.ledger.dataOrigin}>
+      <p class="engineering-teaching-label">Authored synthetic traces — no ledger rows, hash computation or file writes</p>
+      <div class="engineering-worked">
+        <div>
+          <p><strong>Inputs.</strong> A fictional sidecar describes two sealed lines. Compare it with an intact two-line file, an added third line with unchanged prefix, or a changed prefix plus an extra line. The labels below describe precomputed conditions; they are not cryptographic hashes.</p>
+          <div class="engineering-local-controls" data-engineering-controls hidden>
+            <label for="engineering-ledger">Integrity trace</label>
+            <select id="engineering-ledger" data-ledger-preset>
+              <option value="intact" selected>Intact seal · same head and count</option>
+              <option value="unsealed-append">Unsealed append · old prefix retained</option>
+              <option value="changed-history">Changed history · sealed prefix differs</option>
+            </select>
+          </div>
+          <p><strong>Operation.</strong> <code>verify_chain</code> recomputes the head and line count under a shared lock, then compares them with the sidecar. More lines are an unsealed append only if the sealed prefix still matches. Edited, reordered or removed history is reported separately.</p>
+          <p><strong>Separate trial identity.</strong> <code>record_trial_once</code> checks <code>(source, run_uuid, cell_id)</code> under an exclusive lock. Replay returns the existing row with <code>created=false</code>; a new identity appends once. Ordinary <code>record_trial</code> intentionally permits repeated exploratory counts.</p>
+        </div>
+        <div class="engineering-values">
+          <span class="eyebrow">Agreement with a recorded seal</span>
+          <dl class="engineering-ledger">
+            <div><dt>ok</dt><dd data-ledger-ok>{String(frame.ledger.ok)}</dd></div>
+            <div><dt>Expected / actual lines</dt><dd data-ledger-count>{frame.ledger.expectedLines} / {frame.ledger.actualLines}</dd></div>
+            <div><dt>Head comparison</dt><dd data-ledger-head>{frame.ledger.head}</dd></div>
+            <div><dt>Sealed prefix</dt><dd data-ledger-prefix>{frame.ledger.prefix}</dd></div>
+            <div><dt>Integrity reason</dt><dd data-ledger-reason>{frame.ledger.reason}</dd></div>
+            <div><dt>Independent trial trace</dt><dd data-trial-outcome>{frame.ledger.trialOutcome}</dd></div>
+          </dl>
+          <p data-ledger-explanation>{frame.ledger.explanation}</p>
+        </div>
+      </div>
+      <details class="engineering-reading"><summary>Read all three integrity states</summary><ul><li>Intact: expected=2, actual=2, matching head → <code>ok=true</code>.</li><li>Unsealed append: expected=2, actual=3, matching sealed prefix → <code>ok=false</code>, re-sealing required by the original contract.</li><li>Changed history: expected=2, actual=3, disagreeing sealed prefix → <code>ok=false</code>, historical disagreement. An extra line cannot hide the changed prefix.</li></ul></details>
+      <p><strong>Failure boundary.</strong> Verification detects disagreement with the sidecar; it is not external notarization or tamper-proof storage. It cannot prove that the sidecar itself was never replaced. Deduplication is not inference control, and 114 catalog records are coverage, not a trial denominator.</p>
+      <p><strong>Case example.</strong> <a href="/research/cases/atlas-ssf/">Atlas retains its invalid predecessor and corrected execution result →</a> The Delivery record also preserves its documented duplicate-predeclare correction; no pristine-ledger history is inferred.</p>
+      <div slot="source">{ledgerSources.map(excerpt => <SourcePanel excerpt={excerpt} />)}<p class="small">Inspected test boundaries: <code>tests/process/test_ledger_integrity.py::test_tamper_edit_detected</code>, <code>test_legitimate_append_flagged_as_unsealed</code> and <code>tests/research/test_trial_ledger.py</code> cover intended integrity and recording behavior. These original tests were inspected, not executed here; no private ledger rows are displayed.</p></div>
+    </ExperienceFrame>
+
+    <ExperienceFrame id="cases" title="06 · Follow the case-specific work." description="Shared controls support different investigations." executionMode="source-only" dataOrigin="current-source-metadata">
+      <p><strong>Input → operation → output.</strong> Select an investigation to mark its documented path, then follow its case and evidence links. This selection changes emphasis only; every path remains available to read.</p>
+      <div class="engineering-local-controls" data-engineering-controls hidden>
+        <label for="engineering-case">Case path</label>
+        <select id="engineering-case" data-case-preset>{engineeringCasePaths.map(path => <option value={path.id} selected={path.id === frame.state.case}>{path.label}</option>)}</select>
+      </div>
+      <div class="engineering-case-paths">{engineeringCasePaths.map(path => <article data-case-path={path.id} class:list={{'is-selected': path.id === frame.state.case}}>
+        <span class="eyebrow" data-case-selection>{path.id === frame.state.case ? 'Selected path' : 'Case path'}</span>
+        <h3><a href={path.href}>{path.label}</a></h3>
+        <p><strong>Implemented and inspected.</strong> {path.path}</p>
+        <p class="engineering-path-source"><strong>Source operations.</strong> <code>{path.source}</code></p>
+        <p><strong>Boundary.</strong> {path.boundary}</p>
+        <p><strong>Retained decision.</strong> {path.decision}</p>
+        <p class="small">{path.sourceStatus} <a href={path.sourceHref}>Inspect evidence and implementation context →</a></p>
+      </article>)}</div>
+      <p><strong>Failure boundary.</strong> These are source-backed implementation relationships, not a universal research engine or a claim every case used all current governance helpers. Current code, reviewed capture and historical run identity remain separate. The case evidence and its controlling stop decision stay fixed.</p>
+      <p class="engineering-source-reading">Each case path links to its source references and recorded evidence. Selected source excerpts identify the implementation they explain; other paths retain their capture and version limits. Complete source engines are not offered as downloads.</p>
+      <p><a href="/research/">Choose any investigation →</a> · <a href="/research/cases/price-bridge/#bridge-experience">Follow the complete repair-versus-permission story →</a></p>
+    </ExperienceFrame>
+    <aside class="engineering-dependencies">
+      <h2>Implemented boundaries, bounded claims.</h2>
+      <p>The original system uses Python numerical and storage libraries, with optional integrations and deferred broker/notification paths. Their presence does not establish deployed services. Upstream libraries and attributed materials retain their own authorship and rights.</p>
+      <p>The synthetic controls illustrate software behavior and leave recorded research findings unchanged. <a href="/publication/">Read rights and attribution</a> · <a href="/evidence/">Inspect the reviewed evidence</a>.</p>
+    </aside>
+  </div>
+  <script>import '../scripts/experiences/engineering';</script>
+</SiteLayout>
+
+<style>
+  .engineering-heading { max-width: 980px; }
+  .engineering-heading h1 { max-width: 850px; font-size: clamp(2.5rem, 5vw, 4.6rem); }
+  .engineering-ownership { font-size: .9rem; color: var(--muted); }
+  .engineering-outcome { max-width: 780px; border-left: 3px solid var(--blue); padding-left: 1rem; }
+  .engineering-stations { display: block; margin-left: 0; border-block: 1px solid var(--rule); margin-block: 2rem 1.25rem; }
+  .engineering-stations ol { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; list-style: none; padding: 0; margin: 0; }
+  .engineering-stations a { display: flex; flex-direction: column; gap: .6rem; min-height: 105px; padding: 1rem; line-height: 1.4; text-decoration: none; font-size: .85rem; }
+  .engineering-number { color: var(--muted); font-family: var(--mono); font-size: .75rem; }
+  .engineering-stations a:hover { background: var(--white); }
+  .engineering-scope { max-width: 850px; color: var(--muted); }
+  .engineering-toolbar { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0 .5rem; }
+  .engineering-toolbar[hidden], .engineering-local-controls[hidden] { display: none; }
+  .engineering-status { min-height: 1.5em; margin: .5rem 0 1rem; }
+  .engineering-teaching-label { font-size: .78rem; font-weight: 600; color: var(--muted); }
+  .engineering-worked { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 2rem; }
+  .engineering-worked > div { min-width: 0; }
+  .engineering-local-controls { display: flex; flex-direction: column; align-items: flex-start; gap: .4rem; margin-block: 1rem; }
+  .engineering-local-controls label { font-size: .85rem; font-weight: 600; }
+  .engineering-local-controls select { width: 100%; max-width: 470px; }
+  .engineering-table-wrap { max-width: 100%; overflow-x: auto; }
+  .engineering-vintages { margin-block: 1.2rem; font-size: .8rem; width: 100%; }
+  .engineering-vintages caption { text-align: left; color: var(--muted); font-size: .75rem; padding-block: .4rem; }
+  .engineering-vintages :is(th,td) { padding: .6rem .45rem; }
+  .engineering-vintages td { overflow-wrap: anywhere; }
+  .engineering-vintages th:first-child { min-width: 93px; }
+  .engineering-vintages .is-selected { background: #e9eef8; }
+  .engineering-values { background: var(--white); padding: 1.25rem; border: 1px solid var(--rule); }
+  .engineering-ledger { margin-block: .6rem 1rem; }
+  .engineering-ledger > div { padding-block: .65rem; border-bottom: 1px solid var(--rule); }
+  .engineering-ledger dt { font-size: .75rem; font-family: var(--mono); color: var(--muted); overflow-wrap: anywhere; }
+  .engineering-ledger dd { margin: .3rem 0 0; font-size: 1rem; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  .engineering-reading { margin-block: 1rem; padding: 1rem; border: 1px solid var(--rule); }
+  .engineering-reading summary { cursor: pointer; min-height: 32px; font-weight: 600; }
+  .engineering-traces > div { padding-block: .8rem; border-bottom: 1px solid var(--rule); }
+  .engineering-traces dt { font-weight: 600; }
+  .engineering-traces dd { margin: .4rem 0 0; }
+  .engineering-case-paths { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; margin-block: 1.5rem; }
+  .engineering-case-paths article { min-width: 0; border: 1px solid var(--rule); padding: 1.25rem; }
+  .engineering-case-paths article.is-selected { border-left: 3px solid var(--blue); background: var(--white); }
+  .engineering-case-paths h3 { margin-top: .4rem; }
+  .engineering-path-source code { overflow-wrap: anywhere; font-size: .85em; }
+  .engineering-stations a[aria-current] { background: #e9eef8; box-shadow: inset 0 -3px var(--blue); }
+  :global(.exp-frame[data-station-selected="true"]) { border-top-color: var(--blue); }
+  .engineering-source-reading { color: var(--muted); font-size: .85rem; }
+  .engineering-call { padding: 1rem; background: var(--white); border-left: 2px solid var(--blue); overflow-wrap: anywhere; }
+  .engineering-summary { border-top: 1px solid var(--rule); padding-block: 2.5rem; max-width: 850px; scroll-margin-top: 1.5rem; }
+  .engineering-summary h2 { font-size: 1.8rem; margin-top: .7rem; }
+  .engineering-summary code { overflow-wrap: anywhere; }
+  :global([data-engineering] p code), :global([data-engineering] dd code), :global([data-engineering] li code) { overflow-wrap: anywhere; }
+  .engineering-dependencies { border-top: 1px solid var(--rule); margin-top: 1rem; padding-block: 2rem 3rem; max-width: 850px; }
+  .engineering-dependencies h2 { font-size: 1.8rem; }
+  :global(.exp-source[data-source-active='true']) { border-left: 3px solid var(--blue); }
+  :global(.exp-source .exp-code-line.is-active) { background: #edf1f9; }
+  @media (max-width: 1000px) { .engineering-stations ol { grid-template-columns: repeat(3, minmax(0, 1fr)); } .engineering-worked { gap: 1.2rem; } }
+  @media (max-width: 760px) { .engineering-case-paths { grid-template-columns: 1fr; } .engineering-worked { grid-template-columns: 1fr; } .engineering-stations ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } .engineering-stations a { min-height: 88px; padding-inline: .5rem; } .engineering-values { padding: 1rem; } }
+</style>

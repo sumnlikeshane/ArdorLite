@@ -1,0 +1,36 @@
+---
+import { cases } from '../../lib/evidence';
+import { caseExperiences } from '../../content/experiences';
+const entries = [
+  {id:'atlas-ssf',outcome:'Discovery-only. SSF translation stood down.',uses:'State masks · execution guards · cost and capacity gates'},
+  {id:'momentum-v2',outcome:'Execution passed. Residual alpha did not.',uses:'Causal signal · opening guards · factor attribution'},
+  {id:'swing-autopsy',outcome:'Corrected positive primary mean. Robustness still failed.',uses:'Mechanical fills · fixed initial risk · robustness co-gates'},
+  {id:'trend-quality',outcome:'Incremental-information and familywise gates failed.',uses:'Lagged features · training-only calibration · complete folds'},
+  {id:'delivery-insider',outcome:'Association did not establish a forward interaction.',uses:'Event construction · disclosure clocks · forward tests'},
+  {id:'price-bridge',outcome:'Technical QA passed. Source rights failed.',uses:'Explicit repair inputs · vintage and linkage · rights checks'}
+].map(entry => ({...entry, question:caseExperiences.find(item => item.caseId === entry.id)!.question, case: cases.find(item => item.id === entry.id)!}));
+---
+<section id="research-map" class="exp-research-map" aria-labelledby="research-map-title" data-research-map>
+  <div class="exp-map-heading"><span class="eyebrow">The research atlas</span><h2 id="research-map-title">Six questions.<br />Six recorded decisions.</h2><p>Enter anywhere. Each case keeps its evidence, code context and limitations close to its conclusion.</p></div>
+  <div class="exp-map-body">
+    <aside class="exp-map-spine" aria-label="Shared engineering system">
+      <a href="/engineering/" class="exp-spine-title">Inside Ardor <span aria-hidden="true">↗</span></a>
+      <ol aria-label="Research flow">
+        <li><span class="exp-spine-index" aria-hidden="true">01</span><div><strong>Data</strong><span class="exp-spine-detail">Validate the inputs</span></div></li>
+        <li><span class="exp-spine-index" aria-hidden="true">02</span><div><strong>Experiment</strong><span class="exp-spine-detail">Define the comparison</span></div></li>
+        <li><span class="exp-spine-index" aria-hidden="true">03</span><div><strong>Execution</strong><span class="exp-spine-detail">Check the trading constraints</span></div></li>
+        <li><span class="exp-spine-index" aria-hidden="true">04</span><div><strong>Inference</strong><span class="exp-spine-detail">Test the evidence</span></div></li>
+        <li><span class="exp-spine-index" aria-hidden="true">05</span><div><strong>Decision</strong><span class="exp-spine-detail">Retain the conclusion</span></div></li>
+      </ol>
+      <p>Shared engineering, different research paths. The listed operations describe implementation dependencies.</p>
+    </aside>
+    <ol class="exp-map-entries">
+      {entries.map((entry,index) => <li><a class="exp-map-entry" href={`/research/cases/${entry.id}/`} data-case-entry>
+        <span class="exp-entry-top"><span class="case-number">0{index+1} / {entry.case.title}</span><span aria-hidden="true">↗</span></span>
+        <h3>{entry.question}</h3>
+        <p class="exp-entry-outcome">{entry.outcome}</p>
+        <span class="exp-entry-uses">{entry.uses}</span>
+      </a></li>)}
+    </ol>
+  </div>
+</section>

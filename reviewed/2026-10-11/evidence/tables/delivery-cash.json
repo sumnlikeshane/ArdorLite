@@ -1,0 +1,78 @@
+{
+  "id": "delivery-cash",
+  "title": "Validated delivery/insider primary cash forward excess",
+  "case_id": "delivery-insider",
+  "status": "tested_killed",
+  "units": "basis points over 10 sessions",
+  "source_paths": [
+    "docs/postmortems/POSTMORTEM_delivery_x_insider_B8.md"
+  ],
+  "source_artifact_ids": [
+    "src-30e89f2139b6"
+  ],
+  "claim_ids": [
+    "delivery-cash-01",
+    "delivery-cash-01-reported-cash-t",
+    "delivery-cash-01-fillable-n",
+    "delivery-cash-02",
+    "delivery-cash-02-reported-cash-t",
+    "delivery-cash-02-fillable-n",
+    "delivery-cash-03",
+    "delivery-cash-03-reported-cash-t",
+    "delivery-cash-03-fillable-n"
+  ],
+  "extraction_rule": "Transcribe validated primary-cell cash h=10 excess and reported fill counts. No contaminated recomputation or favorable post-hoc threshold.",
+  "study_context": {
+    "window": "2015-01-01 through 2026-06-05; registered and run 2026-06-19/20",
+    "universe": "F&O intersection formed from names ever present in archived futures panel; not PIT membership certification",
+    "observation_clock": "public insider disclosure date; delivery signal known by event date",
+    "hypothesis_entry": "next-session cash open; SSF execution hypothesis T+1 open",
+    "actual_ssf_comparison": "settle-to-settle proxy with artificial narrow high/low solely to avoid solid-bar rejection",
+    "benchmark": "same-window equal-weight eligible universe in each cash/SSF path",
+    "costs": "0A gross forward-excess test; no full cost-swept executable-book return",
+    "inference": "association via within-symbol permutation; prediction/interaction event-date cluster robust SE",
+    "source_verdict": "KILLED / documented null"
+  },
+  "caveats": [
+    "Validated primary event set only: absolute lift floor and 32-calendar-day refractory; contaminated inline recomputation excluded.",
+    "39.9-sigma enrichment describes co-occurrence, not predictive significance.",
+    "Reported bps and t values are rounded report transcriptions.",
+    "SSF settle proxy and ever-in-F&O universe limit claims of executable or PIT SSF translation.",
+    "Post-hoc threshold and prior-return subsets are not passing candidates."
+  ],
+  "rows": [
+    {
+      "label": "Insider parent",
+      "value": 24,
+      "claim_id": "delivery-cash-01",
+      "reported_cash_t": 1.56,
+      "fillable_n": 1679,
+      "additional_claim_ids": {
+        "reported_cash_t": "delivery-cash-01-reported-cash-t",
+        "fillable_n": "delivery-cash-01-fillable-n"
+      }
+    },
+    {
+      "label": "Delivery parent",
+      "value": -8,
+      "claim_id": "delivery-cash-02",
+      "reported_cash_t": -1.3,
+      "fillable_n": 13549,
+      "additional_claim_ids": {
+        "reported_cash_t": "delivery-cash-02-reported-cash-t",
+        "fillable_n": "delivery-cash-02-fillable-n"
+      }
+    },
+    {
+      "label": "Joint primary",
+      "value": 1,
+      "claim_id": "delivery-cash-03",
+      "reported_cash_t": 0.04,
+      "fillable_n": 328,
+      "additional_claim_ids": {
+        "reported_cash_t": "delivery-cash-03-reported-cash-t",
+        "fillable_n": "delivery-cash-03-fillable-n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "establishedBeforeTuning": "2026-11-02",
+  "authority": "Approved S5; implementer-selected representative tasks, not human relevance judgments",
+  "tasks": [
+    {
+      "query": "Atlas",
+      "expectedDestination": "/research/cases/atlas-ssf/",
+      "maximumRank": 3,
+      "expectedContext": "Discovery map versus actual futures; zero nominations and STAND_DOWN"
+    },
+    {
+      "query": "Momentum",
+      "expectedDestination": "/research/cases/momentum-v2/",
+      "maximumRank": 3,
+      "expectedContext": "Execution passes but residual attribution fails; reconstructed report"
+    },
+    {
+      "query": "Swing",
+      "expectedDestination": "/research/cases/swing-autopsy/",
+      "maximumRank": 3,
+      "expectedContext": "Positive corrected mean does not clear co-gates; spent history"
+    },
+    {
+      "query": "Trend quality",
+      "expectedDestination": "/research/cases/trend-quality/",
+      "maximumRank": 3,
+      "expectedContext": "Quality family rejected; complete versus partial folds"
+    },
+    {
+      "query": "Delivery insider",
+      "expectedDestination": "/research/cases/delivery-insider/",
+      "maximumRank": 3,
+      "expectedContext": "Association versus predictive increment; June run identity unresolved"
+    },
+    {
+      "query": "Price Bridge",
+      "expectedDestination": "/research/cases/price-bridge/",
+      "maximumRank": 3,
+      "expectedContext": "Technical true, rights false; blocked before returns"
+    },
+    {
+      "query": "trend-folds-01",
+      "expectedDestination": "/research/cases/trend-quality/#claim-trend-folds-01",
+      "maximumRank": 1,
+      "expectedContext": "Claim value, unit, complete/partial period and controlling comparisons"
+    },
+    {
+      "query": "bridge-certification-01",
+      "expectedDestination": "/research/cases/price-bridge/#claim-bridge-certification-01",
+      "maximumRank": 1,
+      "expectedContext": "Technical result is independent of rights"
+    },
+    {
+      "query": "atlas-gates-01",
+      "expectedDestination": "/research/cases/atlas-ssf/#claim-atlas-gates-01",
+      "maximumRank": 1,
+      "expectedContext": "Overlapping discovery cells, not independent trials"
+    },
+    {
+      "query": "src-3f6afd0415da",
+      "expectedDestination": "/evidence/sources/#src-3f6afd0415da",
+      "maximumRank": 1,
+      "expectedContext": "Source label, excluded original, observation/source date, used-by links"
+    },
+    {
+      "query": "src-2adacd9e9309",
+      "expectedDestination": "/evidence/sources/#src-2adacd9e9309",
+      "maximumRank": 1,
+      "expectedContext": "Separate local-only supplement; original excluded"
+    },
+    {
+      "query": "src-c4562307c478",
+      "expectedDestination": "/evidence/sources/#src-c4562307c478",
+      "maximumRank": 1,
+      "expectedContext": "Configured rules; source date basis versus observation"
+    },
+    {
+      "query": "trend_following_price_bridge_certification_v1_1",
+      "expectedDestination": "/research/records/trend_following_price_bridge_certification_v1_1/",
+      "maximumRank": 1,
+      "expectedContext": "Reference record, independent technical/rights outcome"
+    },
+    {
+      "query": "sweep_reclaim",
+      "expectedDestination": "/research/records/sweep_reclaim/",
+      "maximumRank": 1,
+      "expectedContext": "Archive record retains original outcome and missingness"
+    },
+    {
+      "query": "hybrid_ai_design_2026_10_10",
+      "expectedDestination": "/research/records/hybrid_ai_design_2026_10_10/",
+      "maximumRank": 1,
+      "expectedContext": "Dated design, no implemented trader"
+    },
+    {
+      "query": "rights",
+      "expectedDestination": "/publication/",
+      "maximumRank": 3,
+      "expectedContext": "Metadata, local use, embedding and downloads are separate"
+    },
+    {
+      "query": "source rights",
+      "expectedDestination": "/publication/",
+      "maximumRank": 3,
+      "expectedContext": "Local-only captures do not clear public rights"
+    },
+    {
+      "query": "hybrid",
+      "expectedDestination": "/research/previews/#hybrid-ai",
+      "maximumRank": 3,
+      "expectedContext": "Dated feasibility review; no autonomous trader/return test"
+    },
+    {
+      "query": "Solana",
+      "expectedDestination": "/research/previews/#solana",
+      "maximumRank": 3,
+      "expectedContext": "Rights-blocked certification; noncertifying exploration"
+    },
+    {
+      "query": "long-term company",
+      "expectedDestination": "/research/previews/#longterm",
+      "maximumRank": 3,
+      "expectedContext": "Governed framework, incomplete inputs/live discovery"
+    },
+    {
+      "query": "portfolio",
+      "expectedDestination": "/research/previews/#portfolio",
+      "maximumRank": 3,
+      "expectedContext": "Mixed dated design/infrastructure; scenarios are not returns"
+    },
+    {
+      "query": "partial folds",
+      "expectedDestination": "/research/cases/trend-quality/",
+      "maximumRank": 3,
+      "expectedContext": "Partial interval excluded; two of four complete versus three required"
+    },
+    {
+      "query": "fillability",
+      "expectedDestination": "/research/cases/atlas-ssf/",
+      "maximumRank": 3,
+      "expectedContext": "Corrected futures gate; gross versus net and capacity"
+    },
+    {
+      "query": "residual alpha",
+      "expectedDestination": "/research/cases/momentum-v2/",
+      "maximumRank": 3,
+      "expectedContext": "Raw return is not factor-controlled residual alpha"
+    },
+    {
+      "query": "basis points fixed initial R",
+      "expectedDestination": "/methods/units/",
+      "maximumRank": 3,
+      "expectedContext": "Synthetic unit illustration; no empirical performance"
+    },
+    {
+      "query": "lagged quality calibration",
+      "expectedDestination": "/methods/lagged-quality/",
+      "maximumRank": 3,
+      "expectedContext": "Synthetic prior-session feature and training-only threshold"
+    },
+    {
+      "query": "clustered uncertainty",
+      "expectedDestination": "/methods/cluster-mean/",
+      "maximumRank": 3,
+      "expectedContext": "Synthetic executable example; no historical reproduction"
+    },
+    {
+      "query": "xyz-nonexistent-linguistic-result",
+      "expectedDestination": null,
+      "maximumRank": 0,
+      "expectedContext": "Useful empty recovery with query retained"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "prepared_date": "2026-10-11",
+  "source_project": "Ardor",
+  "source_version_basis": "Actual working-tree bytes, including modified/untracked research; not Git HEAD parity.",
+  "source_licence_declaration": "Proprietary, observed in pyproject.toml.",
+  "rights_notice": "All rights reserved. No open-source licence granted. Ownership/release terms require an actual release decision.",
+  "selection_boundary": "Independently authored public mathematical demonstrations only. Historical modules, TradeX ports, Pine scripts and market inputs are not copied.",
+  "examples": [
+    {
+      "id": "method-multiple-testing",
+      "title": "BH/BY adjusted p-values",
+      "path": "methods/multiple_testing.py",
+      "changes": [
+        "Independently authored stdlib implementation of published BH/BY mathematics; no historical code excerpt.",
+        "One-dimensional lists replace NumPy arrays; finite complete-family inputs are required.",
+        "Missing or invalid p-values raise ValueError instead of silently excluding them from ranks.",
+        "Hand-computed synthetic families and structural invariants are checked."
+      ],
+      "references": [
+        "bh-1995",
+        "by-2001"
+      ],
+      "limitations": [
+        "Not an archived inference rerun.",
+        "FDR interpretation requires valid p-values and a correctly declared complete family; BH dependence assumptions remain necessary."
+      ],
+      "sha256": "0fc7317b8876f102bac98633436cd9c8910d3f8b0732f172e565bcc5027d905c",
+      "source_artifacts": [
+        {
+          "source_path": "ardor/research/multiple_testing.py",
+          "sha256": "d37a328349397e372754feefd95a4f94edfd79550c59140fcbdb8f8850133b88"
+        }
+      ],
+      "authorship": "Independently authored during preparation from public mathematics and reviewed method contracts; not an untouched historical implementation.",
+      "label": "SYNTHETIC SOFTWARE DEMONSTRATION — NOT MARKET EVIDENCE",
+      "reproduction_level": "executable_example",
+      "source_dependencies": [],
+      "runtime_dependencies": [
+        "Python standard library only"
+      ],
+      "publication_state": "included_in_review_ready_handoff_not_published",
+      "rights": "All rights reserved; no open-source licence grant."
+    },
+    {
+      "id": "method-units",
+      "title": "Gross/net basis points and fixed initial R",
+      "path": "methods/units.py",
+      "changes": [
+        "Independently authored elementary unit and signed P&L arithmetic; no source code excerpt.",
+        "No Sharpe/CAGR helpers, source cost model, tax rules, statutory defaults or TradeX-derived implementation.",
+        "Caller supplies complete round-trip cost; initial R excludes costs and stays fixed.",
+        "Synthetic long/short examples verify signs, scale invariance, cost subtraction once and losses beyond one R."
+      ],
+      "references": [],
+      "limitations": [
+        "No historical gross/net reconstruction or execution model.",
+        "Net R is distinct from the source screener target net-risk/reward ratio."
+      ],
+      "sha256": "80d92b2e1ffc755c9bf1a9e3fedac3ea3c4ddcc75eda9a57d745665f6deaf336",
+      "source_artifacts": [
+        {
+          "source_path": "ardor/metrics/core.py",
+          "sha256": "861282bb95d1ab511e925cd96abba21d942f04be58e658261b3885d212b878f7"
+        },
+        {
+          "source_path": "screener/costs.py",
+          "sha256": "21b53bbe037fce96fb52a8eb83e5234a8bfe58bce2c9be0b35e6232df1ceff20"
+        }
+      ],
+      "authorship": "Independently authored during preparation from public mathematics and reviewed method contracts; not an untouched historical implementation.",
+      "label": "SYNTHETIC SOFTWARE DEMONSTRATION — NOT MARKET EVIDENCE",
+      "reproduction_level": "executable_example",
+      "source_dependencies": [],
+      "runtime_dependencies": [
+        "Python standard library only"
+      ],
+      "publication_state": "included_in_review_ready_handoff_not_published",
+      "rights": "All rights reserved; no open-source licence grant."
+    },
+    {
+      "id": "method-cluster-mean",
+      "title": "One-way clustered uncertainty for a mean",
+      "path": "methods/cluster_mean.py",
+      "changes": [
+        "Independently authored stdlib intercept-only CR1 formula; no event-study source excerpt.",
+        "No database, panels, event construction, return labels, fillability, two-way estimator or study gates.",
+        "One-cluster and empty-sample uncertainty is None; invalid observations are rejected explicitly.",
+        "Synthetic cluster replication and unique-cluster comparison checks exercise dependence arithmetic."
+      ],
+      "references": [
+        "cameron-miller-2015"
+      ],
+      "limitations": [
+        "No p-value, confidence interval or strategy verdict.",
+        "Independent clusters and suitable asymptotics are required; a two-cluster teaching example does not support empirical inference."
+      ],
+      "sha256": "2a11da83790f88d8fe54544168c893cf9de67bc8573abb251fa7407582b1ce56",
+      "source_artifacts": [
+        {
+          "source_path": "ardor/research/event_study.py",
+          "sha256": "23b89436e18cd9ec4ea2d4db7d1209d03929dee02081ce5269ec1ac8371ac64f"
+        }
+      ],
+      "authorship": "Independently authored during preparation from public mathematics and reviewed method contracts; not an untouched historical implementation.",
+      "label": "SYNTHETIC SOFTWARE DEMONSTRATION — NOT MARKET EVIDENCE",
+      "reproduction_level": "executable_example",
+      "source_dependencies": [],
+      "runtime_dependencies": [
+        "Python standard library only"
+      ],
+      "publication_state": "included_in_review_ready_handoff_not_published",
+      "rights": "All rights reserved; no open-source licence grant."
+    },
+    {
+      "id": "method-bridge",
+      "title": "Finite positive bridge and explicit-input repair",
+      "path": "methods/bridge.py",
+      "changes": [
+        "Independently authored ratio check and explicit-factor Decimal reconstruction; no audit/adjustment source excerpt.",
+        "Synthetic raw close 0.04, split factor 100 and total-return factor 1.02 are supplied as unrounded decimal strings.",
+        "50-digit working precision avoids the illustrative two-decimal rounding-to-zero failure; no exact-arithmetic guarantee for arbitrary inputs.",
+        "No factor inference, price cliffs, proprietary raw rows, corporate-action records or source-rights certification."
+      ],
+      "references": [],
+      "limitations": [
+        "Cannot recover a lost raw value or factor from rounded zeros.",
+        "Technical finite-positive validity alone cannot certify provenance, licensing, causality or execution."
+      ],
+      "sha256": "290d6a81548f53f85bbb70cbfb06e38bd232c06b716fa866dce5c27dcc77b13b",
+      "source_artifacts": [
+        {
+          "source_path": "ardor/strategies/trend_following_price_bridge_remediation/audit.py",
+          "sha256": "2cd35bcc21965d5e394a0c42f3cbd658b7174b1705c5150c3a1c201e3853947b"
+        },
+        {
+          "source_path": "ardor/data/adjust.py",
+          "sha256": "459d2c2d8cbc15d1644d9f65c36517e58e41e4ae9d352fe40e04bd9124efc95a"
+        }
+      ],
+      "authorship": "Independently authored during preparation from public mathematics and reviewed method contracts; not an untouched historical implementation.",
+      "label": "SYNTHETIC SOFTWARE DEMONSTRATION — NOT MARKET EVIDENCE",
+      "reproduction_level": "executable_example",
+      "source_dependencies": [],
+      "runtime_dependencies": [
+        "Python standard library only"
+      ],
+      "publication_state": "included_in_review_ready_handoff_not_published",
+      "rights": "All rights reserved; no open-source licence grant."
+    },
+    {
+      "id": "method-lagged-quality",
+      "title": "Prior-session R² and training-only fold calibration",
+      "path": "methods/lagged_quality.py",
+      "changes": [
+        "Independently authored stdlib direct centered-sum log-price/time R²; no historical vectorized engine excerpt.",
+        "Small rolling synthetic windows use exactly prices[t-window:t]; no source strategy rules, event generation or manifests.",
+        "Fold teaching contract includes explicit feature availability at t-1 and strict train/validation separation.",
+        "None preserves missing/flat features and zero-variance standardization; missing training values are counted.",
+        "Synthetic future-mutation checks and hand-calculated terciles verify leakage boundaries."
+      ],
+      "references": [],
+      "limitations": [
+        "No historical engine parity, actual exchange calendar or PIT-vintage verification.",
+        "No quality-performance relationship, return regression, parameter search or new research inference."
+      ],
+      "sha256": "dc007f1ad4487cb30e94df271a992baf635d25ab5987135e087c984085f48577",
+      "source_artifacts": [
+        {
+          "source_path": "ardor/strategies/tss_failure_diagnosis_v1/engine.py",
+          "sha256": "e91853e27b1010a43eaa161e3f75ce4d4cc391a7b7b5ec3058cc3406f04bcff8"
+        },
+        {
+          "source_path": "ardor/strategies/trend_quality_immediate_entry_v1/engine.py",
+          "sha256": "48b08f3e387c47fdc821cd3e6f0f3b6c1c6bde477caeb7cb972f924c147122c3"
+        }
+      ],
+      "authorship": "Independently authored during preparation from public mathematics and reviewed method contracts; not an untouched historical implementation.",
+      "label": "SYNTHETIC SOFTWARE DEMONSTRATION — NOT MARKET EVIDENCE",
+      "reproduction_level": "executable_example",
+      "source_dependencies": [],
+      "runtime_dependencies": [
+        "Python standard library only"
+      ],
+      "publication_state": "included_in_review_ready_handoff_not_published",
+      "rights": "All rights reserved; no open-source licence grant."
+    }
+  ],
+  "references": [
+    {
+      "id": "bh-1995",
+      "title": "Benjamini and Hochberg (1995), Controlling the False Discovery Rate",
+      "url": "https://rss.onlinelibrary.wiley.com/doi/10.1111/j.2517-6161.1995.tb02031.x",
+      "kind": "primary_paper"
+    },
+    {
+      "id": "by-2001",
+      "title": "Benjamini and Yekutieli (2001), The control of the false discovery rate in multiple testing under dependency",
+      "url": "https://doi.org/10.1214/aos/1013699998",
+      "author_copy_url": "https://www.math.tau.ac.il/~ybenja/depApr27.pdf",
+      "kind": "primary_paper"
+    },
+    {
+      "id": "cameron-miller-2015",
+      "title": "Cameron and Miller (2015), A Practitioner’s Guide to Cluster-Robust Inference",
+      "url": "https://escholarship.org/uc/item/1jq5d0pq",
+      "kind": "primary_paper"
+    }
+  ],
+  "context_source_artifacts": [
+    {
+      "source_path": "docs/PLAN_ardor_lite.md",
+      "sha256": "68498ca12a93f8fafacd82bb9c4d02de7b556692e25736fe907c81b147e84cf9"
+    },
+    {
+      "source_path": "CLAUDE.md",
+      "sha256": "c93098c4369495846a36192ebe642e4976ecacd7fb12eebed609083f2ae52240"
+    },
+    {
+      "source_path": "pyproject.toml",
+      "sha256": "c50ffc54a57b558e9c12bdff18d67cdcbbe597be1fe8337ff4fa3de8f697c8ed"
+    }
+  ],
+  "verification": "methods/validation.json"
+}

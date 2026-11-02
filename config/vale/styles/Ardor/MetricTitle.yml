@@ -1,0 +1,7 @@
+extends: existence
+message: "This title combines the archived CAGR description with a Sharpe suffix. Supply a metric-specific title in the publication layer."
+level: warning
+scope: text
+ignorecase: true
+tokens:
+  - 'historical CAGR with comparable-risk controls\s*[—–-]\s*sharpe'

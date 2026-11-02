@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "planId": "AL-COMP-001",
+  "inspectedDate": "2026-10-31",
+  "cli": {
+    "version": "3.25.1",
+    "gitTagCommit": "d7a379da688e3ec07138ef94e4f0f0889954d617",
+    "license": "MIT",
+    "url": "https://github.com/vale-cli/vale/releases/tag/v3.25.1",
+    "asset": "vale_3.25.1_macOS_arm64.tar.gz",
+    "assetSha256": "fbcaa68d9b9e229b9c8dc918f209e93572ce943039700b7e04a423ff12f684cd",
+    "binarySha256": "ac853f996e8cce7390d4df35f7c9890a0b7a1728e41336bf98a9ca2e24b5fef5",
+    "checksumsUrl": "https://github.com/vale-cli/vale/releases/download/v3.25.1/vale_3.25.1_checksums.txt"
+  },
+  "stylePackages": [],
+  "ciDependencies": [],
+  "foundations": [
+    {
+      "repository": "https://github.com/anthropics/skills",
+      "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+      "files": [
+        {
+          "path": "skills/doc-coauthoring/SKILL.md",
+          "sha256": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4",
+          "url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/doc-coauthoring/SKILL.md"
+        }
+      ],
+      "adoption": "Ideas and source links only. No copied skill/script; independent Ardor instructions.",
+      "scriptsExecuted": false
+    },
+    {
+      "repository": "https://github.com/evildmp/diataxis-documentation-framework",
+      "commit": "957c09ca40b4a1edc23874f713e01937d50d54d5",
+      "files": [
+        {
+          "path": "source/explanation.rst",
+          "sha256": "f5d82cf4cb673871a1b047dc710e81d1e028713189a06f272ad3312f58ff022e",
+          "url": "https://github.com/evildmp/diataxis-documentation-framework/blob/957c09ca40b4a1edc23874f713e01937d50d54d5/source/explanation.rst"
+        },
+        {
+          "path": "source/reference-explanation.rst",
+          "sha256": "67f3e8a3c2833d97034ddaf7717eae2f7e27d997b47f5e2228a70581c38abc01",
+          "url": "https://github.com/evildmp/diataxis-documentation-framework/blob/957c09ca40b4a1edc23874f713e01937d50d54d5/source/reference-explanation.rst"
+        },
+        {
+          "path": "LICENSE.rst",
+          "sha256": "04fb830dd6f251654d1812a8366f669c47f2442d6cf9b3b7c5191591fff836cd",
+          "url": "https://github.com/evildmp/diataxis-documentation-framework/blob/957c09ca40b4a1edc23874f713e01937d50d54d5/LICENSE.rst"
+        }
+      ],
+      "adoption": "Ideas and source links only. No copied skill/script; independent Ardor instructions.",
+      "scriptsExecuted": false
+    },
+    {
+      "repository": "https://github.com/vale-cli/agent-tools",
+      "commit": "5e8704f5c07a78aadeb255121df9235c3785ec74",
+      "files": [
+        {
+          "path": "skills/setup/SKILL.md",
+          "sha256": "20b640cdbf4a68a2f4e8b223f6ce5034e7e6a3b16cc875631153b48c45a7c099",
+          "url": "https://github.com/vale-cli/agent-tools/blob/5e8704f5c07a78aadeb255121df9235c3785ec74/skills/setup/SKILL.md"
+        },
+        {
+          "path": "skills/triage/SKILL.md",
+          "sha256": "6547fb3980ecfafa8954592f4e76cd654205eb66b5e9d886a929445ad98475f8",
+          "url": "https://github.com/vale-cli/agent-tools/blob/5e8704f5c07a78aadeb255121df9235c3785ec74/skills/triage/SKILL.md"
+        },
+        {
+          "path": "skills/vocab/SKILL.md",
+          "sha256": "b2a3f6ecaaf63945eb5992b87aa789ea236bca43d9c98779fb93fcdcf644afd1",
+          "url": "https://github.com/vale-cli/agent-tools/blob/5e8704f5c07a78aadeb255121df9235c3785ec74/skills/vocab/SKILL.md"
+        },
+        {
+          "path": "skills/ci/SKILL.md",
+          "sha256": "e77bb9209e6e359e911dd13ad4570a243e65fe53308fad9004c7f30ab55269b7",
+          "url": "https://github.com/vale-cli/agent-tools/blob/5e8704f5c07a78aadeb255121df9235c3785ec74/skills/ci/SKILL.md"
+        },
+        {
+          "path": "hooks/vale-edit.sh",
+          "sha256": "76f3e801530c697ec88d8c7e3128fdf00b43ce252bea500a6901e355ec2cfa23",
+          "url": "https://github.com/vale-cli/agent-tools/blob/5e8704f5c07a78aadeb255121df9235c3785ec74/hooks/vale-edit.sh"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "29a16197c8d01cafcacbd9c1774b66b28d7c0f15a6aceed88e4e8068ea398470",
+          "url": "https://github.com/vale-cli/agent-tools/blob/5e8704f5c07a78aadeb255121df9235c3785ec74/LICENSE"
+        }
+      ],
+      "adoption": "Ideas and source links only. No copied skill/script; independent Ardor instructions.",
+      "scriptsExecuted": false
+    }
+  ],
+  "licenseDisposition": {
+    "anthropic": "README describes many Apache-2.0 examples, but selected directory has no license file/frontmatter. Do not vendor or claim a verified per-file license. Link/read and independently author.",
+    "diataxis": "Daniele Procida, CC-BY-SA-4.0. General distinction used as a conceptual reference; no copied text/assets or adaptation distributed.",
+    "vale": "MIT, Joseph Kato. Full license retained for binary. Agent tools scripts inspected but not executed/adopted."
+  },
+  "skillValidation": {
+    "validator": "Bundled skill-creator/scripts/quick_validate.py",
+    "validatorSha256": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c",
+    "temporaryDependency": "PyYAML==6.0.3",
+    "location": "ignored .cache/skill-validator",
+    "applicationDependencyChanged": false
+  }
+}

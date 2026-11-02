@@ -1,0 +1,17 @@
+/* Lowercase serif signature; colors match the publication's light-first tokens. */
+.brand-link {
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: block;
+  width: 220px;
+  height: auto;
+}
+
+@media (max-width: 720px) {
+  .brand-logo {
+    width: clamp(152px, 48vw, 208px);
+  }
+}

@@ -1,0 +1,114 @@
+/* Shared publication controls: real native elements, one visual language. */
+body main select:not([multiple]) {
+  appearance:none;
+  width:100%; min-width:0; max-width:100%; min-height:2.875rem;
+  padding:.65rem 2.5rem .65rem .85rem;
+  border:1px solid var(--border-subtle); border-radius:6px;
+  background-color:var(--surface-raised);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%2350554d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right .85rem center;
+  color:var(--text-primary); font:400 .875rem/1.5 var(--sans);
+  text-overflow:ellipsis; cursor:pointer;
+}
+body main select:not([multiple]):hover:not(:disabled) { border-color:var(--border-control); }
+body main select:not([multiple]):disabled { color:var(--text-secondary); background-color:var(--surface-inset); cursor:default; }
+body main select.has-selection { border-color:var(--border-selected); background-color:var(--surface-selected); color:var(--text-link); }
+:where(.filter-form,.evidence-locate) input { min-height:2.875rem; padding:.65rem .85rem; border:1px solid var(--border-subtle); border-radius:6px; background:var(--surface-raised); }
+:where(.filter-form,.evidence-locate) input::placeholder { color:var(--text-secondary); opacity:1; }
+body :is(.inspector-actions,.bridge-actions,.lab-actions,.lab-toolbar,.engineering-toolbar,.filter-actions,.evidence-locate-actions,.comparison-controls) button {
+  min-height:2.875rem; max-width:100%; padding:.6rem .95rem;
+  border:1px solid var(--border-subtle); border-radius:6px;
+  background:var(--surface-raised); color:var(--text-primary);
+  font:500 .8125rem/1.5 var(--sans); overflow-wrap:anywhere;
+}
+body :is(.inspector-actions,.bridge-actions,.lab-actions,.lab-toolbar,.engineering-toolbar,.filter-actions,.evidence-locate-actions,.comparison-controls) button:hover:not(:disabled) {
+  border-color:var(--border-control); background:var(--surface-inset);
+}
+body :is(.inspector-actions,.bridge-actions,.lab-actions,.lab-toolbar,.engineering-toolbar,.filter-actions,.evidence-locate-actions,.comparison-controls) button:disabled {
+  border-color:var(--border-subtle); background:var(--surface-inset); color:var(--text-secondary); cursor:default;
+}
+body :is(.filter-actions,.evidence-locate-actions) button[type='submit'],
+body .inspector-actions .inspector-show,
+body .bridge-actions [data-bridge-next],body .lab-toolbar [data-next] {
+  border-color:var(--text-primary); background:var(--text-primary); color:var(--text-on-accent);
+}
+body :is(.filter-actions,.evidence-locate-actions) button[type='submit']:hover,
+body .inspector-actions .inspector-show:hover,
+body .bridge-actions [data-bridge-next]:hover:not(:disabled),body .lab-toolbar [data-next]:hover:not(:disabled) {
+  border-color:var(--text-link); background:var(--text-link); color:var(--text-on-accent);
+}
+body :is(.inspector-actions,.bridge-actions,.lab-actions,.engineering-toolbar,.comparison-controls) :is([data-reset],[data-bridge-reset],[data-bridge-share],[data-share],[data-engineering-reset],[data-engineering-share],[data-comparison-reset]) {
+  border-color:transparent; background:transparent; color:var(--text-secondary);
+}
+body :is(.inspector-actions,.bridge-actions,.lab-actions,.engineering-toolbar,.comparison-controls) :is([data-reset],[data-bridge-reset],[data-bridge-share],[data-share],[data-engineering-reset],[data-engineering-share],[data-comparison-reset]):hover {
+  border-color:var(--border-subtle); background:var(--surface-raised); color:var(--text-primary);
+}
+body button[hidden] { display:none!important; }
+/* Quiet, clearly grouped control regions replace large grey utility boxes. */
+body .filter-form,body .evidence-locate,body .lab-controls,body .bridge-controls {
+  background:var(--surface-raised); border:1px solid var(--border-subtle); border-radius:8px;
+  padding:1.25rem; gap:1rem 1.25rem;
+}
+body :is(.filter-form,.evidence-locate,.bridge-controls,.lab-controls) label {
+  font-size:.8125rem; line-height:1.5; font-weight:500; color:var(--text-secondary); gap:.5rem; min-width:0;
+}
+body .filter-form { grid-template-columns:repeat(3,minmax(0,1fr)); }
+body .filter-form .filter-query { grid-column:1/-1; }
+body .filter-actions { flex-wrap:wrap; border-top:1px solid var(--rule); padding-top:.75rem; font-size:.75rem; color:var(--text-secondary); }
+.filter-actions>div { display:flex; gap:.5rem; flex-wrap:wrap; }
+body .catalog-advanced summary { display:flex; align-items:baseline; gap:.65rem; min-height:2.75rem; padding-block:.5rem; font-size:.8125rem; color:var(--text-link); list-style:none; }
+.catalog-advanced summary::-webkit-details-marker { display:none; }
+.catalog-advanced summary::before { content:'+'; font:1rem/1 var(--mono); flex-shrink:0; }
+.catalog-advanced[open] summary::before { content:'−'; }
+body .catalog-advanced-fields { gap:1rem; padding-block:1rem .25rem; }
+body .lab-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:end; }
+body .lab-controls label { display:grid; }
+.lab-actions { grid-column:1/-1; display:flex; flex-wrap:wrap; gap:.5rem; border-top:1px solid var(--rule); padding-top:.75rem; }
+body .bridge-actions { border-top:1px solid var(--rule); padding-top:.85rem; gap:.5rem; }
+body .engineering-toolbar { gap:.5rem; }
+/* A saved-row inspector has a compact heading, fields, and a real action row. */
+body .recorded-inspector {
+  padding:1.25rem; background:var(--surface-raised); border:1px solid var(--border-subtle); border-radius:8px;
+  margin-top:1.5rem;
+}
+.inspector-heading h4 { font:500 .9375rem/1.5 var(--sans); margin:0 0 .35rem; }
+.inspector-heading p { color:var(--text-secondary); margin:0 0 1.25rem; max-width:75ch; }
+.inspector-fields { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(15rem,100%),1fr)); gap:1rem; }
+body .recorded-inspector .inspector-fields label { display:grid; gap:.5rem; font:.8125rem/1.5 var(--sans); color:var(--text-secondary); margin:0; min-width:0; }
+.inspector-toolbar { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.75rem 1.25rem; padding-top:1rem; margin-top:1rem; border-top:1px solid var(--rule); }
+.inspector-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; }
+body .recorded-inspector [data-selection-count] { margin:0; font:.75rem/1.5 var(--sans); color:var(--text-secondary); }
+body .recorded-inspector .plot-holder:empty,body .recorded-inspector [data-chart-state]:empty { display:none; margin:0; }
+body .recorded-inspector [data-chart-state]:not(:empty) { margin-bottom:0; }
+body .comparison-controls { gap:.5rem; }
+body .comparison-controls label { border-color:var(--border-subtle); border-radius:6px; font-size:.8125rem; gap:.5rem; }
+body .comparison-controls label:has(input:checked) { border-color:var(--border-selected); }
+body .comparison-controls button { margin-left:.5rem; }
+/* Fully style the real picker where supported. Other engines retain a system
+   option popup behind the same styled trigger and native keyboard/touch model. */
+@supports (appearance:base-select) {
+  body main select:not([multiple]),body main select::picker(select) { appearance:base-select; }
+  body main select:not([multiple]) { background-image:none; padding-right:.85rem; }
+  body main select::picker-icon { color:var(--text-secondary); }
+  body main select::picker(select) {
+    margin-top:.4rem; border:1px solid var(--border-subtle); border-radius:6px; padding:.35rem;
+    background:var(--surface-raised); color:var(--text-primary); box-shadow:0 8px 24px rgb(32 35 31 / 10%);
+    max-height:20rem; max-width:min(32rem,calc(100vw - 2rem));
+  }
+  body main select option { padding:.65rem .75rem; border-radius:3px; font:.875rem/1.5 var(--sans); white-space:normal; overflow-wrap:anywhere; }
+  body main select option:hover,body main select option:focus { background:var(--surface-inset); }
+  body main select option:checked { color:var(--text-link); background:var(--surface-selected); }
+}
+@media(max-width:700px) {
+  body .filter-form,body .evidence-locate,body .lab-controls { grid-template-columns:minmax(0,1fr); padding:1rem; }
+  body .filter-form .filter-query { grid-column:auto; }
+  body .filter-actions { align-items:flex-start; }
+  body .lab-controls label { min-width:0; }
+  body .lab-actions button { flex:0 1 auto; }
+  body .recorded-inspector { padding:1rem; }
+  .inspector-toolbar { align-items:flex-start; }
+  body .comparison-controls button { margin-left:0; }
+}
+@media(forced-colors:active) {
+  body main select:not([multiple]) { appearance:auto; background-image:none; }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ssf-capacity",
+  "title": "Corrected SSF capacity conventions",
+  "case_id": "atlas-ssf",
+  "status": "stand_down",
+  "units": "INR crore",
+  "source_paths": [
+    "data/research/atlas_followup/atlas_clv_downside_translation_v1_0_1.json"
+  ],
+  "source_artifact_ids": [
+    "src-2513644cee25"
+  ],
+  "claim_ids": [
+    "ssf-capacity-01",
+    "ssf-capacity-02",
+    "ssf-capacity-03",
+    "ssf-capacity-04"
+  ],
+  "extraction_rule": "Select equal-notional median/p10/minimum. Include liquidity-proportional median solely as a labelled non-gate diagnostic.",
+  "study_context": {
+    "window": "2016-01-01 through 2024-12-31",
+    "sample": 20217,
+    "universe": "point-in-time F&O candidate signals",
+    "instrument": "near-month single-stock futures; next-session open to same non-expiry-session settle",
+    "benchmark": "equal-weight valid PIT-F&O SSF long return on the same entry session",
+    "costs": "historically dated statutory stack; frozen ADV-only impact sweep 0.5\u00d7,1\u00d7,2\u00d7; current statutory counterfactual dated 2026-07-30",
+    "inference": "recorded two-way clustering by date and symbol",
+    "source_verdict": "STAND_DOWN"
+  },
+  "caveats": [
+    "Execution-QA v1.0.1 supersedes the earlier fill and capacity figures.",
+    "Frozen impact curve depends on ADV rather than direct order size.",
+    "Gross significance does not override fillability, interaction, capacity, regime or net-return failures.",
+    "The current statutory-only row is a dated counterfactual, not a present-day cost quotation.",
+    "Equal-notional event-count \u00d7 minimum-name capacity is binding; the ADV-sum diagnostic is not capacity for this equal-event book."
+  ],
+  "rows": [
+    {
+      "label": "Equal-notional median daily",
+      "value": 43.91485,
+      "claim_id": "ssf-capacity-01"
+    },
+    {
+      "label": "Equal-notional 10th-percentile daily",
+      "value": 14.083594999999999,
+      "claim_id": "ssf-capacity-02"
+    },
+    {
+      "label": "Equal-notional minimum daily",
+      "value": 1.407285,
+      "claim_id": "ssf-capacity-03"
+    },
+    {
+      "label": "ADV-sum median \u2014 diagnostic only",
+      "value": 233.28580499999998,
+      "claim_id": "ssf-capacity-04"
+    }
+  ],
+  "chart_id": "ssf-capacity",
+  "input_table": "evidence/tables/ssf-capacity.json",
+  "input_sha256": "558ed8a3889b69bcbf9156535c49ba8a2ea63e1726c40cc25b79e7a7da763d4a",
+  "display_rounding": "At most four decimals; integer counts unchanged",
+  "missing_values": "null stays unavailable; never plotted as zero",
+  "transformation": "One bar per recorded numeric value; no interpolation, resampling, inference or optimization",
+  "outputs": [
+    {
+      "path": "charts/generated/ssf-capacity.svg",
+      "sha256": "f285390b18d90c6d5fa09cf0dfca24c9083bdba307194ca6a917bba730fcf466"
+    },
+    {
+      "path": "charts/generated/ssf-capacity.png",
+      "sha256": "5e27541ad979cfa95de968babb05a74a6833b69e9bfdaa4be546d6e00fd84bca"
+    }
+  ],
+  "accessible_table": "evidence/tables/ssf-capacity.md"
+}

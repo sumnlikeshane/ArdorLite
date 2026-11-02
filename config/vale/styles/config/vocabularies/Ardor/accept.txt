@@ -1,0 +1,20 @@
+Ardor
+Ardor Lite
+Astro
+Bonferroni
+NIFTYBEES
+Pagefind
+Sharpe
+Sortino
+TypeScript
+OHLC
+SSF
+EMA
+NAV
+CAGR
+Q67
+S0
+V0
+V5
+wf[1-5]
+wf5_partial

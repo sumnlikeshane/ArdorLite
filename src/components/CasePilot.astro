@@ -1,0 +1,90 @@
+---
+import EvidenceFigure from './EvidenceFigure.astro';
+import ClaimEntry from './ClaimEntry.astro';
+import EvidenceLinks from './EvidenceLinks.astro';
+import BridgePipeline from './experiences/BridgePipeline.astro';
+import {caseRecords,caseClaims,figureById,claimById,claimUrl,recordUrl,renderCaseMarkdown,formatValue} from '../lib/evidence';
+import { studyById } from '../lib/publication';
+import {evidenceCrosswalk} from '../lib/evidence/crosswalk';
+import '../styles/case-pilot.css';
+interface Props { caseId: 'price-bridge'; }
+const {caseId} = Astro.props;
+const entries = caseClaims(caseId);
+const records = caseRecords(caseId);
+const study = studyById.get(caseId)!;
+const value = (id: string, precision=2) => {
+  const raw = claimById.get(id)!.value;
+  return typeof raw === 'number' ? new Intl.NumberFormat('en-IN',{minimumFractionDigits:precision,maximumFractionDigits:precision}).format(raw) : formatValue(raw);
+};
+const word = (id: string) => ['zero','one','two','three','four'][Number(claimById.get(id)!.value)] ?? value(id,0);
+const date = (id: string) => new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(String(claimById.get(id)!.value)+'T00:00:00Z'));
+const html = await renderCaseMarkdown(caseId, {readableCitations:true});
+const cite = (id:string) => {
+  if(claimById.get(id)?.case_id !== caseId) throw new Error(`Wrong pilot claim ${id}`);
+  return claimUrl(id);
+};
+const figure = (id:string) => {
+  const f = figureById.get(id);
+  if(f?.spec.case_id !== caseId) throw new Error(`Wrong pilot figure ${id}`);
+  return f;
+};
+const chapters = [['repair','01 · Failure and explicit repair'],['knowledge','02 · Cutoff, vintage and exact origin'],['permission','03 · Independent certification']];
+---
+<div class="case-pilot" data-case-pilot={caseId}>
+  <nav class="pilot-paths" aria-label="Choose a reading depth">
+    <a href="#decision-brief">Read the decision</a>
+    <a href="#investigation">Follow the investigation</a>
+    <a href="#bridge-experience">Explore the mechanism</a>
+    <a href="#original-verdicts">Inspect the record</a>
+  </nav>
+  <section id="decision-brief" class="decision-brief" aria-labelledby="decision-title">
+    <p class="eyebrow">Decision brief</p>
+    <h2 id="decision-title">{'The repair passed. Source rights remained blocked.'}</h2>
+    <p>{study.researchObject} {study.question}</p>
+    <dl class="decision-points">
+      <div><dt>What was established</dt><dd><><a href={cite('bridge-invalid-01')}>{value('bridge-invalid-01',0)} invalid observed bridges</a> became <a href={cite('bridge-invalid-02')}>{word('bridge-invalid-02')}</a>. Numerical validity and exact raw linkage passed technical QA.</></dd></div>
+      <div><dt>Why it stopped</dt><dd><><a href={cite('bridge-certification-01-source-boolean')}>Technical = {value('bridge-certification-01-source-boolean')}</a> coexisted with <a href={cite('bridge-certification-02-source-boolean')}>source rights = {value('bridge-certification-02-source-boolean')}</a>. <a href={cite('bridge-fully-usable')}>Fully usable rows remained {word('bridge-fully-usable')}</a>.</></dd></div>
+      <div class="decision-final"><dt>Retained decision</dt><dd><strong>{'source-data-repair-required'}</strong><p>{'Blocked before returns. This is a data-engineering result, with no strategy-performance claim or rights grant.'}</p></dd></div>
+    </dl>
+    <p class="pilot-boundary">{'The observed-row counts overlap and must not be added. Zero invalid observed bridges does not prove a dense panel. The earlier exception artifact is unavailable; the later certification supports its own scope.'}</p>
+  </section>
+  <div class="article-layout pilot-layout">
+    <article class="article-body">
+      <section id="investigation" aria-labelledby="investigation-title">
+        <p class="eyebrow">The investigation</p>
+        <h2 id="investigation-title">{'From a broken adjustment to an honest stop'}</h2>
+
+        <div id="figures">
+        <>
+          <section class="pilot-chapter" id="repair"><h2><span>01</span> Repair the cause with explicit inputs.</h2>
+            <p>A share split increases the number of shares while reducing the price of each share proportionately. Comparing the old quote with the new quote without adjusting their share basis can mistake that mechanical change for an investment loss. Historical price systems therefore apply adjustment factors to make prices comparable.</p>
+            <p>Ardor’s failure began when small changes in low-priced quotes were mistaken for unconfirmed splits. Each false event applied another factor to earlier prices. Chaining those unjustified adjustments made some legitimate positive prices so small that the stored decimal precision rounded them to zero. The repair constrained unconfirmed low-price split inference while preserving the separate path for confirmed corporate actions.</p>
+            <div class="evidence-note" data-bridge-static-example><p><strong>Synthetic teaching example — not market evidence.</strong> Reuse the <a href="/methods/bridge/">reviewed explicit-input example</a>: a fictional raw close of ₹0.04 and supplied split factor 100 give an unrounded adjusted close of ₹0.0004. With the supplied total-return factor 1.02, the corresponding price is ₹0.000408. The total-return-adjusted price divided by the split-adjusted price gives a bridge of 1.02.</p><p>If both prices are rounded to two decimal places, each becomes ₹0.00 and that division is undefined. Two stored zeros cannot tell us the lost positive prices. Rebuilding requires the supplied unrounded raw observation and factors; the example cannot infer a missing corporate action or recover private rows. The historical storage and repair are separate from these invented arithmetic inputs.</p></div>
+            <p>The later certification records <a href={cite('bridge-invalid-01')}>{value('bridge-invalid-01',0)} invalid observed bridges before repair</a> and <a href={cite('bridge-invalid-02')}>{word('bridge-invalid-02')} after</a>. These are deterministic counts, with no return estimate. The <a href="#bridge-instrument">fictional mechanism example</a> explains the repair without reconstructing private observations.</p>
+            <EvidenceFigure figure={figure('bridge-invalid')} compact />
+          </section>
+          <section class="pilot-chapter" id="knowledge"><h2><span>02</span> A later repair cannot import later knowledge.</h2>
+            <p>The knowledge cutoff limits which observations the repair was allowed to use. The repair vintage identifies a separate later stored version. Keeping these clocks distinct lets a numerical correction use permitted earlier knowledge without pretending later information was available earlier or overwriting the original version.</p>
+            <p>The requested panel ran <a href={cite('bridge-window')}>{value('bridge-window')}</a>. Observations had to be known by <a href={cite('bridge-cutoff')}>{date('bridge-cutoff')}</a>; the separate repair vintage was <a href={cite('bridge-vintage')}>{date('bridge-vintage')}</a>. The original clean vintage stayed intact.</p>
+            <p><a href={cite('bridge-linkage-01')}>{value('bridge-linkage-01',0)} observed rows</a>, finite-positive bridges and exact raw-linked rows describe overlapping dimensions of the same panel. They must not be summed. <a href={cite('bridge-missing-session')}>Missing exact symbol-session observations</a> and flagged action boundaries remained; a nearby or forward-filled mark cannot substitute.</p>
+            <EvidenceFigure figure={figure('bridge-linkage')} compact />
+          </section>
+          <section class="pilot-chapter" id="permission"><h2><span>03</span> Certify rights independently.</h2>
+            <p>Exact lineage establishes which observation was used; it grants no automation, retention or derived-use permission. The archived governance registry mapped linked rows to <a href={cite('bridge-rights-unusable-all')}>UNUSABLE source classes</a>. <a href={cite('bridge-fully-usable')}>{word('bridge-fully-usable')[0].toUpperCase()+word('bridge-fully-usable').slice(1)} rows were fully usable</a> under both gates.</p>
+            <p><strong>Technical = true; source rights = false.</strong> The archived decision remained <strong>source-data-repair-required</strong>, and no return-bearing successor prompt was emitted. This historical governance decision is separate from present-day policy or permission.</p>
+            <EvidenceFigure figure={figure('bridge-certification')} compact />
+          </section>
+        </>
+        </div>
+      </section>
+      <section class="pilot-limits" id="pilot-limits"><h2>What this evidence cannot supply</h2><p>{'Zero invalid observed bridges does not establish a fully dense panel. Missing exact marks can invalidate a fold. The earlier row-level exception receipt is missing; the later complete certification does not reconstruct it. Restricted observations, identifiers and rights packets remain excluded.'}</p><p>These are <code>archived_result</code> displays and report transcriptions where labelled. Rebuilding historical results requires excluded private inputs. Local derivatives and captures do not establish public clearance.</p></section>
+      <section id="original-verdicts"><h2>The original record</h2>{records.map(record=><div class="evidence-note"><p><strong>{record.title}</strong></p><p>Original verdict: <strong>{record.original_verdict??'Unavailable'}</strong></p><p>{record.controlling_gates??'Controlling gates unavailable in the reviewed record.'}</p><a href={recordUrl(record.id)}>Inspect this catalog record ↗</a></div>)}</section>
+      <section id="narrative" class="case-narrative"><h2>Complete reviewed narrative</h2><details open data-pilot-disclosure><summary>Read the complete narrative</summary><div set:html={html}/></details></section>
+      <section id="related-records"><h2>Related records and reproduction</h2><ul>{records.map(record=><li><a href={recordUrl(record.id)}>{record.title}</a> · <code>{record.reproduction_level}</code>{record.relations.length>0 && <ul>{record.relations.map(rel=><li><a href={recordUrl(rel.record_id)}>{rel.type.replaceAll('_',' ')}: {rel.record_id}</a></li>)}</ul>}</li>)}</ul><p>Reviewed aggregate display is reproducible from the permitted files. Historical strategy return replication requires excluded private inputs. Synthetic examples demonstrate software behavior, not market evidence.</p><EvidenceLinks title="Related synthetic methods" entries={evidenceCrosswalk.incoming('case',caseId,'method-case').map(edge=>edge.from)} note="Authored teaching associations explain a mechanism; they do not reproduce historical results."/><p><a href="/methods/">Five synthetic method examples</a> · <a href="/evidence/">Evidence policy</a></p></section>
+      <section class="claims-section" id="claims"><h2>Claim evidence ledger</h2><p>All {entries.length} entries, including claims outside the figures. Units, caveats, source pointers and reproduction labels remain attached. A direct claim link opens its reference context.</p><details open data-pilot-disclosure><summary>Inspect all {entries.length} claim entries</summary>{entries.map(claim=><ClaimEntry claim={claim}/>)}</details></section>
+    </article>
+    <aside class="case-sidebar" aria-label="Case reading guide"><p class="eyebrow">In this investigation</p><nav aria-label="Case contents"><a href="#decision-brief">Decision brief</a>{chapters.map(([id,label])=><a href={`#${id}`}>{label}</a>)}<a href="#pilot-limits">Limits and missing evidence</a><a href="#bridge-experience">Optional mechanism and source</a><a href="#original-verdicts">Original record & gates</a><a href="#narrative">Complete reviewed narrative</a><a href="#claims">{entries.length} claim entries</a><a href="#related-records">Records & reproduction</a></nav><a href="/research/">← All research cases</a></aside>
+  </div>
+  <div class="pilot-mechanism"><p class="eyebrow">Optional depth · synthetic teaching and current source</p><p>The full 20-preset instrument follows the recorded investigation. Every teaching state leaves the historical disposition fixed. <a href="#decision-brief">Return to the decision brief</a>.</p><BridgePipeline/></div>
+</div>
+<script>import '../scripts/pilot-disclosures';</script>

@@ -1,0 +1,93 @@
+.evidence-links
+{
+  margin-block: 12px;
+  border-top: 1px solid var(--rule);
+  padding-top: 10px;
+}
+.evidence-links summary
+{
+  cursor: pointer;
+  font-size: 14px;
+  padding-block: 5px;
+}
+.evidence-links ul
+{
+  padding-left: 22px;
+  font-size: 14px;
+}
+.evidence-links li, .evidence-links a, .source-entry code
+{
+  overflow-wrap: anywhere;
+}
+.source-entry
+{
+  overflow-wrap: anywhere;
+}
+.evidence-links p
+{
+  margin-block: 10px;
+}
+.evidence-locate
+{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--rule);
+  margin-bottom: 28px;
+  max-width: var(--measure);
+}
+.evidence-locate label
+{
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  min-width: 0;
+}
+.evidence-locate input, .evidence-locate select
+{
+  min-width: 0;
+  width: 100%;
+}
+.evidence-locate-actions
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  grid-column: 1 / -1;
+}
+.evidence-locate [role="status"]
+{
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.evidence-groups
+{
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 0 0 35px;
+}
+.evidence-context
+{
+  margin-block: 14px;
+}
+@media (max-width: 720px)
+{
+  .evidence-locate
+  {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}
+@media print
+{
+  .evidence-locate
+  {
+    display: none !important;
+  }
+  .evidence-links
+  {
+    break-inside: auto;
+  }
+}

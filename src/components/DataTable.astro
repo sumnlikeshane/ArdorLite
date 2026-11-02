@@ -1,0 +1,15 @@
+---
+import { formatValue, claimUrl } from '../lib/evidence';
+import type { EvidenceTable, EvidenceValue } from '../lib/evidence/schemas';
+interface Props { table: EvidenceTable; columns: {key: string; label: string; unit: string}[]; }
+const {table,columns} = Astro.props;
+function cell(row: EvidenceTable['rows'][number],key: string) { return Object.hasOwn(row,key) ? formatValue((row as unknown as Record<string,EvidenceValue>)[key]) : 'Unavailable'; }
+function citation(row: EvidenceTable['rows'][number],key: string) { return key==='value' ? row.claim_id : row.additional_claim_ids?.[key]; }
+---
+<div class="table-scroll" role="region" aria-label={`${table.title}: recorded values`} tabindex="0">
+  <table data-evidence-table={table.id}>
+    <caption>{table.title} · recorded values</caption>
+    <thead><tr><th scope="col">Recorded row</th>{columns.filter(c=>c.key!=='label').map(c=><th scope="col">{c.label}{c.unit && <span class="small" style="display:block">{c.unit}</span>}</th>)}</tr></thead>
+    <tbody>{table.rows.map(row=><tr data-row-label={row.label}><th scope="row">{row.label}</th>{columns.filter(c=>c.key!=='label').map(c=><td class="numeric" data-column={c.key}>{cell(row,c.key)}{citation(row,c.key) && <a class="claim-citation" style="display:block" href={claimUrl(citation(row,c.key)!,'case')} aria-label={`Evidence for ${row.label}: ${c.label}`}>Claim ↗</a>}</td>)}</tr>)}</tbody>
+  </table>
+</div>

@@ -1,0 +1,8 @@
+import { isPublicPublication, isPublicSource } from './scope';
+import { loadPrivateSupplement } from './supplement-private';
+// Public source contains no substitute rates, dates or reconstructed conjunctions.
+const loaded = isPublicSource ? {trendSupplementHash: null, trendFoldRows: []} : loadPrivateSupplement();
+export const {trendSupplementHash, trendFoldRows} = loaded;
+const trendSupplement = 'trendSupplement' in loaded ? loaded.trendSupplement : null;
+export const ratePercent = (raw:string,precision=4) => new Intl.NumberFormat('en-IN',{minimumFractionDigits:precision,maximumFractionDigits:precision}).format(Number(raw)*100)+'%';
+export const variantContext = isPublicPublication ? 'S0 is the unfiltered slow-trend baseline. V5 is the diversification-aware quality portfolio. V0 is an already-observed reference; the unfiltered S0 and EMA timing alternatives remain the required controls. Selected metrics do not establish incremental information.' : `S0 is the unfiltered slow-trend baseline. V0 adds the quality threshold learned from earlier training events and is an already-observed reference, with at most ${trendSupplement!.definitions.V0.maxPositions} positions and ${ratePercent(trendSupplement!.definitions.V0.maxPositionFraction,0)} per position. V5 keeps V0's eligibility and ranking, but allows up to ${trendSupplement!.definitions.V5.maxPositions} positions and caps each at 1/${trendSupplement!.definitions.V5.maxPositions} of capital (about ${ratePercent(trendSupplement!.definitions.V5.maxPositionFraction,2)}). Both changes were tested together to examine portfolio breadth; they do not isolate the effect of either change alone.`;

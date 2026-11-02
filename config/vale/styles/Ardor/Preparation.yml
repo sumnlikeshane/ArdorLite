@@ -1,0 +1,10 @@
+extends: existence
+message: "Preparation instruction '%s' needs an authored reader-facing explanation; retain the original instruction in technical reference."
+level: warning
+scope: text
+ignorecase: true
+tokens:
+  - 'preserve complete flag'
+  - 'select recorded fold Sharpe'
+  - 'do not count partial fold'
+  - 'column=net_cagr'

@@ -1,0 +1,51 @@
+{
+  "id": "momentum-alpha",
+  "title": "Momentum v2 return and residual alpha",
+  "case_id": "momentum-v2",
+  "status": "tested_killed",
+  "units": "annual percent",
+  "source_paths": [
+    "docs/strategies/REPORT_momentum_xs_v2.md"
+  ],
+  "source_artifact_ids": [
+    "src-bc684a860e5e"
+  ],
+  "claim_ids": [
+    "momentum-alpha-01",
+    "momentum-alpha-02",
+    "momentum-alpha-02-reported-hac-t"
+  ],
+  "extraction_rule": "Transcribe raw book annual return and three-factor residual alpha as separately labelled quantities; omit disputed benchmark difference.",
+  "study_context": {
+    "window": "2015\u20132026 full development window (exact endpoints unavailable in reconstructed report)",
+    "sample": 137,
+    "universe": "liquid cash \u2229 PIT F&O pool; long top quintile and short bottom quintile",
+    "instrument": "dividend total-return cash long and SSF settle short",
+    "benchmark": "Phase 0 monthly L/S mean; Phase 1 daily book versus MKT_ew,HML_proxy,ILLIQ_amihud; WML added diagnostically",
+    "costs": "full historically dated cash/futures statutory costs; impact sweep 0.5\u00d7,1\u00d7,2\u00d7",
+    "inference": "Newey\u2013West HAC, reported lags 21",
+    "source_verdict": "Phase 0 PASS \u2192 Phase 1 FAIL"
+  },
+  "caveats": [
+    "Report reconstructed 2026-07-04 from prior commits and session memory; complete historical return/regression artifacts are not bundled.",
+    "Monthly spread significance and daily residual-alpha regression answer different questions.",
+    "Reported book-versus-WML difference has an arithmetic inconsistency and is omitted.",
+    "No invented confidence intervals or unseen OOS performance."
+  ],
+  "rows": [
+    {
+      "label": "Raw book diagnostic",
+      "value": 9.11,
+      "claim_id": "momentum-alpha-01"
+    },
+    {
+      "label": "Three-factor residual alpha",
+      "value": -6.1,
+      "claim_id": "momentum-alpha-02",
+      "reported_hac_t": -0.98,
+      "additional_claim_ids": {
+        "reported_hac_t": "momentum-alpha-02-reported-hac-t"
+      }
+    }
+  ]
+}

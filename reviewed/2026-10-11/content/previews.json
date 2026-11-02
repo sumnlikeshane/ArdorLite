@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "observation_date": "2026-10-11",
+  "records": [
+    {
+      "id": "longterm",
+      "title": "Long-term company research",
+      "status": "research_infrastructure",
+      "maturity": "Implemented offline framework; live discovery blocked",
+      "record_ids": [
+        "longterm_multibagger_research_lane"
+      ],
+      "summary": "Deterministic contracts, policy and governed research packets are implemented. A complete live input and source-rights set is absent. No completed multibagger shortlist or historical-alpha claim is included.",
+      "what_exists": [
+        "Offline policy and strict pinned-input contracts",
+        "Explicit missingness and uncertainty states"
+      ],
+      "what_remains": [
+        "Active complete source receipts",
+        "Fresh prices and complete PIT fundamentals, shares, identity and governance"
+      ],
+      "reproduction_level": "report_transcription",
+      "evidence_reference": "evidence/summaries/catalog-reconciliation.md",
+      "source_ids": [
+        "src-110c7569aa45"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio research",
+      "status": "design_only",
+      "maturity": "Dated screening/underwriting and limited in-sample risk comparison",
+      "record_ids": [
+        "portfolio_market_scan_2026_08_15",
+        "portfolio_reunderwrite_2026_08_14",
+        "portfolio_adversarial_review_2026_09_02"
+      ],
+      "summary": "Dated numeric screening distinguishes population coverage from filing-level underwriting. Adversarial reviews separate evidence, concentration risk and valuation assumptions. Historical diversification comparisons use constant daily target weights with no costs or taxes; bear/base/bull outputs are forecasts.",
+      "what_exists": [
+        "Dated screening-depth audit",
+        "Adversarial underwriting and scenario method"
+      ],
+      "what_remains": [
+        "Current decision inputs and execution assumptions would require a separately scoped refresh"
+      ],
+      "excluded": [
+        "Personal portfolio amounts",
+        "Holdings, weights and trade plans",
+        "Individual company decision packets"
+      ],
+      "reproduction_level": "report_transcription",
+      "evidence_reference": "evidence/summaries/catalog-reconciliation.md",
+      "source_ids": [
+        "src-83084f0bb17e",
+        "src-f1897a51c3dd"
+      ]
+    },
+    {
+      "id": "hybrid-ai",
+      "title": "Hybrid AI design",
+      "status": "design_only",
+      "maturity": "Feasibility and literature review dated 2026-10-10",
+      "record_ids": [
+        "hybrid_ai_design_2026_10_10"
+      ],
+      "summary": "The review proposes bounded disclosure-fact extraction beside deterministic calculations and risk enforcement. Its economic contribution would need a frozen prospective comparison and cheap text/numerical baselines. No new autonomous trader, predictive model or return test was implemented.",
+      "what_exists": [
+        "Local evidence review",
+        "Proposed extraction/admission architecture and falsifiers"
+      ],
+      "what_remains": [
+        "Adjudicated extraction checks",
+        "Prospective all-candidate evaluation",
+        "Model and information chronology receipts"
+      ],
+      "reproduction_level": "report_transcription",
+      "evidence_reference": "evidence/summaries/catalog-reconciliation.md",
+      "source_ids": [
+        "src-b38e42c4b964"
+      ]
+    },
+    {
+      "id": "solana",
+      "title": "Solana launchpad research",
+      "status": "blocked_before_returns",
+      "maturity": "Certification rights-blocked; non-certifying exploratory manifest frozen",
+      "record_ids": [
+        "solana_certification_census",
+        "solana_exploratory_manifest"
+      ],
+      "summary": "A dedicated return-blind census and capped exploratory manifest preserve separate certification and non-certifying scopes. The acquisition guard, dataset acquisition, simulator and return tests are not complete. There is no Solana performance graphic or strategy result in this handoff.",
+      "what_exists": [
+        "Programme/gate definitions",
+        "Dedicated return-blind registration",
+        "Frozen capped exploratory manifest"
+      ],
+      "what_remains": [
+        "Read-only acquisition guard",
+        "Authorized source/data prerequisites",
+        "Dataset and executable simulation",
+        "Registered return tests"
+      ],
+      "reproduction_level": "report_transcription",
+      "evidence_reference": "evidence/summaries/catalog-reconciliation.md",
+      "source_ids": [
+        "src-81e65d638f28",
+        "src-cb46b1da594c"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { cases, sources, sourceDirectoryReferences } from '../../lib/evidence';
+import { evidenceCrosswalk as crosswalk } from '../../lib/evidence/crosswalk';
+import SourceEntry from '../../components/SourceEntry.astro';
+import EvidenceLinks from '../../components/EvidenceLinks.astro';
+import EvidenceLocate from '../../components/EvidenceLocate.astro';
+---
+<SiteLayout title="Source index" description="Source identities, hashes and original-material dispositions for the reviewed Ardor Lite evidence snapshot." type="evidence">
+  <header class="page-heading"><span class="eyebrow">Evidence / Sources</span><h1>Provenance, kept visible.</h1><p class="lede">Source labels and SHA-256 hashes identify the reviewed inputs. Original files are excluded; this publication provides selected reviewed derivatives.</p></header>
+  <EvidenceLocate kind="source" />
+  <nav class="evidence-groups" aria-label="Source groups"><a href="#file-sources">201 file sources</a><a href="#directory-sources">17 directory labels</a>{cases.map(item => <a href={`#source-case-${item.id}`}>{item.title}</a>)}</nav>
+  <div class="prose"><p>A source-relative label records provenance. It is not a filesystem link or a public original-file download. Inclusion of a reviewed summary does not grant rights to its complete original.</p><p class="small">Source dates may be unavailable. A filename-derived date or version label does not establish the full study window or current-code parity.</p>
+  <section data-pagefind-ignore aria-labelledby="source-investigations"><h2 id="source-investigations">Browse by investigation</h2><p class="small">Groups use explicit claim, figure and primary-record references. A teaching example does not establish research support.</p>{cases.map(item => <div id={`source-case-${item.id}`}><EvidenceLinks title={item.title} entries={sources.filter(source => crosswalk.sourceContext(source.id).cases.some(context => context.id === item.id)).map(source => crosswalk.get('source', source.id))} /></div>)}</section>
+  <section id="file-sources" data-evidence-group aria-label="File sources">{sources.map(source => <SourceEntry source={source} />)}</section>
+  <section data-pagefind-ignore id="directory-sources" data-evidence-group aria-labelledby="directory-title"><h2 id="directory-title">Directory provenance labels</h2><p>These 17 labels are distinct from the 201 file identities. No file artifact, file hash or original download is supplied.</p>{sourceDirectoryReferences.map(source => <article id={source.id} class="source-entry" tabindex="-1" data-evidence-entry data-locate-id={source.id} data-locate-cases={crosswalk.sourceContext(source.id).cases.map(item => item.id).join(' ')}><h3>{source.id}</h3><p><code>{source.source_relative_path}</code></p><p class="small">{source.original_disposition}</p><EvidenceLinks title="Catalog source references" entries={crosswalk.sourceContext(source.id).directRecords} /></article>)}</section>
+  </div>
+</SiteLayout>

@@ -1,0 +1,76 @@
+{
+  "id": "bridge-certification",
+  "title": "Technical and source-rights certifications",
+  "case_id": "price-bridge",
+  "status": "blocked_before_returns",
+  "units": "certification flag (1=true, 0=false)",
+  "source_paths": [
+    "data/research/trend_following_price_bridge_certification_v1_1/before_after_validation_summary.json",
+    "data/research/trend_following_price_bridge_certification_v1_1/source_provenance_reconciliation.json"
+  ],
+  "source_artifact_ids": [
+    "src-3f6afd0415da",
+    "src-a34cf0eda79c"
+  ],
+  "claim_ids": [
+    "bridge-certification-01",
+    "bridge-certification-01-source-boolean",
+    "bridge-certification-02",
+    "bridge-certification-02-source-boolean"
+  ],
+  "extraction_rule": "Boolean flags are encoded explicitly 1=true,0=false solely for chart display; they are not performance scores. Preserve source boolean as additional value.",
+  "study_context": {
+    "window": "2015-01-01 through 2026-06-05; frozen knowledge cutoff 2026-06-09; repair vintage 2026-08-12",
+    "universe": "complete observed clean price panel, not a strategy sample",
+    "instrument": "cash price bridge between adjusted and exact frozen raw observations",
+    "benchmark": null,
+    "costs": null,
+    "execution": "data-only validation; exact-session gaps remain explicit and fold handling fail-closed",
+    "inference": "deterministic validity/linkage checks; no market-return inference",
+    "source_verdict": "source-data-repair-required"
+  },
+  "caveats": [
+    "Technical certification and source-rights certification are independent.",
+    "Source-rights status is the archived governance decision for these rows; no present-day legal assessment is made.",
+    "Exact raw linkage proves origin, not automation, retention or derived-use permission.",
+    "Invalid/absent marks remain fail-closed. Zero invalid observed bridges does not mean zero missing exact-session observations.",
+    "No strategy performance, Sharpe, CAGR or P&L was computed."
+  ],
+  "rows": [
+    {
+      "label": "Technical bridge certified",
+      "value": 1,
+      "claim_id": "bridge-certification-01",
+      "source_boolean": true,
+      "additional_claim_ids": {
+        "source_boolean": "bridge-certification-01-source-boolean"
+      }
+    },
+    {
+      "label": "Source rights certified",
+      "value": 0,
+      "claim_id": "bridge-certification-02",
+      "source_boolean": false,
+      "additional_claim_ids": {
+        "source_boolean": "bridge-certification-02-source-boolean"
+      }
+    }
+  ],
+  "chart_id": "bridge-certification",
+  "input_table": "evidence/tables/bridge-certification.json",
+  "input_sha256": "c61436eee80bb03e70de8636707d2c412eac7178f63e81b81cde9a67fecda4a1",
+  "display_rounding": "At most four decimals; integer counts unchanged",
+  "missing_values": "null stays unavailable; never plotted as zero",
+  "transformation": "One bar per recorded numeric value; no interpolation, resampling, inference or optimization",
+  "outputs": [
+    {
+      "path": "charts/generated/bridge-certification.svg",
+      "sha256": "c12aac36f243bee08a8e6a275bf04afe4c1390f51e24437b273f7a87eff8637f"
+    },
+    {
+      "path": "charts/generated/bridge-certification.png",
+      "sha256": "b84e1bcd98a413a0aeb4f75eb3a0ebdbe1c19959b0841d8d96311bb0e3605bfd"
+    }
+  ],
+  "accessible_table": "evidence/tables/bridge-certification.md"
+}

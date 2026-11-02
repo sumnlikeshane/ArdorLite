@@ -1,0 +1,123 @@
+---
+import { isPublicPublication, restrictedSourceNotice } from '../../lib/publication/scope';
+import ExperienceFrame from './ExperienceFrame.astro';
+import EvidenceContext from './EvidenceContext.astro';
+import SourcePanel from './SourcePanel.astro';
+import { sourceExcerpts } from '../../lib/experiences/registry';
+import { claimById, claimUrl, sourceUrl } from '../../lib/evidence/index';
+import { BRIDGE_OPERATIONS, BRIDGE_OPERATION_LABELS, BRIDGE_PRESETS, BRIDGE_PRESET_LABELS, DEFAULT_BRIDGE_STATE, bridgeNumber, deriveBridgeFrame } from '../../lib/experiences/models/bridge';
+import '../../styles/price-bridge.css';
+const frame = deriveBridgeFrame(DEFAULT_BRIDGE_STATE);
+const captured = sourceExcerpts.filter(excerpt => excerpt.id.startsWith('bridge-'));
+const initialSource = captured.find(excerpt => excerpt.id === frame.activeSourceSpans[0]?.excerptId)!;
+const initialPreview = isPublicPublication || !('text' in initialSource) ? '' : initialSource.text.trimEnd().split('\n').slice(0, 14).map((line, index) => `${initialSource.lineStart + index}  ${line}`).join('\n');
+const claim = (id: string) => { const entry = claimById.get(id); if (!entry) throw new Error(`Missing Bridge claim ${id}`); return entry; };
+const value = (id: string) => { const v = claim(id).value; return typeof v === 'number' ? v.toLocaleString('en-US') : String(v); };
+const values = [
+  ['raw-close', 'Explicit raw close', '100', 'INR'], ['split-factor', 'Supplied split factor', '1', 'ratio'], ['total-factor', 'Supplied total-return factor', '1.02', 'ratio'], ['ca-input', 'Corporate-action input', 'Available · no matching action record', 'input availability'],
+  ['observed-close', 'Observed close_adj', bridgeNumber(frame.fixture.close), 'INR'], ['observed-total', 'Observed close_tr_adj', bridgeNumber(frame.fixture.total), 'INR'],
+  ['ratio', 'Observed bridge', bridgeNumber(frame.ratio), 'ratio'], ['mapped-open', 'Mapped open', bridgeNumber(frame.mapped?.open ?? null), 'INR'], ['mapped-high', 'Mapped high', bridgeNumber(frame.mapped?.high ?? null), 'INR'], ['mapped-low', 'Mapped low', bridgeNumber(frame.mapped?.low ?? null), 'INR'], ['mapped-close', 'Mapped close', bridgeNumber(frame.mapped?.close ?? null), 'INR'],
+  ['stored-close', 'Stored observation · six decimals', frame.fixture.close!.toFixed(6), 'INR'], ['explicit-repair', 'Independent explicit reconstruction', '₹100 / ₹102; bridge 1.02', 'synthetic supplied inputs'], ['cliff', 'Unconfirmed cliff eligible / detected', 'true / false', 'boolean'],
+  ['cutoff', 'Knowledge cutoff', '2026-06-09', 'source knowledge date'], ['known-at', 'Input known at', frame.fixture.knownAt, 'date'], ['vintage', 'Separate repair vintage', '2026-08-12', 'storage identity'], ['source', 'Exact source / session', 'fictional-raw-a / present', 'fictional identity'],
+];
+const primaryKeys = ['observed-close', 'observed-total', 'ratio', 'explicit-repair'];
+---
+<section id="bridge-experience" class="bridge-experience" aria-labelledby="bridge-title" data-bridge data-publication-scope={isPublicPublication ? 'public' : 'local'}>
+  <header class="bridge-intro">
+    <p class="eyebrow">Price Bridge · a data engineering investigation</p>
+    <h2 id="bridge-title">A valid number is not a usable source.</h2>
+    <p>Before testing a strategy, the bridge between signal-adjusted and total-return prices had to be trustworthy. Follow the numerical repair, the exact origin of each observation, and the separate permission decision.</p>
+    <nav aria-label="Price Bridge experience"><a href="#bridge-instrument">Understand the mechanism</a><a href="#bridge-implementation">Inspect the implementation</a><a href="#bridge-historical">Read the fixed evidence</a></nav>
+  </header>
+
+  <EvidenceContext title="Fixed historical decision" description="The later panel passed its technical checks. Archived source-rights certification failed. Teaching inputs below cannot change either result.">
+    <div class="bridge-gate-pair" data-bridge-historical>
+      <p><strong>Technical checks</strong><span data-bridge-historical-technical>{value('bridge-certification-01-source-boolean')}</span><a href={claimUrl('bridge-certification-01-source-boolean')}>Archived technical flag</a></p>
+      <p><strong>Source-rights checks</strong><span data-bridge-historical-rights>{value('bridge-certification-02-source-boolean')}</span><a href={claimUrl('bridge-certification-02-source-boolean')}>Archived rights flag</a></p>
+      <p><strong>Fully usable</strong><span data-bridge-historical-usable>{value('bridge-fully-usable')}</span><a href={claimUrl('bridge-fully-usable')}>Rows certified by both</a></p>
+    </div>
+    <p><strong>source-data-repair-required</strong> · No return-bearing successor was launched from this certification.</p>
+  </EvidenceContext>
+
+  <ExperienceFrame id="bridge-instrument" title="Follow one fictional input." description="Synthetic teaching example — not market evidence. This bounded TypeScript adaptation does not execute the original Python. The default bridge is 102 / 100 = 1.02." executionMode="browser-adaptation" dataOrigin="synthetic">
+    <div class="bridge-controls" hidden data-bridge-controls>
+      <label for="bridge-preset">Fictional input preset<select id="bridge-preset" data-bridge-preset>{BRIDGE_PRESETS.map(preset => <option value={preset} selected={preset === DEFAULT_BRIDGE_STATE.preset}>{BRIDGE_PRESET_LABELS[preset]}</option>)}</select></label>
+      <label for="bridge-operation">Inspect operation<select id="bridge-operation" data-bridge-operation>{BRIDGE_OPERATIONS.map(operation => <option value={operation}>{BRIDGE_OPERATION_LABELS[operation]}</option>)}</select></label>
+      <div class="bridge-actions"><button type="button" data-bridge-previous>Previous operation</button><button type="button" data-bridge-next>Next operation</button><button type="button" data-bridge-reset>Reset example</button><button type="button" data-bridge-share>Copy example link</button></div>
+    </div>
+    <ol class="bridge-pipeline" aria-label="Teaching pipeline">{BRIDGE_OPERATIONS.map((operation, index) => <li data-bridge-node={operation} aria-current={index === 0 ? 'step' : undefined}><span>{index + 1}</span>{BRIDGE_OPERATION_LABELS[operation]}</li>)}</ol>
+    <h3 data-bridge-operation-label>{frame.operationLabel}</h3>
+    <p class="bridge-explanation" data-bridge-explanation>{frame.explanation}</p>
+    <div class="bridge-workbench"><div class="bridge-workbench-values">
+    <dl class="exp-state-ledger bridge-values" aria-label="Fictional input and derived values">{values.filter(([key]) => primaryKeys.includes(key!)).map(([key, name, number, unit]) => <div><dt>{name}</dt><dd><span data-bridge-value={key}>{number}</span><span class="exp-unit">{unit}</span></dd></div>)}</dl>
+    <div class="bridge-gate-pair bridge-teaching-gates" aria-label="Synthetic technical and permission outputs">
+      <p><strong>Technical</strong><span data-bridge-value="technical">true</span></p><p><strong>Separate rights receipt</strong><span data-bridge-value="rights">unknown</span></p><p><strong>Ready for use</strong><span data-bridge-value="ready">false</span></p>
+    </div>
+    <p data-bridge-value="reason">{frame.reason}</p>
+    <p class="bridge-scope">The receipt is a separate fictional object: no allowed fields, research-use grant or validity interval has been supplied. Unknown and denied rights both block use. There is no control that grants permission or changes archived rights.</p>
+    <details class="bridge-input-details"><summary>Inspect repair inputs, mapped OHLC, precision and provenance</summary><dl class="exp-state-ledger bridge-values" aria-label="Detailed fictional inputs and intermediate values">{values.filter(([key]) => !primaryKeys.includes(key!)).map(([key, name, number, unit]) => <div><dt>{name}</dt><dd><span data-bridge-value={key}>{number}</span><span class="exp-unit">{unit}</span></dd></div>)}</dl></details>
+    </div>
+    <aside class="bridge-local-source" aria-label="Source for this operation"><p><strong>Source for this operation</strong> · Original current-only capture; browser adaptation, not Python execution.</p><p data-bridge-source-label><code>{initialSource.path}</code> · {initialSource.symbol} · lines {initialSource.lineStart}–{initialSource.lineEnd}</p>{isPublicPublication ? <p data-public-source-omitted>{restrictedSourceNotice}</p><span data-bridge-source-preview></span> : <pre><code data-bridge-source-preview>{initialPreview}</code></pre>}<p class="bridge-scope">Compact excerpt preview · exact captures and additional active ranges remain in the full disclosures.</p><ul data-bridge-source-links><li><a href={`#${initialSource.id}`}>Exact source, all lines and provenance</a></li></ul></aside>
+    </div>
+    <p role="status" aria-live="polite" class="bridge-status" data-bridge-status></p>
+    <noscript><p>All six scenes, default values, preset outcomes, exact source and archived evidence remain readable below. Optional controls require JavaScript.</p></noscript>
+  </ExperienceFrame>
+
+  <ExperienceFrame id="bridge-observations" title="1. Before returns, establish a valid observation.">
+    <p>The signal-adjusted close is the denominator; the total-return-adjusted close is the numerator. Their ratio maps signal OHLC into the total-return path. Zero is not an inconvenient chart point: dividing by it leaves the bridge undefined.</p>
+    <p>The remediation recorded <a href={claimUrl('bridge-invalid-01')}>{value('bridge-invalid-01')} invalid observed bridges</a>, all zero adjusted closes after rounding. The separately reported tiny-positive-close signal-OHLC failures were a different category, not additional zero-bridge rows.</p>
+    <details><summary>Retained chronology</summary><ol><li>Entry Harvester v2.0.0 stopped on bridge integrity.</li><li>Remediation v1.0.0 investigated the cause without calculating strategy returns.</li><li>Certification v1.1.0 assessed a separate repaired vintage and retained independent technical and rights decisions.</li></ol></details>
+  </ExperienceFrame>
+  <ExperienceFrame id="bridge-repair" title="2. Repair the cause, using explicit inputs.">
+    <p>A ₹0.05 tick can look like a large price ratio. The repaired unconfirmed-cliff rule requires <strong>both adjacent closes ≥₹1</strong> before checking the ≥1.4 ratio threshold. Available corporate-action input with no matching action record is a legitimate no-record case. An unavailable CA input remains a missing input.</p>
+    <div class="bridge-comparison"><div><h3>Authored old-rule illustration</h3><p>Twenty repeated false 2× factors on ₹0.05 give <code>{bridgeNumber(frame.oldRuleClose)}</code> before storage, then <strong>{frame.oldRuleStored}</strong> at six decimals. This illustrates the mechanism; it is not an original execution or an actual historical row.</p></div><div><h3>Repaired guard and confirmed actions</h3><p>₹0.10 → ₹0.05 is ineligible for an unconfirmed cliff. A confirmed low-price 2× split, ₹1 → ₹0.50, follows its separate CA path. The repair does not ignore real low-price corporate actions.</p></div></div>
+    <p>Explicit teaching reconstruction uses <code>raw_close / split_factor</code>, then the supplied total-return factor. A stored zero cannot disclose the unrounded price or missing factors. No epsilon, guessed corporate action or inferred factor repairs it. The <a href="/methods/bridge/">independently authored reviewed synthetic method</a> documents the arithmetic and decimal-string contract; this browser adaptation uses bounded numeric fixtures rather than arbitrary decimal entry.</p>
+  </ExperienceFrame>
+  <ExperienceFrame id="bridge-vintage" title="3. Repaired later did not mean known earlier.">
+    <div class="bridge-date-pair"><div><strong>Source knowledge cutoff</strong><span>{value('bridge-cutoff')}</span><p>Raw observations and corporate actions had to be known by this frozen date.</p></div><div><strong>Separate repair vintage</strong><span>{value('bridge-vintage')}</span><p>New storage identity. The original vintage remains retained.</p></div></div>
+    <p>These are <a href={claimUrl('bridge-cutoff')}>archived dates</a>, displayed independently of the fictional input. A fictional trade on 5 June but ingested on 10 June is ineligible at a 9 June cutoff. Moving storage to August cannot import the later knowledge.</p>
+    <p>The separate historical vintage repaired <a href={claimUrl('bridge-repair-rows')}>{value('bridge-repair-rows')} rows</a>; that is a different scope from the full observed panel.</p>
+  </ExperienceFrame>
+  <ExperienceFrame id="bridge-linkage" title="4. A plausible price is not an identity check.">
+    <p>Exact retained raw IDs and a unique eligible source mapping establish origin. Matching a symbol and date alone cannot replace a mismatched retained ID. Ambiguous lineage is rejected. Every held-session and terminal mark also needs the exact required row; a nearby session, forward fill or guessed mark cannot substitute.</p>
+    <p>The historical panel still had <a href={claimUrl('bridge-missing-session')}>{value('bridge-missing-session')} missing exact symbol-session observations</a>. Zero invalid observed bridges did not make a dense panel or establish complete corporate-action certainty.</p>
+  </ExperienceFrame>
+  <ExperienceFrame id="bridge-qa" title="5. Check the transformation, not just its ratio.">
+    <p>Both closes must be finite and positive; so must their ratio. Signal OHLC must be positive, finite and ordered. For the default fictional O/H/L/C of 99/103/98/100 and ratio 1.02, mapped O/H/L/C is <strong>100.98 / 105.06 / 99.96 / 102</strong>. Mapped values must also remain finite-positive.</p>
+    <p>Corporate-action and dividend discontinuity flags remain distinct rejection reasons. The original same-row quarantine also checks source support. This teaching presentation keeps its numerical, exact-origin and permission outputs separate so one failure does not impersonate another.</p>
+    <details><summary>All bounded preset outcomes, available without JavaScript</summary><div class="bridge-preset-results"><table><caption>Fictional known-answer outcomes · no historical row counts</caption><thead><tr><th scope="col">Input</th><th scope="col">Observed ratio / technical</th><th scope="col">Boundary</th></tr></thead><tbody>{BRIDGE_PRESETS.map(preset => { const example = deriveBridgeFrame({ preset, operation: 'qa' }); return <tr><th scope="row">{BRIDGE_PRESET_LABELS[preset]}</th><td>{bridgeNumber(example.ratio)} / {String(example.technical)}</td><td>{example.reason}</td></tr>; })}</tbody></table></div></details>
+  </ExperienceFrame>
+  <ExperienceFrame id="bridge-rights" title="6. Keep the permission gate independent.">
+    <p>A datum and a permission receipt are different objects. Exact origin proves which observation was used; it cannot grant automation, retention or derived-use permission. In the current certification operation, technical blockers must all be zero, while rights separately require no unsupported-source taxonomy rows and an active source receipt. Both are required for readiness.</p>
+    <div id="bridge-historical" class="bridge-historical" data-bridge-historical>
+      <p class="exp-mode"><span>recorded display</span><span>reviewed historical · archived_result</span></p>
+      <h3>One panel, overlapping dimensions</h3>
+      <table><caption>Fixed certification evidence · these counts are not a stacked total</caption><thead><tr><th scope="col">Dimension</th><th scope="col">Archived value</th></tr></thead><tbody>
+        <tr><th scope="row">Observed rows</th><td><a href={claimUrl('bridge-linkage-01')}>{value('bridge-linkage-01')}</a></td></tr><tr><th scope="row">Finite-positive bridge rows</th><td><a href={claimUrl('bridge-linkage-02')}>{value('bridge-linkage-02')}</a></td></tr><tr><th scope="row">Exactly raw-linked rows</th><td><a href={claimUrl('bridge-linkage-03')}>{value('bridge-linkage-03')}</a></td></tr><tr><th scope="row">Rows mapped to archived UNUSABLE source classes</th><td><a href={claimUrl('bridge-rights-unusable-all')}>{value('bridge-rights-unusable-all')}</a></td></tr><tr><th scope="row">Fully usable under both gates</th><td><a href={claimUrl('bridge-fully-usable')}>{value('bridge-fully-usable')}</a></td></tr><tr><th scope="row">Missing exact symbol-session observations</th><td><a href={claimUrl('bridge-missing-session')}>{value('bridge-missing-session')}</a></td></tr>
+      </tbody></table>
+      <p><strong>Technical={value('bridge-certification-01-source-boolean')}; source-rights={value('bridge-certification-02-source-boolean')}.</strong> The archived rights status is the historical governance decision, not a present-day legal assessment. None of these values is calculated by the teaching model.</p>
+    </div>
+  </ExperienceFrame>
+  <ExperienceFrame id="bridge-decision" title="The correct output was to stop.">
+    <p>The low-price guard, explicit-input reconstruction, frozen cutoff, separate vintage, exact lineage and fail-closed checks made engineering progress inspectable. They did not establish a certified data source or authorize a new strategy continuation.</p>
+    <p><strong>Retained limitation:</strong> the earlier <code>row_level_exception_receipt.csv</code> is missing. The later complete certification seal supports its own scope; it cannot reconstruct that earlier row-level audit. No private exception rows, policy packets or market data are exposed here.</p>
+    <details><summary>Test and source boundaries</summary><p>Read-only inspection covered <code>test_price_pipeline_repair.py</code> penny-tick, confirmed low-price split and exact source-link fixtures; <code>test_repair_vintage</code> cutoff/vintage preservation; <code>test_audit</code> invalid bridge and exact marks; and <code>test_bridge_provenance</code> duplicate lineage and unusable rights. These original research tests were inspected, not run. Ardor Lite model tests check only the selected teaching behavior.</p><p>Current source captures are identified separately from historical commits and run seals. The source audit and source index remain repository documentation; source paths below are provenance labels, not filesystem links or download targets.</p></details>
+    <p><a href="/engineering/#observation">Inside Ardor: observation boundaries</a> · <a href="/engineering/#certification">Inside Ardor: certification contracts</a> · <a href="/research/cases/momentum-v2/">Momentum: a different gate can stop a strategy</a></p>
+    <p><a href={sourceUrl('src-a86a2dc65ed8')}>Final certification report provenance</a> · <a href={sourceUrl('src-3f6afd0415da')}>Validation summary provenance</a></p>
+  </ExperienceFrame>
+  <section id="bridge-implementation" class="bridge-implementation" aria-labelledby="bridge-source-title"><h3 id="bridge-source-title">Inspect the selected implementation.</h3><p data-bridge-source-summary>Current active operation: {frame.operationLabel}. Highlighted lines explain its source mechanism; the explicit reconstruction and old-rule illustration are separately authored teaching arithmetic.</p>{captured.map(excerpt => <SourcePanel excerpt={excerpt} />)}</section>
+</section>
+<script>
+  const bridge = document.querySelector<HTMLElement>('[data-bridge]');
+  if (bridge) void import('../../scripts/experiences/bridge').catch(() => {
+    // A reader can leave before the lazy import completes. Rejection must not
+    // escape; a failed enhancement keeps the complete static argument usable.
+    if (!bridge.isConnected) return;
+    const note = document.createElement('p');
+    note.className = 'small';
+    note.setAttribute('role','status');
+    note.dataset.bridgeLoadStatus = '';
+    note.textContent = 'Optional controls could not load. The complete static explanation and recorded evidence remain available.';
+    bridge.prepend(note);
+  });
+</script>

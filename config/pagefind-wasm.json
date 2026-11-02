@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "pagefindVersion": "1.5.2",
+  "canonicalProducer": "@pagefind/linux-x64@1.5.2",
+  "source": "Unmodified WASM gzip members statically extracted from the frozen-lock installed upstream native package; matched to actual clean Linux emission. No executable instructions, postings or indexes are rewritten.",
+  "upstream": "https://github.com/Pagefind/pagefind/tree/v1.5.2",
+  "licence": "MIT; exact upstream LICENSE and LICENSE-vscode-ripgrep retained in vendor/pagefind-1.5.2 and ordinary generated package notices. This grants no licence to Ardor materials.",
+  "assets": {
+    "wasm.en.pagefind": {
+      "path": "vendor/pagefind-1.5.2/wasm.en.pagefind",
+      "sha256": "bb16c9e6d3d214d4d05cccca51df7b487b86b3657318da767f6ca9e0a2e7259d",
+      "inflatedSha256": "7e092add3897f1c134d7f093ebae88a3358e671addd5e1a3d39dcebdee83b12a",
+      "allowedEmittedSha256": [
+        "6c8406154b5d460fc8b6cdbf2c99c008c43c465efdb1f9c15c192f5cf30dcd85",
+        "6dcd742398e59de09ba938f725e27ce7f6896979621c46bf409902ef05909da9",
+        "bb16c9e6d3d214d4d05cccca51df7b487b86b3657318da767f6ca9e0a2e7259d",
+        "e99e9a04b846b68e99dac617421945740e81b1843807c48bdb17adb521c7230f"
+      ]
+    },
+    "wasm.unknown.pagefind": {
+      "path": "vendor/pagefind-1.5.2/wasm.unknown.pagefind",
+      "sha256": "3a74cefceacd066e8d3bc8c52e7bc1c869544ca3d9031b44a9b7136356d5d7f4",
+      "inflatedSha256": "77e118a7fd29152134c0285a97d3048a07055172dbadeb4fc6f27c6a0d3f851c",
+      "allowedEmittedSha256": [
+        "2533da887ac06de36813d031310af0f737daadacc931775e342aa5a3857a4959",
+        "3a74cefceacd066e8d3bc8c52e7bc1c869544ca3d9031b44a9b7136356d5d7f4",
+        "cf93bf56ed009c839b5df7890ccf7a7fe678be9a20f7dc236f673c6f73796811",
+        "fdb104414d57b1805881631a68982cf1b5b5b58a45049113ffee21672dd5ab6c"
+      ]
+    }
+  },
+  "producerInspection": [
+    {
+      "package": "@pagefind/darwin-arm64",
+      "version": "1.5.2",
+      "binarySha256": "111c39d20165385df77736c80ddace6593d01d46d0758d541f5d3bafff0cddd2",
+      "emittedWasm": {
+        "wasm.en.pagefind": "6c8406154b5d460fc8b6cdbf2c99c008c43c465efdb1f9c15c192f5cf30dcd85",
+        "wasm.unknown.pagefind": "2533da887ac06de36813d031310af0f737daadacc931775e342aa5a3857a4959"
+      },
+      "lockfileIntegrity": "sha512-MXpI+7HsAdPkvJ0gk9xj9g541BCqBZOBbdwj9g6lB5LCj6kSV6nqDSjzcAJwvOsfu0fjwvC8hQU+ecfhp+MpiQ=="
+    },
+    {
+      "package": "@pagefind/darwin-x64",
+      "version": "1.5.2",
+      "binarySha256": "a8ca52c505ccd223136d19193c56824191268b045036c25828322c7bba4008c3",
+      "emittedWasm": {
+        "wasm.en.pagefind": "6dcd742398e59de09ba938f725e27ce7f6896979621c46bf409902ef05909da9",
+        "wasm.unknown.pagefind": "fdb104414d57b1805881631a68982cf1b5b5b58a45049113ffee21672dd5ab6c"
+      },
+      "lockfileIntegrity": "sha512-IojxFWMEJe0RQ7PQ3KXQsPIImNsbpPYpoZ+QUDrL8fAl/O27IX+LVLs74/UzEZy5uA2LD8Nz1AiwKr72vrkZQw=="
+    },
+    {
+      "package": "@pagefind/linux-arm64",
+      "version": "1.5.2",
+      "binarySha256": "f317d9624087db37e875e1f606aaf09e935a9fce9cf5122b989d7579cc669a8c",
+      "emittedWasm": {
+        "wasm.en.pagefind": "e99e9a04b846b68e99dac617421945740e81b1843807c48bdb17adb521c7230f",
+        "wasm.unknown.pagefind": "cf93bf56ed009c839b5df7890ccf7a7fe678be9a20f7dc236f673c6f73796811"
+      },
+      "lockfileIntegrity": "sha512-Ovt9+K35sqzn8H3ZMXGwls4TD/wMJuvRtShHIsmUQREmaxjrDEX7gHckRCrwYJ4XE1H1p6HkLz3wukrAnsfXQw=="
+    },
+    {
+      "package": "@pagefind/linux-x64",
+      "version": "1.5.2",
+      "binarySha256": "70cb6d23d6508bb18e77fd5403e99d7ede0ae9d2eef1ab9f049411e0c12ec380",
+      "emittedWasm": {
+        "wasm.en.pagefind": "bb16c9e6d3d214d4d05cccca51df7b487b86b3657318da767f6ca9e0a2e7259d",
+        "wasm.unknown.pagefind": "3a74cefceacd066e8d3bc8c52e7bc1c869544ca3d9031b44a9b7136356d5d7f4"
+      },
+      "lockfileIntegrity": "sha512-V+tFqHKXhQKq/WqPBD67AFy7scn1/aZID00ws4fSDd+1daSi5UHR9VVlRrOUYKxn3VuFQYRD7lYXdZK1WED1YA=="
+    }
+  ]
+}

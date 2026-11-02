@@ -1,0 +1,14 @@
+extends: existence
+message: "Review '%s' in its local context: explain its operation and consequence before relying on it. This alert cannot determine whether it is already defined."
+level: suggestion
+scope: text
+ignorecase: true
+tokens:
+  - 'binding comparator'
+  - 'binding timing comparator'
+  - 'conjunctive'
+  - 'vintage'
+  - 'walk-forward'
+  - 'NAV'
+  - 'R²'
+  - 'OHLC'

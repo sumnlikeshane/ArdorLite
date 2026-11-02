@@ -1,0 +1,35 @@
+---
+import ResearchExperience from './ResearchExperience.astro';
+import { trendComposition } from '../../content/research/trend-quality';
+import { claimUrl } from '../../lib/evidence';
+import { claimText, foldMatrix } from '../../lib/research/presentation';
+import { studyById, familywiseThreshold } from '../../lib/publication';
+const composition = trendComposition;
+const study = studyById.get(composition.caseId)!;
+const cite = claimUrl, value = claimText;
+---
+<ResearchExperience composition={composition}>
+  <div slot="overview" class="research-outcome-overview" aria-labelledby="outcome-overview-title">
+      <p class="eyebrow">The recorded answer</p>
+      <h2 id="outcome-overview-title">The metrics improved. <br/>The family did not pass.</h2>
+      <p>Incremental quality information was not established.</p>
+      <dl class="research-key-evidence">
+        <div><dt>Selected V5 growth</dt><dd><a href={cite('trend-controls-03')}>{value('trend-controls-03',2,'%')}</a><small>CAGR · historical, net of costs<br/>{value('trend-controls-03-market-exposure',2,'%')} average exposure</small></dd></div>
+        <div><dt>Familywise selection</dt><dd><a href={cite('trend-selection-05')}>{value('trend-selection-05',3)}</a><small>p-value · maximum {familywiseThreshold} required</small></dd></div>
+      </dl>
+      <div class="opening-folds" aria-label="Recorded V5 fold outcomes">{foldMatrix.map(row=><a href={row.href} class:list={[row.complete?row.outcome.toLowerCase():'partial']}><span>{row.label.replace('_partial','')}</span><strong>{row.complete?row.outcome:'Partial'}</strong></a>)}</div>
+      <p class="small"><a href={cite('trend-v5-complete-passes')}>{value('trend-v5-complete-passes',0)} of {value('trend-complete-folds',0)} complete folds passed</a>; {value('trend-complete-required',0)} required. The partial fold is excluded.</p>
+      <p class="research-opening-decision"><strong>kill-quality-family</strong><a href="#decision-brief">Why this decision follows →</a></p>
+    </div>
+  <div slot="introduction"><section id="investigation" class="research-investigation-intro" aria-labelledby="investigation-title"><p class="eyebrow">The investigation</p><h2 id="investigation-title">From a lagged signal to a rejected family</h2><p>{study.researchObject} {study.question}</p></section></div>
+  <div slot="conclusion"><section id="decision-brief" class="decision-brief research-decision" aria-labelledby="decision-title">
+        <p class="eyebrow">Decision brief</p><h2 id="decision-title">The selected metrics did not survive the family gates.</h2>
+        <dl class="decision-points">
+          <div><dt>What was established</dt><dd><a href={cite('trend-controls-03')}>V5 recorded {value('trend-controls-03',2,'%')} CAGR</a> and <a href={cite('trend-controls-03-sharpe')}>{value('trend-controls-03-sharpe')} Sharpe</a> on reused development history. These are selected historical metrics.</dd></div>
+          <div><dt>Why it stopped</dt><dd>Incremental quality information was not established. <a href={cite('trend-selection-05')}>Familywise p ≈ {value('trend-selection-05',3)}</a> failed; <a href={cite('trend-v5-complete-passes')}>two of four complete folds passed</a>, below <a href={cite('trend-complete-required')}>three required</a>. Concentration also failed.</dd></div>
+          <div class="decision-final"><dt>Retained decision</dt><dd><strong>kill-quality-family</strong><p>Reject this registered quality family; this does not reject slow-trend investing in general. No priority-selected variant remained.</p></dd></div>
+        </dl>
+        <p class="pilot-boundary">Four complete folds and the partial fold remain separate. Daily NAV/returns were not persisted; no return path can be reconstructed. TSS current-code parity with its historical seal is unresolved.</p>
+      </section>
+      <section class="pilot-limits research-limits" id="pilot-limits"><p class="eyebrow">The boundary of the conclusion</p><h2>What this evidence cannot supply</h2><p>The history was reused and development-only. The TSS diagnostic seal points to an engine whose bytes later changed; current-code parity is not promised. Exact-session gaps and fail-closed rules remain. Daily NAV/returns were not persisted: no equity, underwater or rolling-Sharpe path is available.</p><p>These are <code>archived_result</code> displays and report transcriptions where labelled. Rebuilding historical results requires excluded private inputs. Local derivatives and captures do not establish public clearance.</p></section></div>
+</ResearchExperience>

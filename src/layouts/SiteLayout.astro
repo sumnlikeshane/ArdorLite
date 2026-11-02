@@ -1,0 +1,110 @@
+---
+import '../styles/fonts.css';
+import interFont from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import serifFont from '@fontsource/source-serif-4/files/source-serif-4-latin-400-normal.woff2?url';
+import serifItalic from '@fontsource/source-serif-4/files/source-serif-4-latin-400-italic.woff2?url';
+import '../styles/global.css';
+import '../styles/experiences.css';
+import '../styles/brand.css';
+import '../styles/header.css';
+import '../styles/controls.css';
+import {pageSearchContext} from '../lib/search/documents';
+import { loadEntries } from '../lib/publication/entries';
+import release from '../../config/release.json';
+interface Props { title: string; description: string; type?: string; status?: string; reproduction?: string; wide?: boolean; }
+const { title, description, type = 'publication', status, reproduction, wide = false } = Astro.props;
+const path = Astro.url.pathname;
+const publicEdition = release.mode === 'public';
+const canonical = publicEdition ? new URL(path === '/404/' ? '/404.html' : path, release.publicOrigin!).href : null;
+const searchContext = pageSearchContext(path,type,description,reproduction);
+const hasWriting = loadEntries().some(entry => entry.status === 'published');
+searchContext.meta.title = title;
+const nav = [{href:'/research/',label:'Research'},{href:'/evidence/',label:'Evidence'},{href:'/methods/',label:'Methods'},{href:'/engineering/',label:'Inside Ardor'},{href:'/about/',label:'About'},{href:'/search/',label:'Search'}];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href={interFont} as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href={serifFont} as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href={serifItalic} as="font" type="font/woff2" crossorigin="anonymous" />
+    <title>{title === 'Ardor Lite' ? 'Ardor Lite — Systematic research in Indian equities' : `${title} · Ardor Lite`}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={publicEdition && path !== '/404/' && path !== '/404.html' ? 'index, follow' : 'noindex, nofollow'} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    {canonical && <meta property="og:url" content={canonical} />}
+    {status?.split(', ').map(value=><meta data-pagefind-filter="status[content]" content={value} />)}
+    {Object.entries(searchContext.filters).flatMap(([key,values])=>values.map(value=><meta data-pagefind-filter={`${key}[content]`} content={value} />))}
+    {Object.entries(searchContext.meta).map(([key,value])=><meta data-pagefind-meta={`${key}[content]`} content={value} />)}
+    <meta name="theme-color" content="#f8f7f3" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type === 'case' ? 'article' : 'website'} />
+    <meta property="og:image" content={publicEdition ? new URL('/brand/social/og-light.png', release.publicOrigin!).href : '/brand/social/og-light.png'} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ardor Lite — Quantitative Research Showcase" />
+    <link rel="icon" href="/brand/favicons/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/brand/app-icons/apple-touch-icon.png" sizes="180x180" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-pagefind-ignore>
+      <div class="shell header-inner">
+        <a class="wordmark brand-link" href="/" aria-label="Ardor Lite home"><img class="brand-logo" src="/brand/logos/ardor-lite-horizontal-compact-on-light.svg" alt="" width="698" height="188" /></a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav" hidden><span data-menu-label>Menu</span><span class="menu-glyph" aria-hidden="true"></span></button>
+        <nav id="main-nav" aria-label="Main navigation">
+          {nav.map(item => <a href={item.href} class:list={{'nav-search': item.label === 'Search'}} aria-current={path.startsWith(item.href) ? 'page' : undefined}>{item.label === 'Search' && <img src="/images/icons/search.svg" alt="" width="16" height="16" />}{item.label}</a>)}
+        </nav>
+      </div>
+      <script is:inline>
+        (() => {
+          const header = document.querySelector('.site-header');
+          const button = header?.querySelector('.menu-toggle');
+          const nav = header?.querySelector('#main-nav');
+          const label = button?.querySelector('[data-menu-label]');
+          if (!header || !button || !nav || !label) return;
+          const setOpen = open => {
+            button.setAttribute('aria-expanded', String(open));
+            button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            label.textContent = open ? 'Close' : 'Menu';
+            nav.classList.toggle('is-open', open);
+          };
+          button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
+          document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') { setOpen(false); button.focus(); }
+          });
+          document.addEventListener('click', event => { if (!header.contains(event.target)) setOpen(false); });
+          document.addEventListener('focusin', event => { if (!header.contains(event.target)) setOpen(false); });
+          nav.addEventListener('click', event => { if (event.target.closest('a')) setOpen(false); });
+          const desktop = matchMedia('(min-width: 961px)');
+          desktop.addEventListener('change', () => setOpen(false));
+          document.documentElement.classList.add('header-enhanced');
+          button.hidden = false;
+          // Match actual wrapping/text size, including zoom, without a scroll listener.
+          const size = () => document.documentElement.style.setProperty('--sticky-header-height',
+            getComputedStyle(header).position === 'sticky' ? `${header.getBoundingClientRect().height}px` : '0px');
+          if ('ResizeObserver' in window) new ResizeObserver(size).observe(header);
+          addEventListener('resize', size, {passive: true});
+          size();
+        })();
+      </script>
+    </header>
+    <main id="main" class:list={['shell', { 'wide-content': wide }]} data-pagefind-body={type !== 'search' ? true : undefined} data-pagefind-weight={type==='case'?5:type==='record'?0.5:path==='/publication/'?4:1}>
+      {path.startsWith('/research/') && <nav class="collection-navigation" aria-label="Research sections" data-pagefind-ignore><a href="/research/" aria-current={path==='/research/'?'page':undefined}>Investigations</a><a href="/research/catalog/" aria-current={path==='/research/catalog/'?'page':undefined}>Record catalog</a><a href="/research/previews/" aria-current={path==='/research/previews/'?'page':undefined}>Other directions</a></nav>}
+      {path.startsWith('/evidence/') && <nav class="collection-navigation" aria-label="Evidence sections" data-pagefind-ignore><a href="/evidence/" aria-current={path==='/evidence/'?'page':undefined}>Policy & reproduction</a><a href="/evidence/claims/" aria-current={path==='/evidence/claims/'?'page':undefined}>Claims</a><a href="/evidence/sources/" aria-current={path==='/evidence/sources/'?'page':undefined}>Sources</a></nav>}
+      <slot />
+    </main>
+    <footer class="site-footer" data-pagefind-ignore>
+      <div class="shell footer-grid">
+        <div><a class="wordmark brand-link" href="/" aria-label="Ardor Lite home"><img class="brand-logo" src="/brand/logos/ardor-lite-horizontal-compact-on-light.svg" alt="" width="698" height="188" loading="lazy" /></a><p>Research is the work.<br />The decision is the result.</p></div>
+        <div><span class="eyebrow">The publication</span><a href="/research/catalog/">Research catalog</a><a href="/evidence/">Evidence & reproduction</a><a href="/evidence/claims/">Claim registry</a><a href="/evidence/sources/">Source index</a></div>
+        <div><span class="eyebrow">The record</span>{hasWriting && <a href="/writing/">Research notes & decisions</a>}<a href="/publication/">Rights & attribution</a><a href="/release/">Evidence provenance</a><p class="small">No certified or live strategy.</p></div>
+      </div>
+      <div class="shell footer-bottom"><span>Ardor research · Reserved rights</span><span>Systematic research in Indian equities</span></div>
+    </footer>
+
+  </body>
+</html>

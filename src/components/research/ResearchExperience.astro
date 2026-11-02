@@ -1,0 +1,35 @@
+---
+import ResearchOpening from './ResearchOpening.astro';
+import ResearchChapter from './ResearchChapter.astro';
+import ResearchNavigation from './ResearchNavigation.astro';
+import ResearchReference from './ResearchReference.astro';
+import RecordedComparison from './RecordedComparison.astro';
+import GateMatrix from './GateMatrix.astro';
+import EvidenceFigure from '../EvidenceFigure.astro';
+import { figureById } from '../../lib/evidence';
+import { readingFigure, type ResearchComposition } from '../../lib/research/presentation';
+import '../../styles/case-pilot.css';
+import '../../styles/research-presentation.css';
+interface Props { composition: ResearchComposition; }
+const {composition} = Astro.props;
+---
+<div class="case-pilot research-experience" data-case-pilot={composition.caseId} data-research-experience>
+  <ResearchOpening composition={composition} hasEvidence={Astro.slots.has('overview')}><slot name="overview" slot="evidence"/></ResearchOpening>
+  <div class="research-reading-layout">
+    <ResearchNavigation composition={composition} claimCount={composition.claimCount}/>
+    <article class="research-reading-body">
+      <slot name="introduction"/>
+      <div id="figures">{composition.chapters.map(chapter => <ResearchChapter chapter={chapter}>
+        {chapter.figureId && (()=>{const reading=readingFigure(chapter.figureId!);return <EvidenceFigure figure={figureById.get(chapter.figureId!)!} compact={reading.kind!=='original'} editorial={reading.kind!=='original'}>
+          {reading.kind==='gate-matrix'
+            ? <GateMatrix rows={reading.rows} conditions={reading.conditions}/>
+            : reading.kind==='comparison' && <RecordedComparison figureId={chapter.figureId!}/>}
+        </EvidenceFigure>}
+        )()}
+      </ResearchChapter>)}</div>
+      <slot name="conclusion"/>
+      <ResearchReference caseId={composition.caseId}/>
+    </article>
+  </div>
+</div>
+<script>import '../../scripts/pilot-disclosures'; import '../../scripts/research-reading';</script>

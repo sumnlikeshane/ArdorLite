@@ -1,0 +1,11 @@
+onlyBuiltDependencies:
+  - esbuild
+overrides:
+  # Astro's YAML language server reaches fast-uri through Ajv; 3.1.9 fixes
+  # the four October 2026 URI-normalization advisories affecting 3.1.8.
+  fast-uri: 3.1.9
+supportedArchitectures:
+  # Match installed optional-package notices across local and Render builds.
+  os: [darwin, linux]
+  cpu: [arm64, x64]
+  libc: [glibc, musl]

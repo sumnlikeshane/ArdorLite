@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "observation_date": "2026-10-11",
+  "name": "Ardor lite",
+  "source_project": "Ardor",
+  "audience": [
+    "Quant researchers",
+    "Quant recruiters"
+  ],
+  "lead_scope": "Indian-equity research for NSE cash equities and single-stock futures",
+  "summary": "Ardor studies market hypotheses through point-in-time information, executable instruments, complete costs and dependence-aware inference. The reviewed evidence records failed strategies, invalid experiments, blocked designs and reusable engineering; it supports zero certified/live Indian-equity strategies.",
+  "research_approach": [
+    "Separate information availability from decision and execution clocks.",
+    "Freeze the hypothesis and controlling gates before opening returns.",
+    "Compare gross signals with exact instrument, fill, cost and capacity evidence.",
+    "Treat dependence, factors, placebo calibration, multiplicity and selection as parts of inference.",
+    "Retain null, invalid and blocked outcomes with their original scope."
+  ],
+  "featured_case_ids": [
+    "atlas-ssf",
+    "momentum-v2",
+    "swing-autopsy",
+    "trend-quality",
+    "delivery-insider",
+    "price-bridge"
+  ],
+  "counts": [
+    {
+      "id": "archive_records",
+      "value": 49,
+      "unit": "archive records",
+      "scope": "Structured record blocks in Vantage archive dated 2026-08-26, including strategies, diagnostics, invalid runs and designs.",
+      "observed_at": "2026-10-11",
+      "source_ids": [
+        "src-298365cf15ec"
+      ],
+      "method": "Parsed and counted record_kind blocks."
+    },
+    {
+      "id": "catalog_records",
+      "value": 114,
+      "unit": "catalog records",
+      "scope": "The archive cohort plus named master-census, roadmap/tournament designs, explicit superseded/invalid versions and dated preview lanes. Records overlap in mechanisms and are not independent strategy tests.",
+      "observed_at": "2026-10-11",
+      "method": "Count of unique exported record IDs."
+    },
+    {
+      "id": "frozen_implemented_family_names",
+      "value": 27,
+      "unit": "family names",
+      "scope": "Frozen July audit census; preserved historical count, not a recount of later catalog records.",
+      "observed_at": "2026-10-11",
+      "evidence_date": "2026-07-29",
+      "source_ids": [
+        "src-86230b82691a"
+      ]
+    },
+    {
+      "id": "main_registration_rows",
+      "value": 26,
+      "unit": "nonblank registration rows",
+      "scope": "Main hypothesis registry only; components and versions, with historical seal discrepancy.",
+      "observed_at": "2026-10-11",
+      "source_relative_path": "data/process/hypotheses.jsonl",
+      "method": "Parent preparation agent metadata-only nonblank line count; no protected rows exported."
+    },
+    {
+      "id": "main_trial_rows",
+      "value": 2716,
+      "unit": "nonblank trial rows",
+      "scope": "Main trial ledger only: preserved historical 188-row pre-Atlas prefix plus 2528 Atlas rows; not independent strategies.",
+      "observed_at": "2026-10-11",
+      "source_relative_path": "data/process/trial_ledger.jsonl",
+      "method": "Parent preparation agent metadata-only nonblank line count; no protected rows exported."
+    },
+    {
+      "id": "accepted_atlas_cells",
+      "value": 1264,
+      "unit": "accepted discovery cells",
+      "scope": "One accepted overlapping state/horizon grid; separately retained invalid predecessor is not added to this accepted count.",
+      "observed_at": "2026-10-11",
+      "source_ids": [
+        "src-01377cbc2972"
+      ]
+    },
+    {
+      "id": "certified_live_strategies",
+      "value": 0,
+      "unit": "certified/live strategies",
+      "scope": "Reviewed local Indian-equity evidence only; no contrary certified result identified in the source audit and later reviewed reports. This is not an external strategy census or proof about uninspected systems.",
+      "observed_at": "2026-10-11",
+      "source_ids": [
+        "src-298365cf15ec",
+        "src-b38e42c4b964"
+      ]
+    }
+  ],
+  "author": {
+    "name": null,
+    "biography": null,
+    "verified_contributions": null,
+    "contact": null,
+    "repository_url": null
+  },
+  "evidence_policy": {
+    "historical_only": true,
+    "new_research_performed": false,
+    "raw_private_inputs_exported": false,
+    "return_replication": "private_inputs_required",
+    "public_material": "Reviewed authored summaries, selected aggregate evidence and independently verified examples.",
+    "source_rights": "Original research is treated as proprietary; inclusion does not grant a public licence to source reports, source code or vendor data."
+  },
+  "limitations": [
+    "This is a documented local-source roster, not proof of exhaustive coverage of market hypotheses or every internal engineering task.",
+    "Historical raw/private inputs are excluded; derived narratives preserve limits rather than promising historical return replication.",
+    "Roster semantics changed for B1.2-c, B4.2 and B7.3; records preserve separate mechanisms.",
+    "The copied-session sensitivity and protected ledger governance incidents remain unresolved; no repair or reseal was attempted."
+  ],
+  "source_ids": [
+    "src-298365cf15ec",
+    "src-86230b82691a",
+    "src-b38e42c4b964"
+  ],
+  "evidence_reference": "evidence/summaries/catalog-reconciliation.md"
+}

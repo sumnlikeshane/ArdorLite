@@ -1,0 +1,29 @@
+---
+import OutcomeLabel from '../OutcomeLabel.astro';
+import type { ResearchComposition } from '../../lib/research/presentation';
+import { getCase } from '../../lib/evidence';
+interface Props { composition: ResearchComposition; hasEvidence?: boolean; }
+const {composition,hasEvidence=true} = Astro.props;
+const c = getCase(composition.caseId);
+---
+<header class:list={['research-opening',`opening-${composition.opening}`]} id="research-overview">
+  <p class="research-identity"><a href="/research/">Research</a><span>Case {String(c.order).padStart(2,'0')}</span><span>{c.title}</span></p>
+  <div class:list={['research-opening-grid',{'without-evidence':!hasEvidence}]}>
+    <div>
+      <p class="eyebrow">The research question</p>
+      <h1>{composition.headline}</h1>
+      <p class="research-motivation">{composition.motivation}</p>
+      <div class="outcomes">{c.outcomes.map(status => <OutcomeLabel status={status}/>)}</div>
+      <p class="research-mobile-answer">{composition.answer}</p>
+      <nav class="research-mobile-paths" aria-label="Explore this research"><a href="#decision-brief">Decision</a><a href="#investigation">Investigation</a><a href="#claims">Evidence</a></nav>
+      <p class="research-scope">{composition.scope}<br/>No certified or live strategy</p>
+    </div>
+    {hasEvidence && <div class="research-opening-evidence"><slot name="evidence"/></div>}
+  </div>
+  <nav class="pilot-paths research-paths" aria-label="Choose a reading depth">
+    <a href="#decision-brief">Read the decision <span aria-hidden="true">↗</span></a>
+    <a href="#investigation">Follow the investigation <span aria-hidden="true">↓</span></a>
+    <a href="#original-verdicts">Inspect the record <span aria-hidden="true">↗</span></a>
+    <a href="#claims">All claims <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>

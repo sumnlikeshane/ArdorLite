@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "profile": "public-source",
+  "deploymentEligible": false,
+  "metadata": {
+    "src/content/public-provenance.json": "eb22ea892d59ad945f558e12588e8b5f923b634f171491214b9a0dbd0c7d2204",
+    "config/omitted-content-signatures.json": "35ae05cf601032eac1da08b184122d9335eff8ea3d16e4e9279915c4c53c8540"
+  },
+  "omittedPrivateInputs": [
+    "docs/planning/TREND_SUPPLEMENT_PROPOSAL.json",
+    "receipts/implementation/2026-10-31-trend-supplement-approval.json",
+    "reviewed-supplements/2026-10-31/trend-fold-context-v1.json",
+    "src/content/local-publication-context.json",
+    "src/content/source-excerpts/engineering-m2.json",
+    "src/content/source-excerpts/engineering.json",
+    "src/content/source-excerpts/price-bridge.json",
+    "src/content/walkthrough-source.json",
+    "tests/private-publication-expectations.json"
+  ],
+  "originalInputVerification": "absent-not-verified",
+  "reviewAcceptance": "pending; engineering builds never supply deployment permission"
+}

@@ -1,0 +1,16 @@
+---
+import CasePilot from '../../../components/CasePilot.astro';
+import TrendResearch from '../../../components/research/TrendResearch.astro';
+import CollectionResearch from '../../../components/research/CollectionResearch.astro';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import OutcomeLabel from '../../../components/OutcomeLabel.astro';
+import {cases,caseRecords} from '../../../lib/evidence';
+export function getStaticPaths(){return cases.map(c=>({params:{slug:c.slug},props:{caseData:c}}));}
+const {caseData:c} = Astro.props;
+const records=caseRecords(c.id);
+---
+<SiteLayout title={c.title} description={c.summary} type="case" status={c.outcomes.join(', ')} reproduction={[...new Set(records.map(record=>record.reproduction_level))].join(', ')}>
+ {c.id==='price-bridge' && <header class="page-heading pilot-heading"><p class="breadcrumb"><a href="/research/">Research</a> / Case {String(c.order).padStart(2,'0')}</p><span class="eyebrow">{c.subtitle}</span><h1>{c.title}</h1><p class="lede">{c.question}</p><div class="outcomes"><OutcomeLabel status="passed" label="Technical QA passed"/>{c.outcomes.map(s=><OutcomeLabel status={s}/>)}</div>{c.credit && <p class="small">{c.credit}</p>}<p class="small">Archived evidence · No certified or live strategy</p></header>}
+ {c.id==='trend-quality' ? <TrendResearch/> : c.id==='price-bridge' ? <CasePilot caseId="price-bridge"/> : <CollectionResearch caseId={c.id}/>}
+ <script>import '../../../scripts/recorded-views';</script>
+</SiteLayout>

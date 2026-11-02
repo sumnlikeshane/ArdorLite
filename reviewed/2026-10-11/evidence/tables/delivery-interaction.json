@@ -1,0 +1,59 @@
+{
+  "id": "delivery-interaction",
+  "title": "Incremental effect of surge-preceded insider disclosure",
+  "case_id": "delivery-insider",
+  "status": "tested_killed",
+  "units": "basis points over 10 sessions",
+  "source_paths": [
+    "docs/postmortems/POSTMORTEM_delivery_x_insider_B8.md"
+  ],
+  "source_artifact_ids": [
+    "src-30e89f2139b6"
+  ],
+  "claim_ids": [
+    "delivery-interaction-01",
+    "delivery-interaction-02",
+    "delivery-interaction-03",
+    "delivery-interaction-03-reported-clustered-t"
+  ],
+  "extraction_rule": "Transcribe reported surge/non-surge means and regression beta; beta -0.0029 fractional return \u00d710,000 = -29 bps. Association enrichment is separately identified, never plotted on this return axis.",
+  "study_context": {
+    "window": "2015-01-01 through 2026-06-05; registered and run 2026-06-19/20",
+    "universe": "F&O intersection formed from names ever present in archived futures panel; not PIT membership certification",
+    "observation_clock": "public insider disclosure date; delivery signal known by event date",
+    "hypothesis_entry": "next-session cash open; SSF execution hypothesis T+1 open",
+    "actual_ssf_comparison": "settle-to-settle proxy with artificial narrow high/low solely to avoid solid-bar rejection",
+    "benchmark": "same-window equal-weight eligible universe in each cash/SSF path",
+    "costs": "0A gross forward-excess test; no full cost-swept executable-book return",
+    "inference": "association via within-symbol permutation; prediction/interaction event-date cluster robust SE",
+    "source_verdict": "KILLED / documented null"
+  },
+  "caveats": [
+    "Validated primary event set only: absolute lift floor and 32-calendar-day refractory; contaminated inline recomputation excluded.",
+    "39.9-sigma enrichment describes co-occurrence, not predictive significance.",
+    "Reported bps and t values are rounded report transcriptions.",
+    "SSF settle proxy and ever-in-F&O universe limit claims of executable or PIT SSF translation.",
+    "Post-hoc threshold and prior-return subsets are not passing candidates."
+  ],
+  "rows": [
+    {
+      "label": "Surge-preceded mean",
+      "value": 1,
+      "claim_id": "delivery-interaction-01"
+    },
+    {
+      "label": "No-surge mean",
+      "value": 30,
+      "claim_id": "delivery-interaction-02"
+    },
+    {
+      "label": "Interaction beta",
+      "value": -29,
+      "claim_id": "delivery-interaction-03",
+      "reported_clustered_t": -0.76,
+      "additional_claim_ids": {
+        "reported_clustered_t": "delivery-interaction-03-reported-clustered-t"
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+---
+import { isPublicPublication, restrictedSourceNotice } from '../../lib/publication/scope';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import OutcomeLabel from '../../components/OutcomeLabel.astro';
+import EvidenceFigure from '../../components/EvidenceFigure.astro';
+import { evidenceCrosswalk } from '../../lib/evidence/crosswalk';
+import { figureById } from '../../lib/evidence';
+import { walkthroughSource as source } from '../../lib/experiences/captures';
+import '../../styles/walkthrough.css';
+const steps = [
+  ['01', 'Respect the clock', 'Only information available before the decision enters the signal.'],
+  ['02', 'Measure momentum', 'Compare two historical prices. Skip the most recent month.'],
+  ['03', 'Build the baskets', 'Rank the eligible cross-section into five groups.'],
+  ['04', 'Check execution', 'A short candidate must also pass the trading guards.'],
+  ['05', 'Read the verdict', 'Working mechanics do not establish independent alpha.'],
+];
+---
+<SiteLayout title="Inside the strategy" description={isPublicPublication ? "Step through Momentum v2 with synthetic prices, visible variables and the separate recorded research verdict. Original source excerpts are omitted." : "Step through Momentum v2 with synthetic prices, exact Ardor Python excerpts, visible variables and the separate recorded research verdict."} type="walkthrough" status="tested_killed">
+  <header class="page-heading lab-heading">
+    <p class="breadcrumb"><a href="/research/">Research</a> / Interactive walkthrough</p>
+    <span class="eyebrow">The strategy, made visible / Momentum v2</span>
+    <h1>Follow the signal.<br /><em>Inspect the code.</em></h1>
+    <p class="lede">{isPublicPublication ? "From a price history to a basket decision. Change the synthetic example and follow each step. Original Python excerpts are omitted from this public edition." : "From a price history to a basket decision. Change the example, follow each step, and see the Python behind the rule."}</p>
+    <div class="lab-boundary"><strong>Synthetic teaching example — not market evidence.</strong><span>The interactive calculation is a bounded TypeScript translation. {isPublicPublication ? "Original source excerpts remain local-only and are omitted here." : "The Python excerpts are exact Ardor source, captured separately from the reviewed evidence."} This is not a Python debugger or a backtest.</span></div>
+  </header>
+
+  <section class="walkthrough" data-walkthrough aria-label="Interactive Momentum walkthrough">
+    <div class="lab-controls" data-lab-controls hidden>
+      <label>Explore a scenario<select data-scenario><option value="baseline">A clear cross-section</option><option value="reversal">A recent reversal</option><option value="banned">A banned short candidate</option><option value="missing-history">Insufficient history</option></select></label>
+      <label>Inspect a fictitious stock<select data-stock aria-label="Fictitious stock"></select></label>
+      <div class="lab-actions"><button type="button" data-reset>Reset walkthrough</button><button type="button" data-share>Copy this view</button></div>
+      <span class="small" data-share-status role="status"></span>
+    </div>
+    <noscript><p class="evidence-note">The complete explanation, Python excerpts and recorded evidence are available below. Enable JavaScript to change synthetic inputs and step through the calculation.</p></noscript>
+    <ol class="lab-stepper" aria-label="Walkthrough steps">
+      {steps.map(([n,title,description],i)=><li><a href={`#walkthrough-step-${i}`} data-step={i}><span>{n}</span><strong>{title}</strong><small>{description}</small></a></li>)}
+    </ol>
+    <div data-live-lab hidden>
+      <div class="lab-toolbar"><p class="eyebrow" data-step-counter></p><div><button type="button" data-prev aria-label="Previous step">← Back</button><button type="button" data-next aria-label="Next step">Next →</button></div></div>
+      <div class="lab-workspace">
+        <div class="lab-visual">
+          <div class="lab-panel-heading"><div><span class="eyebrow">Synthetic adjusted prices · arbitrary units</span><h2 data-chart-heading>What the signal can see</h2></div><span class="lab-symbol" data-symbol></span></div>
+          <div class="lab-chart" data-chart></div>
+          <div class="lab-legend"><span><i class="legend-history"></i> Prior observations</span><span><i class="legend-skip"></i> Skipped recent observations</span><span><i class="legend-today"></i> Decision day · excluded</span></div>
+          <p class="small" data-chart-description></p>
+          <label class="lab-slider">Change the decision-day price <output data-today-output></output><input type="range" min="20" max="250" step="1" value="100" data-today aria-label="Decision-day price"/><span class="small">Try moving today's price. The historical momentum signal should stay unchanged.</span></label>
+          <dl class="lab-variables" data-variables></dl>
+        </div>
+        <div class="lab-code-panel">
+          <span class="eyebrow">{isPublicPublication ? 'Source availability / selected rule' : 'Exact Python excerpt / selected rule'}</span><h2 data-code-heading></h2>
+          <p class="small" data-code-path></p>
+          <pre tabindex="0" aria-label="Selected original Python source"><code data-code></code></pre>
+          <p class="small">{isPublicPublication ? "The source excerpt is omitted; metadata and the independent teaching translation remain available." : "Indentation is normalized in this panel; the complete excerpt is preserved below. The browser executes a separate teaching translation."}</p>
+          <a class="small" href="#source-provenance">Inspect source hashes & scope ↓</a>
+        </div>
+      </div>
+      <div class="lab-explanation" aria-live="polite" aria-atomic="true"><span class="eyebrow" data-state-label></span><h3 data-state-title></h3><p data-state-description></p></div>
+      <section class="lab-basket" aria-labelledby="basket-title"><div class="section-heading"><div><span class="eyebrow">The whole synthetic universe</span><h2 id="basket-title">A signal is a relative decision.</h2></div><span class="small">10 fictitious names · five rank buckets</span></div><p class="small">Select a row to inspect its prices. Buckets use the source’s rank formula; this tiny example cannot meet the full strategy’s breadth and execution requirements.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Synthetic universe and calculated positions"><table><thead><tr><th scope="col">Stock</th><th scope="col">Prior observations</th><th scope="col">12–1 signal</th><th scope="col">Bucket</th><th scope="col">Candidate / guard result</th></tr></thead><tbody data-universe></tbody></table></div><p class="small" data-basket-summary></p></section>
+    </div>
+  </section>
+
+  <section class="section lab-reading" aria-labelledby="logic-heading"><div class="section-heading"><div><span class="eyebrow">Read the complete logic</span><h2 id="logic-heading">Five steps. Different questions.</h2></div></div>
+    <div class="lab-reading-grid">
+      <article id="walkthrough-step-0"><span class="eyebrow">01 / Information timing</span><h3>Freeze what was knowable.</h3><p>The signal first restricts prices to dates strictly before the rebalance. A stock needs at least 252 prior observations. The decision day's price is excluded, even if changing it would make the signal look better.</p></article>
+      <article id="walkthrough-step-1"><span class="eyebrow">02 / The signal</span><h3>Leave the recent month out.</h3><p>The code takes <code>closes[-21] / closes[-252] - 1.0</code>. These are observation offsets in the prior series. The gap deliberately excludes recent prices; the chart exposes the exact selected points.</p></article>
+      <article id="walkthrough-step-2"><span class="eyebrow">03 / Cross-sectional ranking</span><h3>Relative strength, five groups.</h3><p>Eligible momentum values are ranked against one another. Momentum v2 calls the shared signal builder with five buckets: the top quintile supplies cash-long candidates, the bottom quintile supplies single-stock-futures short candidates. The source column remains named <code>decile</code>.</p></article>
+      <article id="walkthrough-step-3"><span class="eyebrow">04 / Trading guards</span><h3>A candidate is not a fill.</h3><p>The original short-basket code checks eligibility, a ban at the decision date, and a carried forced-cover guard. This example shows those exclusions. Substitution, index parking, lot sizing, settlement, rolls, dated costs and portfolio gates remain outside this teaching model.</p></article>
+      <article id="walkthrough-step-4"><span class="eyebrow">05 / Research decision</span><h3>Execution passed. Alpha did not.</h3><p>The reviewed Momentum v2 record reports a passing execution phase and a failing attribution phase. The synthetic controls above cannot change that historical verdict.</p><OutcomeLabel status="tested_killed"/><p><a href="/research/cases/momentum-v2/">Read the full Momentum v2 case →</a></p></article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="recorded-heading"><span class="eyebrow">Back to the recorded evidence</span><h2 id="recorded-heading">The outcome stays attached.</h2><p class="lede">These figures contain reviewed, recorded values. They are independent of every synthetic input above.</p><div class="evidence-note"><p><strong>Phase 0 PASS → Phase 1 FAIL. No certified or live strategy.</strong></p><p>The report was reconstructed on 4 July 2026. Complete historical return and regression artifacts are not bundled; the walkthrough does not recreate them.</p></div><div class="lab-evidence-grid"><EvidenceFigure figure={figureById.get('momentum-execution')!}/><EvidenceFigure figure={figureById.get('momentum-alpha')!}/></div></section>
+
+  <section class="section" id="source-provenance" aria-labelledby="source-heading"><span class="eyebrow">Code provenance</span><h2 id="source-heading">Real source. Explicit boundaries.</h2><p>Selected excerpts were copied from the local Ardor source on {source.capturedOn}. They are separate from the immutable reviewed snapshot and do not establish that the current source exactly reproduces the historical report. Paths below identify the source; they are not downloads or runtime dependencies.</p><p class="small">{source.notice}</p>{source.excerpts.map(excerpt=><details class="lab-source" data-walkthrough-source={excerpt.id} data-title={excerpt.title} data-path={excerpt.path} data-start={excerpt.startLine} data-end={excerpt.endLine}><summary>{excerpt.title} · lines {excerpt.startLine}–{excerpt.endLine}</summary><p id={`walkthrough-source-${excerpt.id}`} tabindex="-1"><code>{excerpt.path}</code></p>{evidenceCrosswalk.outgoing('excerpt', `walkthrough-${excerpt.id}`, 'excerpt-source').map(edge => <p class="small"><a href={edge.to.href}>Reviewed source identity: {edge.to.id}</a>. File path and hash match; historical parity is not established.</p>)}<p class="small">Source file SHA-256: <code>{excerpt.fileSha256}</code><br/>Excerpt SHA-256: <code>{excerpt.excerptSha256}</code></p>{isPublicPublication ? <p data-public-source-omitted>{restrictedSourceNotice}</p> : <pre tabindex="0" aria-label={`${excerpt.title} original source`}><code>{excerpt.code}</code></pre>}</details>)}<p class="small">The source manifest and excerpt hashes are checked during the local build. Synthetic model tests check timing, exclusions and rank behavior; they do not certify the entire strategy.</p></section>
+  <section class="section"><h2>Keep exploring.</h2><div class="hero-actions"><a class="button-link" href="/research/cases/momentum-v2/">Read the research decision</a><a class="text-link" href="/methods/lagged-quality/">Inspect another timing method</a><a class="text-link" href="/research/">All six cases</a></div></section>
+</SiteLayout>
+<script>import '../../scripts/walkthrough';</script>

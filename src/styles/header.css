@@ -1,0 +1,129 @@
+/* A compact, persistent masthead for the light editorial publication. */
+:root { --sticky-header-height: 5.25rem; }
+html { scroll-padding-top: calc(var(--sticky-header-height) + 1.5rem); }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--surface-page);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 2px 5px rgb(32 35 31 / 3%);
+}
+.site-header .header-inner {
+  min-height: 5.25rem;
+  padding-block: .75rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.site-header .brand-link { padding: 0; }
+.site-header .brand-logo { width: 202px; }
+.site-header #main-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .25rem 1.5rem;
+  margin: 0 0 0 auto;
+  width: auto;
+  border: 0;
+  padding: 0;
+}
+.site-header #main-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 2.75rem;
+  padding: .5rem 0;
+  color: var(--text-secondary);
+  font: 500 .875rem/1.5 var(--sans);
+  text-decoration: none;
+  box-shadow: none;
+}
+.site-header #main-nav a:hover,
+.site-header #main-nav a[aria-current] { color: var(--text-link); }
+.site-header #main-nav a[aria-current]::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+}
+.site-header #main-nav .nav-search {
+  margin-left: .5rem;
+  padding-inline: .875rem;
+  border: 1px solid var(--text-primary);
+  border-radius: 6px;
+  color: var(--text-on-accent);
+  background: var(--text-primary);
+}
+.site-header #main-nav .nav-search img { filter: brightness(0) invert(1); }
+.site-header #main-nav .nav-search:hover,
+.site-header #main-nav .nav-search[aria-current] {
+  border-color: var(--text-link);
+  color: var(--text-on-accent);
+  background: var(--text-link);
+}
+.site-header #main-nav a.nav-search::after { content: none; display: none; }
+.site-header .menu-toggle:not([hidden]) { display: none; }
+.site-header .menu-toggle {
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  min-height: 2.75rem;
+  min-width: 5.5rem;
+  padding: .5rem .75rem;
+  margin-left: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: 5px;
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  font: 500 .875rem/1.5 var(--sans);
+}
+.menu-glyph { display: grid; gap: 5px; width: 15px; }
+.menu-glyph::before,.menu-glyph::after { content: ''; height: 1px; background: currentColor; }
+.menu-toggle[aria-expanded='true'] .menu-glyph { gap: 0; }
+.menu-toggle[aria-expanded='true'] .menu-glyph::before { transform: translateY(.5px) rotate(45deg); }
+.menu-toggle[aria-expanded='true'] .menu-glyph::after { transform: translateY(-.5px) rotate(-45deg); }
+.skip-link { position: fixed; z-index: 30; }
+
+@media (max-width: 960px) {
+  :root { --sticky-header-height: 4.5rem; }
+  .site-header .header-inner { min-height: 4.5rem; padding-block: .625rem; gap: 0 1rem; }
+  .site-header .brand-logo { width: clamp(152px, 40vw, 180px); }
+  .site-header .menu-toggle:not([hidden]) { display: inline-flex; }
+  .site-header #main-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: .25rem 1rem;
+    margin-top: .625rem;
+    padding-block: .75rem .25rem;
+    border-top: 1px solid var(--border-subtle);
+    max-height: calc(100dvh - 5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .header-enhanced .site-header #main-nav:not(.is-open) { display: none; }
+  .site-header #main-nav a { justify-content: flex-start; padding: .625rem .5rem; }
+  .site-header #main-nav a[aria-current] { background: var(--surface-selected); }
+  .site-header #main-nav a[aria-current]::after { left: .5rem; right: .5rem; }
+  .site-header #main-nav .nav-search { margin-left: 0; }
+  /* With JavaScript unavailable, every link stays visible in normal page flow. */
+  html:not(.header-enhanced) { --sticky-header-height: 0px; }
+  html:not(.header-enhanced) .site-header { position: static; }
+}
+
+/* Limited-height/zoomed viewports need their space for reading and keyboard focus. */
+@media (max-height: 480px) {
+  :root { --sticky-header-height: 0px !important; }
+  .site-header { position: static; }
+}
+@media print {
+  :root { --sticky-header-height: 0px !important; }
+  .site-header { display: none; }
+}

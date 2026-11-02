@@ -1,0 +1,100 @@
+{
+  "id": "ssf-economics",
+  "title": "Corrected SSF gross and net excess",
+  "case_id": "atlas-ssf",
+  "status": "stand_down",
+  "units": "basis points per filled event",
+  "source_paths": [
+    "data/research/atlas_followup/atlas_clv_downside_translation_v1_0_1.json"
+  ],
+  "source_artifact_ids": [
+    "src-2513644cee25"
+  ],
+  "claim_ids": [
+    "ssf-economics-01",
+    "ssf-economics-01-two-way-t",
+    "ssf-economics-02",
+    "ssf-economics-02-two-way-t",
+    "ssf-economics-03",
+    "ssf-economics-03-two-way-t",
+    "ssf-economics-04",
+    "ssf-economics-04-two-way-t",
+    "ssf-economics-05",
+    "ssf-economics-05-two-way-t",
+    "ssf-economics-06",
+    "ssf-economics-06-two-way-t"
+  ],
+  "extraction_rule": "Select recorded mean_bps and two_way_t fields; no inferred stress points or break-even extrapolation.",
+  "study_context": {
+    "window": "2016-01-01 through 2024-12-31",
+    "sample": 20217,
+    "universe": "point-in-time F&O candidate signals",
+    "instrument": "near-month single-stock futures; next-session open to same non-expiry-session settle",
+    "benchmark": "equal-weight valid PIT-F&O SSF long return on the same entry session",
+    "costs": "historically dated statutory stack; frozen ADV-only impact sweep 0.5\u00d7,1\u00d7,2\u00d7; current statutory counterfactual dated 2026-07-30",
+    "inference": "recorded two-way clustering by date and symbol",
+    "source_verdict": "STAND_DOWN"
+  },
+  "caveats": [
+    "Execution-QA v1.0.1 supersedes the earlier fill and capacity figures.",
+    "Frozen impact curve depends on ADV rather than direct order size.",
+    "Gross significance does not override fillability, interaction, capacity, regime or net-return failures.",
+    "The current statutory-only row is a dated counterfactual, not a present-day cost quotation."
+  ],
+  "rows": [
+    {
+      "label": "Gross excess",
+      "value": 6.8536805696552765,
+      "claim_id": "ssf-economics-01",
+      "two_way_t": 3.6638342917297955,
+      "additional_claim_ids": {
+        "two_way_t": "ssf-economics-01-two-way-t"
+      }
+    },
+    {
+      "label": "Dated statutory-only",
+      "value": 5.107129388579944,
+      "claim_id": "ssf-economics-02",
+      "two_way_t": 2.7298935133817857,
+      "additional_claim_ids": {
+        "two_way_t": "ssf-economics-02-two-way-t"
+      }
+    },
+    {
+      "label": "Net 0.5\u00d7 impact",
+      "value": 2.1819435418020667,
+      "claim_id": "ssf-economics-03",
+      "two_way_t": 1.1642446672256552,
+      "additional_claim_ids": {
+        "two_way_t": "ssf-economics-03-two-way-t"
+      }
+    },
+    {
+      "label": "Net 1\u00d7 impact",
+      "value": -0.7432423049758089,
+      "claim_id": "ssf-economics-04",
+      "two_way_t": -0.3955694373967101,
+      "additional_claim_ids": {
+        "two_way_t": "ssf-economics-04-two-way-t"
+      }
+    },
+    {
+      "label": "Net 2\u00d7 impact",
+      "value": -6.593613998531564,
+      "claim_id": "ssf-economics-05",
+      "two_way_t": -3.483374630654273,
+      "additional_claim_ids": {
+        "two_way_t": "ssf-economics-05-two-way-t"
+      }
+    },
+    {
+      "label": "Current statutory-only counterfactual",
+      "value": 1.1982005696552784,
+      "claim_id": "ssf-economics-06",
+      "two_way_t": 0.6405329648583244,
+      "additional_claim_ids": {
+        "two_way_t": "ssf-economics-06-two-way-t"
+      }
+    }
+  ]
+}

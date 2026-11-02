@@ -1,0 +1,17 @@
+.env
+.env.*
+private/
+staging/
+data/
+data_cache/
+*.db
+*.sqlite*
+*.parquet
+*.jsonl
+*.log
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.matplotlib/
+dist/

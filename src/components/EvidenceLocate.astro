@@ -1,0 +1,16 @@
+---
+import { cases } from '../lib/evidence';
+import '../styles/evidence.css';
+interface Props { kind: 'claim' | 'source'; }
+const { kind } = Astro.props;
+---
+<form class="evidence-locate" data-evidence-locate hidden role="search" aria-label={`Locate a ${kind}`}>
+  <label for="evidence-query">Find by ID or text<input id="evidence-query" name="q" type="search" data-locate-query /></label>
+  <label for="evidence-case">Investigation<select id="evidence-case" name="case" data-locate-case>
+    <option value="">All investigations</option>{cases.map(item => <option value={item.id}>{item.title}</option>)}
+  </select></label>
+  <div class="evidence-locate-actions"><button type="submit">Locate</button><button type="button" data-locate-reset>Show all</button></div>
+  <p class="small" role="status" data-locate-status aria-live="polite"></p>
+</form>
+<p class="small" data-pagefind-ignore>All entries remain available without JavaScript. Use the group links or your browser’s Find command. A direct evidence link always exposes its entry.</p>
+<script>import '../scripts/evidence-locate';</script>

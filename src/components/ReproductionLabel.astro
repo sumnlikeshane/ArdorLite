@@ -1,0 +1,6 @@
+---
+interface Props { level: string; compact?: boolean; }
+const {level,compact=false} = Astro.props;
+const meanings: Record<string,string> = {archived_result:'Reviewed saved aggregates. Public display transformations can be repeated; historical returns require excluded inputs.',report_transcription:'Reviewed transcription from a source report. This is not a fresh empirical test.',executable_example:'Runnable independent synthetic software demonstration. Not market evidence.',private_inputs_required:'Historical return replication requires private inputs omitted from this publication.'};
+---
+{compact ? <p class="small">Reproduction · {meanings[level]||level}</p> : <div class="evidence-note"><span class="eyebrow">Reproduction · {level.replaceAll('_',' ')}</span><p>{meanings[level]||level}</p></div>}

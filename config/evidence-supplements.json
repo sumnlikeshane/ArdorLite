@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "supplements": [
+    {
+      "id": "trend-fold-context-v1",
+      "path": "reviewed-supplements/2026-10-31/trend-fold-context-v1.json",
+      "sha256": "16ca63441481dc62d534ac49de76f72fafd6c325d1e900cfce5a78f01334da0b",
+      "caseId": "trend-quality",
+      "approvalRecord": "receipts/implementation/2026-10-31-trend-supplement-approval.json",
+      "approvalRecordSha256": "47204508200c43826fc00ffd89faa5b2c2fb9734c61a723bec3a58bd3b7a9058",
+      "embeddedRoutes": [
+        "research/cases/trend-quality/index.html",
+        "evidence/claims/index.html",
+        "evidence/sources/index.html"
+      ],
+      "immutable": true,
+      "proposalPath": "docs/planning/TREND_SUPPLEMENT_PROPOSAL.json",
+      "proposalSha256": "7ea2bd41fa2e54fd552ffbe14f83c82cc264ccecc31966ee85a71b78a0483994"
+    }
+  ]
+}

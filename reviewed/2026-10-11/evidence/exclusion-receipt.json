@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "observation_date": "2026-10-11",
+  "export_mode": "explicit_per_file_allowlist",
+  "source_originals_copied": 0,
+  "categories": [
+    {
+      "id": "secrets_and_configuration",
+      "excluded": "Environment files, tokens, account identifiers, local configuration and logs",
+      "treatment": "Not selected; not read for export"
+    },
+    {
+      "id": "raw_vendor_and_runtime",
+      "excluded": "Raw/vendor records, caches, databases and full price panels",
+      "treatment": "No original copied"
+    },
+    {
+      "id": "protected_governance",
+      "excluded": "Hypothesis/trial/grade ledgers, sidecars and recovery copies",
+      "treatment": "Count/hash metadata only; row contents excluded"
+    },
+    {
+      "id": "row_level_research",
+      "excluded": "Trading/event/exception rows, checkpoints, symbol/date ranges, snapshots and holdouts",
+      "treatment": "Only reviewed aggregate analytical summaries"
+    },
+    {
+      "id": "personal_decisions",
+      "excluded": "Personal portfolio amounts, holdings, trade plans and identifying notes",
+      "treatment": "Omitted from all narrative and chart derivatives"
+    },
+    {
+      "id": "internal_packets",
+      "excluded": "Complete private decision and source activation receipts",
+      "treatment": "Authored outcome summaries only"
+    },
+    {
+      "id": "upstream_assets_code",
+      "excluded": "TradeX-derived ports, entire engines, Pine scripts, unreviewed third-party code/images/datasets",
+      "treatment": "Independently authored synthetic examples only"
+    }
+  ],
+  "unresolved_items": [
+    "Destination licence/ownership choice remains reserved; no blanket release licence",
+    "Private return replication not supplied",
+    "Website and destination repository are pending"
+  ]
+}

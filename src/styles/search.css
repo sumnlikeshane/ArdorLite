@@ -1,0 +1,85 @@
+/* Query first, optional filters second, then one readable results column. */
+.search-page { max-width:64rem; margin-inline:auto; container-type:inline-size; }
+.search-heading { padding-block:3.5rem 2rem; border:0; margin:0; }
+.search-heading h1 { font-size:clamp(2.25rem,4.5vw,3.5rem); line-height:1.12; letter-spacing:-.035em; margin:1rem 0; }
+.search-heading>p { font-size:1rem; color:var(--text-secondary); max-width:65ch; margin:0; }
+.publication-search { margin-bottom:5rem; min-height:24rem; }
+#search-controls { border:0; padding:0; margin:0; min-width:0; }
+.search-query { display:block; font-size:.875rem; font-weight:500; margin-bottom:.6rem; }
+.search-query-bar { display:flex; align-items:center; gap:1rem; padding:.45rem .45rem .45rem 1.15rem; background:var(--surface-raised); border:1px solid var(--border-control); border-radius:8px; }
+.search-query-bar:focus-within { border-color:var(--focus-ring); outline:2px solid var(--focus-ring); outline-offset:3px; }
+.search-query-bar>img { flex-shrink:0; opacity:.65; }
+.search-query-bar input { width:100%; min-width:0; min-height:3rem; padding:.5rem 0; border:0; background:transparent; color:var(--ink); font:1rem/1.5 var(--sans); border-radius:0; }
+.search-query-bar input:focus-visible { outline:none; }
+.search-query-bar input::placeholder { color:var(--text-secondary); opacity:1; }
+.publication-search .search-submit { display:inline-flex; flex-shrink:0; white-space:nowrap; align-items:center; justify-content:center; gap:1.5rem; min-height:3rem; padding:.6rem 1.1rem; border:1px solid var(--text-primary); border-radius:5px; background:var(--text-primary); color:var(--text-on-accent); font:500 .875rem/1.5 var(--sans); }
+.publication-search .search-submit:hover { background:var(--text-link); border-color:var(--text-link); }
+.publication-search .search-submit:disabled { background:var(--surface-inset); border-color:var(--border-subtle); color:var(--text-secondary); }
+.search-query-hint { margin:.75rem 0 1.75rem; color:var(--text-secondary); font-size:.8125rem; }
+.search-filter-heading { display:flex; justify-content:space-between; align-items:baseline; gap:.5rem 1rem; flex-wrap:wrap; font-size:.8125rem; font-weight:500; }
+.search-optional { color:var(--text-secondary); font-weight:400; }
+.publication-search .search-clear { padding:.35rem 0; border:0; min-height:2.75rem; background:transparent; color:var(--text-link); font:.8125rem/1.5 var(--sans); text-align:left; text-decoration:underline; text-underline-offset:3px; }
+.publication-search .search-clear:hover { color:var(--text-link-hover); }
+.search-facets { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin:.6rem 0 1rem; }
+.search-facets label { display:grid; gap:.45rem; min-width:0; font:.75rem/1.5 var(--sans); color:var(--text-secondary); }
+.search-extra-filters { border:0; margin:0; padding:0; }
+.search-extra-filters summary { display:flex; gap:.75rem; align-items:center; width:fit-content; max-width:100%; min-height:2.75rem; padding:.5rem 0; color:var(--text-link); font:.8125rem/1.5 var(--sans); cursor:pointer; list-style:none; }
+.search-extra-filters summary::-webkit-details-marker { display:none; }
+.search-extra-filters summary::before { content:'+'; font:1rem/1 var(--mono); }
+.search-extra-filters[open] summary::before { content:'−'; }
+.search-extra-description { color:var(--text-secondary); font-size:.75rem; }
+.search-extra-filters .search-facets { margin-top:.5rem; }
+.search-results-heading { border-top:1px solid var(--rule); margin-top:1.75rem; padding-top:1.25rem; display:flex; align-items:baseline; gap:.5rem 1.25rem; flex-wrap:wrap; }
+.search-results-heading h2 { font:500 .875rem/1.5 var(--sans); margin:0; }
+#search-state { font-size:.8125rem; color:var(--text-secondary); margin:0; min-height:1.5em; }
+#search-recovery { padding:1rem 0; max-width:70ch; font-size:.875rem; }
+.search-start { padding:2.5rem 0 1.5rem; }
+.search-start h3 { font:400 1.75rem/1.3 var(--serif); margin:0 0 .75rem; }
+.search-start>p { font-size:.875rem; color:var(--text-secondary); margin:0 0 1.25rem; }
+.search-examples { display:flex; flex-wrap:wrap; align-items:baseline; gap:.65rem 1.5rem; font-size:.8125rem; }
+.search-examples>span { color:var(--text-secondary); }
+.search-examples a { padding-block:.5rem; text-decoration:none; border-bottom:1px solid var(--border-selected); }
+.search-examples a span { margin-left:.5rem; }
+.search-examples a:hover { border-bottom-color:var(--text-link); }
+.search-start .search-browse { margin-top:2rem; font-size:.8125rem; }
+.publication-search [hidden] { display:none!important; }
+#search-results { list-style:none; padding:0; margin:0; max-width:78ch; }
+#search-results>li { padding-block:1.75rem; border-bottom:1px solid var(--rule); overflow-wrap:anywhere; }
+#search-results h2 { font:400 1.625rem/1.3 var(--serif); margin:.5rem 0 .75rem; }
+#search-results h2 a { text-decoration:none; }
+#search-results h2 a:hover { text-decoration:underline; }
+#search-results p { margin:.5rem 0; font-size:.875rem; }
+#search-results .small { font-size:.8125rem; color:var(--text-secondary); }
+#search-results .search-result-kind { font:.75rem/1.6 var(--sans); color:var(--text-secondary); }
+.search-subresults { font:.875rem/1.6 var(--sans); padding-left:1.25rem; }
+#search-more { min-height:2.875rem; padding:.65rem 1.25rem; margin-top:1.5rem; border:1px solid var(--border-control); border-radius:5px; font:.875rem/1.5 var(--sans); background:var(--surface-raised); }
+#search-more:hover { background:var(--surface-selected); border-color:var(--border-selected); }
+.search-scope { border:0; border-top:1px solid var(--rule); margin-top:2.5rem; padding:.75rem 0 0; color:var(--text-secondary); max-width:78ch; }
+.search-scope summary { font:.8125rem/1.5 var(--sans); cursor:pointer; padding:.5rem 0; }
+.search-scope p { font-size:.8125rem; }
+@media(max-width:700px) {
+  .search-heading { padding-top:2.5rem; }
+  .search-query-bar { gap:.65rem; padding-left:.85rem; }
+  .search-query-bar input { font-size:1rem; }
+  .publication-search .search-submit { gap:.65rem; padding-inline:.9rem; }
+  .search-facets { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .search-facets label:first-child { grid-column:1/-1; }
+  .search-extra-description { display:none; }
+}
+@media(max-width:380px) {
+  .search-query-bar>img,.search-submit>span { display:none; }
+  .search-facets { grid-template-columns:minmax(0,1fr); }
+}
+@container (max-width:22rem) {
+  .search-query-bar { display:grid; grid-template-columns:minmax(0,1fr); gap:.5rem; padding:.5rem; }
+  .search-query-bar>img { display:none; }
+  .search-query-bar input { padding-inline:.35rem; }
+  .publication-search .search-submit { width:100%; }
+}
+@media print {
+  #search-form,#search-more,#search-recovery,#search-start { display:none!important; }
+  .search-heading { padding-top:0; }
+  #search-results>li { break-inside:avoid; }
+  .search-scope { display:block; }
+  .search-scope::details-content { content-visibility:visible; }
+}

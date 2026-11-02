@@ -1,0 +1,28 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import '../styles/search.css';
+const facets=[['type','Content type'],['investigation','Investigation'],['family','Research family'],['maturity','Recorded maturity'],['reproduction','Reproduction'],['role','Evidence role']];
+---
+<SiteLayout title="Search the publication" description="Find investigations, exact claims, source identities, reference records and synthetic methods with their evidence context." type="search">
+<div class="search-page">
+<header class="page-heading search-heading"><span class="eyebrow">The publication index</span><h1>Search the publication.</h1><p>Find a research question, recorded decision, method or exact evidence ID.</p></header>
+<section id="search" class="publication-search" data-pagefind-ignore aria-label="Publication search">
+  <form id="search-form" role="search" aria-busy="true"><fieldset id="search-controls" aria-label="Search controls" disabled>
+    <label class="search-query" for="publication-query">Search</label>
+    <div class="search-query-bar"><img src="/images/icons/search.svg" alt="" width="22" height="22" /><input id="publication-query" type="text" inputmode="search" name="q" autocomplete="off" placeholder="Question, topic or exact ID" aria-describedby="search-query-hint" /><button class="search-submit" type="submit">Search<span aria-hidden="true">↗</span></button></div>
+    <p id="search-query-hint" class="search-query-hint">Search across investigations, claims, sources and reference records.</p>
+    <div class="search-filter-heading"><span>Refine results <span class="search-optional">· optional</span></span><button class="search-clear" type="reset">Clear search and filters</button></div>
+    <div class="search-facets">{facets.slice(0,3).map(([key,label])=><label>{label}<select name={key} aria-label={label}><option value="">All</option></select></label>)}</div>
+    <details id="search-extra-filters" class="search-extra-filters"><summary>More filters<span class="search-extra-description">Maturity, reproduction & evidence role</span></summary><div class="search-facets">{facets.slice(3).map(([key,label])=><label>{label}<select name={key} aria-label={label}><option value="">All</option></select></label>)}</div></details>
+  </fieldset></form>
+  <div class="search-results-heading"><h2>Results</h2><p id="search-state" role="status" aria-live="polite">Loading search…</p></div>
+  <p id="search-recovery" hidden><a id="search-retry" href="/search/">Try search again</a> · Browse the <a href="/research/catalog/">complete catalog</a>, <a href="/research/">investigations</a> or <a href="/evidence/">evidence guide</a>.</p>
+  <div id="search-start" class="search-start" hidden><h3>Start with a question.</h3><p>Explore a topic or go straight to a piece of evidence.</p><div class="search-examples"><span>Try</span><a href="/search/?q=Price+Bridge">Price Bridge <span aria-hidden="true">↗</span></a><a href="/search/?q=execution+costs">Execution costs <span aria-hidden="true">↗</span></a><a href="/search/?q=trend-folds-01">trend-folds-01 <span aria-hidden="true">↗</span></a></div><p class="search-browse">Or browse the <a href="/research/">six investigations</a> and <a href="/research/catalog/">complete catalog</a>.</p></div>
+  <ol id="search-results" aria-label="Search results"></ol>
+  <button id="search-more" type="button" hidden>Show more results</button>
+  <noscript><style is:inline>#search-form,.search-results-heading{display:none!important}</style><p>Full-text search requires JavaScript. Browse the <a href="/research/catalog/">complete catalog</a>, <a href="/research/">six investigations</a> or <a href="/evidence/sources/">source index</a> without it. All reference content remains available.</p></noscript>
+  <details class="search-scope"><summary>About these results</summary><p>Search across investigations, exact values, source references and synthetic methods. Each result links to its research context and limitations.</p><p>Filter counts describe matching search documents. A claim, source, record and investigation are separate entities; linked versions keep their own decisions. Unknown metadata is not inferred.</p><p>Search relevance does not rank strategy quality. Original files remain excluded; research derivatives and selected source excerpts have separate permissions. Each destination retains its controlling caveats.</p></details>
+</section>
+</div>
+<script>import '../scripts/search';</script>
+</SiteLayout>

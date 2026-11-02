@@ -1,0 +1,122 @@
+{
+  "id": "swing-policies",
+  "title": "Fourteen whole-book exit policies \u2014 in-sample diagnostic",
+  "case_id": "swing-autopsy",
+  "status": "tested_killed",
+  "units": "net R per filled trade",
+  "source_paths": [
+    "screener/validation/outputs/v1_exit_autopsy.json"
+  ],
+  "source_artifact_ids": [
+    "src-18ca4fa1211e"
+  ],
+  "claim_ids": [
+    "swing-policies-01",
+    "swing-policies-02",
+    "swing-policies-03",
+    "swing-policies-04",
+    "swing-policies-05",
+    "swing-policies-06",
+    "swing-policies-07",
+    "swing-policies-08",
+    "swing-policies-09",
+    "swing-policies-10",
+    "swing-policies-11",
+    "swing-policies-12",
+    "swing-policies-13",
+    "swing-policies-14"
+  ],
+  "extraction_rule": "Select P0\u2013P13 from all-book aggregate; P0 is baseline, 13 are alternatives. Exclude CEILING_exit_at_peak and subset searches. No row-level trade records read or exported.",
+  "study_context": {
+    "window": "2022-01-03 through 2026-06-05",
+    "universe": "current-only screener membership; historical survivorship tailwind",
+    "benchmark": "equal-weight price-panel proxy for relative strength and market regime",
+    "instrument": "cash-equity mechanical trigger replay",
+    "costs": "notional friction + tax convention in R units; V1 per-win conservative tax, V2 corrected annual net tax with constant risk per trade",
+    "execution": "weekly as-of decisions; conservative bar-based fills; V1 fixed stop/far target/time exit; V2 trailing loss management",
+    "inference": "reported bootstrap mean interval and shuffled-date placebo; exit alternatives are post-hoc same-fill diagnostics",
+    "source_verdict": "V1 FAIL; corrected V2 KILL"
+  },
+  "caveats": [
+    "R is trade P&L divided by initial planned trade risk; R is not a percentage return.",
+    "V1 and V2 are different designs and tax lines, not an isolated causal comparison.",
+    "Current-only membership and single 2026 adjusted-price vintage limit historical PIT claims.",
+    "The historical window is spent development data; V2 replay was kill-only and cannot pass the hypothesis.",
+    "V2 bear-regime expectancy and no_regime_half_sign_flip metric are null; a passing mechanical check does not establish bear evidence.",
+    "Includes baseline within 14 policy rows; every all-book row remains negative.",
+    "Postmortem range is rounded; exact saved JSON P5=-0.0434R is retained.",
+    "Hindsight peak-exit ceiling and favorable subset maxima are omitted."
+  ],
+  "rows": [
+    {
+      "label": "P0 baseline replayed",
+      "value": -0.1313,
+      "claim_id": "swing-policies-01"
+    },
+    {
+      "label": "P1 bank at 1R",
+      "value": -0.0852,
+      "claim_id": "swing-policies-02"
+    },
+    {
+      "label": "P2 bank at 1.5R",
+      "value": -0.1122,
+      "claim_id": "swing-policies-03"
+    },
+    {
+      "label": "P3 bank at 2R",
+      "value": -0.1426,
+      "claim_id": "swing-policies-04"
+    },
+    {
+      "label": "P4 partial50 at 1.5R then BE",
+      "value": -0.1,
+      "claim_id": "swing-policies-05"
+    },
+    {
+      "label": "P5 BE after 1R",
+      "value": -0.0434,
+      "claim_id": "swing-policies-06"
+    },
+    {
+      "label": "P6 trail 1.5R after 1R",
+      "value": -0.0754,
+      "claim_id": "swing-policies-07"
+    },
+    {
+      "label": "P7 time10 only",
+      "value": -0.1397,
+      "claim_id": "swing-policies-08"
+    },
+    {
+      "label": "P8 stall close below 5d low",
+      "value": -0.1402,
+      "claim_id": "swing-policies-09"
+    },
+    {
+      "label": "P9 widestop 2x same target",
+      "value": -0.0987,
+      "claim_id": "swing-policies-10"
+    },
+    {
+      "label": "P10 widestop 2x bank 1R",
+      "value": -0.0826,
+      "claim_id": "swing-policies-11"
+    },
+    {
+      "label": "P11 widestop 2x BE1R bank 2R",
+      "value": -0.0867,
+      "claim_id": "swing-policies-12"
+    },
+    {
+      "label": "P12 widestop 1.5x bank 1R time10",
+      "value": -0.0939,
+      "claim_id": "swing-policies-13"
+    },
+    {
+      "label": "P13 bank 1R time10",
+      "value": -0.1218,
+      "claim_id": "swing-policies-14"
+    }
+  ]
+}

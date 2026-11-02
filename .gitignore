@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.astro/
+.cache/
+.pnpm-store/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+playwright-report/
+test-results/
+receipts/screenshots/
+# Deterministic build/export products and local review recordings
+public/downloads/
+public/notices/packages/
+public/notices/dependencies.json
+/generated/
+artifacts/
+# Browser recordings stay local; keep compact JSON acceptance receipts in Git.
+/receipts/playwright-*/
+receipts/build-console.txt

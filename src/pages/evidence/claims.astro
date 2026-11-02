@@ -1,0 +1,12 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ClaimEntry from '../../components/ClaimEntry.astro';
+import { cases, caseClaims, assetUrl } from '../../lib/evidence';
+import EvidenceLocate from '../../components/EvidenceLocate.astro';
+---
+<SiteLayout title="Claim registry" description="All 204 reviewed claim entries, with recorded values, units, caveats, case context and source pointers." type="evidence">
+  <header class="page-heading"><span class="eyebrow">Evidence / Claim registry</span><h1>Every claim has a context.</h1><p class="lede">204 reviewed entries preserve values, units, original source pointers and reproduction levels. Numbers retain their controlling caveats.</p><a class="text-link" href={assetUrl('evidence/claims.json')}>Download reviewed claims JSON</a></header>
+  <EvidenceLocate kind="claim" />
+  <nav class="evidence-groups" aria-label="Claim groups">{cases.map(c=><a href={`#case-${c.id}`}>{c.title} ({caseClaims(c.id).length})</a>)}</nav>
+  <div class="prose">{cases.map(c=><section id={`case-${c.id}`} data-evidence-group><h2>{c.title}</h2><p class="small">{c.summary} <a href={`/research/cases/${c.slug}/`}>Read the case</a>.</p>{caseClaims(c.id).map(claim=><ClaimEntry claim={claim} index/>)}</section>)}</div>
+</SiteLayout>

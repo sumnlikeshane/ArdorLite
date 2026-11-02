@@ -1,0 +1,24 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { loadEntries, renderEntry, entryUrl, type Entry } from '../../lib/publication/entries';
+export function getStaticPaths() {
+  const entries = loadEntries().filter(entry => entry.status === 'published');
+  return entries.length ? [
+    { params: { slug: undefined }, props: { entries } },
+    ...entries.map(entry => ({ params: { slug: entry.slug }, props: { entries, entry } })),
+  ] : [];
+}
+const { entries, entry } = Astro.props as { entries: Entry[]; entry?: Entry };
+const labels = { research: 'Research note', decision: 'Decision', publication: 'Publication' };
+const html = entry ? await renderEntry(entry) : '';
+---
+<SiteLayout title={entry?.title ?? 'Research notes & decisions'} description={entry?.summary ?? 'Authored research notes, decisions and publications from Ardor.'} type="publication">
+  {entry ? <>
+    <header class="page-heading"><a href="/writing/">Research notes & decisions</a><p class="eyebrow">{labels[entry.kind]} · <time datetime={entry.date}>{entry.date}</time></p><h1>{entry.title}</h1><p class="lede">{entry.summary}</p></header>
+    <article class="prose" set:html={html} />
+    <section class="section" aria-label="Evidence references"><h2>Referenced evidence</h2><ul>{entry.references.map(href => <li><a href={href}>{href}</a></li>)}</ul></section>
+  </> : <>
+    <header class="page-heading"><span class="eyebrow">The record</span><h1>Research notes<br />& decisions.</h1><p class="lede">Questions, evidence and the decisions they support.</p></header>
+    {entries.map(item => <article class="section"><p class="eyebrow">{labels[item.kind]} · <time datetime={item.date}>{item.date}</time></p><h2><a href={entryUrl(item)}>{item.title}</a></h2><p>{item.summary}</p></article>)}
+  </>}
+</SiteLayout>

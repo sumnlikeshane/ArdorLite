@@ -1,0 +1,23 @@
+---
+import ResearchExperience from './ResearchExperience.astro';
+import { rolloutById, rolloutStudyById } from '../../content/research/rollout';
+import { caseById } from '../../lib/evidence';
+import EditorialNoteReference from '../EditorialNoteReference.astro';
+interface Props { caseId:string; }
+const {caseId}=Astro.props;
+const composition=rolloutById.get(caseId)!;
+const study=rolloutStudyById.get(caseId)!;
+const c=caseById.get(caseId)!;
+---
+<ResearchExperience composition={composition}>
+ <section slot="introduction" id="investigation" class="research-investigation-intro" aria-labelledby="investigation-title">
+  <p class="eyebrow">The investigation</p><h2 id="investigation-title">{study.question}</h2>
+  <p>{study.researchObject} {study.mechanism}</p>
+
+  {c.credit && <p class="small">{c.credit}</p>}
+ </section>
+ <div slot="conclusion">
+  <section id="decision-brief" class="decision-brief research-decision" aria-labelledby="decision-title"><p class="eyebrow">Decision brief</p><h2 id="decision-title">{composition.answer}</h2><p>{c.summary}</p><p>{study.qualification}</p><p><a href="#original-verdicts">Inspect the original verdicts and complete controlling gates</a> · <a href="#claims">Verify every claim</a></p></section>
+  <section id="pilot-limits" class="pilot-limits research-limits"><h2>Limits and missing evidence</h2><p>{study.qualification}</p>{caseId==='delivery-insider' && <EditorialNoteReference/>}<p>Display transformations use the reviewed derivatives. Repeating historical research requires excluded private inputs. Source identity, local inspection, reproduction and public-use permission remain separate.</p></section>
+ </div>
+</ResearchExperience>

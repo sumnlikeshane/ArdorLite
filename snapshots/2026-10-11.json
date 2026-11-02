@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "observation_date": "2026-10-11",
+  "archive_sha256": "32a22bceea917881eff14cf847b94513d356b0e3a81e7796f98640b1b588203a",
+  "manifest_sha256": "c3af4b13004144ecafbc9ecd674164387d31a369fd76dc19d38c4d942f3c34d6",
+  "file_count": 135,
+  "counts": {
+    "records": 114,
+    "cases": 6,
+    "claims": 204,
+    "figures": 18,
+    "methods": 5,
+    "previews": 4
+  },
+  "source": "reviewed/2026-10-11",
+  "immutable": true
+}

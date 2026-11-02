@@ -1,0 +1,20 @@
+---
+import { isPublicPublication } from '../../lib/publication/scope';
+interface Row {id: string; label: string; period: string; complete: boolean; conditions: (boolean|null)[]; outcome: string; href: string;}
+interface Props { rows: Row[]; conditions: string[]; }
+const {rows, conditions} = Astro.props;
+---
+<div class="gate-matrix">
+  <p class="matrix-instruction">Read across each period. All three conditions are required; partial evidence cannot contribute a complete-period pass.</p>
+  <div class="table-scroll" role="region" aria-label="Complete and partial period decision matrix" tabindex="0">
+    <table>
+      <caption>{isPublicPublication ? 'Recorded V5 decisions · omitted return conditions remain unavailable' : 'Recorded V5 conditions · inspect a period for exact returns and source precision'}</caption>
+      <thead><tr><th scope="col">Test period</th>{conditions.map(condition => <th scope="col">{condition}</th>)}<th scope="col">Decision</th></tr></thead>
+      <tbody>{rows.map(row => <tr class:list={[{'is-partial':!row.complete}]}><th scope="row"><a href={row.href}>{row.label} ↗</a><small>{row.period}</small></th>
+        {row.conditions.map(pass => <td><span class:list={['gate-state', pass === null ? 'gate-unavailable' : pass?'gate-pass':'gate-fail']}>{pass === null ? 'Not included' : pass?'✓ Pass':'× Fail'}</span></td>)}
+        <td><strong>{row.outcome}</strong>{!row.complete && <small>Descriptive only</small>}</td>
+      </tr>)}</tbody>
+    </table>
+  </div>
+  <p class="small">Condition labels describe saved comparisons. The partial row’s observations are descriptive; no complete-period decision is evaluated for it. EMA’s absent candidate-gate fields remain unavailable.</p>
+</div>

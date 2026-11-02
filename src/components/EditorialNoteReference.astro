@@ -1,0 +1,7 @@
+---
+import { deliveryDiscrepancy, deliveryDiscrepancyUrl } from '../content/editorial-notes';
+---
+<aside class="evidence-note" aria-label="Delivery definition qualification" data-editorial-note-reference={deliveryDiscrepancy.id}>
+  <p><strong>{deliveryDiscrepancy.title}.</strong> {deliveryDiscrepancy.context}</p>
+  <p><a href={deliveryDiscrepancyUrl}>Read the discrepancy and historical-run boundary beside the archived definition</a>.</p>
+</aside>

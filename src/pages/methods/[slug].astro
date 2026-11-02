@@ -1,0 +1,29 @@
+---
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ReproductionLabel from '../../components/ReproductionLabel.astro';
+import { methods, assetUrl, snapshotRoot } from '../../lib/evidence';
+import { methodPresentation, methodReferences, methodDemo, renderMethodExplanation } from '../../content/methods';
+import { evidenceCrosswalk as crosswalk } from '../../lib/evidence/crosswalk';
+export function getStaticPaths() { return methods.map(method=>({params:{slug:method.slug},props:{method}})); }
+const {method}=Astro.props;
+const presentation=methodPresentation(method.id);
+const html=await renderMethodExplanation(method.id);
+const output=methodDemo(method.id);
+const source=readFileSync(resolve(snapshotRoot,method.path),'utf8');
+const references=method.references.map(id=>{const ref=methodReferences.find(ref=>ref.id===id);if(!ref)throw new Error(`Missing method reference ${id}`);return ref;});
+const sourceRelations = crosswalk.outgoing('method', method.id, 'method-source');
+const conceptualSources=method.source_artifacts.map((artifact,index)=>({...artifact,source:sourceRelations[index]!.to}));
+---
+<SiteLayout title={method.title} description={presentation.summary} type="method" reproduction="executable_example">
+  <header class="page-heading"><p class="breadcrumb"><a href="/methods/">Methods</a> / Synthetic example</p><span class="eyebrow">A bounded software contract</span><h1>{method.title}</h1><p class="lede">{presentation.summary}</p><div class="evidence-note"><p><strong>Synthetic teaching example — not market evidence.</strong></p><p>This independently authored example demonstrates software behavior. It does not reproduce historical research returns or establish a strategy verdict.</p></div><ReproductionLabel level={method.reproduction_level}/></header>
+  <article class="prose">
+    <section aria-labelledby="explanation"><h2 id="explanation">Method and assumptions</h2><div set:html={html}/></section>
+    <section aria-labelledby="limits"><h2 id="limits">What this example cannot establish</h2><ul>{method.limitations.map(limit=><li>{limit}</li>)}</ul><p>Historical research retains its own <a href="/evidence/">reproduction boundary</a> and controlling gates. <a href={`/research/cases/${presentation.relatedCase}/`}>Read the related research case.</a></p></section>
+    <section aria-labelledby="output"><h2 id="output">Verified synthetic output</h2><p>The following values come from the included demonstration runner. Undefined values remain JSON <code>null</code>. They are synthetic examples, not saved market results.</p><pre tabindex="0" aria-label="Verified synthetic JSON output"><code>{JSON.stringify(output,null,2)}</code></pre><p class="small">The build compares the complete demonstration output hash with its archived recorded identity. <a href={assetUrl('methods/demo.py')} download>Download the original runner</a> · <a href={assetUrl('methods/validation.json')} download>Archived example verification</a></p></section>
+    <section aria-labelledby="source"><h2 id="source">Source and reproduction</h2><p>{method.authorship.replace(" during preparation", "").replace(" for the handoff", "")}</p><p>Runtime: {method.runtime_dependencies.join('; ')}. <a href="/methods/#run">Download the collection’s support files and run its tests.</a></p><p><a class="text-link" href={assetUrl(method.path)} download>Download {method.path.split('/').at(-1)}</a></p><p class="small">Original example SHA-256: <code style="overflow-wrap:anywhere">{method.sha256}</code></p><details><summary>Inspect the included example source</summary><pre tabindex="0" aria-label="Included Python example source"><code>{source}</code></pre></details><h3>Changes and bounded treatment</h3><ul>{method.changes.map(change=><li>{change}</li>)}</ul></section>
+    <section aria-labelledby="attribution"><h2 id="attribution">Attribution and provenance</h2><p>The conceptual source paths below are provenance labels for excluded originals. The downloadable example is the independent file identified above.</p><ul>{conceptualSources.map(artifact=><li><code style="overflow-wrap:anywhere">{artifact.source_path}</code>{artifact.source && <> · <a href={artifact.source.href}>Source record</a></>}<br/><span class="small">SHA-256: <code style="overflow-wrap:anywhere">{artifact.sha256}</code></span></li>)}</ul>{references.length>0 && <><h3>Primary references</h3><ul>{references.map(reference=><li><a href={reference.url}>{reference.title}</a></li>)}</ul></>}<p><a href={assetUrl('methods/ATTRIBUTION.json')} download>Download the reviewed attribution record</a> · <a href={assetUrl('NOTICE.md')} download>Read the reviewed notice</a></p><p class="small">{method.rights} The original project declaration and applicable material-specific rights remain separate from public download availability.</p></section>
+    <p><a href="/methods/">← All five synthetic examples</a> · <a href="/evidence/">Evidence policy</a></p>
+  </article>
+</SiteLayout>

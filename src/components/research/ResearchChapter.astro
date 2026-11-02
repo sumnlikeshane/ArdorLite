@@ -1,0 +1,22 @@
+---
+import type { ResearchComposition } from '../../lib/research/presentation';
+interface Props { chapter: ResearchComposition['chapters'][number]; }
+const {chapter} = Astro.props;
+---
+<section class:list={['research-chapter', `composition-${chapter.layout}`]} id={chapter.id} aria-labelledby={`${chapter.id}-title`}>
+  <header class="research-chapter-heading"><p class="eyebrow">{chapter.number} / The investigation</p><h2 id={`${chapter.id}-title`}>{chapter.title}</h2></header>
+  <div class="research-chapter-grid">
+    <div class="research-prose">{chapter.paragraphs.slice(0,chapter.supportAfter).map(html => <p set:html={html}/>)}</div>
+    {chapter.support && <aside class:list={['research-support', `support-${chapter.support.kind}`]} aria-label={chapter.support.title}>
+      <h3>{chapter.support.title}</h3>
+      {chapter.support.kind === 'process' && <>
+        <ol class="research-process">{chapter.support.steps.map((step,i) => <li><span aria-hidden="true">{String(i+1).padStart(2,'0')}</span><div><strong>{step.label}</strong><p>{step.text}</p></div></li>)}</ol>
+        <p class="small">{chapter.support.note}</p>
+      </>}
+      {chapter.support.kind === 'roles' && <dl class="research-roles">{chapter.support.rows.map(row => <div><dt>{row.label}</dt><dd>{row.purpose}</dd></div>)}</dl>}
+      {chapter.support.kind === 'finding' && <p>{chapter.support.text}</p>}
+    </aside>}
+    {chapter.supportAfter && <div class="research-prose research-prose-continuation">{chapter.paragraphs.slice(chapter.supportAfter).map(html => <p set:html={html}/>)}</div>}
+  </div>
+  <slot/>
+</section>

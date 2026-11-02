@@ -1,0 +1,46 @@
+---
+import { evidenceCrosswalk as crosswalk, materialDisposition } from '../lib/evidence/crosswalk';
+import type { Source } from '../lib/evidence';
+import EvidenceLinks from './EvidenceLinks.astro';
+import EditorialNoteReference from './EditorialNoteReference.astro';
+import { deliveryDiscrepancy } from '../content/editorial-notes';
+import { studyById } from '../lib/publication';
+interface Props { source: Source; }
+const { source } = Astro.props;
+const context = crosswalk.sourceContext(source.id);
+const rights = materialDisposition('sources', source.id);
+const derivativeRights = [...new Set(context.assets.map(asset => materialDisposition('derivatives', asset.id).downloadableDerivatives.state))];
+const pilotContext = context.cases.map(item => studyById.get(item.id)).filter(item => item !== undefined);
+const supplementRoles: Record<string,string> = {
+  'src-2adacd9e9309':'Selected saved return comparisons and archived condition flags for the five Trend periods.',
+  'src-c4562307c478':'Configured training/testing intervals, variant construction and registered decision rules.',
+  'src-84ab5c4a1d94':'The report crosscheck for the saved fold comparisons and final family decision.',
+};
+---
+<article data-pagefind-ignore id={source.id} class="source-entry" tabindex="-1" data-evidence-entry data-locate-id={source.id} data-locate-cases={context.cases.map(item => item.id).join(' ')}>
+  <h2>{pilotContext.length ? `Evidence supporting ${context.cases.map(item => item.label).join(' and ')}` : `Source reference: ${source.source_relative_path.split('/').at(-1)}`}</h2>
+  {pilotContext.length > 0 && <><p><strong>Source identity:</strong> <code>{source.id}</code></p>
+    <p>This source supports the linked {context.claims.length ? 'recorded claims' : 'study context'} and {context.figures.length ? 'figure comparisons' : 'reference relationships'} listed below. The original is excluded from this publication; selected mapped derivatives, where listed, are separate available artifacts.</p>
+    {pilotContext.map(study => <p>{study.question} <a href={study.explanationHref}>Read the explanation before checking the source</a>.</p>)}
+  </>}
+  <p class="small">This entry is a provenance reference. The original file is excluded; only explicitly listed mapped derivatives are available here. A source hash identifies bytes and does not establish historical execution or redistribution permission.</p>
+  {supplementRoles[source.id] && <p>{supplementRoles[source.id]} The separate <a href="/research/cases/trend-quality/#trend-fold-decision-context">Trend fold context supplement</a> makes those selected premises inspectable. It does not provide the complete original or a new download; public embedding remains unapproved.</p>}
+  {deliveryDiscrepancy.sourceIds.some(id => id === source.id) && <EditorialNoteReference />}
+  <p><strong>Original label:</strong> <code>{source.source_relative_path}</code></p>
+  <p><strong>Material role:</strong> {source.catalog_source_roles.length ? source.catalog_source_roles.map(role => role.replaceAll('_', ' ')).join(' · ') : 'No catalog source role supplied'} · {source.canonical_status.replaceAll('_', ' ')}</p>
+  <p><strong>SHA-256:</strong> <code>{source.sha256}</code></p>
+  <p class="small">Observed {source.observation_date} · Source date: {source.source_date ?? 'Unavailable'} · Version label: {source.version_label ?? 'Unavailable'}</p>
+  <p class="small">{source.source_date_basis}. {source.version_basis}.</p>
+  <p><strong>Original unavailable:</strong> {source.original_disposition.replaceAll('_', ' ')}</p>
+  <p class="small">Metadata reference: {rights.referenceMetadata.state}. Original public embedding: {rights.publicEmbedding.state}; original download: {rights.downloadableDerivatives.state}.</p>
+  {source.evidence_gaps.length > 0 && <ul>{source.evidence_gaps.map(gap => <li>{gap}</li>)}</ul>}
+  {context.cases.length > 0 && <p>Used in investigations: {context.cases.map((item, index) => <>{index > 0 && ' · '}<a href={item.href}>{item.label}</a></>)}</p>}
+  <EvidenceLinks title="Claims" entries={context.claims} note="Exact reviewed claim source IDs. Follow a claim for its original locator, value, units and qualifications." />
+  <EvidenceLinks title="Figures and exact tables" entries={context.figures} />
+  <EvidenceLinks title="Records owning these claims" entries={context.owningRecords} note="Claim ownership is distinct from a record’s direct source list." />
+  <EvidenceLinks title="Catalog source references" entries={context.directRecords} note="Explicit canonical, source-list or source-index references in the reviewed records." />
+  <EvidenceLinks title="Synthetic method examples" entries={context.methods} note="Conceptual source identity matches by path and hash. These examples do not reproduce historical results." />
+  <EvidenceLinks title="Mapped reviewed derivatives" entries={context.assets} note={`Listed downloads retain their notices. Public derivative clearance: ${derivativeRights.join(' · ')}. Availability does not grant rights to the original.`} />
+  <EvidenceLinks title="Selected source excerpts" entries={context.excerpts} note="Exact file path and hash match only. Capture date and historical relation remain separate; local-only excerpts are not source downloads or proof of a historical run." />
+  {context.claims.length + context.figures.length + context.directRecords.length + context.methods.length + context.assets.length + context.excerpts.length === 0 && <p class="small">No additional consuming context is declared for this identity. No relationship has been inferred.</p>}
+</article>

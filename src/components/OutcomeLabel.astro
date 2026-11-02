@@ -1,0 +1,7 @@
+---
+interface Props { status: string; label?: string; }
+const {status,label} = Astro.props;
+const tone = /kill|stand_down|fail|invalid|blocked/.test(status) ? 'fail' : /discovery/.test(status) ? 'discovery' : /pass/.test(status) ? 'pass' : 'neutral';
+const names: Record<string,string> = {discovery_map_only:'Discovery map only',stand_down:'Stand down',tested_killed:'Tested · killed',blocked_before_returns:'Blocked before returns',invalidated:'Invalidated',design_only:'Design only',research_infrastructure:'Research infrastructure'};
+---
+<span class:list={['outcome',`outcome-${tone}`]}>{label || names[status] || status.replaceAll('_',' ')}</span>

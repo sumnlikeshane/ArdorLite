@@ -1,0 +1,20 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  description?: string;
+  executionMode?: string;
+  dataOrigin?: string;
+}
+const { id, title, description, executionMode, dataOrigin } = Astro.props;
+---
+<section id={id} class="exp-frame" aria-labelledby={`${id}-title`}>
+  <header class="exp-frame-heading">
+    {(executionMode || dataOrigin) && <p class="exp-mode">{executionMode && <span>{executionMode.replaceAll('-', ' ')}</span>}{dataOrigin && <span>{dataOrigin.replaceAll('-', ' ')}</span>}</p>}
+    <h2 id={`${id}-title`}>{title}</h2>
+    {description && <p class="exp-description">{description}</p>}
+  </header>
+  <div class="exp-frame-content"><slot /></div>
+  {Astro.slots.has('controls') && <div class="exp-controls"><slot name="controls" /></div>}
+  {Astro.slots.has('source') && <div class="exp-frame-source"><slot name="source" /></div>}
+</section>

@@ -1,0 +1,79 @@
+{
+  "id": "atlas-gates",
+  "title": "Accepted Atlas cumulative gate funnel",
+  "case_id": "atlas-ssf",
+  "status": "discovery_map_only",
+  "units": "cells",
+  "source_paths": [
+    "docs/discovery/ATLAS_v1_RESULTS.md",
+    "data/research/atlas_v1/9232e16d-b8de-4039-9c11-31d718eacfb0.jsonl",
+    "config/research/atlas_v1.yaml"
+  ],
+  "source_artifact_ids": [
+    "src-01377cbc2972",
+    "src-3da0d4ccff37",
+    "src-1a618c29038e"
+  ],
+  "claim_ids": [
+    "atlas-gates-01",
+    "atlas-gates-02",
+    "atlas-gates-03",
+    "atlas-gates-04",
+    "atlas-gates-05",
+    "atlas-gates-06",
+    "atlas-gates-07"
+  ],
+  "extraction_rule": "Recount recorded accepted-cell fields using frozen gate predicates; gate counts checked against report. Gate 3 requires finite, non-null mean_excess in every declared regime, with mean_excess * full-cell excess_mean > 0; null or unavailable regime fails rather than being skipped or converted to zero. Gate 4 requires max_date_share <= 0.10 and max_symbol_share <= 0.05; gate 5 requires fillable_count >= required_sample_size. Zero formal nominations transcribed from report, because nominations require separate governance.",
+  "study_context": {
+    "window": "2016-01-01 through 2024-12-31",
+    "universe": "liquid cash and point-in-time F&O membership lenses",
+    "instrument": "cash-price base rates in both lenses",
+    "benchmark": "same eligible equal-weight universe and horizon",
+    "costs": "No actual-instrument cost clearance in Atlas; rough magnitude is diagnostic only",
+    "inference": "recorded date/symbol two-way clustering; BH across all accepted cells; BY diagnostic",
+    "source_verdict": "discovery atlas complete; no cell formally nominated"
+  },
+  "caveats": [
+    "Cells overlap across states and horizons; counts are not independent alpha discoveries.",
+    "Gates 6\u20137 (actual-instrument costs/translation and mechanism) were not automated.",
+    "Formal nominations are a report transcription, not inferred from cell statistics.",
+    "Unopened holdout is Atlas-specific; the calendar dates were used by other research families."
+  ],
+  "rows": [
+    {
+      "label": "Accepted cells",
+      "value": 1264,
+      "claim_id": "atlas-gates-01"
+    },
+    {
+      "label": "Absolute two-way t gate",
+      "value": 312,
+      "claim_id": "atlas-gates-02"
+    },
+    {
+      "label": "Plus BH q gate",
+      "value": 312,
+      "claim_id": "atlas-gates-03"
+    },
+    {
+      "label": "Plus regime-sign agreement",
+      "value": 294,
+      "claim_id": "atlas-gates-04"
+    },
+    {
+      "label": "Plus concentration limits",
+      "value": 293,
+      "claim_id": "atlas-gates-05"
+    },
+    {
+      "label": "Plus fillable sample requirement",
+      "value": 293,
+      "claim_id": "atlas-gates-06"
+    },
+    {
+      "label": "Formal nominations",
+      "value": 0,
+      "claim_id": "atlas-gates-07"
+    }
+  ]
+}

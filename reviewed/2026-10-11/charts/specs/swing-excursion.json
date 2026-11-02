@@ -1,0 +1,104 @@
+{
+  "id": "swing-excursion",
+  "title": "Swing excursion versus realized net by exit cause",
+  "case_id": "swing-autopsy",
+  "status": "tested_killed",
+  "units": "R",
+  "source_paths": [
+    "screener/validation/outputs/v1_exit_autopsy.json"
+  ],
+  "source_artifact_ids": [
+    "src-18ca4fa1211e"
+  ],
+  "claim_ids": [
+    "swing-excursion-01",
+    "swing-excursion-01-filled-trades",
+    "swing-excursion-02",
+    "swing-excursion-03",
+    "swing-excursion-03-filled-trades",
+    "swing-excursion-04",
+    "swing-excursion-05",
+    "swing-excursion-05-filled-trades",
+    "swing-excursion-06"
+  ],
+  "extraction_rule": "Select aggregate MFE and realized net by observed exit cause; group counts retained. MFE is path excursion, not an executable return.",
+  "study_context": {
+    "window": "2022-01-03 through 2026-06-05",
+    "universe": "current-only screener membership; historical survivorship tailwind",
+    "benchmark": "equal-weight price-panel proxy for relative strength and market regime",
+    "instrument": "cash-equity mechanical trigger replay",
+    "costs": "notional friction + tax convention in R units; V1 per-win conservative tax, V2 corrected annual net tax with constant risk per trade",
+    "execution": "weekly as-of decisions; conservative bar-based fills; V1 fixed stop/far target/time exit; V2 trailing loss management",
+    "inference": "reported bootstrap mean interval and shuffled-date placebo; exit alternatives are post-hoc same-fill diagnostics",
+    "source_verdict": "V1 FAIL; corrected V2 KILL"
+  },
+  "caveats": [
+    "R is trade P&L divided by initial planned trade risk; R is not a percentage return.",
+    "V1 and V2 are different designs and tax lines, not an isolated causal comparison.",
+    "Current-only membership and single 2026 adjusted-price vintage limit historical PIT claims.",
+    "The historical window is spent development data; V2 replay was kill-only and cannot pass the hypothesis.",
+    "V2 bear-regime expectancy and no_regime_half_sign_flip metric are null; a passing mechanical check does not establish bear evidence.",
+    "Grouping by realized exit cause is descriptive; it does not identify causal management value."
+  ],
+  "rows": [
+    {
+      "label": "Stop \u2014 maximum favorable excursion",
+      "value": 1.0943,
+      "claim_id": "swing-excursion-01",
+      "filled_trades": 124,
+      "additional_claim_ids": {
+        "filled_trades": "swing-excursion-01-filled-trades"
+      }
+    },
+    {
+      "label": "Stop \u2014 realized net",
+      "value": -1.1876,
+      "claim_id": "swing-excursion-02"
+    },
+    {
+      "label": "Target \u2014 maximum favorable excursion",
+      "value": 3.9707,
+      "claim_id": "swing-excursion-03",
+      "filled_trades": 26,
+      "additional_claim_ids": {
+        "filled_trades": "swing-excursion-03-filled-trades"
+      }
+    },
+    {
+      "label": "Target \u2014 realized net",
+      "value": 2.815,
+      "claim_id": "swing-excursion-04"
+    },
+    {
+      "label": "Time exit \u2014 maximum favorable excursion",
+      "value": 1.7305,
+      "claim_id": "swing-excursion-05",
+      "filled_trades": 78,
+      "additional_claim_ids": {
+        "filled_trades": "swing-excursion-05-filled-trades"
+      }
+    },
+    {
+      "label": "Time exit \u2014 realized net",
+      "value": 0.5658,
+      "claim_id": "swing-excursion-06"
+    }
+  ],
+  "chart_id": "swing-excursion",
+  "input_table": "evidence/tables/swing-excursion.json",
+  "input_sha256": "5ad529ae394e0446f7596cde1da16add5f8bf361ced56f803e21701223a8551d",
+  "display_rounding": "At most four decimals; integer counts unchanged",
+  "missing_values": "null stays unavailable; never plotted as zero",
+  "transformation": "One bar per recorded numeric value; no interpolation, resampling, inference or optimization",
+  "outputs": [
+    {
+      "path": "charts/generated/swing-excursion.svg",
+      "sha256": "f242692c74a11e77131fdfafd6b530a5bb69c0ac3ea76f38b10fdfa6f73c4c0f"
+    },
+    {
+      "path": "charts/generated/swing-excursion.png",
+      "sha256": "a96fc4e2fca60b01f9a8b19b706fa1ab0f75bfb4d650af21bb55632f24138405"
+    }
+  ],
+  "accessible_table": "evidence/tables/swing-excursion.md"
+}

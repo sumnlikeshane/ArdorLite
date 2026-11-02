@@ -1,0 +1,64 @@
+{
+  "id": "bridge-invalid",
+  "title": "Price bridge invalidity before and after repair",
+  "case_id": "price-bridge",
+  "status": "research_infrastructure",
+  "units": "observed rows",
+  "source_paths": [
+    "data/research/trend_following_price_bridge_certification_v1_1/before_after_validation_summary.json"
+  ],
+  "source_artifact_ids": [
+    "src-3f6afd0415da"
+  ],
+  "claim_ids": [
+    "bridge-invalid-01",
+    "bridge-invalid-02"
+  ],
+  "extraction_rule": "Select recorded before/after invalid_bridge_rows; do not export exception row identities, symbol/date ranges or raw IDs.",
+  "study_context": {
+    "window": "2015-01-01 through 2026-06-05; frozen knowledge cutoff 2026-06-09; repair vintage 2026-08-12",
+    "universe": "complete observed clean price panel, not a strategy sample",
+    "instrument": "cash price bridge between adjusted and exact frozen raw observations",
+    "benchmark": null,
+    "costs": null,
+    "execution": "data-only validation; exact-session gaps remain explicit and fold handling fail-closed",
+    "inference": "deterministic validity/linkage checks; no market-return inference",
+    "source_verdict": "source-data-repair-required"
+  },
+  "caveats": [
+    "Technical certification and source-rights certification are independent.",
+    "Source-rights status is the archived governance decision for these rows; no present-day legal assessment is made.",
+    "Exact raw linkage proves origin, not automation, retention or derived-use permission.",
+    "Invalid/absent marks remain fail-closed. Zero invalid observed bridges does not mean zero missing exact-session observations.",
+    "No strategy performance, Sharpe, CAGR or P&L was computed."
+  ],
+  "rows": [
+    {
+      "label": "Before invalid bridges",
+      "value": 1158,
+      "claim_id": "bridge-invalid-01"
+    },
+    {
+      "label": "After invalid bridges",
+      "value": 0,
+      "claim_id": "bridge-invalid-02"
+    }
+  ],
+  "chart_id": "bridge-invalid",
+  "input_table": "evidence/tables/bridge-invalid.json",
+  "input_sha256": "0132a91395516d8707004caf3ee440efd2430b484688dbb257d6614325be1872",
+  "display_rounding": "At most four decimals; integer counts unchanged",
+  "missing_values": "null stays unavailable; never plotted as zero",
+  "transformation": "One bar per recorded numeric value; no interpolation, resampling, inference or optimization",
+  "outputs": [
+    {
+      "path": "charts/generated/bridge-invalid.svg",
+      "sha256": "09a0258c448391679efb3adea6f66df5eee54a758d381cd174bfd1ea369f9b5c"
+    },
+    {
+      "path": "charts/generated/bridge-invalid.png",
+      "sha256": "7830bac03e8b0925b590bf7013e07152d69629afafda8f31cb532b2d7b7580ae"
+    }
+  ],
+  "accessible_table": "evidence/tables/bridge-invalid.md"
+}

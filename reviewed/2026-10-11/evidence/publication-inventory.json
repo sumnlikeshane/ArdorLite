@@ -1,0 +1,2100 @@
+{
+  "schema_version": 1,
+  "observation_date": "2026-10-11",
+  "rights_treatment": "Reserved rights; review-ready local handoff, no broad source/data redistribution licence",
+  "included": [
+    {
+      "path": ".gitignore",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "AGENTS.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "NOTICE.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "README.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/explorer.html",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/atlas-gates.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/atlas-gates.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/bridge-certification.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/bridge-certification.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/bridge-invalid.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/bridge-invalid.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/bridge-linkage.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/bridge-linkage.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/delivery-cash.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/delivery-cash.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/delivery-interaction.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/delivery-interaction.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/delivery-ssf.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/delivery-ssf.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/momentum-alpha.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/momentum-alpha.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/momentum-execution.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/momentum-execution.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/momentum-exposures.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/momentum-exposures.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/ssf-capacity.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/ssf-capacity.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/ssf-economics.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/ssf-economics.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/swing-excursion.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/swing-excursion.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/swing-expectancy.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/swing-expectancy.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/swing-policies.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/swing-policies.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/trend-controls.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/trend-controls.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/trend-folds.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/trend-folds.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/trend-selection.png",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/generated/trend-selection.svg",
+      "decision": "include",
+      "material": "authored_figure_from_reviewed_table",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/atlas-gates.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/bridge-certification.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/bridge-invalid.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/bridge-linkage.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/delivery-cash.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/delivery-interaction.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/delivery-ssf.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/momentum-alpha.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/momentum-execution.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/momentum-exposures.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/ssf-capacity.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/ssf-economics.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/swing-excursion.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/swing-expectancy.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/swing-policies.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/trend-controls.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/trend-folds.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "charts/specs/trend-selection.json",
+      "decision": "include",
+      "material": "chart_provenance_and_transformation",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/cases/atlas-ssf.md",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/cases/delivery-insider.md",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/cases/momentum-v2.md",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/cases/price-bridge.md",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/cases/swing-autopsy.md",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/cases/trend-quality.md",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/methods.json",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/previews.json",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/project.json",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "content/research.json",
+      "decision": "include",
+      "material": "authored_research_catalog_or_narrative",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "docs/EVIDENCE_POLICY.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "docs/HANDOFF.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "docs/METHODS.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "docs/PLAN_ardor_lite.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "docs/REPRODUCIBILITY.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/allowlist.json",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/claims.json",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/exclusion-receipt.json",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/manifest.json",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/preparation-receipt.json",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/publication-inventory.json",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/source-verification.json",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/summaries/catalog-reconciliation.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/summaries/featured-evidence.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/summaries/source-index.md",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "evidence/tables/atlas-gates.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/atlas-gates.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/bridge-certification.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/bridge-certification.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/bridge-invalid.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/bridge-invalid.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/bridge-linkage.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/bridge-linkage.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/delivery-cash.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/delivery-cash.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/delivery-interaction.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/delivery-interaction.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/delivery-ssf.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/delivery-ssf.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/momentum-alpha.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/momentum-alpha.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/momentum-execution.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/momentum-execution.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/momentum-exposures.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/momentum-exposures.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/ssf-capacity.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/ssf-capacity.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/ssf-economics.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/ssf-economics.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/swing-excursion.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/swing-excursion.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/swing-expectancy.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/swing-expectancy.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/swing-policies.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/swing-policies.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/trend-controls.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/trend-controls.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/trend-folds.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/trend-folds.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/trend-selection.json",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "evidence/tables/trend-selection.md",
+      "decision": "include",
+      "material": "reviewed_aggregate_analytical_values",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Archived analytical summaries only; no vendor market observations or price reconstruction"
+    },
+    {
+      "path": "methods/ATTRIBUTION.json",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "methods/__init__.py",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "methods/bridge.py",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "methods/cluster_mean.py",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "methods/demo.py",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "methods/lagged_quality.py",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "methods/multiple_testing.py",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "methods/units.py",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "methods/validation.json",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "requirements-charts.txt",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "scripts/generate_charts.py",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "scripts/validate.py",
+      "decision": "include",
+      "material": "authored_preparation_instructions_or_tool",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "tests/test_evidence.py",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    },
+    {
+      "path": "tests/test_methods.py",
+      "decision": "include",
+      "material": "independent_synthetic_method_or_verification",
+      "review": "Selected derivative inspected; no raw/row identities, personal details or restricted source implementation; source originals excluded",
+      "ownership_attribution": "Ardor source provenance retained; independently authored derivative, not untouched original",
+      "source_use_rule": "Authored preparation derivative with reserved rights"
+    }
+  ],
+  "excluded_originals": [
+    {
+      "source_id": "src-6ebdb617a810",
+      "path": "CLAUDE.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-b33563055168",
+      "path": "README.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-ac57f2d1ba86",
+      "path": "ardor/broker/README.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6fbb4dae711f",
+      "path": "ardor/broker/__init__.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f806e2945734",
+      "path": "ardor/broker/base.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f19b0518a912",
+      "path": "ardor/data/adjust.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-3ecccf36caea",
+      "path": "ardor/data/buyback/reader.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-3a49bca56b9c",
+      "path": "ardor/data/fo/basis_decomp.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-1db8f00e4beb",
+      "path": "ardor/data/insider/cluster.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-8f4e71e7ce1a",
+      "path": "ardor/data/microstructure/fill_rule.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-e273cf6b92bb",
+      "path": "ardor/data/reference/index_rebalance.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-bc5ddef7ab0b",
+      "path": "ardor/data/reference/result_dates.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-47bbd9f3b470",
+      "path": "ardor/engine/README.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-30b059dc99bf",
+      "path": "ardor/metrics/core.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-87b4a2117479",
+      "path": "ardor/process/experiment.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f09100231e7d",
+      "path": "ardor/process/feasibility_gate.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-2344544254f3",
+      "path": "ardor/process/ledger_integrity.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-46b06def03be",
+      "path": "ardor/research/atlas.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-66cb011e0326",
+      "path": "ardor/research/event_study.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6d5fed618d59",
+      "path": "ardor/research/multiple_testing.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-9d5cb4bbb089",
+      "path": "ardor/research/trend_state_validation.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7c60e5997747",
+      "path": "ardor/strategies/killed/momentum_xs_v1/signal.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-b0a1a83377ba",
+      "path": "ardor/strategies/killed/momentum_xs_v2/driver.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-50f61de1f3c8",
+      "path": "ardor/strategies/trend_following_price_bridge_remediation/audit.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-61706768c122",
+      "path": "ardor/strategies/trend_quality_immediate_entry_v1/engine.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-9dc2d3303b0f",
+      "path": "ardor/strategies/tss_failure_diagnosis_v1/engine.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-b6aefa299d8b",
+      "path": "config/research/atc_liq_free_v1.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-a1276a341fad",
+      "path": "config/research/atlas_clv_downside_followup_v1_0_1.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-1a618c29038e",
+      "path": "config/research/atlas_v1.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-be8b1c2acd77",
+      "path": "config/research/longterm_multibagger.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-fcf6dfde427c",
+      "path": "config/research/trend_following_entry_harvester_v2.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-61975f046c00",
+      "path": "config/research/trend_following_price_bridge_certification_v1_1.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-1bd3ea445144",
+      "path": "config/research/trend_following_price_bridge_remediation_v1.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-c4562307c478",
+      "path": "config/research/trend_quality_immediate_entry_v1.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-e4cb86edb390",
+      "path": "config/research/trend_state_classifier_feature_v1.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-fa6fba8525fb",
+      "path": "config/research/tss_failure_diagnosis_v1.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7aca7dad5ade",
+      "path": "config/research/tss_slow_trend_overlay_v1.yaml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6bd4edbd78a1",
+      "path": "data/process/hypotheses.jsonl",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-8788be4f1338",
+      "path": "data/process/hypotheses.jsonl.sha256",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-e11e4643058c",
+      "path": "data/process/trial_ledger.jsonl",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-70df346e044d",
+      "path": "data/process/trial_ledger.jsonl.sha256",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-1df46a0c6839",
+      "path": "data/research/atc_liq_free_v1/gate_matrix.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-508d317a24b5",
+      "path": "data/research/atc_liq_free_v1/results.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-fe5573d36283",
+      "path": "data/research/atc_liq_free_v1/strategy_comparison.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-2513644cee25",
+      "path": "data/research/atlas_followup/atlas_clv_downside_translation_v1_0_1.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-51f96626b85b",
+      "path": "data/research/atlas_v1/3a46da30-54a2-481b-b685-1ba4407a1d29.jsonl",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-3da0d4ccff37",
+      "path": "data/research/atlas_v1/9232e16d-b8de-4039-9c11-31d718eacfb0.jsonl",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7ea53e74c922",
+      "path": "data/research/candidate_A_preflight_2026-07-31.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-ecb1dfac7fab",
+      "path": "data/research/trend_following_entry_harvester_v2/engine_repair_bridge.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-51c7a3156512",
+      "path": "data/research/trend_following_entry_harvester_v2/results.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-3f6afd0415da",
+      "path": "data/research/trend_following_price_bridge_certification_v1_1/before_after_validation_summary.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-fc5fcf3fb237",
+      "path": "data/research/trend_following_price_bridge_certification_v1_1/results.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-a34cf0eda79c",
+      "path": "data/research/trend_following_price_bridge_certification_v1_1/source_provenance_reconciliation.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-e2ed7672dfb8",
+      "path": "data/research/trend_following_price_bridge_certification_v1_1/source_rights_activation_blocker.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-cf4a9533a461",
+      "path": "data/research/trend_following_price_bridge_remediation_v1/bridge_failure_taxonomy.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-65bcc04e1a0e",
+      "path": "data/research/trend_following_price_bridge_remediation_v1/results.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-3d4685269a6a",
+      "path": "data/research/trend_quality_immediate_entry_v1/direct_quality_regression.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-d42dd5bd922d",
+      "path": "data/research/trend_quality_immediate_entry_v1/gate_matrix.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-cd5e51f07d1d",
+      "path": "data/research/trend_quality_immediate_entry_v1/results.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6d49d801b740",
+      "path": "data/research/trend_quality_immediate_entry_v1/selection_adjustment.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-23f0e40c4c44",
+      "path": "data/research/trend_quality_immediate_entry_v1/strategy_comparison.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-2adacd9e9309",
+      "path": "data/research/trend_quality_immediate_entry_v1/walk_forward.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-757482c9cf96",
+      "path": "data/research/trend_state_classifier_feature_v1/feature_results.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f6c0d1f488f8",
+      "path": "data/research/trend_state_classifier_feature_v1/results.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-2d02717818b3",
+      "path": "data/research/trend_state_classifier_feature_v1/walk_forward_results.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-59f5a1a17350",
+      "path": "data/research/tss_failure_diagnosis_v1/preregistration.jsonl",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-bfe2062dea63",
+      "path": "data/research/tss_failure_diagnosis_v1/results.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-141898263d56",
+      "path": "data/research/tss_slow_trend_overlay_v1/results.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-61b52eff08a1",
+      "path": "data/research/tss_slow_trend_overlay_v1/strategy_comparison.csv",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-3a65de1eeaab",
+      "path": "data/store/insider_momentum_v1/registered/summary.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7a5080d05f4e",
+      "path": "data/store/insider_momentum_v1/reported/summary.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6d12320cd4ce",
+      "path": "docs/MASTER_PLAN_edge_discovery.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-81e65d638f28",
+      "path": "docs/MASTER_PLAN_sol_memecoin_strategy.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-a38a4793e94a",
+      "path": "docs/MASTER_PLAN_v2_edge_discovery.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-cad3a4cdb78c",
+      "path": "docs/PLAN_ardor_lite.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-3131aecbed39",
+      "path": "docs/ROADMAP_mpv2_run_order.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-298365cf15ec",
+      "path": "docs/VANTAGE_ARCHIVE_SOURCE.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-d9d0501b3de7",
+      "path": "docs/data/OPTIONS_SIGNED_FLOW_BLOCKER.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-aeb1b2b6d77c",
+      "path": "docs/decisions/0004-longterm-research-lane.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-eba026bc9216",
+      "path": "docs/decisions/GATE_G0_memecoin.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-8ac087295e86",
+      "path": "docs/discovery/2026-07-31_candidate_A_return_blind_preflight.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-34b291f9f084",
+      "path": "docs/discovery/ATLAS_CLV_DOWNSIDE_TRANSLATION_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-204e5b886942",
+      "path": "docs/discovery/ATLAS_CLV_DOWNSIDE_TRANSLATION_v1_0_1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-86724a7a7c5e",
+      "path": "docs/discovery/ATLAS_v1_QA.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-01377cbc2972",
+      "path": "docs/discovery/ATLAS_v1_RESULTS.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f534dc55e818",
+      "path": "docs/discovery/CANDIDATE_TOURNAMENT_2026-07-30.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f26848ae5d05",
+      "path": "docs/discovery/DECISION_2026-07-29_b10_1_registration.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-0be1c4ab228a",
+      "path": "docs/discovery/DISCOVERY_2026-06-11_trader_setups.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-bf16771254fd",
+      "path": "docs/discovery/DISCOVERY_2026-06-12_wave0_wave1_session.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f70a42adc2b9",
+      "path": "docs/discovery/DISCOVERY_2026-06-13_b3_1_overnight_intraday_session.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-1660a17e467f",
+      "path": "docs/discovery/DISCOVERY_2026-06-18_wave0_handoff_to_0A.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-9c9aa6140ef7",
+      "path": "docs/discovery/DISCOVERY_2026-06-20_B8_delivery_x_insider.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6e2f0306dead",
+      "path": "docs/discovery/DISCOVERY_2026-06-21_b1_2_index_rebalance.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-31b1bd8dc943",
+      "path": "docs/discovery/DISCOVERY_2026-06-23_b1_2_next50_index_rebalance.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-ed86ea900045",
+      "path": "docs/discovery/DISCOVERY_2026-07-07_b2_1_insider_cluster.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-2dc34d136742",
+      "path": "docs/discovery/DISCOVERY_2026-07-09_b1_3_band_revision_BLOCKED.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-4f11cca82903",
+      "path": "docs/discovery/DISCOVERY_2026-07-09_b7_1_march_tax.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-94f659dd6194",
+      "path": "docs/discovery/DISCOVERY_2026-07-17_b1_2_b_announcement_drift_0A_KILL.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-8374243f4707",
+      "path": "docs/discovery/DISCOVERY_2026-07-17_b1_2_b_announcement_drift_REGISTERED.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6731ff3c5b63",
+      "path": "docs/discovery/DISCOVERY_2026-07-17_b1_2_c_announcement_drift_0A_KILL.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7ce694f8459b",
+      "path": "docs/discovery/DISCOVERY_2026-07-17_b1_8_a_fo_eligibility_0A_KILL.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-0aa7edbec355",
+      "path": "docs/discovery/DISCOVERY_2026-07-17_b3_2_delivery_anatomy.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-073185d52946",
+      "path": "docs/discovery/DISCOVERY_2026-07-17_b4_1_extreme_basis_0A_KILL.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-8cb5d6dc11b6",
+      "path": "docs/discovery/DISCOVERY_2026-07-19_b1_3_band_revision_UNBLOCKED.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-d716d1934fae",
+      "path": "docs/discovery/DISCOVERY_2026-07-20_b1_3_band_revision_0A_KILL.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-d6ac53f075c2",
+      "path": "docs/discovery/DISCOVERY_2026-07-24_b1_8_bc_fo_eligibility_0A.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-465b179c6620",
+      "path": "docs/discovery/DISCOVERY_2026-07-24_b2_12_mps_deadline_source.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-44d117a22c0f",
+      "path": "docs/discovery/DISCOVERY_2026-07-24_b2_8_buyback_utilization_drift_0A_KILL.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-a7b792b65ee1",
+      "path": "docs/discovery/DISCOVERY_2026-07-26_b4_2_basis_discount_reversion_0A_KILL.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-52451e85d9b9",
+      "path": "docs/discovery/DISCOVERY_2026-07-29_b10_1_options_leading_diagnostic.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-826e392f3ddb",
+      "path": "docs/discovery/DISCOVERY_2026-07-30_post_atlas_strategy_mandate.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-70cc1856837b",
+      "path": "docs/discovery/DISCOVERY_2026-08-15_memecoin_0a_registration.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-cb46b1da594c",
+      "path": "docs/discovery/DISCOVERY_2026-08-15_memecoin_xpl_001_manifest.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f1897a51c3dd",
+      "path": "docs/portfolio/aggressive_india_portfolio_adversarial_review_2026-09-02.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-83084f0bb17e",
+      "path": "docs/portfolio/indian_absolute_return_market_scan_2026-08-15.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-9d1b4886c2a5",
+      "path": "docs/portfolio/indian_absolute_return_portfolio_2026-08-14.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f6732b6efd8a",
+      "path": "docs/postmortems/POSTMORTEM_b1_8_fo_eligibility_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-df54c9136914",
+      "path": "docs/postmortems/POSTMORTEM_b2_12_mps_forced_dilution_naive_live_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-104533647263",
+      "path": "docs/postmortems/POSTMORTEM_b2_8_buyback_utilization_drift_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-92fecc8ea26a",
+      "path": "docs/postmortems/POSTMORTEM_ban_exit_short_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f97c11da971e",
+      "path": "docs/postmortems/POSTMORTEM_delivery_anatomy_B3_2.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-30e89f2139b6",
+      "path": "docs/postmortems/POSTMORTEM_delivery_x_insider_B8.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-5df77fc87324",
+      "path": "docs/postmortems/POSTMORTEM_insider_cluster_standalone_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-80be058861af",
+      "path": "docs/postmortems/POSTMORTEM_march_tax_reversal_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-1fddc4267b62",
+      "path": "docs/postmortems/POSTMORTEM_momentum_xs_v2.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-c23aa0f5b8b5",
+      "path": "docs/postmortems/POSTMORTEM_screener_swing_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7d2fc435564e",
+      "path": "docs/postmortems/POSTMORTEM_ssf_liquidation_reversal_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-86230b82691a",
+      "path": "docs/reviews/2026-07-29_equity_ohlcv_discovery_audit.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7113beab4a6f",
+      "path": "docs/reviews/2026-07-30_edge_discovery_reconciliation.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-d1258334caab",
+      "path": "docs/reviews/2026-07-31_governance_data_boundary_decision.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6a17656d764b",
+      "path": "docs/roadmap.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-32bcdb61f115",
+      "path": "docs/strategies/CODEX_SUMMARY_screener_swing_v3_1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-4ebcec4d311b",
+      "path": "docs/strategies/DESIGN_MEMO_b10_1_options_surface_positioning.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-18ab9c18cdd4",
+      "path": "docs/strategies/DESIGN_MEMO_b2_12_mps_forced_dilution.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-4c27766ad98c",
+      "path": "docs/strategies/DESIGN_MEMO_b2_8_buyback_utilization_drift.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-d023cd9120f9",
+      "path": "docs/strategies/DESIGN_MEMO_b4_2_basis_discount_reversion.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-1d0b85703b5b",
+      "path": "docs/strategies/DESIGN_MEMO_b7_3_result_date_conditioning.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-916f04d0d0c1",
+      "path": "docs/strategies/DISTINCTNESS_MEMO_atlas_clv_downside_continuation_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-3fa304e4a3ea",
+      "path": "docs/strategies/DISTINCTNESS_MEMO_b3_2_delivery_anatomy.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-676ec1bce27c",
+      "path": "docs/strategies/DISTINCTNESS_MEMO_b4_1_extreme_basis.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-76c79c9dedab",
+      "path": "docs/strategies/IMPL_b1_3_band_revision.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-14404deb9c56",
+      "path": "docs/strategies/IMPL_b1_8_fo_eligibility.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-25095946967a",
+      "path": "docs/strategies/IMPL_momentum_xs_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-d24390db4c75",
+      "path": "docs/strategies/IMPL_momentum_xs_v2.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-a2bea3a47809",
+      "path": "docs/strategies/IMPL_screener_swing_v2.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-97ffefc622ac",
+      "path": "docs/strategies/IMPL_screener_swing_v3.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-71acf50fce26",
+      "path": "docs/strategies/IMPL_screener_swing_v3_1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7abb0cc15927",
+      "path": "docs/strategies/PROMPT_ardor_trend_program_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-b37a428d29e6",
+      "path": "docs/strategies/REPORT_atc_liq_free_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-af13557df209",
+      "path": "docs/strategies/REPORT_insider_cluster_standalone_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-a08bba38eab9",
+      "path": "docs/strategies/REPORT_march_tax_reversal_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7a6346f01bd6",
+      "path": "docs/strategies/REPORT_momentum_xs_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-bc684a860e5e",
+      "path": "docs/strategies/REPORT_momentum_xs_v2.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-9492ba659d2d",
+      "path": "docs/strategies/REPORT_screener_swing_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-57bfda6c7224",
+      "path": "docs/strategies/REPORT_screener_swing_v2.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-27297ebe085c",
+      "path": "docs/strategies/REPORT_trend_following_entry_harvester_v2.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-a86a2dc65ed8",
+      "path": "docs/strategies/REPORT_trend_following_price_bridge_certification_v1_1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-d3e2a9358785",
+      "path": "docs/strategies/REPORT_trend_following_price_bridge_remediation_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-84ab5c4a1d94",
+      "path": "docs/strategies/REPORT_trend_quality_immediate_entry_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-c12feb83a1e1",
+      "path": "docs/strategies/REPORT_trend_state_classifier_feature_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-99e9ed4ba4b6",
+      "path": "docs/strategies/REPORT_tss_failure_diagnosis_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-1318b2a94aee",
+      "path": "docs/strategies/REPORT_tss_slow_trend_overlay_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-4b994eb1346d",
+      "path": "docs/strategies/RESEARCH_ardor_structure_continuation_v1.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-b38e42c4b964",
+      "path": "docs/strategies/RESEARCH_hybrid_ai_trading_agent_2026-10-10.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-5e8efd51cc8a",
+      "path": "docs/strategies/RESEARCH_screener_swing_v2_design_space.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-50c86b7ed8ac",
+      "path": "pyproject.toml",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-b796fa87c921",
+      "path": "screener/costs.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-110c7569aa45",
+      "path": "screener/longterm/README.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-cc3a13c7627b",
+      "path": "screener/paper/shadows_v2.jsonl",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-958dc38fbcc2",
+      "path": "screener/swing/TRADEBOOK.md",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-73f92483a179",
+      "path": "screener/swing/grades_v3.jsonl",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-fa501c34f464",
+      "path": "screener/swing/grades_v3.jsonl.sha256",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-18ca4fa1211e",
+      "path": "screener/validation/outputs/v1_exit_autopsy.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-b396f5be3e0b",
+      "path": "screener/validation/outputs/v1_replay_curr_2026-06-05.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-5a3ae8610009",
+      "path": "screener/validation/outputs/v2_replay_curr_2026-06-05.json",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-a641e27470cf",
+      "path": "scripts/data/backfill_index_rebalance_c.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-ec2b59504bdc",
+      "path": "scripts/data/promote_clean_ohlcv_repair_v1_1.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-bec3851fa764",
+      "path": "scripts/diagnosis/diagnose_ban_exit_short_v1.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-10db98718e3c",
+      "path": "scripts/discovery/build_delivery_surge_events.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6dc2384cade0",
+      "path": "scripts/discovery/diagnostic_b10_1_options_lead.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-85ed61f28ef1",
+      "path": "scripts/discovery/discovery_0a_announcement_drift.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-535fa931afd2",
+      "path": "scripts/discovery/discovery_0a_band_revision.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-35089588647f",
+      "path": "scripts/discovery/discovery_0a_basis_discount_reversion.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-2e1ef2fd773f",
+      "path": "scripts/discovery/discovery_0a_behaviour_study.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-ff25117d6d58",
+      "path": "scripts/discovery/discovery_0a_buyback_drift.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-3b2d0e4799e9",
+      "path": "scripts/discovery/discovery_0a_delivery_anatomy.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-6fcaa7ff17d2",
+      "path": "scripts/discovery/discovery_0a_delivery_x_insider.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-69a3ad9c0039",
+      "path": "scripts/discovery/discovery_0a_extreme_basis.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-26872aa04fb1",
+      "path": "scripts/discovery/discovery_0a_fo_eligibility.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-88bd7f89cf71",
+      "path": "scripts/discovery/discovery_0a_index_rebalance.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-7f37937a6b8b",
+      "path": "scripts/discovery/discovery_0a_march_tax.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-323a20fc5972",
+      "path": "scripts/discovery/discovery_0a_overnight_intraday.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f6f5ea466191",
+      "path": "scripts/discovery/validate_atlas_clv_downside_translation.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-da72ba00a348",
+      "path": "scripts/strategies/ardor_structure_continuation_v1.pine",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-f85cfeb3808f",
+      "path": "scripts/strategies/ardor_v5_s0_q67_tradingview_proxy.pine",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-24f860dcbbb2",
+      "path": "scripts/strategies/diagnose_screener_swing_v1_exits.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-dbbab9be34fd",
+      "path": "scripts/strategies/run_atc_liq_free_v1_phase6.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-bb1a1c9a3f1c",
+      "path": "scripts/strategies/run_climax_continuation_is.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-4f35e807a854",
+      "path": "scripts/strategies/run_insider_momentum_oos.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-986471c72f5e",
+      "path": "scripts/strategies/snapshot_ssf_liquidation_reversal_v1.py",
+      "decision": "exclude_original"
+    },
+    {
+      "source_id": "src-db8552071b8f",
+      "path": "tests/data/fo/test_basis_decomp.py",
+      "decision": "exclude_original"
+    }
+  ],
+  "unresolved_omitted": [
+    "Daily NAV/return charts",
+    "Pine code and direct engine excerpts",
+    "Biography/contact/remote links",
+    "Personal portfolio/holding or trade-card details"
+  ]
+}

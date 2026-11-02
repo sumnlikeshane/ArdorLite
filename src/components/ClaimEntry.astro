@@ -1,0 +1,43 @@
+---
+import { formatValue, claimUrl } from '../lib/evidence';
+import type { Claim } from '../lib/evidence/schemas';
+import EditorialNoteReference from './EditorialNoteReference.astro';
+import { deliveryDiscrepancy } from '../content/editorial-notes';
+import { evidenceCrosswalk as crosswalk } from '../lib/evidence/crosswalk';
+import EvidenceLinks from './EvidenceLinks.astro';
+import ReproductionLabel from './ReproductionLabel.astro';
+import { claimPresentation } from '../lib/publication';
+import { ratePercent } from '../lib/publication/supplement';
+interface Props { claim: Claim; index?: boolean; }
+const {claim,index=false} = Astro.props;
+const source = crosswalk.outgoing('claim', claim.id, 'claim-source')[0]!.to;
+const records = crosswalk.incoming('claim', claim.id, 'record-claim').map(edge => edge.from);
+const figures = crosswalk.incoming('claim', claim.id, 'figure-claim').map(edge => edge.from);
+const presentation = claimPresentation(claim.id);
+---
+<article data-pagefind-ignore class="claim-entry" id={`claim-${claim.id}`} tabindex="-1" data-claim-id={claim.id} data-evidence-entry={index || undefined} data-locate-id={index ? claim.id : undefined} data-locate-cases={index ? claim.case_id : undefined}>
+  <h3>{presentation?.title ?? claim.description}</h3>
+  {presentation && <div class="claim-reading-context" data-publication-context={claim.case_id}>
+    <p>{presentation.study.researchObject} {presentation.study.question}</p>
+    <p>{presentation.study.baseline}</p>
+    {presentation.figureContext && <p>Measurement scope: {Object.entries(presentation.figureContext).filter(([key])=>['window','universe','instrument','benchmark','inference'].includes(key)).map(([key,value])=>`${key.replaceAll('_',' ')}: ${value??'Unavailable'}`).join('; ')}.</p>}
+    {presentation.measurementPeriod && <p>This measurement summarises the stitched walk-forward portfolio tests with configured bounds {presentation.measurementPeriod.start}–{presentation.measurementPeriod.end}, including the final partial interval; it is not a single complete-fold metric. The portfolio universe requires liquid cash equities with prior history, positive adjusted open/high/low/close prices and eligibility based on earlier traded value. {presentation.exposureClaim && <>Recorded average invested exposure: <a href={claimUrl(presentation.exposureClaim.id)}>{formatValue(presentation.exposureClaim.value)}%</a> of capital.</>}</p>}
+    {presentation.fold && <><p>Training: {presentation.fold.period.train_start}–{presentation.fold.period.train_end}. Test: {presentation.fold.period.test_start}–{presentation.fold.period.test_end}. {presentation.fold.period.complete?'Complete period.':'Partial period; excluded from the complete-period decision.'}</p>
+      {presentation.foldCandidate ? <p>V5 net growth {ratePercent(presentation.fold.rates.candidateNetCagr)} versus S0 {ratePercent(presentation.fold.rates.s0NetCagr)}; V5 growth with the EMA risk cap {ratePercent(presentation.fold.rates.candidateVolMatchedCagr)} versus EMA {ratePercent(presentation.fold.rates.emaNetCagr)}. Both return comparisons and positive Sharpe are required in a complete period. <a href="/research/cases/trend-quality/#trend-fold-decision-context">Read this period’s full decision and source locators</a>.</p>
+      : <p>This is the unfiltered EMA comparator, rather than a selectable quality candidate. Its absent candidate-gate field is unavailable, not a failed candidate result.</p>}</>}
+  </div>}
+  <div><span class="claim-value">{formatValue(claim.value)}</span><span>{claim.unit}</span></div>
+  {presentation && <><p>{presentation.interpretation}</p><p class="small">{presentation.study.qualification}</p>
+    <p class="small"><a href={presentation.study.explanationHref}>Understand the investigation</a> · <a href={presentation.comparisonHref}>Inspect the comparison</a></p>
+    {presentation.decisionInputs.length>0 && <div class="claim-decision-context"><p><strong>Read alongside the study decision evidence:</strong> these are separate quantities and saved requirements, not an additive score. {claim.case_id==='swing-autopsy' && 'V2 uncertainty/placebo/regime diagnostics use the per-winning-trade tax stress series, separate from the primary year-net mean.'}</p><ul>{presentation.decisionInputs.map(input=><li><a href={claimUrl(input.id)}>{input.description.replaceAll('_',' ')}</a>: {formatValue(input.value)} {input.unit}</li>)}</ul></div>}
+    <ReproductionLabel level={claim.reproduction_level} compact />
+    <details><summary>Archived description</summary><p>{claim.description}</p></details>
+  </>}
+  <p class="claim-meta"><code>{claim.id}</code> · {claim.reproduction_level}</p>
+  {deliveryDiscrepancy.claimIds.some(id => id === claim.id) && <EditorialNoteReference />}
+  {claim.caveats.length>0 && <ul>{claim.caveats.map(c=><li>{c}</li>)}</ul>}
+  <p class="claim-meta"><a href={source.href}>{presentation && 'Verify the source: '}{source.label}</a> · Source pointer: <code>{claim.source_pointer}</code></p>
+  <EvidenceLinks title="Figures and exact tables" entries={figures} />
+  <EvidenceLinks title="Records owning this claim" entries={records} />
+  <a class="small" href={claimUrl(claim.id,index?'case':'index')}>{index?'Read in case context':'Claim registry entry'} ↗</a>
+</article>

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "observation_date": "2026-10-11",
+  "phase_state": {
+    "0": "complete",
+    "1": "complete",
+    "2": "complete",
+    "3": "complete",
+    "4_handoff_and_isolated_validation": "complete",
+    "4_destination_installation": "pending_destination",
+    "5": "pending",
+    "6": "pending",
+    "7": "not_requested"
+  },
+  "source_preservation": {
+    "status": "pass",
+    "original_files_checked": 985,
+    "changed_original_files": 0,
+    "protected_ledgers": "unchanged; no repair, restore or reseal"
+  },
+  "content_counts": {
+    "catalog_records": 114,
+    "archive_cohort": 49,
+    "featured_cases": 6,
+    "claims": 204,
+    "figures": 18,
+    "synthetic_methods": 5
+  },
+  "tests": {
+    "status": "pass",
+    "substantive_checks": 29,
+    "runtimes": [
+      "Python 3.12.8 baseline (staged checks)",
+      "Python 3.14.7 (independently extracted archive)"
+    ],
+    "commands": [
+      {
+        "command": "python3 scripts/validate.py",
+        "exit_code": 0,
+        "result": "pass"
+      },
+      {
+        "command": "python3 -m unittest discover -s tests -v",
+        "exit_code": 0,
+        "result": "pass"
+      },
+      {
+        "command": "python3 -m methods.demo",
+        "exit_code": 0,
+        "result": "pass"
+      }
+    ]
+  },
+  "privacy_boundary": "Explicit selected derivative allowlist. Zero complete originals copied; raw/private inputs excluded.",
+  "browser_validation": "No browser available; graphical interaction/mobile/keyboard checks pending",
+  "deployment": "not_requested; no remote/site/deployment created",
+  "portable_validation": {
+    "status": "pass",
+    "mode": "Explicit allowlist zip extracted into a fresh temporary directory; source-independent validation and method imports",
+    "local_method_imports_confirmed": true,
+    "network_or_db_required": false,
+    "export_files": 135
+  }
+}

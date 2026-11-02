@@ -1,0 +1,1933 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "2026-10-11",
+  "baseUrl": "/downloads/reviewed/2026-10-11/",
+  "assets": [
+    {
+      "sourcePath": "NOTICE.md",
+      "sourceSha256": "0570bba28c1cd8c924bc94b17b57001b36df59f1bedb062f46028ba2b7bf2beb",
+      "outputUrl": "/downloads/reviewed/2026-10-11/NOTICE.md",
+      "role": "rights_notice",
+      "sourceIds": [
+        "src-cad3a4cdb78c",
+        "src-50c86b7ed8ac"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/explorer.html",
+      "sourceSha256": "bda9a3730ea2f556f61bfc3a6ea02a8d99d78ebd84877fc1f6c24a4fd0f89be2",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/explorer.html",
+      "role": "archived_explorer",
+      "sourceIds": [],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/atlas-gates.png",
+      "sourceSha256": "3ebea7854483fe1d6893b8d5d86d0badaa7d9b6fb8ca148a275bab651b099775",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/atlas-gates.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-1a618c29038e",
+        "src-3da0d4ccff37",
+        "src-01377cbc2972"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/atlas-gates.svg",
+      "sourceSha256": "94c98d130aa143f12884d759fb4476996b88925b8f1f6e4db6b7b3f7057928ff",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/atlas-gates.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-1a618c29038e",
+        "src-3da0d4ccff37",
+        "src-01377cbc2972"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/bridge-certification.png",
+      "sourceSha256": "b84e1bcd98a413a0aeb4f75eb3a0ebdbe1c19959b0841d8d96311bb0e3605bfd",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/bridge-certification.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-3f6afd0415da",
+        "src-a34cf0eda79c"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/bridge-certification.svg",
+      "sourceSha256": "c12aac36f243bee08a8e6a275bf04afe4c1390f51e24437b273f7a87eff8637f",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/bridge-certification.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-3f6afd0415da",
+        "src-a34cf0eda79c"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/bridge-invalid.png",
+      "sourceSha256": "7830bac03e8b0925b590bf7013e07152d69629afafda8f31cb532b2d7b7580ae",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/bridge-invalid.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/bridge-invalid.svg",
+      "sourceSha256": "09a0258c448391679efb3adea6f66df5eee54a758d381cd174bfd1ea369f9b5c",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/bridge-invalid.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/bridge-linkage.png",
+      "sourceSha256": "7776ed7effee1741b621843ff62c9e9d3d0d788e0892060955c8bf0956c2af89",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/bridge-linkage.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/bridge-linkage.svg",
+      "sourceSha256": "57d9ac1a7e4821c002dfe58c2114ac1681159a7d5361667dd805ccceccd202b4",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/bridge-linkage.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/delivery-cash.png",
+      "sourceSha256": "1cae188956e2264b337022a180a10b2855a5308f992a0dbb5fd2d1153016676e",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/delivery-cash.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/delivery-cash.svg",
+      "sourceSha256": "972481ac99e31d53fd1936450941717ffd4136be7b8574baba51785866427cfc",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/delivery-cash.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/delivery-interaction.png",
+      "sourceSha256": "03f58a12d29b9002ef6207893be5c39304b3405a7f4f6e16f4b781469ad47949",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/delivery-interaction.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/delivery-interaction.svg",
+      "sourceSha256": "a31e246f78915cd5c0b72a7edb99a4acd6291db7b228b486764598524a5df9c2",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/delivery-interaction.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/delivery-ssf.png",
+      "sourceSha256": "5213e7be9dc82a073795dd675d825ede03bff1b39a5c86898ce814f5fb556196",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/delivery-ssf.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-30e89f2139b6",
+        "src-6fcaa7ff17d2"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/delivery-ssf.svg",
+      "sourceSha256": "156caa4ec63c3d8667055cc42fe589fdae255158649ad738f65e77c36a2471f9",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/delivery-ssf.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-30e89f2139b6",
+        "src-6fcaa7ff17d2"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/momentum-alpha.png",
+      "sourceSha256": "88e9cd670e0dc76020c628a99a668334b09614a2ddf10ee5de93c496c45d4dd6",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/momentum-alpha.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/momentum-alpha.svg",
+      "sourceSha256": "a85e56c2335ee1e76353c10f4b3e5909b6086ac5669bf622bfb19ff2d7d035b6",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/momentum-alpha.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/momentum-execution.png",
+      "sourceSha256": "bc6dc22258899a6153a7fb0177e8868209c4ea2436ea7abde83ddd3aaa5f4f6c",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/momentum-execution.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/momentum-execution.svg",
+      "sourceSha256": "0cab8e2acd898444171b314994f459e7b81782d39aac5a53c6618d172d1348c5",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/momentum-execution.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/momentum-exposures.png",
+      "sourceSha256": "411ee48ad19f43092b64f1a2d839eac4b2b9a332a4166a8488b30f1126622283",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/momentum-exposures.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/momentum-exposures.svg",
+      "sourceSha256": "9f8a20995fcd193a07ab9ae6beb6fa86b68def4e00e6653713b3418128e6636f",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/momentum-exposures.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/ssf-capacity.png",
+      "sourceSha256": "5e27541ad979cfa95de968babb05a74a6833b69e9bfdaa4be546d6e00fd84bca",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/ssf-capacity.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/ssf-capacity.svg",
+      "sourceSha256": "f285390b18d90c6d5fa09cf0dfca24c9083bdba307194ca6a917bba730fcf466",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/ssf-capacity.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/ssf-economics.png",
+      "sourceSha256": "1f8399a09f1cbee670edcf3975de6dd4d7dc8dcc31e0f4a891fc88b3dcbb64a1",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/ssf-economics.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/ssf-economics.svg",
+      "sourceSha256": "f36165da9e0f59d6e601c899b6e0633a0348530f8d7707e4070ddb385e65a786",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/ssf-economics.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/swing-excursion.png",
+      "sourceSha256": "a96fc4e2fca60b01f9a8b19b706fa1ab0f75bfb4d650af21bb55632f24138405",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/swing-excursion.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/swing-excursion.svg",
+      "sourceSha256": "f242692c74a11e77131fdfafd6b530a5bb69c0ac3ea76f38b10fdfa6f73c4c0f",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/swing-excursion.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/swing-expectancy.png",
+      "sourceSha256": "75fb40b6e7f3f0dc25f7e00524fe38ad6b11f161c9c01fb5f6e40601d9effafb",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/swing-expectancy.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-18ca4fa1211e",
+        "src-5a3ae8610009"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/swing-expectancy.svg",
+      "sourceSha256": "e81225004f181c4c676919fa6a903c2a64b137e8db08a2e30954f31478ed14f9",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/swing-expectancy.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-18ca4fa1211e",
+        "src-5a3ae8610009"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/swing-policies.png",
+      "sourceSha256": "64fe4eb12f4df5e27d4f61e7da75560111e6770648afcb6275dcaed337c1cb32",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/swing-policies.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/swing-policies.svg",
+      "sourceSha256": "1d95a76d8d8bb5b1218b89c6cc40fe30a7dfa03b8b0ef9a6c7e2e445aa5a46b5",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/swing-policies.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/trend-controls.png",
+      "sourceSha256": "498181be170b5b286f6f08851631ef078280ab4dfd6f2dbaebcb24b0207035f1",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/trend-controls.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-23f0e40c4c44"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/trend-controls.svg",
+      "sourceSha256": "c644808aaadd2f4b878439dcba4367c0a9887cfa25c3086617fc938339b19eee",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/trend-controls.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-23f0e40c4c44"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/trend-folds.png",
+      "sourceSha256": "c3f4c173ce108dc15061e825c73c19539fa4a29d4e4d5bb36c973287d2ad922f",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/trend-folds.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-2adacd9e9309"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/trend-folds.svg",
+      "sourceSha256": "00453e8347155d05e791a4dfca88b58535db8aa63dc68eac1616b503ef8e0864",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/trend-folds.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-2adacd9e9309"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/trend-selection.png",
+      "sourceSha256": "21e80ad48e629ae58af3bd225f62d7e1b1100fd8cde4436b889f548852728105",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/trend-selection.png",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-6d49d801b740"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/generated/trend-selection.svg",
+      "sourceSha256": "c172cc34e429a2681a6b89586fa722fc009d322c29c8f7f5cb4d6af5f63df866",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/generated/trend-selection.svg",
+      "role": "original_reviewed_figure",
+      "sourceIds": [
+        "src-6d49d801b740"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/atlas-gates.json",
+      "sourceSha256": "0be4aa960585087c1526248efa8b5916978099baeed4b83f381bef602a7c11bd",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/atlas-gates.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-1a618c29038e",
+        "src-3da0d4ccff37",
+        "src-01377cbc2972"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/bridge-certification.json",
+      "sourceSha256": "b443e32b82b8b62ab5ee3b9856ff8451dd4f59b72de02e6e97a9318e8dd4f983",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/bridge-certification.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-3f6afd0415da",
+        "src-a34cf0eda79c"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/bridge-invalid.json",
+      "sourceSha256": "171b9b700a2f53b14a772fb171ffc54369d628534f054cf9ccf88b3dd6d27ad6",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/bridge-invalid.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/bridge-linkage.json",
+      "sourceSha256": "7cc6547946e7502c18e4f0d1e441e168bc9ca595e9ee1a2c08ef2ec8a685e490",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/bridge-linkage.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/delivery-cash.json",
+      "sourceSha256": "c1339556f2a307e8f5b89b6f695b1aea5043b5be32260b48bc2d93a8ff7a1126",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/delivery-cash.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/delivery-interaction.json",
+      "sourceSha256": "06512cddd098e59fafe0d706b24629836125a4a9c057606127e4639e5939da89",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/delivery-interaction.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/delivery-ssf.json",
+      "sourceSha256": "c598959c77e9c7514b255515bd4a92de5198898fecf2686de98ddd47651ec2df",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/delivery-ssf.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-30e89f2139b6",
+        "src-6fcaa7ff17d2"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/momentum-alpha.json",
+      "sourceSha256": "5f2577b78cea05cd233f284e960f152f5b7027067785303c8445fcd19add0204",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/momentum-alpha.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/momentum-execution.json",
+      "sourceSha256": "9f8638133f9532c1c149f01f0cd29790780da606b9036df52f80c4369a427db7",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/momentum-execution.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/momentum-exposures.json",
+      "sourceSha256": "ecefc5ec646f08c2a63c849058c806a9247f4e4b0af904ea93e11262145c6209",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/momentum-exposures.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/ssf-capacity.json",
+      "sourceSha256": "17ced68df096600d0f5a806427f43b0f98fbc90a90d8f56908def982c3522424",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/ssf-capacity.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/ssf-economics.json",
+      "sourceSha256": "1a314a8aa17aea0884e4abfb517f704bd41914334cc4dd99eb8c9d152fc69288",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/ssf-economics.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/swing-excursion.json",
+      "sourceSha256": "bea7c013a0bc7401ae655ac5bc2a6f42362550a58d2af279fa2032b85e49c6fa",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/swing-excursion.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/swing-expectancy.json",
+      "sourceSha256": "46eadd07c7d691f7e5bc34a02e32bc528e456457b94cc880abcdfc31748771e5",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/swing-expectancy.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-18ca4fa1211e",
+        "src-5a3ae8610009"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/swing-policies.json",
+      "sourceSha256": "b4df38e3348ccd7f89f94a043588446aa71d0ecc3d8e859c369a5eaab6add38e",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/swing-policies.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/trend-controls.json",
+      "sourceSha256": "2aa374ee22c4da2228f74db57ca73533f48d91bc278890d1b324ecbb04f6eb30",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/trend-controls.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-23f0e40c4c44"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/trend-folds.json",
+      "sourceSha256": "b4713263a3711052fb3e4f64e71030b18d0816a7674eeed02cf98f6937dd50e4",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/trend-folds.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-2adacd9e9309"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "charts/specs/trend-selection.json",
+      "sourceSha256": "fdce98c88a8ad0be54b60f1e39e58b9b5ac1eb012951e6465b2e364f4914ef68",
+      "outputUrl": "/downloads/reviewed/2026-10-11/charts/specs/trend-selection.json",
+      "role": "figure_specification",
+      "sourceIds": [
+        "src-6d49d801b740"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "content/methods.json",
+      "sourceSha256": "b077674f6c35ea5eca0b7017611f43d79890da20265f08d032c134d2641d34e7",
+      "outputUrl": "/downloads/reviewed/2026-10-11/content/methods.json",
+      "role": "synthetic_method_metadata",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-cad3a4cdb78c",
+        "src-50c86b7ed8ac",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "content/previews.json",
+      "sourceSha256": "850acb9b5a56cd0856c0ee97a7efc868a4b9a0fd5eef9fa332fe8fad20bc97d9",
+      "outputUrl": "/downloads/reviewed/2026-10-11/content/previews.json",
+      "role": "preview_metadata",
+      "sourceIds": [],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "content/research.json",
+      "sourceSha256": "ac1f31ea24813a0b2f8a15a44cbda3d6222dacf7cd877fcd7ba26645cbd5a430",
+      "outputUrl": "/downloads/reviewed/2026-10-11/content/research.json",
+      "role": "reviewed_catalog",
+      "sourceIds": [
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-f09100231e7d",
+        "src-46b06def03be",
+        "src-9d5cb4bbb089",
+        "src-b6aefa299d8b",
+        "src-a1276a341fad",
+        "src-1a618c29038e",
+        "src-be8b1c2acd77",
+        "src-fcf6dfde427c",
+        "src-61975f046c00",
+        "src-1bd3ea445144",
+        "src-c4562307c478",
+        "src-e4cb86edb390",
+        "src-fa6fba8525fb",
+        "src-7aca7dad5ade",
+        "src-6bd4edbd78a1",
+        "src-e11e4643058c",
+        "src-1df46a0c6839",
+        "src-508d317a24b5",
+        "src-fe5573d36283",
+        "src-2513644cee25",
+        "src-51f96626b85b",
+        "src-3da0d4ccff37",
+        "src-7ea53e74c922",
+        "src-ecb1dfac7fab",
+        "src-51c7a3156512",
+        "src-fc5fcf3fb237",
+        "src-a34cf0eda79c",
+        "src-e2ed7672dfb8",
+        "src-cf4a9533a461",
+        "src-65bcc04e1a0e",
+        "src-d42dd5bd922d",
+        "src-cd5e51f07d1d",
+        "src-6d49d801b740",
+        "src-757482c9cf96",
+        "src-f6c0d1f488f8",
+        "src-2d02717818b3",
+        "src-59f5a1a17350",
+        "src-bfe2062dea63",
+        "src-141898263d56",
+        "src-61b52eff08a1",
+        "src-3a65de1eeaab",
+        "src-7a5080d05f4e",
+        "src-6d12320cd4ce",
+        "src-81e65d638f28",
+        "src-a38a4793e94a",
+        "src-3131aecbed39",
+        "src-298365cf15ec",
+        "src-d9d0501b3de7",
+        "src-aeb1b2b6d77c",
+        "src-eba026bc9216",
+        "src-8ac087295e86",
+        "src-34b291f9f084",
+        "src-204e5b886942",
+        "src-86724a7a7c5e",
+        "src-01377cbc2972",
+        "src-f534dc55e818",
+        "src-f26848ae5d05",
+        "src-0be1c4ab228a",
+        "src-bf16771254fd",
+        "src-f70a42adc2b9",
+        "src-1660a17e467f",
+        "src-9c9aa6140ef7",
+        "src-6e2f0306dead",
+        "src-31b1bd8dc943",
+        "src-ed86ea900045",
+        "src-2dc34d136742",
+        "src-4f11cca82903",
+        "src-94f659dd6194",
+        "src-8374243f4707",
+        "src-6731ff3c5b63",
+        "src-7ce694f8459b",
+        "src-0aa7edbec355",
+        "src-073185d52946",
+        "src-8cb5d6dc11b6",
+        "src-d716d1934fae",
+        "src-d6ac53f075c2",
+        "src-465b179c6620",
+        "src-44d117a22c0f",
+        "src-a7b792b65ee1",
+        "src-52451e85d9b9",
+        "src-826e392f3ddb",
+        "src-70cc1856837b",
+        "src-cb46b1da594c",
+        "src-f1897a51c3dd",
+        "src-83084f0bb17e",
+        "src-9d1b4886c2a5",
+        "src-f6732b6efd8a",
+        "src-df54c9136914",
+        "src-104533647263",
+        "src-92fecc8ea26a",
+        "src-f97c11da971e",
+        "src-30e89f2139b6",
+        "src-5df77fc87324",
+        "src-80be058861af",
+        "src-1fddc4267b62",
+        "src-c23aa0f5b8b5",
+        "src-7d2fc435564e",
+        "src-86230b82691a",
+        "src-d1258334caab",
+        "src-32bcdb61f115",
+        "src-4ebcec4d311b",
+        "src-18ab9c18cdd4",
+        "src-4c27766ad98c",
+        "src-d023cd9120f9",
+        "src-1d0b85703b5b",
+        "src-916f04d0d0c1",
+        "src-3fa304e4a3ea",
+        "src-676ec1bce27c",
+        "src-76c79c9dedab",
+        "src-14404deb9c56",
+        "src-25095946967a",
+        "src-d24390db4c75",
+        "src-a2bea3a47809",
+        "src-97ffefc622ac",
+        "src-71acf50fce26",
+        "src-7abb0cc15927",
+        "src-b37a428d29e6",
+        "src-af13557df209",
+        "src-a08bba38eab9",
+        "src-7a6346f01bd6",
+        "src-bc684a860e5e",
+        "src-9492ba659d2d",
+        "src-57bfda6c7224",
+        "src-27297ebe085c",
+        "src-a86a2dc65ed8",
+        "src-d3e2a9358785",
+        "src-84ab5c4a1d94",
+        "src-c12feb83a1e1",
+        "src-99e9ed4ba4b6",
+        "src-1318b2a94aee",
+        "src-4b994eb1346d",
+        "src-b38e42c4b964",
+        "src-110c7569aa45",
+        "src-cc3a13c7627b",
+        "src-958dc38fbcc2",
+        "src-73f92483a179",
+        "src-18ca4fa1211e",
+        "src-b396f5be3e0b",
+        "src-5a3ae8610009",
+        "src-a641e27470cf",
+        "src-ec2b59504bdc",
+        "src-bec3851fa764",
+        "src-10db98718e3c",
+        "src-6dc2384cade0",
+        "src-85ed61f28ef1",
+        "src-535fa931afd2",
+        "src-35089588647f",
+        "src-2e1ef2fd773f",
+        "src-ff25117d6d58",
+        "src-3b2d0e4799e9",
+        "src-69a3ad9c0039",
+        "src-26872aa04fb1",
+        "src-88bd7f89cf71",
+        "src-7f37937a6b8b",
+        "src-323a20fc5972",
+        "src-f6f5ea466191",
+        "src-da72ba00a348",
+        "src-f85cfeb3808f",
+        "src-24f860dcbbb2",
+        "src-dbbab9be34fd",
+        "src-bb1a1c9a3f1c",
+        "src-4f35e807a854",
+        "src-986471c72f5e",
+        "src-db8552071b8f"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "docs/METHODS.md",
+      "sourceSha256": "c6ec899409e4e59754e16bfc9d878d9228a0770a53cd392710bcedf0ae54f461",
+      "outputUrl": "/downloads/reviewed/2026-10-11/docs/METHODS.md",
+      "role": "synthetic_method_documentation",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/claims.json",
+      "sourceSha256": "a1890ce26e8a496ace026f70101c7de3742665914c6706483fd9a7f8e2a71b74",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/claims.json",
+      "role": "claim_registry",
+      "sourceIds": [
+        "src-a1276a341fad",
+        "src-1a618c29038e",
+        "src-c4562307c478",
+        "src-2513644cee25",
+        "src-3da0d4ccff37",
+        "src-3f6afd0415da",
+        "src-a34cf0eda79c",
+        "src-3d4685269a6a",
+        "src-d42dd5bd922d",
+        "src-6d49d801b740",
+        "src-23f0e40c4c44",
+        "src-2adacd9e9309",
+        "src-01377cbc2972",
+        "src-30e89f2139b6",
+        "src-bc684a860e5e",
+        "src-18ca4fa1211e",
+        "src-b396f5be3e0b",
+        "src-5a3ae8610009",
+        "src-6fcaa7ff17d2"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/summaries/catalog-reconciliation.md",
+      "sourceSha256": "3ea6a74594d7d76b6f6601b67f2d41dfe8cafe37bc286ba5547afabdb7c1932f",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/summaries/catalog-reconciliation.md",
+      "role": "reviewed_summary",
+      "sourceIds": [],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/summaries/featured-evidence.md",
+      "sourceSha256": "19179ba12683e140579f9275a9ddf91fe633fe494dd7abd4f1fa9a81ef5a5eae",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/summaries/featured-evidence.md",
+      "role": "reviewed_summary",
+      "sourceIds": [],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/summaries/source-index.md",
+      "sourceSha256": "8b2a5f0bb486488fe3ee028be6640649ef1e26e2355840ecc6144feb187ff83d",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/summaries/source-index.md",
+      "role": "reviewed_provenance_summary",
+      "sourceIds": [],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/atlas-gates.json",
+      "sourceSha256": "eae10343a4f39e48f3623b1e3a6e15dd7ba3a61f6b46a48a28bfb209fa42b5fd",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/atlas-gates.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-1a618c29038e",
+        "src-3da0d4ccff37",
+        "src-01377cbc2972"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/atlas-gates.md",
+      "sourceSha256": "e2ba9403a06368363e27e929b1778ff90fcd43bde8aea4610a937aceca4333cb",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/atlas-gates.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-1a618c29038e",
+        "src-3da0d4ccff37",
+        "src-01377cbc2972"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/bridge-certification.json",
+      "sourceSha256": "c61436eee80bb03e70de8636707d2c412eac7178f63e81b81cde9a67fecda4a1",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/bridge-certification.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-3f6afd0415da",
+        "src-a34cf0eda79c"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/bridge-certification.md",
+      "sourceSha256": "a8aa596241df0a49513b2b1122de4f934798adb98050510c128b1ec1a8a55f6a",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/bridge-certification.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-3f6afd0415da",
+        "src-a34cf0eda79c"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/bridge-invalid.json",
+      "sourceSha256": "0132a91395516d8707004caf3ee440efd2430b484688dbb257d6614325be1872",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/bridge-invalid.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/bridge-invalid.md",
+      "sourceSha256": "e77eaa514534fe85e0bbc50dad277e94363cfd284051c5378b3768cabbe96e3c",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/bridge-invalid.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/bridge-linkage.json",
+      "sourceSha256": "3f26560954fb08f3c40bb33f97401c23b0264cb586acd39c45f841e12ed64684",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/bridge-linkage.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/bridge-linkage.md",
+      "sourceSha256": "105b69e05077fe26886924e38264745da9d9d7fc2092fc29cf10d991f9f98533",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/bridge-linkage.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-3f6afd0415da"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/delivery-cash.json",
+      "sourceSha256": "533e7065b13b1b12591804d860ae8f2a8186fdd905a5cda65f4750f45a6c6365",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/delivery-cash.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/delivery-cash.md",
+      "sourceSha256": "1ebe3943386344e97969f5254ec5d57221964a314ea78ffd2c22bf71cc1bb33a",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/delivery-cash.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/delivery-interaction.json",
+      "sourceSha256": "cfb8d162c2240c36e1ab7c182f443e5c4d8255062a7ab60f41b615542fd51b68",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/delivery-interaction.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/delivery-interaction.md",
+      "sourceSha256": "61f911fc0a2716a1b6c3430dd2ae621ec3bdcb6d8df9787200940c566617a18a",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/delivery-interaction.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-30e89f2139b6"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/delivery-ssf.json",
+      "sourceSha256": "a3b7693765acacc6288e88f6c415225a999ef7117b7de0ccf8512d254d9139c2",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/delivery-ssf.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-30e89f2139b6",
+        "src-6fcaa7ff17d2"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/delivery-ssf.md",
+      "sourceSha256": "c44817b0d194ccfa3a8e5e6c6c909fef78dd0604022ae841dd3416081cc99189",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/delivery-ssf.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-30e89f2139b6",
+        "src-6fcaa7ff17d2"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/momentum-alpha.json",
+      "sourceSha256": "cfcd40f391b67698c3b10d36bb8bf7f482b5a00830c4261c6ac7bae97c9dba48",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/momentum-alpha.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/momentum-alpha.md",
+      "sourceSha256": "241874d5618ce921d9a337ca03aa27731d302f0207798960c75593bcf75a9953",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/momentum-alpha.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/momentum-execution.json",
+      "sourceSha256": "8aae97d9908205f8449f8e7427308066f3a50e0381fdbdde55e0df565a209ead",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/momentum-execution.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/momentum-execution.md",
+      "sourceSha256": "a13ef7b5cf08fe3cb965c5e41ff0b307d40566acc2ab233cb1d4a41a7754f2ef",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/momentum-execution.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/momentum-exposures.json",
+      "sourceSha256": "3cf494a8bd4d7660caa418ad9e00efc5878713cab7cd5b70200897f863e6c5ce",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/momentum-exposures.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/momentum-exposures.md",
+      "sourceSha256": "b60ce14b537821dd2a07459979dfdf70601f5c539b9db98d66fda64f9bb6a9f1",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/momentum-exposures.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-bc684a860e5e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/ssf-capacity.json",
+      "sourceSha256": "558ed8a3889b69bcbf9156535c49ba8a2ea63e1726c40cc25b79e7a7da763d4a",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/ssf-capacity.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/ssf-capacity.md",
+      "sourceSha256": "38752a8653fe00d30002c1a36921d5a4667e94ce266f5c2d79304cf1adfecae9",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/ssf-capacity.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/ssf-economics.json",
+      "sourceSha256": "c2d238429b7ad286278e57faafb5023dede4d1aa9117e81ecf42fc9ad1f9bc5d",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/ssf-economics.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/ssf-economics.md",
+      "sourceSha256": "11595a15b3c3fdde24bdd1604974594528a3733a121c7c6d3b62b8b86b4f3330",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/ssf-economics.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-2513644cee25"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/swing-excursion.json",
+      "sourceSha256": "5ad529ae394e0446f7596cde1da16add5f8bf361ced56f803e21701223a8551d",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/swing-excursion.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/swing-excursion.md",
+      "sourceSha256": "09e542170bc3578bc80c47d2ecaf9eeb07ad8d40e562acb37931be7186680196",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/swing-excursion.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/swing-expectancy.json",
+      "sourceSha256": "08523fcfd2c4ba67317dfc5816eb0fc80ea7e4aa247b41838502cae50c4f6a02",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/swing-expectancy.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-18ca4fa1211e",
+        "src-5a3ae8610009"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/swing-expectancy.md",
+      "sourceSha256": "1c651e47fdab868d59d90432d28a8ff32a27eaef8fd3a02f8f183881b339d49e",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/swing-expectancy.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-18ca4fa1211e",
+        "src-5a3ae8610009"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/swing-policies.json",
+      "sourceSha256": "c9764242da340bb3e7b4cc668bb799681cb53eef6c1bc9e37835d453736d88ee",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/swing-policies.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/swing-policies.md",
+      "sourceSha256": "f6e97c40665e10a54c9a949a436a7fdc40513979d8e4aa98de2b2e8c8f6a317c",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/swing-policies.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-18ca4fa1211e"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/trend-controls.json",
+      "sourceSha256": "f2d2d5ce88ac63c2376b2924948a82f10d1d63b27f223a6a6516b532e957d5ff",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/trend-controls.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-23f0e40c4c44"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/trend-controls.md",
+      "sourceSha256": "d908a1ad1a4f0781265b38812a19e0fb52280275934347b400ea98494f835daa",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/trend-controls.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-23f0e40c4c44"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/trend-folds.json",
+      "sourceSha256": "a403399b09d32d9c808782a2285f61ebbfad4a899a21d41314da4fdd01c4ff5b",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/trend-folds.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-2adacd9e9309"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/trend-folds.md",
+      "sourceSha256": "5c65808f25b19fa13efd4b2f8b0bf1fd7aa2127960122c55e83298e597641ab9",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/trend-folds.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-2adacd9e9309"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/trend-selection.json",
+      "sourceSha256": "4200368857475379743a2bfe2d10b852cdf734fba0ccdb91c0bdd5900544a03c",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/trend-selection.json",
+      "role": "recorded_values",
+      "sourceIds": [
+        "src-6d49d801b740"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "evidence/tables/trend-selection.md",
+      "sourceSha256": "f94efb37f8daf0461451f785a867e08471b6bdfcf8bc2c6183e7b4c760f27b51",
+      "outputUrl": "/downloads/reviewed/2026-10-11/evidence/tables/trend-selection.md",
+      "role": "accessible_table",
+      "sourceIds": [
+        "src-6d49d801b740"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "methods/ATTRIBUTION.json",
+      "sourceSha256": "12ea7ba170705143f0dc4e6da5c864e9972e8502efe0bd8c010047b4aea8453e",
+      "outputUrl": "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json",
+      "role": "method_attribution",
+      "sourceIds": [
+        "src-6ebdb617a810",
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-cad3a4cdb78c",
+        "src-50c86b7ed8ac",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "methods/__init__.py",
+      "sourceSha256": "49675fb59899e3cba1c51911b0d9a60501aa93abf023ab38b9226ac2f3657b11",
+      "outputUrl": "/downloads/reviewed/2026-10-11/methods/__init__.py",
+      "role": "synthetic_support",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "methods/bridge.py",
+      "sourceSha256": "290d6a81548f53f85bbb70cbfb06e38bd232c06b716fa866dce5c27dcc77b13b",
+      "outputUrl": "/downloads/reviewed/2026-10-11/methods/bridge.py",
+      "role": "synthetic_method_source",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "methods/cluster_mean.py",
+      "sourceSha256": "2a11da83790f88d8fe54544168c893cf9de67bc8573abb251fa7407582b1ce56",
+      "outputUrl": "/downloads/reviewed/2026-10-11/methods/cluster_mean.py",
+      "role": "synthetic_method_source",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "methods/demo.py",
+      "sourceSha256": "a462052a1fba4a66e0abb97b8844a3ac7baa9d48de7debe829fc3aa5d1a064e6",
+      "outputUrl": "/downloads/reviewed/2026-10-11/methods/demo.py",
+      "role": "synthetic_demo_source",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "methods/lagged_quality.py",
+      "sourceSha256": "dc007f1ad4487cb30e94df271a992baf635d25ab5987135e087c984085f48577",
+      "outputUrl": "/downloads/reviewed/2026-10-11/methods/lagged_quality.py",
+      "role": "synthetic_method_source",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "methods/multiple_testing.py",
+      "sourceSha256": "0fc7317b8876f102bac98633436cd9c8910d3f8b0732f172e565bcc5027d905c",
+      "outputUrl": "/downloads/reviewed/2026-10-11/methods/multiple_testing.py",
+      "role": "synthetic_method_source",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "methods/units.py",
+      "sourceSha256": "80d92b2e1ffc755c9bf1a9e3fedac3ea3c4ddcc75eda9a57d745665f6deaf336",
+      "outputUrl": "/downloads/reviewed/2026-10-11/methods/units.py",
+      "role": "synthetic_method_source",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "methods/validation.json",
+      "sourceSha256": "0bf0eb1fd895b7d1cd3e7674e944c927b84d9c41e7476327fee23cc900f46dfa",
+      "outputUrl": "/downloads/reviewed/2026-10-11/methods/validation.json",
+      "role": "synthetic_method_checks",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    },
+    {
+      "sourcePath": "tests/test_methods.py",
+      "sourceSha256": "63b3ba27984d9abf50f35346ecd5e4f7fcd069f9c664e3c3736902271044b6ba",
+      "outputUrl": "/downloads/reviewed/2026-10-11/tests/test_methods.py",
+      "role": "synthetic_method_checks_source",
+      "sourceIds": [
+        "src-ac57f2d1ba86",
+        "src-6fbb4dae711f",
+        "src-f806e2945734",
+        "src-f19b0518a912",
+        "src-3ecccf36caea",
+        "src-3a49bca56b9c",
+        "src-1db8f00e4beb",
+        "src-8f4e71e7ce1a",
+        "src-e273cf6b92bb",
+        "src-bc5ddef7ab0b",
+        "src-47bbd9f3b470",
+        "src-30b059dc99bf",
+        "src-87b4a2117479",
+        "src-f09100231e7d",
+        "src-2344544254f3",
+        "src-46b06def03be",
+        "src-66cb011e0326",
+        "src-6d5fed618d59",
+        "src-9d5cb4bbb089",
+        "src-7c60e5997747",
+        "src-b0a1a83377ba",
+        "src-50f61de1f3c8",
+        "src-61706768c122",
+        "src-9dc2d3303b0f",
+        "src-b796fa87c921"
+      ],
+      "notices": [
+        "/downloads/reviewed/2026-10-11/NOTICE.md",
+        "/downloads/reviewed/2026-10-11/methods/ATTRIBUTION.json"
+      ],
+      "transformation": "byte-preserving reviewed file export"
+    }
+  ]
+}

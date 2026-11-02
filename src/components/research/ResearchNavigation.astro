@@ -1,0 +1,20 @@
+---
+import type { ResearchComposition } from '../../lib/research/presentation';
+interface Props { composition: ResearchComposition; claimCount: number; }
+const {composition,claimCount} = Astro.props;
+---
+<aside class="research-navigation" aria-label="Case reading guide">
+  <p class="eyebrow">In this investigation</p>
+  <nav aria-label="Case contents" data-research-navigation>
+    <a href="#research-overview">Overview</a>
+    {composition.chapters.map(c => <a href={`#${c.id}`}><span>{c.number}</span> {c.navLabel}</a>)}
+    <a href="#decision-brief">The retained decision</a>
+    <a href="#pilot-limits">Limits & missing evidence</a>
+    <a href="#original-verdicts">Original record & gates</a>
+    <a href="#narrative">Complete reviewed narrative</a>
+    <a href="#claims">{claimCount} claim entries</a>
+    <a href="#related-records">Records & reproduction</a>
+  </nav>
+  <details class="research-figure-index"><summary>Go directly to a figure</summary><nav aria-label="Figure index">{composition.chapters.filter(c=>c.figureId).map(c=><a href={`#figure-${c.figureId}`}>{c.navLabel}</a>)}</nav></details>
+  <a class="research-return" href="/research/">← All research cases</a>
+</aside>

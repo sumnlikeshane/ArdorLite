@@ -1,0 +1,145 @@
+{
+  "id": "trend-controls",
+  "title": "Trend quality historical CAGR with comparable-risk controls",
+  "case_id": "trend-quality",
+  "status": "tested_killed",
+  "units": "annual percent",
+  "source_paths": [
+    "data/research/trend_quality_immediate_entry_v1/strategy_comparison.csv"
+  ],
+  "source_artifact_ids": [
+    "src-23f0e40c4c44"
+  ],
+  "claim_ids": [
+    "trend-controls-01",
+    "trend-controls-01-sharpe",
+    "trend-controls-01-maximum-drawdown",
+    "trend-controls-01-market-exposure",
+    "trend-controls-01-annualized-volatility",
+    "trend-controls-01-vol-matched-cagr-to-EMA20-50-UNFILTERED",
+    "trend-controls-02",
+    "trend-controls-02-sharpe",
+    "trend-controls-02-maximum-drawdown",
+    "trend-controls-02-market-exposure",
+    "trend-controls-02-annualized-volatility",
+    "trend-controls-02-vol-matched-cagr-to-EMA20-50-UNFILTERED",
+    "trend-controls-03",
+    "trend-controls-03-sharpe",
+    "trend-controls-03-maximum-drawdown",
+    "trend-controls-03-market-exposure",
+    "trend-controls-03-annualized-volatility",
+    "trend-controls-03-vol-matched-cagr-to-EMA20-50-UNFILTERED",
+    "trend-controls-04",
+    "trend-controls-04-sharpe",
+    "trend-controls-04-maximum-drawdown",
+    "trend-controls-04-market-exposure",
+    "trend-controls-04-annualized-volatility",
+    "trend-controls-04-vol-matched-cagr-to-EMA20-50-UNFILTERED"
+  ],
+  "extraction_rule": "Select S0, unfiltered EMA20/50, V5 and buy-and-hold. Multiply fractional rates/exposures by 100; retain Sharpe and recorded CAGR scaled to EMA risk as additional fields. No synthetic NAV.",
+  "study_context": {
+    "window": "panel 2015-01-01 through 2026-06-05; walk-forward test 2018-01-01 through 2026-06-05",
+    "universe": "liquid cash after minimum history, positive OHLC and prior traded-value filters",
+    "instrument": "unlevered integer-share delivery equities; cash retained when underinvested",
+    "benchmark": "unfiltered S0, binding unfiltered EMA20/50 comparator; NIFTYBEES buy-and-hold reference",
+    "costs": "recorded delivery-equity statutory costs, DP charge and base 5 bps slippage per side",
+    "execution": "weekly after-close decision; exact next-session open; quality strictly through t-1; fold training-only quality boundaries",
+    "inference": "direct quality date/symbol two-way clustered regression with controls; moving-block familywise max-t versus S0",
+    "source_verdict": "kill-quality-family; HQ falsified; HR falsified; priority-selected variant none"
+  },
+  "caveats": [
+    "Post-hoc historical development; no live/shadow authorization.",
+    "V0 already-observed reference and EMA quality-filter diagnostic are not selectable variants or binding controls.",
+    "Only wf1\u2013wf4 count as complete folds; wf5_partial is excluded from the fold gate.",
+    "Full-capital NIFTYBEES CAGR has materially greater exposure and volatility; compare risks before interpreting returns.",
+    "Daily NAV was not persisted; no equity, underwater or rolling-Sharpe curves can be reconstructed from summary metrics.",
+    "Archived TSS diagnosis seal points to an engine whose bytes later changed; current-code parity is not promised."
+  ],
+  "rows": [
+    {
+      "label": "S0_UNFILTERED",
+      "value": 2.215992539983791,
+      "claim_id": "trend-controls-01",
+      "sharpe": 0.45903519964258765,
+      "maximum_drawdown": -14.909036740968673,
+      "market_exposure": 20.889777679878065,
+      "annualized_volatility": 5.0532226505023665,
+      "vol_matched_cagr_to_EMA20_50_UNFILTERED": 2.2083055837874843,
+      "additional_claim_ids": {
+        "sharpe": "trend-controls-01-sharpe",
+        "maximum_drawdown": "trend-controls-01-maximum-drawdown",
+        "market_exposure": "trend-controls-01-market-exposure",
+        "annualized_volatility": "trend-controls-01-annualized-volatility",
+        "vol_matched_cagr_to_EMA20_50_UNFILTERED": "trend-controls-01-vol-matched-cagr-to-EMA20-50-UNFILTERED"
+      }
+    },
+    {
+      "label": "EMA20_50_UNFILTERED",
+      "value": 2.4668525391514207,
+      "claim_id": "trend-controls-02",
+      "sharpe": 0.5092011000768754,
+      "maximum_drawdown": -10.36082684626136,
+      "market_exposure": 20.77737130473255,
+      "annualized_volatility": 5.03481342566379,
+      "vol_matched_cagr_to_EMA20_50_UNFILTERED": 2.4668525391514207,
+      "additional_claim_ids": {
+        "sharpe": "trend-controls-02-sharpe",
+        "maximum_drawdown": "trend-controls-02-maximum-drawdown",
+        "market_exposure": "trend-controls-02-market-exposure",
+        "annualized_volatility": "trend-controls-02-annualized-volatility",
+        "vol_matched_cagr_to_EMA20_50_UNFILTERED": "trend-controls-02-vol-matched-cagr-to-EMA20-50-UNFILTERED"
+      }
+    },
+    {
+      "label": "V5_S0_Q67_DIVERSIFIED",
+      "value": 4.303282556817045,
+      "claim_id": "trend-controls-03",
+      "sharpe": 0.81018721535534,
+      "maximum_drawdown": -9.549038502624397,
+      "market_exposure": 20.717353881829403,
+      "annualized_volatility": 5.3797773117983265,
+      "vol_matched_cagr_to_EMA20_50_UNFILTERED": 4.030967697349963,
+      "additional_claim_ids": {
+        "sharpe": "trend-controls-03-sharpe",
+        "maximum_drawdown": "trend-controls-03-maximum-drawdown",
+        "market_exposure": "trend-controls-03-market-exposure",
+        "annualized_volatility": "trend-controls-03-annualized-volatility",
+        "vol_matched_cagr_to_EMA20_50_UNFILTERED": "trend-controls-03-vol-matched-cagr-to-EMA20-50-UNFILTERED"
+      }
+    },
+    {
+      "label": "NIFTYBEES_BH",
+      "value": 10.963632956477042,
+      "claim_id": "trend-controls-04",
+      "sharpe": 0.7540248007869673,
+      "maximum_drawdown": -36.33626215606694,
+      "market_exposure": 99.99896080810223,
+      "annualized_volatility": 15.375954428585892,
+      "vol_matched_cagr_to_EMA20_50_UNFILTERED": 3.737343835304263,
+      "additional_claim_ids": {
+        "sharpe": "trend-controls-04-sharpe",
+        "maximum_drawdown": "trend-controls-04-maximum-drawdown",
+        "market_exposure": "trend-controls-04-market-exposure",
+        "annualized_volatility": "trend-controls-04-annualized-volatility",
+        "vol_matched_cagr_to_EMA20_50_UNFILTERED": "trend-controls-04-vol-matched-cagr-to-EMA20-50-UNFILTERED"
+      }
+    }
+  ],
+  "chart_id": "trend-controls",
+  "input_table": "evidence/tables/trend-controls.json",
+  "input_sha256": "f2d2d5ce88ac63c2376b2924948a82f10d1d63b27f223a6a6516b532e957d5ff",
+  "display_rounding": "At most four decimals; integer counts unchanged",
+  "missing_values": "null stays unavailable; never plotted as zero",
+  "transformation": "One bar per recorded numeric value; no interpolation, resampling, inference or optimization",
+  "outputs": [
+    {
+      "path": "charts/generated/trend-controls.svg",
+      "sha256": "c644808aaadd2f4b878439dcba4367c0a9887cfa25c3086617fc938339b19eee"
+    },
+    {
+      "path": "charts/generated/trend-controls.png",
+      "sha256": "498181be170b5b286f6f08851631ef078280ab4dfd6f2dbaebcb24b0207035f1"
+    }
+  ],
+  "accessible_table": "evidence/tables/trend-controls.md"
+}

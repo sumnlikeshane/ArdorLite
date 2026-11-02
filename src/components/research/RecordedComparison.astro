@@ -1,0 +1,37 @@
+---
+import { comparisonPanels } from '../../lib/research/presentation';
+import { claimUrl, formatValue } from '../../lib/evidence';
+interface Props { figureId: string; }
+const {figureId} = Astro.props;
+const panels = comparisonPanels(figureId);
+const width = (v: number, min: number, max: number) => 100*(v-min)/(max-min);
+---
+<div class="recorded-comparison" data-research-comparison={figureId}>
+  {panels.length>1 && <fieldset class="comparison-controls" hidden data-comparison-controls>
+    <legend>Compare saved measurements</legend>
+    {panels.map((panel,i) => <label><input type="radio" name={`view-${figureId}`} value={panel.id} checked={i===0} data-comparison-input/><span>{panel.label}</span></label>)}
+    <button type="button" data-comparison-reset>Reset comparison</button>
+  </fieldset>}
+  {panels.map(panel => <section data-comparison-panel={panel.id} aria-labelledby={`${figureId}-${panel.id}-title`}>
+    <h4 id={`${figureId}-${panel.id}-title`}>{panel.title}</h4>
+    <p class="comparison-description">{panel.description}</p>
+    <div class="comparison-scale" aria-hidden="true"><span>{panel.unit}</span><div>{panel.ticks.map(tick => <span style={`left:${width(tick,panel.minimum,panel.maximum)}%`}>{formatValue(tick,2)}</span>)}</div></div>
+    {panel.threshold !== undefined && <p class="comparison-threshold">Pass threshold ≤ {panel.threshold}. All values are above it.</p>}
+    <table class="comparison-table">
+      <caption class="sr-only">{panel.title} · {panel.unit}. Exact claims linked from each value.</caption>
+      <colgroup><col class="comparison-label-column"/><col/></colgroup>
+      <thead class="sr-only"><tr><th scope="col">Portfolio or variant</th><th scope="col">{panel.unit}</th></tr></thead>
+      <tbody>{panel.rows.map(row => <tr>
+        <th scope="row"><span>{row.label}</span><small>{row.context}</small></th>
+        <td>
+          <div class="comparison-track" aria-hidden="true">
+            {panel.threshold!==undefined && <span class="comparison-rule" style={`left:${width(panel.threshold,panel.minimum,panel.maximum)}%`}></span>}
+            {row.value!==null && <span class:list={['comparison-bar',{'is-selected':row.label.startsWith('V5'), 'is-negative':panel.threshold!==undefined}]} style={`width:${width(row.value,panel.minimum,panel.maximum)}%`}></span>}
+          </div>
+          <a href={claimUrl(row.claimId)} class="comparison-value" aria-label={`${row.label}: ${row.value===null?'Unavailable':formatValue(row.value,4)} ${panel.unit}. Inspect claim.`}>{row.value===null?'Unavailable':formatValue(row.value,4)}{panel.unit==='% per year'?'%':''}<span aria-hidden="true"> ↗</span></a>
+        </td>
+      </tr>)}</tbody>
+    </table>
+  </section>)}
+  <p class="small" data-comparison-status aria-live="polite">Saved observations · no interpolation or new inference.</p>
+</div>

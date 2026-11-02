@@ -1,0 +1,178 @@
+{
+  "id": "trend-folds",
+  "title": "V5 and binding EMA control across complete and partial folds",
+  "case_id": "trend-quality",
+  "status": "tested_killed",
+  "units": "Sharpe ratio",
+  "source_paths": [
+    "data/research/trend_quality_immediate_entry_v1/walk_forward.csv"
+  ],
+  "source_artifact_ids": [
+    "src-2adacd9e9309"
+  ],
+  "claim_ids": [
+    "trend-folds-01",
+    "trend-folds-01-complete",
+    "trend-folds-01-conjunctive-fold-pass",
+    "trend-folds-02",
+    "trend-folds-02-complete",
+    "trend-folds-02-conjunctive-fold-pass",
+    "trend-folds-03",
+    "trend-folds-03-complete",
+    "trend-folds-03-conjunctive-fold-pass",
+    "trend-folds-04",
+    "trend-folds-04-complete",
+    "trend-folds-04-conjunctive-fold-pass",
+    "trend-folds-05",
+    "trend-folds-05-complete",
+    "trend-folds-05-conjunctive-fold-pass",
+    "trend-folds-06",
+    "trend-folds-06-complete",
+    "trend-folds-07",
+    "trend-folds-07-complete",
+    "trend-folds-08",
+    "trend-folds-08-complete",
+    "trend-folds-09",
+    "trend-folds-09-complete",
+    "trend-folds-10",
+    "trend-folds-10-complete"
+  ],
+  "extraction_rule": "Select recorded fold Sharpe for V5 and unfiltered EMA. Preserve complete flag and V5 conjunctive gate. Do not count partial fold as a fifth complete fold.",
+  "study_context": {
+    "window": "panel 2015-01-01 through 2026-06-05; walk-forward test 2018-01-01 through 2026-06-05",
+    "universe": "liquid cash after minimum history, positive OHLC and prior traded-value filters",
+    "instrument": "unlevered integer-share delivery equities; cash retained when underinvested",
+    "benchmark": "unfiltered S0, binding unfiltered EMA20/50 comparator; NIFTYBEES buy-and-hold reference",
+    "costs": "recorded delivery-equity statutory costs, DP charge and base 5 bps slippage per side",
+    "execution": "weekly after-close decision; exact next-session open; quality strictly through t-1; fold training-only quality boundaries",
+    "inference": "direct quality date/symbol two-way clustered regression with controls; moving-block familywise max-t versus S0",
+    "source_verdict": "kill-quality-family; HQ falsified; HR falsified; priority-selected variant none"
+  },
+  "caveats": [
+    "Post-hoc historical development; no live/shadow authorization.",
+    "V0 already-observed reference and EMA quality-filter diagnostic are not selectable variants or binding controls.",
+    "Only wf1\u2013wf4 count as complete folds; wf5_partial is excluded from the fold gate.",
+    "Full-capital NIFTYBEES CAGR has materially greater exposure and volatility; compare risks before interpreting returns.",
+    "Daily NAV was not persisted; no equity, underwater or rolling-Sharpe curves can be reconstructed from summary metrics.",
+    "Archived TSS diagnosis seal points to an engine whose bytes later changed; current-code parity is not promised."
+  ],
+  "rows": [
+    {
+      "label": "wf1 \u2014 complete / V5_S0_Q67_DIVERSIFIED",
+      "value": -0.18952895348791093,
+      "claim_id": "trend-folds-01",
+      "complete": true,
+      "conjunctive_fold_pass": false,
+      "additional_claim_ids": {
+        "complete": "trend-folds-01-complete",
+        "conjunctive_fold_pass": "trend-folds-01-conjunctive-fold-pass"
+      }
+    },
+    {
+      "label": "wf2 \u2014 complete / V5_S0_Q67_DIVERSIFIED",
+      "value": 1.6662676606770865,
+      "claim_id": "trend-folds-02",
+      "complete": true,
+      "conjunctive_fold_pass": false,
+      "additional_claim_ids": {
+        "complete": "trend-folds-02-complete",
+        "conjunctive_fold_pass": "trend-folds-02-conjunctive-fold-pass"
+      }
+    },
+    {
+      "label": "wf3 \u2014 complete / V5_S0_Q67_DIVERSIFIED",
+      "value": 1.4572000390811082,
+      "claim_id": "trend-folds-03",
+      "complete": true,
+      "conjunctive_fold_pass": true,
+      "additional_claim_ids": {
+        "complete": "trend-folds-03-complete",
+        "conjunctive_fold_pass": "trend-folds-03-conjunctive-fold-pass"
+      }
+    },
+    {
+      "label": "wf4 \u2014 complete / V5_S0_Q67_DIVERSIFIED",
+      "value": 0.19514951787333418,
+      "claim_id": "trend-folds-04",
+      "complete": true,
+      "conjunctive_fold_pass": true,
+      "additional_claim_ids": {
+        "complete": "trend-folds-04-complete",
+        "conjunctive_fold_pass": "trend-folds-04-conjunctive-fold-pass"
+      }
+    },
+    {
+      "label": "wf5_partial \u2014 PARTIAL, excluded / V5_S0_Q67_DIVERSIFIED",
+      "value": 0.5554942315381268,
+      "claim_id": "trend-folds-05",
+      "complete": false,
+      "conjunctive_fold_pass": false,
+      "additional_claim_ids": {
+        "complete": "trend-folds-05-complete",
+        "conjunctive_fold_pass": "trend-folds-05-conjunctive-fold-pass"
+      }
+    },
+    {
+      "label": "wf1 \u2014 complete / EMA20_50_UNFILTERED",
+      "value": -0.8923103922669947,
+      "claim_id": "trend-folds-06",
+      "complete": true,
+      "additional_claim_ids": {
+        "complete": "trend-folds-06-complete"
+      }
+    },
+    {
+      "label": "wf2 \u2014 complete / EMA20_50_UNFILTERED",
+      "value": 1.7029693547207652,
+      "claim_id": "trend-folds-07",
+      "complete": true,
+      "additional_claim_ids": {
+        "complete": "trend-folds-07-complete"
+      }
+    },
+    {
+      "label": "wf3 \u2014 complete / EMA20_50_UNFILTERED",
+      "value": 0.42180850071863546,
+      "claim_id": "trend-folds-08",
+      "complete": true,
+      "additional_claim_ids": {
+        "complete": "trend-folds-08-complete"
+      }
+    },
+    {
+      "label": "wf4 \u2014 complete / EMA20_50_UNFILTERED",
+      "value": 0.15281484282110147,
+      "claim_id": "trend-folds-09",
+      "complete": true,
+      "additional_claim_ids": {
+        "complete": "trend-folds-09-complete"
+      }
+    },
+    {
+      "label": "wf5_partial \u2014 PARTIAL, excluded / EMA20_50_UNFILTERED",
+      "value": 0.5940284439096707,
+      "claim_id": "trend-folds-10",
+      "complete": false,
+      "additional_claim_ids": {
+        "complete": "trend-folds-10-complete"
+      }
+    }
+  ],
+  "chart_id": "trend-folds",
+  "input_table": "evidence/tables/trend-folds.json",
+  "input_sha256": "a403399b09d32d9c808782a2285f61ebbfad4a899a21d41314da4fdd01c4ff5b",
+  "display_rounding": "At most four decimals; integer counts unchanged",
+  "missing_values": "null stays unavailable; never plotted as zero",
+  "transformation": "One bar per recorded numeric value; no interpolation, resampling, inference or optimization",
+  "outputs": [
+    {
+      "path": "charts/generated/trend-folds.svg",
+      "sha256": "00453e8347155d05e791a4dfca88b58535db8aa63dc68eac1616b503ef8e0864"
+    },
+    {
+      "path": "charts/generated/trend-folds.png",
+      "sha256": "c3f4c173ce108dc15061e825c73c19539fa4a29d4e4d5bb36c973287d2ad922f"
+    }
+  ],
+  "accessible_table": "evidence/tables/trend-folds.md"
+}

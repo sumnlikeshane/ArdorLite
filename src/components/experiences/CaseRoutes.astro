@@ -1,0 +1,13 @@
+---
+interface Props { heading?: boolean; }
+const { heading = true } = Astro.props;
+const routes = [
+  {title:'Follow a research decision',text:'Discovery, execution and independent information ask different questions.',links:[['/research/cases/atlas-ssf/','Atlas & SSF'],['/research/cases/momentum-v2/','Momentum v2']]},
+  {title:'Inspect the engineering',text:'Traceable observations, valid numbers and permission have separate boundaries.',links:[['/engineering/','Inside Ardor'],['/research/cases/price-bridge/','Price bridge'],['/research/cases/trend-quality/','Trend quality']]},
+  {title:'Inspect a correction',text:'A repaired calculation can change a result while preserving the final stop decision.',links:[['/research/cases/swing-autopsy/','Swing autopsy'],['/engineering/#certification','The experiment gate']]}
+];
+---
+<div class="exp-case-routes">
+  {heading && <h2>Start with a question you want to inspect.</h2>}
+  {routes.map(route => <article class="exp-route"><h3>{route.title}</h3><div><p>{route.text}</p><ol aria-label={route.title}>{route.links.map(([href,label]) => <li><a href={href}>{label}</a></li>)}</ol></div></article>)}
+</div>

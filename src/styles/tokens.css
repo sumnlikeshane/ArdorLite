@@ -1,0 +1,52 @@
+/* S3 light-first contract. Dark mode and theme switching are deliberately deferred. */
+:root {
+  color-scheme: light;
+  --surface-page: #f8f7f3;
+  --surface-raised: #fffefa;
+  --surface-inset: #eeefe8;
+  --surface-plate: #ffffff;
+  --surface-selected: #e9edf9;
+  --surface-code: #f0f2eb;
+  --text-primary: #20231f;
+  --text-secondary: #50554d;
+  --text-link: #2447b2;
+  --text-link-hover: #17358e;
+  --text-on-accent: #ffffff;
+  --text-code: #26332a;
+  --text-print: #111111;
+  --border-subtle: #d9dbd1;
+  --border-control: #767b70;
+  --border-selected: #a3afc8;
+  --focus-ring: #2447b2;
+  --status-negative-text: #88452c;
+  --status-negative-surface: #f2ece5;
+  --status-negative-border: #b48d72;
+  --status-positive-text: #386047;
+  --status-positive-surface: #edf1e9;
+  --status-positive-border: #8b9d81;
+  --chart-primary: #2447b2;
+  --chart-negative: #88452c;
+  --chart-partial: #9a7359;
+  --chart-skipped-surface: #f2e7da;
+  --chart-muted: #8b99bd;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: Inter, system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --measure: 72ch;
+  --space: clamp(24px, 5vw, 72px);
+  /* Compatibility aliases keep existing components on one semantic palette. */
+  --paper: var(--surface-page);
+  --white: var(--surface-raised);
+  --ink: var(--text-primary);
+  --muted: var(--text-secondary);
+  --rule: var(--border-subtle);
+  --blue: var(--text-link);
+  --blue-pale: var(--surface-selected);
+  --rust: var(--status-negative-text);
+  --green: var(--status-positive-text);
+}
+::selection { background: var(--surface-selected); color: var(--text-primary); }
+:focus-visible { outline-color: var(--focus-ring); }
+button, input, select, summary { min-height: 2.75rem; }
+button:disabled { color: var(--text-secondary); background: var(--surface-inset); cursor: default; }
+button[aria-pressed='true'], [aria-selected='true'] { background: var(--surface-selected); color: var(--text-link); }

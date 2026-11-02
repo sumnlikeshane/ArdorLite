@@ -1,0 +1,16 @@
+---
+import ClaimEntry from '../ClaimEntry.astro';
+import EvidenceLinks from '../EvidenceLinks.astro';
+import { caseRecords, caseClaims, recordUrl, renderCaseMarkdown } from '../../lib/evidence';
+import { evidenceCrosswalk } from '../../lib/evidence/crosswalk';
+interface Props { caseId: string; }
+const {caseId} = Astro.props;
+const records = caseRecords(caseId), entries = caseClaims(caseId);
+const html = await renderCaseMarkdown(caseId, {readableCitations:true});
+---
+<div data-pagefind-ignore class="research-reference">
+  <section id="original-verdicts"><p class="eyebrow">The research record</p><h2>The original record</h2>{records.map(record=><div class="evidence-note"><p><strong>{record.title}</strong></p><p>Original verdict: <strong>{record.original_verdict??'Unavailable'}</strong></p><p>{record.controlling_gates??'Controlling gates unavailable in the reviewed record.'}</p><a href={recordUrl(record.id)}>Inspect this catalog record ↗</a></div>)}</section>
+  <section id="narrative" class="case-narrative"><h2>Complete reviewed narrative</h2><details open data-pilot-disclosure><summary>Read the complete narrative</summary><div set:html={html}/></details></section>
+  <section id="related-records"><h2>Related records and reproduction</h2><ul>{records.map(record=><li><a href={recordUrl(record.id)}>{record.title}</a> · <code>{record.reproduction_level}</code>{record.relations.length>0 && <ul>{record.relations.map(rel=><li><a href={recordUrl(rel.record_id)}>{rel.type.replaceAll('_',' ')}: {rel.record_id}</a></li>)}</ul>}</li>)}</ul><p>Reviewed aggregate display is reproducible from the permitted files. Historical strategy return replication requires excluded private inputs. Synthetic examples demonstrate software behavior, not market evidence.</p><EvidenceLinks title="Related synthetic methods" entries={evidenceCrosswalk.incoming('case',caseId,'method-case').map(edge=>edge.from)} note="Authored teaching associations explain a mechanism; they do not reproduce historical results."/><p><a href="/methods/">Five synthetic method examples</a> · <a href="/evidence/">Evidence policy</a></p></section>
+  <section class="claims-section" id="claims"><h2>Claim evidence ledger</h2><p>All {entries.length} entries, including claims outside the figures. Units, caveats, source pointers and reproduction labels remain attached. A direct claim link opens its reference context.</p><details open data-pilot-disclosure><summary>Inspect all {entries.length} claim entries</summary>{entries.map(claim=><ClaimEntry claim={claim}/>)}</details></section>
+</div>

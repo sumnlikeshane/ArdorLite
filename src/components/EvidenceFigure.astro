@@ -1,0 +1,58 @@
+---
+import DataTable from './DataTable.astro';
+import OutcomeLabel from './OutcomeLabel.astro';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { assetUrl, snapshotRoot } from '../lib/evidence';
+import type { FigureSpec, EvidenceTable } from '../lib/evidence/schemas';
+import { evidenceCrosswalk as crosswalk } from '../lib/evidence/crosswalk';
+import EvidenceLinks from './EvidenceLinks.astro';
+import TrendFoldContext from './TrendFoldContext.astro';
+import { figureCaptions } from '../lib/publication';
+interface Props { compact?: boolean; editorial?: boolean; figure: {spec:FigureSpec;table:EvidenceTable;svgUrl:string;pngUrl:string;dataUrl:string;columns:{key:string;label:string;unit:string}[]}; }
+const {figure,compact=false,editorial=false} = Astro.props;
+const {spec,table} = figure;
+const caption = figureCaptions[spec.id];
+const svgSource=readFileSync(resolve(snapshotRoot,spec.outputs.find(o=>o.path.endsWith('.svg'))!.path),'utf8');
+const viewBox=svgSource.match(/viewBox="[\d.]+ [\d.]+ ([\d.]+) ([\d.]+)"/);
+if(!viewBox) throw new Error(`Missing figure geometry: ${spec.id}`);
+const imageWidth=Number(viewBox[1]), imageHeight=Number(viewBox[2]);
+const enhanced = ['ssf-economics','momentum-execution','swing-policies','trend-folds'].includes(spec.id);
+const sources = crosswalk.outgoing('figure', spec.id, 'figure-source').map(edge => edge.to);
+const methods = crosswalk.distinct(sources.flatMap(source => crosswalk.sourceContext(source.id).methods));
+const owners = crosswalk.distinct(crosswalk.outgoing('figure', spec.id, 'figure-claim').flatMap(edge => crosswalk.incoming('claim', edge.to.id, 'record-claim').map(owner => owner.from)));
+---
+<figure class:list={['evidence-figure',{'research-evidence-figure':editorial}]} id={`figure-${spec.id}`} data-figure-id={spec.id}>
+  <span class="eyebrow">Recorded evidence / {spec.id}</span>
+  <h3>{spec.title}</h3>
+  <OutcomeLabel status={spec.status}/>
+  {editorial && <><slot/><figcaption>{caption} Values are archived analytical summaries; the original figure is preserved.</figcaption></>}
+  {!editorial && spec.id === 'trend-folds' && <TrendFoldContext />}
+  {editorial ? <details open data-pilot-disclosure class="research-original-figure"><summary>Inspect the original figure at its recorded scale</summary>
+    <img src={figure.svgUrl} alt={`${spec.title}. Recorded values are listed in the accessible table below. Outcome: ${spec.status.replaceAll('_',' ')}.`} width={imageWidth} height={imageHeight} loading="lazy" decoding="async" />
+    <p class="small"><a href={figure.svgUrl}>Open original figure at full size ↗</a> · Units: {spec.units}.</p>
+  </details> : <>
+  <p class="small" style="margin-top:14px">{!caption && <>{spec.transformation}. </>}Units: {spec.units}.</p>
+  <img src={figure.svgUrl} alt={`${spec.title}. Recorded values are listed in the accessible table below. Outcome: ${spec.status.replaceAll('_',' ')}.`} width={imageWidth} height={imageHeight} loading="lazy" decoding="async" />
+  <p class="small" style="margin-top:10px"><a href={figure.svgUrl}>Open original figure at full size ↗</a></p>
+  <figcaption>{caption ?? spec.extraction_rule} Values are archived analytical summaries; the original figure is preserved.</figcaption>
+  </>}
+  {caption && <details><summary>Technical extraction and transformation</summary><p>{spec.extraction_rule}</p><p>{spec.transformation}</p></details>}
+  {compact ? <details><summary>Study context, controls and reproduction</summary>  <div class="figure-context"><dl>{Object.entries(spec.study_context).map(([key,value])=><><dt>{key.replaceAll('_',' ')}</dt><dd>{value===null?'Unavailable':value}</dd></>)}</dl></div>
+</details> : <>  <div class="figure-context"><dl>{Object.entries(spec.study_context).map(([key,value])=><><dt>{key.replaceAll('_',' ')}</dt><dd>{value===null?'Unavailable':value}</dd></>)}</dl></div>
+</>}
+  {editorial ? <details open data-pilot-disclosure class="research-exact-table"><summary>Inspect the complete exact-value table</summary><DataTable table={table} columns={figure.columns}/></details> : <DataTable table={table} columns={figure.columns}/>}
+  {editorial && spec.id === 'trend-folds' && <details open data-pilot-disclosure class="research-fold-inputs"><summary>Inspect every fold’s determining returns, dates and sources</summary><TrendFoldContext /></details>}
+  {enhanced && <div class="enhancement recorded-inspector" data-recorded-view={spec.id} data-input-url={figure.dataUrl} hidden>
+    <div class="inspector-heading"><h4>Inspect saved rows</h4><p class="small">{spec.id==='swing-policies'?'In-sample diagnostic: P0 is baseline; thirteen alternatives do not establish a recommended policy.':'Select or highlight recorded observations. No interpolation or new inference.'}</p></div>
+    <div class="inspector-fields"><label>Recorded rows<select data-row-select><option value="all">All recorded rows</option>{table.rows.map((r,i)=><option value={i}>{r.label}</option>)}</select></label>{spec.id==='swing-policies' && <label>Display order<select data-sort><option value="source">Original saved order</option><option value="ascending">Recorded value, ascending</option><option value="descending">Recorded value, descending</option></select></label>}</div>
+    <div class="inspector-toolbar"><div class="inspector-actions" data-view-actions><button type="button" data-reset>Reset view</button></div><p class="small" data-selection-count aria-live="polite">{table.rows.length} of {table.rows.length} recorded rows</p></div>
+    <div class="plot-holder" data-plot></div><p class="small" data-chart-state aria-live="polite"></p>
+  </div>}
+  <div class="caveats"><p><strong>Controlling context and limitations</strong></p><ul>{spec.caveats.map(c=><li>{c}</li>)}</ul></div>
+  <p class="small">Precision: {spec.display_rounding}. Missingness: {spec.missing_values}.</p>
+  <div class="download-links"><a href={figure.svgUrl} download>Original SVG</a><a href={figure.pngUrl} download>Original PNG</a><a href={figure.dataUrl} download>Reviewed JSON</a><a href={assetUrl(spec.accessible_table)} download>Accessible Markdown table</a></div>
+  <p class="small">Sources: {sources.map((source,i)=><>{i>0&&' · '}<a href={source.href}>{source.label}</a></>)}</p>
+  <EvidenceLinks title="Records owning these claims" entries={owners} />
+  <EvidenceLinks title="Related synthetic methods" entries={methods} note="Conceptual source identity only; a synthetic example does not reproduce this recorded figure." />
+</figure>

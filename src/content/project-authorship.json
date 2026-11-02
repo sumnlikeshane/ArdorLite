@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "confirmedAt": "2026-10-30",
+  "basis": "User's explicit project-ownership confirmation in the 30 October 2026 master brief.",
+  "ownership": "Independently built and directed across research, implementation, experimentation, data engineering and validation.",
+  "developmentDuration": "Approximately two months",
+  "publicName": null,
+  "publicRole": null,
+  "biography": null,
+  "contact": null,
+  "profileUrls": null,
+  "upstreamBoundary": "Project ownership does not establish authorship of external research, third-party libraries or upstream TradeX materials. Rights and attribution remain material-specific.",
+  "remainingAttribution": "Detailed collaborator, upstream and AI-assistance attribution remains unset."
+}

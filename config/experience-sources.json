@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "scope": "M1 E1/E4 captures preserved; M2 selected E2/E3/E5 and Bridge operations embedded on their declared reading routes only. No source downloads or expanded reviewed exports.",
+  "manifests": [
+    "src/content/source-excerpts/engineering.json",
+    "src/content/source-excerpts/engineering-m2.json",
+    "src/content/source-excerpts/price-bridge.json"
+  ],
+  "excerpts": [
+    {
+      "id": "engineering-observation-vintage",
+      "path": "ardor/data/prices.py",
+      "lineStart": 90,
+      "lineEnd": 108,
+      "sha256": "251cb63e92d2802bf1e681dfb99baed7b0e4524c13df00e28b7fbfb59c1692c7",
+      "excerptSha256": "36844f964dacec6a779b04f630722f2fe1ae58d15d917c391c1699248347aeaa"
+    },
+    {
+      "id": "engineering-observation-support",
+      "path": "ardor/data/prices.py",
+      "lineStart": 119,
+      "lineEnd": 125,
+      "sha256": "251cb63e92d2802bf1e681dfb99baed7b0e4524c13df00e28b7fbfb59c1692c7",
+      "excerptSha256": "8f69a6082c3e3ea03e6f8e06f88d24d0d6c6fbe076e9bacfd3e5a00fd37a3f86"
+    },
+    {
+      "id": "engineering-gate-profile",
+      "path": "ardor/process/feasibility_gate.py",
+      "lineStart": 347,
+      "lineEnd": 372,
+      "sha256": "b8391eb30f1345634eef29aa250be8989b7dc3abbfe0e0f2bae4b211c04520bf",
+      "excerptSha256": "dc08e466a67a79d636b80cbc703b91eada9538af30d901a6a56e2c1d378e92bd"
+    },
+    {
+      "id": "engineering-gate-legacy",
+      "path": "ardor/process/feasibility_gate.py",
+      "lineStart": 431,
+      "lineEnd": 436,
+      "sha256": "b8391eb30f1345634eef29aa250be8989b7dc3abbfe0e0f2bae4b211c04520bf",
+      "excerptSha256": "d8d41088169e49c6487927454b566afa252bc36bcfecfaf22faef05008cb6720"
+    },
+    {
+      "id": "engineering-gate-certify",
+      "path": "ardor/process/feasibility_gate.py",
+      "lineStart": 439,
+      "lineEnd": 456,
+      "sha256": "b8391eb30f1345634eef29aa250be8989b7dc3abbfe0e0f2bae4b211c04520bf",
+      "excerptSha256": "a8eeaa1b7b5eede705b9ab9f2839198536e2042d091f87c30f41335e720c9062"
+    },
+    {
+      "id": "engineering-registration-unique",
+      "path": "ardor/process/hypothesis_registry.py",
+      "lineStart": 134,
+      "lineEnd": 152,
+      "sha256": "49ae1af8ffb806ea168ad0cba079c13b74f0e275c2051d4f03f397d3eab86b66",
+      "excerptSha256": "2ae55ffc71934c2d8cff9290830dac41f26e3f03e30438a8f4cc3bd33d165ae9"
+    },
+    {
+      "id": "engineering-registration-typed",
+      "path": "ardor/process/hypothesis_registry.py",
+      "lineStart": 249,
+      "lineEnd": 272,
+      "sha256": "49ae1af8ffb806ea168ad0cba079c13b74f0e275c2051d4f03f397d3eab86b66",
+      "excerptSha256": "a2fba0517cefea7804a0f9b6153b78722d3eb5bbb50cd371da1fc7dd03c5f953"
+    },
+    {
+      "id": "engineering-comparison-evaluate",
+      "path": "ardor/process/experiment.py",
+      "lineStart": 152,
+      "lineEnd": 175,
+      "sha256": "bffe71756861236381d04a34a9ac78f4c480b79efdec00adbbe724c65641efbb",
+      "excerptSha256": "be7b422e27d3b58c3971016eedb906e1cc26b8fdd9ab985d10c25db5789f6916"
+    },
+    {
+      "id": "engineering-comparison-legacy",
+      "path": "ardor/process/experiment.py",
+      "lineStart": 195,
+      "lineEnd": 207,
+      "sha256": "bffe71756861236381d04a34a9ac78f4c480b79efdec00adbbe724c65641efbb",
+      "excerptSha256": "5b003f52af5e612e072d86e2097a6475ade54f7ab93a97d44630e70fdd73e6c7"
+    },
+    {
+      "id": "engineering-comparison-finite",
+      "path": "ardor/process/experiment.py",
+      "lineStart": 210,
+      "lineEnd": 216,
+      "sha256": "bffe71756861236381d04a34a9ac78f4c480b79efdec00adbbe724c65641efbb",
+      "excerptSha256": "8b3048c3a663532c1d2305978710794eac0201c6ee96011440bf4090fa5c0326"
+    },
+    {
+      "id": "engineering-comparison-null",
+      "path": "ardor/process/experiment.py",
+      "lineStart": 234,
+      "lineEnd": 235,
+      "sha256": "bffe71756861236381d04a34a9ac78f4c480b79efdec00adbbe724c65641efbb",
+      "excerptSha256": "8eec37d6571e0b49b367126f026f8ba266aea653c6ea74e805c99a1eeaf84576"
+    },
+    {
+      "id": "engineering-ledger-verify",
+      "path": "ardor/process/ledger_integrity.py",
+      "lineStart": 189,
+      "lineEnd": 209,
+      "sha256": "7a7e4963fb2b3c6fee5edca0bdef327374c3b199ed4b44a00d11eb6372885b03",
+      "excerptSha256": "3b8d739880e3efefe81eec325679090887b876cee53b70685f2be5fe19c55159"
+    },
+    {
+      "id": "engineering-trial-once",
+      "path": "ardor/research/trial_ledger.py",
+      "lineStart": 201,
+      "lineEnd": 223,
+      "sha256": "2d1cb87788591a5edcac2cb068ba29be8be66d35fafea7e59505174d14c87e2a",
+      "excerptSha256": "4b0be85fa7510043b50c130976eedf5bebe25b87c86ed425dd783ddb7786591a"
+    },
+    {
+      "id": "bridge-cliff-guard",
+      "path": "ardor/data/adjust.py",
+      "lineStart": 101,
+      "lineEnd": 115,
+      "sha256": "459d2c2d8cbc15d1644d9f65c36517e58e41e4ae9d352fe40e04bd9124efc95a",
+      "excerptSha256": "b44580985f7b31c3a3420d9a1008d60d1d055a8837366e660494d8836b6877ee"
+    },
+    {
+      "id": "bridge-confirmed-action",
+      "path": "ardor/data/promote.py",
+      "lineStart": 77,
+      "lineEnd": 90,
+      "sha256": "6222ca7aa27b314f121f780510ed2d6defb7470d43e98540518da4133077c4ec",
+      "excerptSha256": "44ab50eae64b5d7b275ed7a8b8d855933ad24bf4a250b657a6394292e6724a24"
+    },
+    {
+      "id": "bridge-numeric-check",
+      "path": "ardor/strategies/trend_following_price_bridge_remediation/audit.py",
+      "lineStart": 103,
+      "lineEnd": 138,
+      "sha256": "2cd35bcc21965d5e394a0c42f3cbd658b7174b1705c5150c3a1c201e3853947b",
+      "excerptSha256": "77a5596f7a11cb0c8d0292ac983b5c681c938020b6545620c7857ef2a3cae772"
+    },
+    {
+      "id": "bridge-exact-session",
+      "path": "ardor/strategies/trend_following_price_bridge_remediation/audit.py",
+      "lineStart": 167,
+      "lineEnd": 188,
+      "sha256": "2cd35bcc21965d5e394a0c42f3cbd658b7174b1705c5150c3a1c201e3853947b",
+      "excerptSha256": "1700d92eadecacf4c96047863b2ab9eb3dd72cd4edc5f106818edcd9964a0f7e"
+    },
+    {
+      "id": "bridge-repair-vintage",
+      "path": "scripts/data/promote_clean_ohlcv_repair_v1_1.py",
+      "lineStart": 33,
+      "lineEnd": 51,
+      "sha256": "3fc8776a32197e830d84ba8313f073d0743aeaaca04d9a3697aacb5f20e18bb1",
+      "excerptSha256": "f59494d37710fbeabac2a82cabfd73574825cdabe7d6ed13058ea1263eff9514"
+    },
+    {
+      "id": "bridge-lineage-cutoff",
+      "path": "ardor/data/bridge_provenance.py",
+      "lineStart": 28,
+      "lineEnd": 37,
+      "sha256": "8cf639e875d5efa2650d35f63cab9045973e2a7625ab86b7344d1d0607c28a3b",
+      "excerptSha256": "6b93f4ca9bf4a709fb7b8412a0761dbc6f183e475291885184e764c0d3132a76"
+    },
+    {
+      "id": "bridge-lineage-unique",
+      "path": "ardor/data/bridge_provenance.py",
+      "lineStart": 48,
+      "lineEnd": 56,
+      "sha256": "8cf639e875d5efa2650d35f63cab9045973e2a7625ab86b7344d1d0607c28a3b",
+      "excerptSha256": "b01ca806e24df48b026c14559410ed12f6f01b89ac8863d99e8496fbd6a6d222"
+    },
+    {
+      "id": "bridge-certification-decision",
+      "path": "scripts/strategies/run_trend_following_price_bridge_certification_v1_1.py",
+      "lineStart": 125,
+      "lineEnd": 146,
+      "sha256": "056ba4dde3c12dd9356ebf905d98652354e483898757b1ea60a1040a371d4fe2",
+      "excerptSha256": "6f5dae63757479d433c6077dc9ee8f9c922a309913d743245748273229b9eb92"
+    },
+    {
+      "id": "bridge-cliff-threshold",
+      "path": "ardor/data/adjust.py",
+      "lineStart": 63,
+      "lineEnd": 63,
+      "sha256": "459d2c2d8cbc15d1644d9f65c36517e58e41e4ae9d352fe40e04bd9124efc95a",
+      "excerptSha256": "6b4de08e4589028012a8e7f594cb859b3eb8e1be3b6ca946d4ebf24e9948b787"
+    },
+    {
+      "id": "bridge-cliff-minimum",
+      "path": "ardor/data/adjust.py",
+      "lineStart": 79,
+      "lineEnd": 79,
+      "sha256": "459d2c2d8cbc15d1644d9f65c36517e58e41e4ae9d352fe40e04bd9124efc95a",
+      "excerptSha256": "285c0173b432ca7e492ccd661b477c6a9e5877a56d35b9f37a3b4bc9cdb089f8"
+    }
+  ],
+  "embeddedRoutes": {
+    "src/content/source-excerpts/engineering.json": "engineering/index.html",
+    "src/content/source-excerpts/engineering-m2.json": "engineering/index.html",
+    "src/content/source-excerpts/price-bridge.json": "research/cases/price-bridge/index.html"
+  }
+}
