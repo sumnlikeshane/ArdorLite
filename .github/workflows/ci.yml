@@ -36,6 +36,19 @@ jobs:
           run_install: false
       - run: ./scripts/run.sh install --frozen-lockfile
       - run: ./scripts/run.sh build
+      - name: Verify reviewed source and output identities
+        run: |
+          python3.12 -B - <<'PY'
+          import json
+          from pathlib import Path
+          expected = json.loads(Path('receipts/release-evidence.json').read_text())
+          build = json.loads(Path('receipts/clean-build.json').read_text())
+          audit = json.loads(Path('receipts/output-audit.json').read_text())
+          if any(build.get(key) != expected.get(key) for key in ('sourceDigest', 'artifactIdentity')):
+              for row in audit['files']:
+                  print(json.dumps(row, sort_keys=True))
+              raise SystemExit('CI source/output differs from the reviewed technical evidence')
+          PY
       - run: ./scripts/run.sh exec playwright install --with-deps chromium firefox webkit
       - run: ./scripts/run.sh test:e2e
       - run: ./scripts/run.sh exec node scripts/search_acceptance.mjs
