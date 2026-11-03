@@ -1,7 +1,6 @@
 {
-  "schemaVersion": 1,
-  "profile": "public-source",
-  "deploymentEligible": false,
+  "schemaVersion": 2,
+  "profile": "public-site",
   "metadata": {
     "src/content/public-provenance.json": "158384f5ec40912eb04d4ba093e1e740a2844798d6b31a8a41f29d5e31c447f5",
     "config/omitted-content-signatures.json": "35ae05cf601032eac1da08b184122d9335eff8ea3d16e4e9279915c4c53c8540"
@@ -18,5 +17,5 @@
     "tests/private-publication-expectations.json"
   ],
   "originalInputVerification": "absent-not-verified",
-  "reviewAcceptance": "pending; engineering builds never supply deployment permission"
+  "reviewAcceptance": "Pending/stale reviews are separate from build success; exact release authority and local original-input audit remain mandatory."
 }

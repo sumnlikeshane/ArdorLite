@@ -14,12 +14,15 @@
     "content:check": "node --import tsx scripts/content_check.ts",
     "assets:prepare": "python3.12 scripts/assets_prepare.py",
     "check": "pnpm evidence:check && pnpm content:check && astro check",
-    "build": "python3.12 -B scripts/build_public_source.py",
+    "build": "python3.12 -B scripts/build.py",
     "preview": "python3.12 -B scripts/serve_dist.py",
     "test:e2e": "playwright test",
     "prose:check": "node scripts/prose_check.mjs",
     "content:status": "python3.12 -B scripts/publication_policy.py",
-    "entries:check": "node --import tsx scripts/entry_check.ts"
+    "entries:check": "node --import tsx scripts/entry_check.ts",
+    "release:check": "python3.12 -B scripts/release_check.py",
+    "release:package": "python3.12 -B scripts/release_package.py",
+    "rollback:exercise": "python3.12 -B scripts/rollback_exercise.py"
   },
   "dependencies": {
     "@fontsource/inter": "5.3.0",

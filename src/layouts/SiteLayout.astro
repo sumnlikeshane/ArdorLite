@@ -1,8 +1,5 @@
 ---
 import '../styles/fonts.css';
-import interFont from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
-import serifFont from '@fontsource/source-serif-4/files/source-serif-4-latin-400-normal.woff2?url';
-import serifItalic from '@fontsource/source-serif-4/files/source-serif-4-latin-400-italic.woff2?url';
 import '../styles/global.css';
 import '../styles/experiences.css';
 import '../styles/brand.css';
@@ -26,9 +23,6 @@ const nav = [{href:'/research/',label:'Research'},{href:'/evidence/',label:'Evid
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preload" href={interFont} as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href={serifFont} as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href={serifItalic} as="font" type="font/woff2" crossorigin="anonymous" />
     <title>{title === 'Ardor Lite' ? 'Ardor Lite — Systematic research in Indian equities' : `${title} · Ardor Lite`}</title>
     <meta name="description" content={description} />
     <meta name="robots" content={publicEdition && path !== '/404/' && path !== '/404.html' ? 'index, follow' : 'noindex, nofollow'} />

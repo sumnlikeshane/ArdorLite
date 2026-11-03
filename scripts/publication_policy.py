@@ -27,7 +27,7 @@ def source_inventory(root: Path = ROOT) -> list[dict]:
     Generated public exports/notices are derived from hashed source and existing gates.
     """
     files = []
-    for name in ('src', 'config', 'scripts', 'vendor', 'tests', '.github', 'playwright.config.ts', '.agents/skills/ardor-publication-review', 'reviewed', 'reviewed-supplements', 'snapshots',
+    for name in ('src', 'config', 'scripts', 'vendor', 'tests', '.github', 'playwright.config.ts', 'docs/search/JUDGED_QUERIES.json', '.agents/skills/ardor-publication-review', 'reviewed', 'reviewed-supplements', 'snapshots',
                  'public/brand', 'public/images', 'public/favicon.svg', 'public/robots.txt',
                  'package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml', '.node-version', '.python-version', '.npmrc', 'NOTICE.md', 'astro.config.mjs', 'tsconfig.json'):
         path = root / name
@@ -215,8 +215,6 @@ def authorization_errors(root: Path, release: dict, identity: str) -> list[str]:
         valid = False
     valid = valid and not (parsed.hostname or '').endswith('.invalid')
     errors = [] if valid else ['A canonical HTTPS publishing origin without credentials/path/query is required.']
-    if public_profile(root):
-        errors.append('Public-source engineering profile cannot authorize deployment; use the canonical release pipeline.')
     path = root / 'receipts/public-release-authorization.json'
     try:
         if path.is_symlink():

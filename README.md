@@ -2,7 +2,7 @@
 
 A static research publication that follows six Indian-equity investigations from question to experiment, evidence and recorded decision. It is the reading and inspection layer for **Ardor**, an independently built personal research system.
 
-**Website:** [ardorlite.onrender.com](https://ardorlite.onrender.com/) · **Public source:** [ArdorLite-Public](https://github.com/sumnlikeshane/ArdorLite-Public)
+**Website:** [ardorlite.onrender.com](https://ardorlite.onrender.com/) · **Public source (current name):** [ArdorLite-Public](https://github.com/sumnlikeshane/ArdorLite-Public)
 
 The project makes failed hypotheses, intermediate successes and unresolved limits inspectable. Its reviewed evidence supports **no certified or live strategy**. Synthetic demonstrations explain software behavior; they do not reproduce historical returns.
 
@@ -56,7 +56,7 @@ export PYTHONDONTWRITEBYTECODE=1
 ./scripts/run.sh preview --port 4321 --ignore-lock
 ```
 
-Open the exact loopback URL printed by Astro; stop preview with Ctrl-C. The wrapper prefers the prepared Mac's working Node 24 installation, otherwise it uses `PATH`. The complete build checks exact Node/pnpm versions. Installation uses the package registry; building and reading then use local assets. No environment file, API key, account, database, broker, market-data service or private Ardor checkout is needed.
+Open the exact loopback URL printed by the read-only preview; stop preview with Ctrl-C. The wrapper prefers the prepared Mac's working Node 24 installation, otherwise it uses `PATH`. The complete build checks exact Node/pnpm versions. Installation uses the package registry; building and reading then use local assets. No environment file, API key, account, database, broker, market-data service or private Ardor checkout is needed.
 
 For UI work, use `./scripts/run.sh dev`. Test search through the built HTTP preview: development mode does not generate its index. See [BUILD.md](docs/BUILD.md) for the full pipeline and browser setup.
 
@@ -110,11 +110,11 @@ Browser checks require matching engines and local process/loopback access:
 
 Use a fresh browser-output directory to preserve prior runs. Receipts apply only to their recorded source/output identities. GitHub CI runs the public build, history secret scan and dependency audit with pinned actions and read-only tokens. These technical checks do not supply scientific or human acceptance.
 
-You can inspect and build your own clone or fork. Shared validation is included; owner-only authoring, release, deployment and recovery commands stay in the private operational repository. Public read/clone access grants no upstream write, merge, administrative or deployment authority. There is no browser admin, CMS, production write service or runtime database. See [contribution rules](CONTRIBUTING.md) and [security](SECURITY.md).
+You can inspect and build your own clone or fork. Shared validation is included; owner mutation tools, drafts, private inputs and full operational records stay in external local storage. Public read/clone access grants no upstream write, merge, administrative or deployment authority. There is no browser admin, CMS, production write service or runtime database. See [contribution rules](CONTRIBUTING.md) and [security](SECURITY.md).
 
 ## Status and limits
 
-The website is available at [ardorlite.onrender.com](https://ardorlite.onrender.com/). This repository provides the complete website presentation with an independently buildable **public-source engineering profile**. It includes metadata-only provenance; original source captures, the local-only Trend supplement and its approval, private explanatory inputs and owner-only commands are excluded. Missing original-input verification is reported as absent, not passed. Deployment remains controlled through the private canonical pipeline; this public profile is not a deployment-authorized release.
+The website is available at [ardorlite.onrender.com](https://ardorlite.onrender.com/). This repository is the single maintained website source for independent reviewers, CI and the intended Render source. Its required public-site input contract supplies metadata-only provenance; original source captures, the local-only Trend supplement, private explanatory inputs, drafts and owner mutation tools remain outside public Git. Missing original-input verification is reported as absent. An explicit local pre-release audit checks retained private inputs against this exact public projection and source. The read-only provider entry point runs the same build and rejects missing/wrong source, output, target and approval bindings. Local preparation does not authorize a deployment. See [deployment](docs/DEPLOYMENT.md) and [maintenance](docs/MAINTENANCE.md).
 
 Full independent scientific, human-reader, assistive/device, zoom/print and remaining browser/performance acceptance is incomplete. Technical checks and agent diagnostics do not fill those gaps. Research limitations include unrecovered historical source identities, reconstructed artifacts and absent daily Trend NAV; no replacement evidence is synthesized.
 

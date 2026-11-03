@@ -1,23 +1,28 @@
-# Independent public build
+# One public build
 
-Use Node 24.21.0, pnpm 10.14.0 and nonoptimized Python 3.12 (the release uses 3.12.8). Set PYTHONDONTWRITEBYTECODE=1. Install the exact lockfile with `./scripts/run.sh install --frozen-lockfile`, then run `./scripts/run.sh build`. No sibling checkout or credential is needed. Output is `dist/` and local receipts are generated under `receipts/`.
-
-The public pipeline checks metadata-only provenance, the complete frozen derivative snapshot, scoped material rights, structured content, read-only authored-entry validation, types, synthetic models, assets, dependency notices, metadata, Pagefind search and the output inventory. It reports original captures/supplement verification as absent-not-verified. It does not silently pass unavailable original inputs or reconstruct their contents.
-
-Run `./scripts/run.sh exec playwright install chromium firefox webkit` if the browsers are not installed, then `./scripts/run.sh test:e2e` for all production journeys. `./scripts/run.sh exec node scripts/search_acceptance.mjs` evaluates judged local search. Preview with `./scripts/run.sh preview --port 4321 --ignore-lock`. Browser automation covers the engines; it does not certify actual Safari/Edge, assistive technology, physical devices, genuine zoom, complete print or reader comprehension.
-
-The public profile produces the same intended public website as the separately verified private canonical build at the selected origin. Production is released from the private canonical repository: its additional original-input, policy, source/output/browser and exact authorization checks must pass before Render publishes `dist/`. This repository intentionally has no deployment entry point or provider credential. Changing a URL/profile does not authorize a deployment.
-
-Pagefind's locked native emitters use an unchanged checksum-pinned upstream WASM pair and normalized metadata ordering for reproducible cross-platform bytes. Upstream MIT/OFL/dependency notices retain their own scope. Reserved project rights remain; no blanket licence is selected.
-
-## Search verification receipts
-
-After a complete build, run `./scripts/run.sh exec node scripts/search_acceptance.mjs`. It evaluates the unchanged 28 judged queries and 536 exact destinations and writes `receipts/search-acceptance.json`, creating missing parents. This is the current run and is replaced on repetition; it never overwrites the historical dated implementation receipts.
-
-To retain separate runs, use a new destination, for example:
+Use Node **24.21.0**, pnpm **10.14.0**, ordinary nonoptimized Python **3.12** (provider patch 3.12.8), and `PYTHONDONTWRITEBYTECODE=1`.
 
 ```sh
-ARDOR_SEARCH_RECEIPT=receipts/my-review/search/acceptance.json ./scripts/run.sh exec node scripts/search_acceptance.mjs
+export PYTHONDONTWRITEBYTECODE=1
+./scripts/run.sh install --frozen-lockfile
+./scripts/run.sh build
+./scripts/run.sh exec playwright install chromium firefox webkit
+./scripts/run.sh test:e2e
+./scripts/run.sh exec node scripts/search_acceptance.mjs
+python3.12 -B scripts/technical_check.py
+./scripts/run.sh preview --port 4321 --ignore-lock
 ```
 
-Nested parents are created automatically. The optional, separately scoped Chromium search lab uses `./scripts/run.sh exec node scripts/search_performance.mjs`, writes the current run to `receipts/search-performance.json`, and supports the same retention pattern through `ARDOR_SEARCH_PERFORMANCE_RECEIPT`. Its local lab method is unchanged; it is not a field or physical-device measurement and is not required to verify receipt writing.
+`pnpm build` runs only `scripts/build.py`. The same source and build serve reviewer clones, CI and the read-only Render entry point. No sibling directory, original Ardor checkout, environment file, credentials or private input is needed. The retired engineering builder/exporter is not part of maintenance.
+
+The required version-2 `config/source-profile.json` checks the committed provenance projection, omission signatures and exact omitted-input list. Missing or invalid contracts fail before rendering. Private originals remain **absent-not-verified** in public build receipts. The separate explicit local audit verifies retained captures, the supplement and actual approval, and compares the public projection and signatures. It never regenerates research.
+
+The ordered build retains immutable snapshot validation and 29 archived tests before/after, material/content/entry/publication checks, public Python/Node regressions, guarded exports, dependency notices, Astro types/rendering, canonical metadata, normalized Pagefind and exhaustive output/adverse-output checks. Counts in the actual build receipt are authoritative. `receipts/clean-build.json` binds the production-input digest and output inventory. Generated receipts/output are excluded from source identity to avoid cycles; scripts, tests, configuration, CI, pins and search judgments are included.
+
+All **42 journeys per engine**, **126 total**, must pass once in Chromium, Firefox and WebKit with zero skips. The browser reporter records each title, engine, source and output. The search check requires **28 judged queries and 536 exact destinations**. `technical_check.py` independently checks the complete records and current output. A representative run cannot fill a gap. Real Safari/Edge, independent scientific/readership, assistive technology, physical devices, genuine zoom, complete paper output and full performance remain pending/stale at their actual scope.
+
+Receipts are generated outside `dist/`. To retain an additional judged-search run, use `ARDOR_SEARCH_RECEIPT=receipts/my-review/search/acceptance.json`; nested parents are created. The optional search lab supports `ARDOR_SEARCH_PERFORMANCE_RECEIPT`; it is scoped lab evidence. Preserve historical observations separately before replacing current receipts.
+
+Pagefind 1.5.2 uses normalized tables and a checksum-pinned unchanged upstream WASM pair across supported Mac/Linux emitters. Portability requires actual complete byte comparisons. No dependency, font or upstream notice grants a blanket Ardor licence.
+
+`pnpm release:check` reports exact readiness and may correctly fail despite a successful build. `pnpm release:package` retains audited static bytes locally; `pnpm rollback:exercise` detects corruption and restores/audits temporary copies without changing active output. Neither command deploys. See [deployment](DEPLOYMENT.md) and [maintenance](MAINTENANCE.md).

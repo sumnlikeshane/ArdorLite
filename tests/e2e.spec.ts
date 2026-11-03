@@ -225,6 +225,8 @@ test('S2 contextual evidence round trips retain exact anchors and keyboard histo
   await page.locator(`main a[href="${methodSourceHref}"]`).first().focus();
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(methodSourceHref);
+  // The URL can commit before streamed disclosure markup finishes parsing.
+  await page.waitForLoadState('domcontentloaded');
   const methodSource = page.locator('#src-50f61de1f3c8');
   for (const disclosure of await methodSource.locator('details').all()) {
     if (await disclosure.getAttribute('open') === null) await disclosure.locator('summary').first().click();

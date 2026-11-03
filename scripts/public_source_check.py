@@ -1,5 +1,6 @@
 """Verify metadata-only provenance against selected identities, never absent code."""
 import json
+import os
 from pipeline_common import ROOT, guard, read_json, write_json
 from source_profile import public_profile
 
@@ -25,9 +26,26 @@ def check():
         for key in ('fileSha256', 'excerptSha256'):
             if len(item[key]) != 64:
                 raise ValueError('Invalid walkthrough provenance hash')
-    report = {'schemaVersion': 1, 'status': 'passed', 'profile': 'public-source', 'capturedContents': 'absent-not-verified',
+    for path in (ROOT / 'src/content/entries').glob('*/entry.json'):
+        if read_json(path).get('status') != 'published':
+            raise ValueError('Draft or archived authored source belongs outside public Git')
+    for relative in ('scripts/content_manage.ts', '.env', '.local', 'ardorlite-local'):
+        path = ROOT / relative
+        if path.exists() or path.is_symlink():
+            raise ValueError('Unexpected private/owner input in public source: ' + relative)
+    for path in ROOT.glob('.env*'):
+        raise ValueError('Environment files are not public build inputs: ' + path.name)
+    for name in ('src','config','scripts','tests','docs','receipts','reviewed','snapshots','vendor','public'):
+        for base, directories, files in os.walk(ROOT/name, followlinks=False):
+            for item in directories+files:
+                path = __import__('pathlib').Path(base)/item
+                if path.is_symlink():
+                    raise ValueError('Symlink in public source/output inputs: '+str(path.relative_to(ROOT)))
+                if path.name.endswith(('.pem','.key','.p12','.pfx')):
+                    raise ValueError('Unexpected credential file in public source')
+    report = {'schemaVersion': 2, 'status': 'passed', 'profile': 'public-site', 'capturedContents': 'absent-not-verified',
               'metadataIdentities': len(actual) + len(walkthrough), 'immutableSnapshotVerification': 'separate-complete-check',
-              'deploymentEligible': False, 'omittedPrivateInputs': profile['omittedPrivateInputs']}
+              'releaseAuthority': 'separate-exact-candidate-gate', 'omittedPrivateInputs': profile['omittedPrivateInputs']}
     write_json(ROOT / 'receipts/public-source-check.json', report)
     print(json.dumps(report))
 
