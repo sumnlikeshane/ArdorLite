@@ -33,7 +33,7 @@ class EvidenceSchemaTests(unittest.TestCase):
             relative='receipts/'+('browser-results' if key=='browser' else 'search-acceptance')+'.json'
             refs[key]={'path':relative,'sha256':sha256(self.write(relative,data))}
         audit={'schemaVersion':1,'status':'passed','sourceDigest':self.source,'projectionSha256':sha256(self.root/'src/content/public-provenance.json'),'inputContractSha256':sha256(self.root/'config/source-profile.json'),'privateInventorySha256':'b'*64,'auditRecordSha256':'b'*64,'toolSha256':'b'*64,'checks':sorted(release.PRIVATE_CHECKS),'originalInputVerification':'retained-capture-supplement-integrity','checkedAt':'2026-11-03'}
-        approval={'schemaVersion':1,'status':'exact-candidate-authorized','scope':'public-deployment','commit':'a'*40,'sourceDigest':self.source,'artifactIdentity':self.output,'releaseConfigSha256':sha256(self.root/'config/release.json'),'origin':'https://ardorlite.onrender.com','repository':'sumnlikeshane/ardorlite','serviceId':'srv-dbk7dngu01pc73990vpg','authorityRecordSha256':'b'*64,'authorizedAt':'2026-11-03'}
+        approval={'schemaVersion':1,'status':'exact-candidate-authorized','scope':'public-deployment','commit':'a'*40,'sourceDigest':self.source,'artifactIdentity':self.output,'releaseConfigSha256':sha256(self.root/'config/release.json'),'origin':'https://ardorlite.onrender.com','repository':'sumnlikeshane/ArdorLite','serviceId':'srv-dbk7dngu01pc73990vpg','authorityRecordSha256':'b'*64,'authorizedAt':'2026-11-03'}
         self.approval=approval
         self.data={'schemaVersion':1,'sourceDigest':self.source,'artifactIdentity':self.output,'releaseConfigSha256':approval['releaseConfigSha256'],'inputContractSha256':audit['inputContractSha256'],**refs,'privateAudit':audit,'ownerApproval':{'verification':'external-protected-binding-required'}}
         self.env={name:approval[key] for key,name in release.PINS.items()}
@@ -55,7 +55,7 @@ class EvidenceSchemaTests(unittest.TestCase):
             with self.subTest(field=field):self.assertTrue(self.errors(data))
         data=deepcopy(self.data);data['privateAudit']={'status':'passed'};self.assertTrue(self.errors(data))
     def test_missing_wrong_stale_or_unapproved_owner_authority_rejects(self):
-        for field,value in [('status','pending'),('scope','local-build'),('commit','b'*40),('origin','https://wrong.example'),('repository','sumnlikeshane/ArdorLite'),('serviceId','wrong'),('sourceDigest','f'*64),('artifactIdentity','f'*64),('releaseConfigSha256','f'*64),('authorityRecordSha256',''),('authorizedAt','2999-01-01')]:
+        for field,value in [('status','pending'),('scope','local-build'),('commit','b'*40),('origin','https://wrong.example'),('repository','sumnlikeshane/ardorlite'),('serviceId','wrong'),('sourceDigest','f'*64),('artifactIdentity','f'*64),('releaseConfigSha256','f'*64),('authorityRecordSha256',''),('authorizedAt','2999-01-01')]:
             approval={**self.approval,field:value}
             with self.subTest(field=field):self.assertTrue(self.errors(env={**self.env,'ARDOR_RELEASE_APPROVAL_JSON':json.dumps(approval)}))
     def test_committed_commit_self_reference_and_malformed_external_approval_reject(self):

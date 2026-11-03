@@ -2,7 +2,7 @@
 
 A static research publication that follows six Indian-equity investigations from question to experiment, evidence and recorded decision. It is the reading and inspection layer for **Ardor**, an independently built personal research system.
 
-**Website:** [ardorlite.onrender.com](https://ardorlite.onrender.com/) · **Public source (current name):** [ArdorLite-Public](https://github.com/sumnlikeshane/ArdorLite-Public)
+**Website:** [ardorlite.onrender.com](https://ardorlite.onrender.com/) · **Public source:** [ArdorLite](https://github.com/sumnlikeshane/ArdorLite)
 
 The project makes failed hypotheses, intermediate successes and unresolved limits inspectable. Its reviewed evidence supports **no certified or live strategy**. Synthetic demonstrations explain software behavior; they do not reproduce historical returns.
 
