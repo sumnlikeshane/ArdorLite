@@ -72,7 +72,7 @@ def provider_errors(root=ROOT, env=None, check_pins=True):
     from urllib.parse import urlsplit
     parsed=urlsplit(origin)
     if parsed.scheme!='https' or not parsed.hostname or parsed.hostname.endswith('.invalid') or parsed.path not in ('','/') or parsed.query or parsed.fragment or parsed.username or parsed.password or parsed.port not in (None,443):errors.append('Invalid release origin')
-    if release.get('mode')!='public' or host.get('repository')!='sumnlikeshane/ardorlite' or host.get('serviceId')!='srv-dbk7dngu01pc73990vpg' or host.get('branch')!='main':errors.append('Wrong public release target')
+    if release.get('mode')!='public' or host.get('repository')!='sumnlikeshane/ArdorLite' or host.get('serviceId')!='srv-dbk7dngu01pc73990vpg' or host.get('branch')!='main':errors.append('Wrong public release target')
     if env.get('IS_PULL_REQUEST','false').lower() not in ('false','0','') or env.get('RENDER_SERVICE_NAME','').endswith('-pr') or env.get('RENDER_GIT_BRANCH')!='main':errors.append('Preview builds cannot release')
     commit=env.get('RENDER_GIT_COMMIT','')
     if not COMMIT.fullmatch(commit) or commit!=env.get('ARDOR_APPROVED_COMMIT'):errors.append('Wrong/missing approved provider commit')

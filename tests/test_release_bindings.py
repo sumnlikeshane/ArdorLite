@@ -13,7 +13,7 @@ from source_profile import public_profile
 class ReleaseBindingTests(unittest.TestCase):
     def setUp(self):
         self.env={'RENDER_SERVICE_ID':'srv-dbk7dngu01pc73990vpg','RENDER_SERVICE_TYPE':'static',
-                  'RENDER_EXTERNAL_URL':'https://ardorlite.onrender.com','RENDER_GIT_REPO_SLUG':'sumnlikeshane/ardorlite',
+                  'RENDER_EXTERNAL_URL':'https://ardorlite.onrender.com','RENDER_GIT_REPO_SLUG':'sumnlikeshane/ArdorLite',
                   'RENDER_GIT_BRANCH':'main','RENDER_GIT_COMMIT':'a'*40,'ARDOR_APPROVED_COMMIT':'a'*40}
 
     def test_expected_provider_target_passes_and_each_wrong_missing_or_preview_binding_rejects(self):
@@ -24,6 +24,18 @@ class ReleaseBindingTests(unittest.TestCase):
                 with self.subTest(key=key,value=value):self.assertTrue(provider_errors(ROOT,env,check_pins=False))
         self.assertTrue(provider_errors(ROOT,{**self.env,'IS_PULL_REQUEST':'true'},check_pins=False))
         self.assertTrue(provider_errors(ROOT,self.env))
+
+    def test_repository_binding_requires_exact_case_in_provider_and_contract(self):
+        for repository in ('sumnlikeshane/ardorlite','sumnlikeshane/ARDORLITE','sumnlikeshane/ArdorLite-Public','other/ArdorLite'):
+            env={**self.env,'RENDER_GIT_REPO_SLUG':repository}
+            with self.subTest(repository=repository):
+                self.assertIn('Wrong/missing provider binding: RENDER_GIT_REPO_SLUG',provider_errors(ROOT,env,check_pins=False))
+                with tempfile.TemporaryDirectory() as directory:
+                    root=Path(directory);(root/'config').mkdir()
+                    release=json.loads((ROOT/'config/release.json').read_text())
+                    release['hosting']['repository']=repository
+                    (root/'config/release.json').write_text(json.dumps(release))
+                    self.assertIn('Wrong public release target',provider_errors(root,env,check_pins=False))
 
     def test_full_browser_inventory_is_required_with_no_aggregate_flag_shortcut(self):
         titles=re.findall(r"^  '([^']+)',?$",(ROOT/'tests/browser-reporter.ts').read_text().split('] as const;')[0],re.M)
