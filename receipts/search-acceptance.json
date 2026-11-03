@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-03T10:23:35.165Z",
-  "artifactIdentity": "8d90502dea917eb5bb4700a292fe46a5cea0eb3afc0c95794fcdf576a39291cc",
+  "checkedAt": "2026-11-03T11:20:33.773Z",
+  "artifactIdentity": "e9c14d9d223b00979c2608ffce6beebd6cf7cc91c75a091133526330bed79be2",
   "judgments": [
     {
       "query": "Atlas",
@@ -70,14 +70,6 @@
           "caveat": "Discovery cells overlap and are coverage, not independent strategies. The Atlas holdout is study-specific and unopened. Corrected execution-QA v1.0.1 supersedes predecessor fill/capacity values. ADV-sum capacity is diagnostic; equal-notional capacity binds. The frozen impact curve depends on traded value, not direct order size. STAND_DOWN remains controlling. Cells overlap across states and horizons; counts are not independent alpha discoveries. Gates 6–7 (actual-instrument costs/translation and mechanism) were not automated. Formal nominations are a report transcription, not inferred from cell statistics. Unopened holdout is Atlas-specific; the calendar dates were used by other research families."
         },
         {
-          "url": "/research/cases/atlas-ssf/#claim-atlas-gates-07",
-          "title": "Accepted Atlas cumulative gate funnel: Formal nominations",
-          "entity": "claim:atlas-gates-07",
-          "date": "Archived research evidence; study periods and source dates are recorded at the destination.",
-          "summary": "0 cells. This saved count or interval belongs to the named population or rule. Overlapping cells, construction counts, fillable samples and required samples remain separate; this is not an independent-strategy count.",
-          "caveat": "Discovery cells overlap and are coverage, not independent strategies. The Atlas holdout is study-specific and unopened. Corrected execution-QA v1.0.1 supersedes predecessor fill/capacity values. ADV-sum capacity is diagnostic; equal-notional capacity binds. The frozen impact curve depends on traded value, not direct order size. STAND_DOWN remains controlling. Cells overlap across states and horizons; counts are not independent alpha discoveries. Gates 6–7 (actual-instrument costs/translation and mechanism) were not automated. Formal nominations are a report transcription, not inferred from cell statistics. Unopened holdout is Atlas-specific; the calendar dates were used by other research families."
-        },
-        {
           "url": "/research/cases/atlas-ssf/#claim-atlas-gates-01",
           "title": "Accepted Atlas cumulative gate funnel: Accepted cells",
           "entity": "claim:atlas-gates-01",
@@ -89,6 +81,14 @@
           "url": "/research/cases/atlas-ssf/#claim-atlas-gates-02",
           "title": "Accepted Atlas cumulative gate funnel: Absolute two-way t gate",
           "entity": "claim:atlas-gates-02",
+          "date": "Archived research evidence; study periods and source dates are recorded at the destination.",
+          "summary": "312 cells. This saved count or interval belongs to the named population or rule. Overlapping cells, construction counts, fillable samples and required samples remain separate; this is not an independent-strategy count.",
+          "caveat": "Discovery cells overlap and are coverage, not independent strategies. The Atlas holdout is study-specific and unopened. Corrected execution-QA v1.0.1 supersedes predecessor fill/capacity values. ADV-sum capacity is diagnostic; equal-notional capacity binds. The frozen impact curve depends on traded value, not direct order size. STAND_DOWN remains controlling. Cells overlap across states and horizons; counts are not independent alpha discoveries. Gates 6–7 (actual-instrument costs/translation and mechanism) were not automated. Formal nominations are a report transcription, not inferred from cell statistics. Unopened holdout is Atlas-specific; the calendar dates were used by other research families."
+        },
+        {
+          "url": "/research/cases/atlas-ssf/#claim-atlas-gates-03",
+          "title": "Accepted Atlas cumulative gate funnel: Plus BH q gate",
+          "entity": "claim:atlas-gates-03",
           "date": "Archived research evidence; study periods and source dates are recorded at the destination.",
           "summary": "312 cells. This saved count or interval belongs to the named population or rule. Overlapping cells, construction counts, fillable samples and required samples remain separate; this is not an independent-strategy count.",
           "caveat": "Discovery cells overlap and are coverage, not independent strategies. The Atlas holdout is study-specific and unopened. Corrected execution-QA v1.0.1 supersedes predecessor fill/capacity values. ADV-sum capacity is diagnostic; equal-notional capacity binds. The frozen impact curve depends on traded value, not direct order size. STAND_DOWN remains controlling. Cells overlap across states and horizons; counts are not independent alpha discoveries. Gates 6–7 (actual-instrument costs/translation and mechanism) were not automated. Formal nominations are a report transcription, not inferred from cell statistics. Unopened holdout is Atlas-specific; the calendar dates were used by other research families."
@@ -778,14 +778,6 @@
           "caveat": ""
         },
         {
-          "url": "/research/walkthrough/",
-          "title": "Inside the strategy",
-          "entity": "page:/research/walkthrough/",
-          "date": "Independent synthetic adaptation with capture metadata dated 30 October 2026; original text omitted and not reverified. Not a historical rerun.",
-          "summary": "Step through Momentum v2 with synthetic prices, visible variables and the separate recorded research verdict. Original source excerpts are omitted.",
-          "caveat": ""
-        },
-        {
           "url": "/methods/",
           "title": "Methods",
           "entity": "page:/methods/",
@@ -794,19 +786,11 @@
           "caveat": ""
         },
         {
-          "url": "/research/cases/price-bridge/#claim-bridge-certification-02-source-boolean",
-          "title": "Certification state: Source rights certified",
-          "entity": "claim:bridge-certification-02-source-boolean",
-          "date": "Archived research evidence; study periods and source dates are recorded at the destination.",
-          "summary": "false boolean. This records one certification dimension. Numerical validity and source-rights readiness must each be satisfied independently; neither is a strategy-performance measure.",
-          "caveat": "Technical validity and source rights are independent. Observed, valid and linked counts overlap and cannot be added; zero invalid observed bridges does not establish a dense panel. Exact-session gaps and the missing earlier exception receipt remain. No performance claim or rights grant follows. Technical certification and source-rights certification are independent. Source-rights status is the archived governance decision for these rows; no present-day legal assessment is made. Exact raw linkage proves origin, not automation, retention or derived-use permission. Invalid/absent marks remain fail-closed. Zero invalid observed bridges does not mean zero missing exact-session observations. No strategy performance, Sharpe, CAGR or P&L was computed."
-        },
-        {
-          "url": "/methods/lagged-quality/",
-          "title": "Prior-session R² and training-only fold calibration",
-          "entity": "page:/methods/lagged-quality/",
-          "date": "Independent synthetic example; not historical market evidence.",
-          "summary": "Keep prior-session features and training-only calibration separate from future prices and validation observations.",
+          "url": "/research/walkthrough/",
+          "title": "Inside the strategy",
+          "entity": "page:/research/walkthrough/",
+          "date": "Independent synthetic adaptation with capture metadata dated 30 October 2026; original text omitted and not reverified. Not a historical rerun.",
+          "summary": "Step through Momentum v2 with synthetic prices, visible variables and the separate recorded research verdict. Original source excerpts are omitted.",
           "caveat": ""
         },
         {
@@ -818,11 +802,27 @@
           "caveat": ""
         },
         {
+          "url": "/methods/lagged-quality/",
+          "title": "Prior-session R² and training-only fold calibration",
+          "entity": "page:/methods/lagged-quality/",
+          "date": "Independent synthetic example; not historical market evidence.",
+          "summary": "Keep prior-session features and training-only calibration separate from future prices and validation observations.",
+          "caveat": ""
+        },
+        {
           "url": "/research/cases/price-bridge/#claim-bridge-certification-02",
           "title": "Certification state: Source rights certified",
           "entity": "claim:bridge-certification-02",
           "date": "Archived research evidence; study periods and source dates are recorded at the destination.",
           "summary": "0 certification flag (1=true, 0=false). This records one certification dimension. Numerical validity and source-rights readiness must each be satisfied independently; neither is a strategy-performance measure.",
+          "caveat": "Technical validity and source rights are independent. Observed, valid and linked counts overlap and cannot be added; zero invalid observed bridges does not establish a dense panel. Exact-session gaps and the missing earlier exception receipt remain. No performance claim or rights grant follows. Technical certification and source-rights certification are independent. Source-rights status is the archived governance decision for these rows; no present-day legal assessment is made. Exact raw linkage proves origin, not automation, retention or derived-use permission. Invalid/absent marks remain fail-closed. Zero invalid observed bridges does not mean zero missing exact-session observations. No strategy performance, Sharpe, CAGR or P&L was computed."
+        },
+        {
+          "url": "/research/cases/price-bridge/#claim-bridge-certification-02-source-boolean",
+          "title": "Certification state: Source rights certified",
+          "entity": "claim:bridge-certification-02-source-boolean",
+          "date": "Archived research evidence; study periods and source dates are recorded at the destination.",
+          "summary": "false boolean. This records one certification dimension. Numerical validity and source-rights readiness must each be satisfied independently; neither is a strategy-performance measure.",
           "caveat": "Technical validity and source rights are independent. Observed, valid and linked counts overlap and cannot be added; zero invalid observed bridges does not establish a dense panel. Exact-session gaps and the missing earlier exception receipt remain. No performance claim or rights grant follows. Technical certification and source-rights certification are independent. Source-rights status is the archived governance decision for these rows; no present-day legal assessment is made. Exact raw linkage proves origin, not automation, retention or derived-use permission. Invalid/absent marks remain fail-closed. Zero invalid observed bridges does not mean zero missing exact-session observations. No strategy performance, Sharpe, CAGR or P&L was computed."
         }
       ]
