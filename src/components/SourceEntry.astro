@@ -4,6 +4,7 @@ import type { Source } from '../lib/evidence';
 import EvidenceLinks from './EvidenceLinks.astro';
 import EditorialNoteReference from './EditorialNoteReference.astro';
 import { deliveryDiscrepancy } from '../content/editorial-notes';
+import { isPublicPublication } from '../lib/publication/scope';
 import { studyById } from '../lib/publication';
 interface Props { source: Source; }
 const { source } = Astro.props;
@@ -24,7 +25,7 @@ const supplementRoles: Record<string,string> = {
     {pilotContext.map(study => <p>{study.question} <a href={study.explanationHref}>Read the explanation before checking the source</a>.</p>)}
   </>}
   <p class="small">This entry is a provenance reference. The original file is excluded; only explicitly listed mapped derivatives are available here. A source hash identifies bytes and does not establish historical execution or redistribution permission.</p>
-  {supplementRoles[source.id] && <p>{supplementRoles[source.id]} The separate <a href="/research/cases/trend-quality/#trend-fold-decision-context">Trend fold context supplement</a> makes those selected premises inspectable. It does not provide the complete original or a new download; public embedding remains unapproved.</p>}
+  {supplementRoles[source.id] && <p>{supplementRoles[source.id]} {isPublicPublication ? <>The <a href="/research/cases/trend-quality/#trend-fold-decision-context">Trend fold evidence boundary</a> retains archived Sharpe, completeness and overall decisions. The separate supplement’s return inputs and dates are omitted and are not reverified here; no individual return-condition result is inferred.</> : <>The separate <a href="/research/cases/trend-quality/#trend-fold-decision-context">Trend fold context supplement</a> makes those selected premises inspectable. It does not provide the complete original or a new download; public embedding remains unapproved.</>}</p>}
   {deliveryDiscrepancy.sourceIds.some(id => id === source.id) && <EditorialNoteReference />}
   <p><strong>Original label:</strong> <code>{source.source_relative_path}</code></p>
   <p><strong>Material role:</strong> {source.catalog_source_roles.length ? source.catalog_source_roles.map(role => role.replaceAll('_', ' ')).join(' · ') : 'No catalog source role supplied'} · {source.canonical_status.replaceAll('_', ' ')}</p>
@@ -41,6 +42,6 @@ const supplementRoles: Record<string,string> = {
   <EvidenceLinks title="Catalog source references" entries={context.directRecords} note="Explicit canonical, source-list or source-index references in the reviewed records." />
   <EvidenceLinks title="Synthetic method examples" entries={context.methods} note="Conceptual source identity matches by path and hash. These examples do not reproduce historical results." />
   <EvidenceLinks title="Mapped reviewed derivatives" entries={context.assets} note={`Listed downloads retain their notices. Public derivative clearance: ${derivativeRights.join(' · ')}. Availability does not grant rights to the original.`} />
-  <EvidenceLinks title="Selected source excerpts" entries={context.excerpts} note="Exact file path and hash match only. Capture date and historical relation remain separate; local-only excerpts are not source downloads or proof of a historical run." />
+  <EvidenceLinks title={isPublicPublication ? 'Selected capture metadata' : 'Selected source excerpts'} entries={context.excerpts} note={isPublicPublication ? 'Source identities, locators and recorded hashes are available; original captured text is omitted and is not reverified here. Follow a reference for the independent synthetic adaptation. Metadata does not establish historical execution or permission.' : 'Exact file path and hash match only. Capture date and historical relation remain separate; local-only excerpts are not source downloads or proof of a historical run.'} />
   {context.claims.length + context.figures.length + context.directRecords.length + context.methods.length + context.assets.length + context.excerpts.length === 0 && <p class="small">No additional consuming context is declared for this identity. No relationship has been inferred.</p>}
 </article>

@@ -1,3 +1,4 @@
+import { isPublicPublication } from '../../lib/publication/scope';
 import { defineComposition, claimLink as c } from '../../lib/research/presentation';
 import { rolloutStudies } from '../explanations/rollout';
 import { claimById } from '../../lib/evidence';
@@ -25,7 +26,7 @@ export const rolloutCompositions = [
  'The book buys the strongest past-return quintile and shorts the weakest. Formation uses lagged adjusted prices, skipping the recent month. Rebalance-day prices do not enter the signal; realized holdings belong to the following hold context.',
  `The report covers ${c('momentum-window',0)} and ${c('momentum-rebalances',0)} monthly rebalances. Liquid cash names intersect the point-in-time F&O pool; dividend-inclusive cash longs and futures settlement shorts retain ban, roll and lot constraints.`,
  `After correcting cash-leg impact sizing to cash traded value and rejecting non-finite names, the three saved mean-test statistics were ${c('momentum-execution-01')}, ${c('momentum-execution-02')} and ${c('momentum-execution-03')}. All exceeded the ${c('momentum-phase0-t-threshold',1)} hurdle. Newey–West inference used ${c('momentum-hac-lags',0)} lags to account for serial dependence.`,
- '<a href="/research/walkthrough/">The optional signal walkthrough</a> uses fictional prices and a browser adaptation beside exact Python excerpts. It explains mechanics, not historical returns.'
+ isPublicPublication ? '<a href="/research/walkthrough/">The optional signal walkthrough</a> uses fictional prices and an independent browser adaptation with source identities, locators and hashes. Original Python excerpts are omitted and are not reverified here. It explains mechanics, not historical returns.' : '<a href="/research/walkthrough/">The optional signal walkthrough</a> uses fictional prices and a browser adaptation beside exact Python excerpts. It explains mechanics, not historical returns.'
  ],'momentum-execution'),
  chapter('exposures','02','A neutral wrapper can retain factor exposure','Factor exposures',[
  'Phase 1 asks whether the daily book has positive return unexplained by market, value-proxy and illiquidity factors at central impact. A four-factor diagnostic adds published momentum exposure.',

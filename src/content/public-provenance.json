@@ -457,15 +457,15 @@
   "walkthrough": {
     "schemaVersion": 1,
     "capturedOn": "2026-10-30",
-    "notice": "Ardor source excerpts. Proprietary; reserved rights. Included for local review under the user’s explicit 30 October 2026 instruction. No blanket source licence or public deployment authorization is implied.",
+    "notice": "Metadata only: source identities, line locators and recorded hashes are supplied. Original captured text is omitted and is not reverified by this build. Independent synthetic adaptations remain available. Reserved rights; no source redistribution or deployment authority is granted.",
     "limitations": [
-      "These exact excerpts document selected original source logic; the browser runs a separately authored TypeScript teaching adaptation, not the original Python engine.",
+      "These metadata identities describe selected captures; original Python text is absent and is not reverified here. The browser runs an independently authored TypeScript teaching adaptation, not the original engine.",
       "All prices, symbols, eligibility and ban flags are synthetic. They are not historical market evidence.",
       "The example shows signal construction and candidate opening guards only. It omits full universe construction, liquidity thresholds, the minimum short-name floor, substitutions, index parking, settlement, rolls, costs, portfolio construction, inference and attribution.",
       "Five buckets follow the Momentum v2 driver. The signal excerpt retains its original v1 path and variable name n_deciles; that name can hold five buckets.",
       "The ten-symbol teaching universe is intentionally too small for the registered 25-short-name requirement and must never be described as an executable v2 portfolio.",
       "Finite positive endpoint validation is an additional teaching-layer guard. Equal-score ties use supplied input order in TypeScript; built-in examples have distinct signals.",
-      "Current source capture is dated separately from the immutable 11 October 2026 reviewed research evidence. Source excerpts do not change the archived verdict."
+      "Capture dates are separate from study dates and the immutable reviewed research. Metadata does not establish historical execution or change the archived verdict."
     ],
     "excerpts": [
       {

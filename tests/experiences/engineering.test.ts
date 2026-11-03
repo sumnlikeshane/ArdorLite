@@ -1,3 +1,4 @@
+import { sourceTextAvailable } from '../../src/lib/experiences/captures';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
@@ -213,4 +214,18 @@ test('comparison and certification frames point to their corresponding captured 
       assert.doesNotThrow(() => validateSourceSpan(span, sourceExcerpts));
     }
   }
+});
+
+// Availability follows both the edition boundary and actual content, even if a
+// manifest has a complete identity/hash but no captured body.
+test('source inspection never promises captured text from a metadata identity alone', () => {
+  const body = {text: 'synthetic fixture body\n'};
+  assert.equal(sourceTextAvailable(body, false), true);
+  assert.equal(sourceTextAvailable({code: 'synthetic fixture body\n'}, false), true);
+  for (const publicEdition of [true, false]) {
+    assert.equal(sourceTextAvailable({contentOmitted: true}, publicEdition), false);
+    assert.equal(sourceTextAvailable({text: '   '}, publicEdition), false);
+    assert.equal(sourceTextAvailable({...body, contentOmitted: true}, publicEdition), false);
+  }
+  assert.equal(sourceTextAvailable(body, true), false);
 });

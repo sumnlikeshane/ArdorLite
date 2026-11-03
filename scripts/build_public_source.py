@@ -32,7 +32,7 @@ def main():
         ['node', '--import', 'tsx', '--test', 'tests/evidence.test.ts', 'tests/search.test.ts',
          'tests/evidence-crosswalk.test.ts', 'tests/authoring.test.ts',
          'tests/experiences/bridge.test.ts', 'tests/experiences/engineering.test.ts'],
-        ['node', '--test', 'tests/prose-extraction.test.mjs'],
+        ['node', '--test', 'tests/prose-extraction.test.mjs', 'tests/search-receipt.test.mjs'],
         [sys.executable, 'scripts/assets_prepare.py'],
         [sys.executable, 'scripts/dependency_notices.py'],
         ['pnpm', 'exec', 'astro', 'check'],

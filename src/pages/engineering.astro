@@ -1,4 +1,5 @@
 ---
+import { isPublicPublication } from '../lib/publication/scope';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import ExperienceFrame from '../components/experiences/ExperienceFrame.astro';
 import SourcePanel from '../components/experiences/SourcePanel.astro';
@@ -27,7 +28,7 @@ const gateSources = sources.filter(source => frame.gate.sourceIds.includes(sourc
     <nav class="engineering-stations" aria-label="Engineering stations">
       <ol>{engineeringStations.map((station, index) => <li><a href={`#${station.id}`} data-engineering-station={station.id}><span class="engineering-number" aria-hidden="true">0{index + 1}</span><span>{station.label}</span></a></li>)}</ol>
     </nav>
-    <p class="engineering-scope">The worked examples below use fictitious inputs and current source captures; the final station maps six documented implementations. They do not run original Python, read a database or reproduce a historical experiment.</p>
+    <p class="engineering-scope">The worked examples below use fictitious inputs and {isPublicPublication ? 'current-source metadata; original text is omitted and is not reverified here' : 'current source captures'}; the final station maps six documented implementations. They do not run original Python, read a database or reproduce a historical experiment.</p>
     <div class="engineering-toolbar" data-engineering-controls hidden>
       <button type="button" class="button button-secondary" data-engineering-reset>Reset engineering example</button>
       <button type="button" class="button button-secondary" data-engineering-share>Copy example link</button>
@@ -229,7 +230,7 @@ const gateSources = sources.filter(source => frame.gate.sourceIds.includes(sourc
         <p class="small">{path.sourceStatus} <a href={path.sourceHref}>Inspect evidence and implementation context →</a></p>
       </article>)}</div>
       <p><strong>Failure boundary.</strong> These are source-backed implementation relationships, not a universal research engine or a claim every case used all current governance helpers. Current code, reviewed capture and historical run identity remain separate. The case evidence and its controlling stop decision stay fixed.</p>
-      <p class="engineering-source-reading">Each case path links to its source references and recorded evidence. Selected source excerpts identify the implementation they explain; other paths retain their capture and version limits. Complete source engines are not offered as downloads.</p>
+      <p class="engineering-source-reading">Each case path links to its source references and recorded evidence. {isPublicPublication ? 'Selected identities, locators and hashes describe omitted source captures; the independent adaptations remain available' : 'Selected source excerpts identify the implementation they explain'}; other paths retain their capture and version limits. Complete source engines are not offered as downloads.</p>
       <p><a href="/research/">Choose any investigation →</a> · <a href="/research/cases/price-bridge/#bridge-experience">Follow the complete repair-versus-permission story →</a></p>
     </ExperienceFrame>
     <aside class="engineering-dependencies">

@@ -434,7 +434,7 @@ test('Delivery discrepancy and publication scopes remain contextual without Java
   for (const [route, text] of [
     ['/release/', 'Each case retains any unresolved historical-version discrepancy'],
     ['/publication/', 'Public embedding clearance for these excerpts remains unresolved'],
-    ['/evidence/', 'Five Momentum and 23 engineering/Bridge source excerpts'],
+    ['/evidence/', publicPublication ? 'Metadata for five Momentum and 23 engineering/Bridge capture identities' : 'Five Momentum and 23 engineering/Bridge source excerpts'],
     ['/search/', 'Each result links to its research context and limitations'],
     ['/research/records/momentum_xs_v2/', 'Source references identify the material supporting this record'],
   ]) {
@@ -1410,4 +1410,64 @@ test('Responsive masthead menu preserves keyboard and no-JS navigation', async (
   expect(await plain.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
   await plain.locator('#main-nav').getByRole('link',{name:'Research',exact:true}).click();await expect(plain).toHaveURL(/\/research\//);
   await context.close();
+});
+
+
+test('Source availability promises match supplied material across reading and search', async ({browser, page}) => {
+  test.setTimeout(120_000);
+  const context = await browser.newContext({javaScriptEnabled: false});
+  const staticPage = await context.newPage();
+  try {
+    for (const route of ['/research/', '/research/cases/momentum-v2/', '/research/walkthrough/', '/engineering/', '/research/cases/price-bridge/', '/evidence/', '/release/', '/publication/']) {
+      await staticPage.goto(route);
+      const main = staticPage.locator('main');
+      if (publicPublication) {
+        await expect(main).toContainText(/omit|absent/i);
+        // Detect affirmative promises that would send the reader to absent bodies.
+        await expect(main).not.toContainText(/beside exact Python excerpts|uses synthetic prices, five exact source excerpts|Python excerpts and recorded evidence are available below|exact captures and additional active ranges remain|Highlighted lines explain its source mechanism|manifest and excerpt hashes are checked during the local build/);
+      }
+      const panels = staticPage.locator('[data-source-panel]');
+      for (const panel of await panels.all()) {
+        await expect(panel.locator('summary')).toContainText(publicPublication ? 'Inspect source metadata' : 'Inspect original source');
+        await panel.locator('summary').click();
+        await expectSourceScope(panel);
+        if (publicPublication) {
+          await expect(panel).toContainText('not reverified');
+          await expect(panel).not.toContainText('Exact captured Python');
+        }
+      }
+    }
+    await staticPage.goto('/evidence/sources/#src-2adacd9e9309');
+    const source = staticPage.locator('#src-2adacd9e9309');
+    await expect(source).toContainText(publicPublication ? 'return inputs and dates are omitted' : 'makes those selected premises inspectable');
+    if (publicPublication) await expect(source).not.toContainText('makes those selected premises inspectable');
+    await staticPage.goto('/research/walkthrough/#source-provenance');
+    for (const panel of await staticPage.locator('[data-walkthrough-source]').all()) {
+      await panel.locator('summary').click();
+      await expectSourceScope(panel);
+    }
+    await page.goto('/research/cases/price-bridge/#bridge-experience');
+    await expect(page.locator('[data-bridge-controls]')).toBeVisible();
+    await page.locator('[data-bridge-operation]').selectOption('qa');
+    const link = page.locator('[data-bridge-source-links] a').first();
+    await expect(link).toContainText(publicPublication ? 'Source metadata' : 'Exact');
+    await link.focus();
+    await page.keyboard.press('Enter');
+    const panel = page.locator('[data-source-panel][open]').first();
+    await expectSourceScope(panel);
+    if (publicPublication) await expect(page.locator('[data-bridge-source-summary]')).toContainText('omitted');
+    await page.goBack();
+    await expect(page.locator('[data-bridge-operation]')).toHaveValue('qa');
+    await page.goto('/search/?q=Momentum');
+    await expect(page.locator('[data-search-ready]')).toBeAttached();
+    const metadata = await page.evaluate(async () => {
+      const bundle = '/pagefind/pagefind.js';
+      const pf = await import(/* @vite-ignore */ bundle);
+      const results = await pf.search('Momentum');
+      const data = await Promise.all(results.results.map((r: {data: () => Promise<{url: string; meta: Record<string, string>}>}) => r.data()));
+      return data.find(r => r.url === '/research/walkthrough/')?.meta;
+    });
+    expect(metadata).toBeTruthy();
+    expect(metadata.date).toContain(publicPublication ? 'original text omitted and not reverified' : 'selected current-source captures');
+  } finally { await context.close(); }
 });

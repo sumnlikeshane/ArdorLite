@@ -9,3 +9,15 @@ Run `./scripts/run.sh exec playwright install chromium firefox webkit` if the br
 The public profile produces the same intended public website as the separately verified private canonical build at the selected origin. Production is released from the private canonical repository: its additional original-input, policy, source/output/browser and exact authorization checks must pass before Render publishes `dist/`. This repository intentionally has no deployment entry point or provider credential. Changing a URL/profile does not authorize a deployment.
 
 Pagefind's locked native emitters use an unchanged checksum-pinned upstream WASM pair and normalized metadata ordering for reproducible cross-platform bytes. Upstream MIT/OFL/dependency notices retain their own scope. Reserved project rights remain; no blanket licence is selected.
+
+## Search verification receipts
+
+After a complete build, run `./scripts/run.sh exec node scripts/search_acceptance.mjs`. It evaluates the unchanged 28 judged queries and 536 exact destinations and writes `receipts/search-acceptance.json`, creating missing parents. This is the current run and is replaced on repetition; it never overwrites the historical dated implementation receipts.
+
+To retain separate runs, use a new destination, for example:
+
+```sh
+ARDOR_SEARCH_RECEIPT=receipts/my-review/search/acceptance.json ./scripts/run.sh exec node scripts/search_acceptance.mjs
+```
+
+Nested parents are created automatically. The optional, separately scoped Chromium search lab uses `./scripts/run.sh exec node scripts/search_performance.mjs`, writes the current run to `receipts/search-performance.json`, and supports the same retention pattern through `ARDOR_SEARCH_PERFORMANCE_RECEIPT`. Its local lab method is unchanged; it is not a field or physical-device measurement and is not required to verify receipt writing.
