@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-03T08:50:12.231Z",
+  "checkedAt": "2026-11-03T10:27:23.143Z",
   "status": "passed",
-  "sourceDigest": "ca99998704f8c02f16ca171cd6702b874328c2bb5830c9dc83581e58be286822",
-  "artifactIdentity": "0579900bf4dc11504b740b2460a10650082d93f6e69f68193b7b07cc33964548",
+  "sourceDigest": "ba717f3f0cf9469e6cf8901af08b8fd2dd3a0f7370cc76b5fc2b1124309019d6",
+  "artifactIdentity": "8d90502dea917eb5bb4700a292fe46a5cea0eb3afc0c95794fcdf576a39291cc",
   "engines": [
     "chromium",
     "firefox",
@@ -22,7 +22,7 @@
       "journeyTitle": "S2 registry locate controls restore history and reveal directly linked evidence",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1445,
+      "durationMs": 1394,
       "annotations": []
     },
     {
@@ -30,7 +30,7 @@
       "journeyTitle": "S2 contextual references remain complete without JavaScript and reflow across review widths",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 8467,
+      "durationMs": 8447,
       "annotations": []
     },
     {
@@ -38,7 +38,7 @@
       "journeyTitle": "S2 contextual evidence round trips retain exact anchors and keyboard history",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1185,
+      "durationMs": 1046,
       "annotations": []
     },
     {
@@ -46,7 +46,7 @@
       "journeyTitle": "Walkthrough preserves timing, scenario state, history and the recorded verdict",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 350,
+      "durationMs": 293,
       "annotations": []
     },
     {
@@ -54,7 +54,7 @@
       "journeyTitle": "Walkthrough accessible controls, small-screen reading and invalid URL recovery",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1373,
+      "durationMs": 1214,
       "annotations": []
     },
     {
@@ -62,7 +62,7 @@
       "journeyTitle": "Walkthrough retains exact source and research context without JavaScript",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 161,
+      "durationMs": 158,
       "annotations": []
     },
     {
@@ -70,7 +70,7 @@
       "journeyTitle": "Home → Atlas → claim → source reading journey @representative",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 510,
+      "durationMs": 476,
       "annotations": []
     },
     {
@@ -78,7 +78,7 @@
       "journeyTitle": "Representative automated accessibility, 320px reflow, reduced motion @representative",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1047,
+      "durationMs": 1056,
       "annotations": []
     },
     {
@@ -86,7 +86,7 @@
       "journeyTitle": "Representative reading and tables with JavaScript disabled @representative",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 145,
+      "durationMs": 142,
       "annotations": []
     },
     {
@@ -102,7 +102,7 @@
       "journeyTitle": "Delivery discrepancy and publication scopes remain contextual without JavaScript",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1507,
+      "durationMs": 1498,
       "annotations": []
     },
     {
@@ -110,7 +110,7 @@
       "journeyTitle": "Catalog filters persist across history and expose reset and no results",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 293,
+      "durationMs": 252,
       "annotations": []
     },
     {
@@ -118,7 +118,7 @@
       "journeyTitle": "Pagefind production index searches outcome evidence and empty results",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 539,
+      "durationMs": 517,
       "annotations": []
     },
     {
@@ -126,7 +126,7 @@
       "journeyTitle": "Chart enhancements retain HTML tables and reset the complete recorded set",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1009,
+      "durationMs": 1019,
       "annotations": []
     },
     {
@@ -134,7 +134,7 @@
       "journeyTitle": "All case and secondary page templates pass automated accessibility",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 13706,
+      "durationMs": 13540,
       "annotations": []
     },
     {
@@ -142,7 +142,7 @@
       "journeyTitle": "Optional chart and search load failures preserve useful reading",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 460,
+      "durationMs": 324,
       "annotations": []
     },
     {
@@ -150,7 +150,7 @@
       "journeyTitle": "Keyboard skip link, mobile menu, 404 and print remain usable",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 153,
+      "durationMs": 150,
       "annotations": []
     },
     {
@@ -158,7 +158,7 @@
       "journeyTitle": "Research Atlas gives six independent entrances and engineering state survives history",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 779,
+      "durationMs": 702,
       "annotations": []
     },
     {
@@ -166,7 +166,7 @@
       "journeyTitle": "M1 Home and engineering remain accessible across the review viewports",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 3670,
+      "durationMs": 3981,
       "annotations": []
     },
     {
@@ -174,7 +174,7 @@
       "journeyTitle": "M1 static explanation and exact source remain usable without enhancement",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 294,
+      "durationMs": 302,
       "annotations": []
     },
     {
@@ -182,7 +182,7 @@
       "journeyTitle": "Price Bridge synchronizes bounded repair states, source and immutable historical gates",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 429,
+      "durationMs": 368,
       "annotations": []
     },
     {
@@ -198,7 +198,7 @@
       "journeyTitle": "M2 Bridge and engineering support responsive source inspection and automated accessibility",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 9629,
+      "durationMs": 6760,
       "annotations": []
     },
     {
@@ -206,7 +206,7 @@
       "journeyTitle": "M2 complete arguments and source remain readable without JavaScript or module loading",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 572,
+      "durationMs": 548,
       "annotations": []
     },
     {
@@ -214,7 +214,7 @@
       "journeyTitle": "S3 pilot decision briefs preserve gates and contextual keyboard history",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1224,
+      "durationMs": 1156,
       "annotations": []
     },
     {
@@ -222,7 +222,7 @@
       "journeyTitle": "S3 pilot retains complete no-JS reference and direct anchors in light print",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 843,
+      "durationMs": 865,
       "annotations": []
     },
     {
@@ -230,7 +230,7 @@
       "journeyTitle": "S3 light pilot reflows with enlarged text and accessible controls",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 2130,
+      "durationMs": 2117,
       "annotations": []
     },
     {
@@ -238,7 +238,7 @@
       "journeyTitle": "Comprehension pilot preserves local claim context, determining fold inputs and the static Bridge mechanism",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1731,
+      "durationMs": 1748,
       "annotations": []
     },
     {
@@ -246,7 +246,7 @@
       "journeyTitle": "Research presentation compares saved measures with keyboard, URL history and exact claim recovery",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 658,
+      "durationMs": 666,
       "annotations": []
     },
     {
@@ -254,7 +254,7 @@
       "journeyTitle": "Research presentation retains figures, fold conditions and full reference without JavaScript and in print",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 568,
+      "durationMs": 571,
       "annotations": []
     },
     {
@@ -262,7 +262,7 @@
       "journeyTitle": "Research presentation opening and distributed figures reflow with accessible navigation",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1777,
+      "durationMs": 1834,
       "annotations": []
     },
     {
@@ -270,7 +270,7 @@
       "journeyTitle": "Optional Bridge lazy import failure preserves static reading without an unhandled error",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 168,
+      "durationMs": 153,
       "annotations": []
     },
     {
@@ -278,7 +278,7 @@
       "journeyTitle": "S4 six investigations connect reading chapters, exact figures and complete references",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 2075,
+      "durationMs": 2093,
       "annotations": []
     },
     {
@@ -286,7 +286,7 @@
       "journeyTitle": "S4 catalog common and advanced controls preserve exact state and return to results",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 402,
+      "durationMs": 576,
       "annotations": []
     },
     {
@@ -294,7 +294,7 @@
       "journeyTitle": "S4 migrated pages retain no-JS evidence, print, reflow and accessible collection navigation",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 6058,
+      "durationMs": 6697,
       "annotations": []
     },
     {
@@ -302,7 +302,7 @@
       "journeyTitle": "S5 judged search tasks and exact canonical destinations retain evidence context",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1612,
+      "durationMs": 1505,
       "annotations": []
     },
     {
@@ -310,7 +310,7 @@
       "journeyTitle": "S5 search URL filters reload history invalid state and empty recovery remain usable",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 941,
+      "durationMs": 898,
       "annotations": []
     },
     {
@@ -318,7 +318,7 @@
       "journeyTitle": "S5 search populated facets keyboard loading failure and pagination recover",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 2890,
+      "durationMs": 2972,
       "annotations": []
     },
     {
@@ -326,7 +326,7 @@
       "journeyTitle": "S5 search reflows with accessible controls and keeps no-JS print browse recovery",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1161,
+      "durationMs": 1105,
       "annotations": []
     },
     {
@@ -334,7 +334,7 @@
       "journeyTitle": "Sticky masthead keeps navigation and evidence anchors visible",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 538,
+      "durationMs": 536,
       "annotations": []
     },
     {
@@ -342,7 +342,7 @@
       "journeyTitle": "Responsive masthead menu preserves keyboard and no-JS navigation",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 835,
+      "durationMs": 773,
       "annotations": []
     },
     {
@@ -350,7 +350,7 @@
       "journeyTitle": "Source availability promises match supplied material across reading and search",
       "project": "chromium",
       "status": "passed",
-      "durationMs": 1798,
+      "durationMs": 1822,
       "annotations": []
     },
     {
@@ -358,7 +358,7 @@
       "journeyTitle": "S2 registry locate controls restore history and reveal directly linked evidence",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 2364,
+      "durationMs": 2581,
       "annotations": []
     },
     {
@@ -366,7 +366,7 @@
       "journeyTitle": "S2 contextual references remain complete without JavaScript and reflow across review widths",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 10713,
+      "durationMs": 9452,
       "annotations": []
     },
     {
@@ -374,7 +374,7 @@
       "journeyTitle": "S2 contextual evidence round trips retain exact anchors and keyboard history",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1455,
+      "durationMs": 1527,
       "annotations": []
     },
     {
@@ -382,7 +382,7 @@
       "journeyTitle": "Walkthrough preserves timing, scenario state, history and the recorded verdict",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 479,
+      "durationMs": 429,
       "annotations": []
     },
     {
@@ -390,7 +390,7 @@
       "journeyTitle": "Walkthrough accessible controls, small-screen reading and invalid URL recovery",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1704,
+      "durationMs": 1784,
       "annotations": []
     },
     {
@@ -398,7 +398,7 @@
       "journeyTitle": "Walkthrough retains exact source and research context without JavaScript",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 238,
+      "durationMs": 230,
       "annotations": []
     },
     {
@@ -406,7 +406,7 @@
       "journeyTitle": "Home → Atlas → claim → source reading journey @representative",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 646,
+      "durationMs": 713,
       "annotations": []
     },
     {
@@ -414,7 +414,7 @@
       "journeyTitle": "Representative automated accessibility, 320px reflow, reduced motion @representative",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 2620,
+      "durationMs": 2980,
       "annotations": []
     },
     {
@@ -422,7 +422,7 @@
       "journeyTitle": "Representative reading and tables with JavaScript disabled @representative",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 973,
+      "durationMs": 1557,
       "annotations": []
     },
     {
@@ -430,7 +430,7 @@
       "journeyTitle": "Complete publication routes, synthetic boundaries and record gates",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 539,
+      "durationMs": 1088,
       "annotations": []
     },
     {
@@ -438,7 +438,7 @@
       "journeyTitle": "Delivery discrepancy and publication scopes remain contextual without JavaScript",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1470,
+      "durationMs": 1656,
       "annotations": []
     },
     {
@@ -446,7 +446,7 @@
       "journeyTitle": "Catalog filters persist across history and expose reset and no results",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 792,
+      "durationMs": 510,
       "annotations": []
     },
     {
@@ -454,7 +454,7 @@
       "journeyTitle": "Pagefind production index searches outcome evidence and empty results",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 579,
+      "durationMs": 566,
       "annotations": []
     },
     {
@@ -462,7 +462,7 @@
       "journeyTitle": "Chart enhancements retain HTML tables and reset the complete recorded set",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1178,
+      "durationMs": 1194,
       "annotations": []
     },
     {
@@ -470,7 +470,7 @@
       "journeyTitle": "All case and secondary page templates pass automated accessibility",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 24899,
+      "durationMs": 26771,
       "annotations": []
     },
     {
@@ -478,7 +478,7 @@
       "journeyTitle": "Optional chart and search load failures preserve useful reading",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 421,
+      "durationMs": 397,
       "annotations": []
     },
     {
@@ -486,7 +486,7 @@
       "journeyTitle": "Keyboard skip link, mobile menu, 404 and print remain usable",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 288,
+      "durationMs": 265,
       "annotations": []
     },
     {
@@ -494,7 +494,7 @@
       "journeyTitle": "Research Atlas gives six independent entrances and engineering state survives history",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 972,
+      "durationMs": 1000,
       "annotations": []
     },
     {
@@ -502,7 +502,7 @@
       "journeyTitle": "M1 Home and engineering remain accessible across the review viewports",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 3452,
+      "durationMs": 3125,
       "annotations": []
     },
     {
@@ -518,7 +518,7 @@
       "journeyTitle": "Price Bridge synchronizes bounded repair states, source and immutable historical gates",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 743,
+      "durationMs": 756,
       "annotations": []
     },
     {
@@ -526,7 +526,7 @@
       "journeyTitle": "M2 engineering traces preserve typed missingness, retained records and case-specific paths",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 476,
+      "durationMs": 493,
       "annotations": []
     },
     {
@@ -534,7 +534,7 @@
       "journeyTitle": "M2 Bridge and engineering support responsive source inspection and automated accessibility",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 3815,
+      "durationMs": 3858,
       "annotations": []
     },
     {
@@ -542,7 +542,7 @@
       "journeyTitle": "M2 complete arguments and source remain readable without JavaScript or module loading",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 772,
+      "durationMs": 770,
       "annotations": []
     },
     {
@@ -550,7 +550,7 @@
       "journeyTitle": "S3 pilot decision briefs preserve gates and contextual keyboard history",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1519,
+      "durationMs": 1275,
       "annotations": []
     },
     {
@@ -558,7 +558,7 @@
       "journeyTitle": "S3 pilot retains complete no-JS reference and direct anchors in light print",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1362,
+      "durationMs": 1258,
       "annotations": []
     },
     {
@@ -566,7 +566,7 @@
       "journeyTitle": "S3 light pilot reflows with enlarged text and accessible controls",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 4730,
+      "durationMs": 4638,
       "annotations": []
     },
     {
@@ -574,7 +574,7 @@
       "journeyTitle": "Comprehension pilot preserves local claim context, determining fold inputs and the static Bridge mechanism",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1046,
+      "durationMs": 1029,
       "annotations": []
     },
     {
@@ -582,7 +582,7 @@
       "journeyTitle": "Research presentation compares saved measures with keyboard, URL history and exact claim recovery",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 849,
+      "durationMs": 832,
       "annotations": []
     },
     {
@@ -590,7 +590,7 @@
       "journeyTitle": "Research presentation retains figures, fold conditions and full reference without JavaScript and in print",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 658,
+      "durationMs": 775,
       "annotations": []
     },
     {
@@ -598,7 +598,7 @@
       "journeyTitle": "Research presentation opening and distributed figures reflow with accessible navigation",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 4412,
+      "durationMs": 4056,
       "annotations": []
     },
     {
@@ -606,7 +606,7 @@
       "journeyTitle": "Optional Bridge lazy import failure preserves static reading without an unhandled error",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 308,
+      "durationMs": 295,
       "annotations": []
     },
     {
@@ -614,7 +614,7 @@
       "journeyTitle": "S4 six investigations connect reading chapters, exact figures and complete references",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1034,
+      "durationMs": 1004,
       "annotations": []
     },
     {
@@ -622,7 +622,7 @@
       "journeyTitle": "S4 catalog common and advanced controls preserve exact state and return to results",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1265,
+      "durationMs": 1271,
       "annotations": []
     },
     {
@@ -630,7 +630,7 @@
       "journeyTitle": "S4 migrated pages retain no-JS evidence, print, reflow and accessible collection navigation",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 11143,
+      "durationMs": 18985,
       "annotations": []
     },
     {
@@ -638,7 +638,7 @@
       "journeyTitle": "S5 judged search tasks and exact canonical destinations retain evidence context",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1721,
+      "durationMs": 1933,
       "annotations": []
     },
     {
@@ -646,7 +646,7 @@
       "journeyTitle": "S5 search URL filters reload history invalid state and empty recovery remain usable",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1063,
+      "durationMs": 1362,
       "annotations": []
     },
     {
@@ -654,7 +654,7 @@
       "journeyTitle": "S5 search populated facets keyboard loading failure and pagination recover",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 2646,
+      "durationMs": 2735,
       "annotations": []
     },
     {
@@ -662,7 +662,7 @@
       "journeyTitle": "S5 search reflows with accessible controls and keeps no-JS print browse recovery",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1392,
+      "durationMs": 2577,
       "annotations": []
     },
     {
@@ -670,7 +670,7 @@
       "journeyTitle": "Sticky masthead keeps navigation and evidence anchors visible",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 880,
+      "durationMs": 1040,
       "annotations": []
     },
     {
@@ -678,7 +678,7 @@
       "journeyTitle": "Responsive masthead menu preserves keyboard and no-JS navigation",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 1876,
+      "durationMs": 1802,
       "annotations": []
     },
     {
@@ -686,7 +686,7 @@
       "journeyTitle": "Source availability promises match supplied material across reading and search",
       "project": "firefox",
       "status": "passed",
-      "durationMs": 2185,
+      "durationMs": 2291,
       "annotations": []
     },
     {
@@ -694,7 +694,7 @@
       "journeyTitle": "S2 registry locate controls restore history and reveal directly linked evidence",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 5692,
+      "durationMs": 4370,
       "annotations": []
     },
     {
@@ -702,7 +702,7 @@
       "journeyTitle": "S2 contextual references remain complete without JavaScript and reflow across review widths",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 9991,
+      "durationMs": 7351,
       "annotations": []
     },
     {
@@ -710,7 +710,7 @@
       "journeyTitle": "S2 contextual evidence round trips retain exact anchors and keyboard history",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 2149,
+      "durationMs": 2219,
       "annotations": []
     },
     {
@@ -718,7 +718,7 @@
       "journeyTitle": "Walkthrough preserves timing, scenario state, history and the recorded verdict",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 607,
+      "durationMs": 677,
       "annotations": []
     },
     {
@@ -726,7 +726,7 @@
       "journeyTitle": "Walkthrough accessible controls, small-screen reading and invalid URL recovery",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1548,
+      "durationMs": 2122,
       "annotations": []
     },
     {
@@ -734,7 +734,7 @@
       "journeyTitle": "Walkthrough retains exact source and research context without JavaScript",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 282,
+      "durationMs": 956,
       "annotations": []
     },
     {
@@ -742,7 +742,7 @@
       "journeyTitle": "Home → Atlas → claim → source reading journey @representative",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 991,
+      "durationMs": 1525,
       "annotations": []
     },
     {
@@ -750,7 +750,7 @@
       "journeyTitle": "Representative automated accessibility, 320px reflow, reduced motion @representative",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1607,
+      "durationMs": 2255,
       "annotations": []
     },
     {
@@ -758,7 +758,7 @@
       "journeyTitle": "Representative reading and tables with JavaScript disabled @representative",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 340,
+      "durationMs": 492,
       "annotations": []
     },
     {
@@ -766,7 +766,7 @@
       "journeyTitle": "Complete publication routes, synthetic boundaries and record gates",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 494,
+      "durationMs": 1361,
       "annotations": []
     },
     {
@@ -774,7 +774,7 @@
       "journeyTitle": "Delivery discrepancy and publication scopes remain contextual without JavaScript",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1914,
+      "durationMs": 2805,
       "annotations": []
     },
     {
@@ -782,7 +782,7 @@
       "journeyTitle": "Catalog filters persist across history and expose reset and no results",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 731,
+      "durationMs": 1002,
       "annotations": []
     },
     {
@@ -790,7 +790,7 @@
       "journeyTitle": "Pagefind production index searches outcome evidence and empty results",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 676,
+      "durationMs": 775,
       "annotations": []
     },
     {
@@ -798,7 +798,7 @@
       "journeyTitle": "Chart enhancements retain HTML tables and reset the complete recorded set",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1379,
+      "durationMs": 1529,
       "annotations": []
     },
     {
@@ -806,7 +806,7 @@
       "journeyTitle": "All case and secondary page templates pass automated accessibility",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 16773,
+      "durationMs": 18441,
       "annotations": []
     },
     {
@@ -814,7 +814,7 @@
       "journeyTitle": "Optional chart and search load failures preserve useful reading",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 542,
+      "durationMs": 541,
       "annotations": []
     },
     {
@@ -822,7 +822,7 @@
       "journeyTitle": "Keyboard skip link, mobile menu, 404 and print remain usable",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 298,
+      "durationMs": 293,
       "annotations": []
     },
     {
@@ -830,7 +830,7 @@
       "journeyTitle": "Research Atlas gives six independent entrances and engineering state survives history",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1536,
+      "durationMs": 1462,
       "annotations": []
     },
     {
@@ -838,7 +838,7 @@
       "journeyTitle": "M1 Home and engineering remain accessible across the review viewports",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 2128,
+      "durationMs": 2154,
       "annotations": []
     },
     {
@@ -846,7 +846,7 @@
       "journeyTitle": "M1 static explanation and exact source remain usable without enhancement",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 645,
+      "durationMs": 613,
       "annotations": []
     },
     {
@@ -854,7 +854,7 @@
       "journeyTitle": "Price Bridge synchronizes bounded repair states, source and immutable historical gates",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 601,
+      "durationMs": 569,
       "annotations": []
     },
     {
@@ -862,7 +862,7 @@
       "journeyTitle": "M2 engineering traces preserve typed missingness, retained records and case-specific paths",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 503,
+      "durationMs": 482,
       "annotations": []
     },
     {
@@ -870,7 +870,7 @@
       "journeyTitle": "M2 Bridge and engineering support responsive source inspection and automated accessibility",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 2943,
+      "durationMs": 2894,
       "annotations": []
     },
     {
@@ -878,7 +878,7 @@
       "journeyTitle": "M2 complete arguments and source remain readable without JavaScript or module loading",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 980,
+      "durationMs": 941,
       "annotations": []
     },
     {
@@ -886,7 +886,7 @@
       "journeyTitle": "S3 pilot decision briefs preserve gates and contextual keyboard history",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1629,
+      "durationMs": 1632,
       "annotations": []
     },
     {
@@ -894,7 +894,7 @@
       "journeyTitle": "S3 pilot retains complete no-JS reference and direct anchors in light print",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1093,
+      "durationMs": 965,
       "annotations": []
     },
     {
@@ -902,7 +902,7 @@
       "journeyTitle": "S3 light pilot reflows with enlarged text and accessible controls",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 2926,
+      "durationMs": 2968,
       "annotations": []
     },
     {
@@ -910,7 +910,7 @@
       "journeyTitle": "Comprehension pilot preserves local claim context, determining fold inputs and the static Bridge mechanism",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1409,
+      "durationMs": 1356,
       "annotations": []
     },
     {
@@ -918,7 +918,7 @@
       "journeyTitle": "Research presentation compares saved measures with keyboard, URL history and exact claim recovery",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1315,
+      "durationMs": 1283,
       "annotations": []
     },
     {
@@ -926,7 +926,7 @@
       "journeyTitle": "Research presentation retains figures, fold conditions and full reference without JavaScript and in print",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 832,
+      "durationMs": 803,
       "annotations": []
     },
     {
@@ -934,7 +934,7 @@
       "journeyTitle": "Research presentation opening and distributed figures reflow with accessible navigation",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 2589,
+      "durationMs": 2502,
       "annotations": []
     },
     {
@@ -942,7 +942,7 @@
       "journeyTitle": "Optional Bridge lazy import failure preserves static reading without an unhandled error",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 323,
+      "durationMs": 320,
       "annotations": []
     },
     {
@@ -950,7 +950,7 @@
       "journeyTitle": "S4 six investigations connect reading chapters, exact figures and complete references",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1343,
+      "durationMs": 1318,
       "annotations": []
     },
     {
@@ -958,7 +958,7 @@
       "journeyTitle": "S4 catalog common and advanced controls preserve exact state and return to results",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1061,
+      "durationMs": 1011,
       "annotations": []
     },
     {
@@ -966,7 +966,7 @@
       "journeyTitle": "S4 migrated pages retain no-JS evidence, print, reflow and accessible collection navigation",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 8196,
+      "durationMs": 8343,
       "annotations": []
     },
     {
@@ -974,7 +974,7 @@
       "journeyTitle": "S5 judged search tasks and exact canonical destinations retain evidence context",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 2187,
+      "durationMs": 2395,
       "annotations": []
     },
     {
@@ -982,7 +982,7 @@
       "journeyTitle": "S5 search URL filters reload history invalid state and empty recovery remain usable",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1190,
+      "durationMs": 1240,
       "annotations": []
     },
     {
@@ -990,7 +990,7 @@
       "journeyTitle": "S5 search populated facets keyboard loading failure and pagination recover",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 2691,
+      "durationMs": 2866,
       "annotations": []
     },
     {
@@ -998,7 +998,7 @@
       "journeyTitle": "S5 search reflows with accessible controls and keeps no-JS print browse recovery",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1449,
+      "durationMs": 1987,
       "annotations": []
     },
     {
@@ -1006,7 +1006,7 @@
       "journeyTitle": "Sticky masthead keeps navigation and evidence anchors visible",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1200,
+      "durationMs": 1226,
       "annotations": []
     },
     {
@@ -1014,7 +1014,7 @@
       "journeyTitle": "Responsive masthead menu preserves keyboard and no-JS navigation",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 1158,
+      "durationMs": 1172,
       "annotations": []
     },
     {
@@ -1022,7 +1022,7 @@
       "journeyTitle": "Source availability promises match supplied material across reading and search",
       "project": "webkit",
       "status": "passed",
-      "durationMs": 2413,
+      "durationMs": 2532,
       "annotations": []
     }
   ]

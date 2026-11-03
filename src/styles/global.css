@@ -968,6 +968,8 @@ pre
 .table-scroll
 {
   overflow-x:auto;
+  /* Isolate table repainting during responsive reflow within its scrollport. */
+  contain:paint;
   max-width:100%;
   margin:20px 0;
   border:1px solid var(--rule);
@@ -1644,6 +1646,7 @@ tbody tr:last-child td
   .table-scroll
   {
     overflow:visible;
+    contain:none;
     border:0
   }
   table
