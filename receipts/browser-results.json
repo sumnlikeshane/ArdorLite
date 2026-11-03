@@ -1,0 +1,1029 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-03T08:50:12.231Z",
+  "status": "passed",
+  "sourceDigest": "ca99998704f8c02f16ca171cd6702b874328c2bb5830c9dc83581e58be286822",
+  "artifactIdentity": "0579900bf4dc11504b740b2460a10650082d93f6e69f68193b7b07cc33964548",
+  "engines": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "coverage": "production journeys",
+  "expectedJourneysPerEngine": 42,
+  "environment": "Playwright browser engines on darwin/arm64; WebKit is not a real Safari/device check",
+  "diagnostics": "Call/source traces retained on failure; explicit journey and failure screenshots retained; per-action DOM/screencast disabled after controlled trace-overhead comparison. Assertions and timeouts unchanged.",
+  "passed": 126,
+  "failed": 0,
+  "skipped": 0,
+  "tests": [
+    {
+      "title": " / chromium / e2e.spec.ts / S2 registry locate controls restore history and reveal directly linked evidence",
+      "journeyTitle": "S2 registry locate controls restore history and reveal directly linked evidence",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1445,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S2 contextual references remain complete without JavaScript and reflow across review widths",
+      "journeyTitle": "S2 contextual references remain complete without JavaScript and reflow across review widths",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 8467,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S2 contextual evidence round trips retain exact anchors and keyboard history",
+      "journeyTitle": "S2 contextual evidence round trips retain exact anchors and keyboard history",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1185,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Walkthrough preserves timing, scenario state, history and the recorded verdict",
+      "journeyTitle": "Walkthrough preserves timing, scenario state, history and the recorded verdict",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 350,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Walkthrough accessible controls, small-screen reading and invalid URL recovery",
+      "journeyTitle": "Walkthrough accessible controls, small-screen reading and invalid URL recovery",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1373,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Walkthrough retains exact source and research context without JavaScript",
+      "journeyTitle": "Walkthrough retains exact source and research context without JavaScript",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 161,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Home → Atlas → claim → source reading journey @representative",
+      "journeyTitle": "Home → Atlas → claim → source reading journey @representative",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 510,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Representative automated accessibility, 320px reflow, reduced motion @representative",
+      "journeyTitle": "Representative automated accessibility, 320px reflow, reduced motion @representative",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1047,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Representative reading and tables with JavaScript disabled @representative",
+      "journeyTitle": "Representative reading and tables with JavaScript disabled @representative",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 145,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Complete publication routes, synthetic boundaries and record gates",
+      "journeyTitle": "Complete publication routes, synthetic boundaries and record gates",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 258,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Delivery discrepancy and publication scopes remain contextual without JavaScript",
+      "journeyTitle": "Delivery discrepancy and publication scopes remain contextual without JavaScript",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1507,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Catalog filters persist across history and expose reset and no results",
+      "journeyTitle": "Catalog filters persist across history and expose reset and no results",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 293,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Pagefind production index searches outcome evidence and empty results",
+      "journeyTitle": "Pagefind production index searches outcome evidence and empty results",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 539,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Chart enhancements retain HTML tables and reset the complete recorded set",
+      "journeyTitle": "Chart enhancements retain HTML tables and reset the complete recorded set",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1009,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / All case and secondary page templates pass automated accessibility",
+      "journeyTitle": "All case and secondary page templates pass automated accessibility",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 13706,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Optional chart and search load failures preserve useful reading",
+      "journeyTitle": "Optional chart and search load failures preserve useful reading",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 460,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Keyboard skip link, mobile menu, 404 and print remain usable",
+      "journeyTitle": "Keyboard skip link, mobile menu, 404 and print remain usable",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 153,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Research Atlas gives six independent entrances and engineering state survives history",
+      "journeyTitle": "Research Atlas gives six independent entrances and engineering state survives history",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 779,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / M1 Home and engineering remain accessible across the review viewports",
+      "journeyTitle": "M1 Home and engineering remain accessible across the review viewports",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 3670,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / M1 static explanation and exact source remain usable without enhancement",
+      "journeyTitle": "M1 static explanation and exact source remain usable without enhancement",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 294,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Price Bridge synchronizes bounded repair states, source and immutable historical gates",
+      "journeyTitle": "Price Bridge synchronizes bounded repair states, source and immutable historical gates",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 429,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / M2 engineering traces preserve typed missingness, retained records and case-specific paths",
+      "journeyTitle": "M2 engineering traces preserve typed missingness, retained records and case-specific paths",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 270,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / M2 Bridge and engineering support responsive source inspection and automated accessibility",
+      "journeyTitle": "M2 Bridge and engineering support responsive source inspection and automated accessibility",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 9629,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / M2 complete arguments and source remain readable without JavaScript or module loading",
+      "journeyTitle": "M2 complete arguments and source remain readable without JavaScript or module loading",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 572,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S3 pilot decision briefs preserve gates and contextual keyboard history",
+      "journeyTitle": "S3 pilot decision briefs preserve gates and contextual keyboard history",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1224,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S3 pilot retains complete no-JS reference and direct anchors in light print",
+      "journeyTitle": "S3 pilot retains complete no-JS reference and direct anchors in light print",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 843,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S3 light pilot reflows with enlarged text and accessible controls",
+      "journeyTitle": "S3 light pilot reflows with enlarged text and accessible controls",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 2130,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Comprehension pilot preserves local claim context, determining fold inputs and the static Bridge mechanism",
+      "journeyTitle": "Comprehension pilot preserves local claim context, determining fold inputs and the static Bridge mechanism",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1731,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Research presentation compares saved measures with keyboard, URL history and exact claim recovery",
+      "journeyTitle": "Research presentation compares saved measures with keyboard, URL history and exact claim recovery",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 658,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Research presentation retains figures, fold conditions and full reference without JavaScript and in print",
+      "journeyTitle": "Research presentation retains figures, fold conditions and full reference without JavaScript and in print",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 568,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Research presentation opening and distributed figures reflow with accessible navigation",
+      "journeyTitle": "Research presentation opening and distributed figures reflow with accessible navigation",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1777,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Optional Bridge lazy import failure preserves static reading without an unhandled error",
+      "journeyTitle": "Optional Bridge lazy import failure preserves static reading without an unhandled error",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 168,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S4 six investigations connect reading chapters, exact figures and complete references",
+      "journeyTitle": "S4 six investigations connect reading chapters, exact figures and complete references",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 2075,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S4 catalog common and advanced controls preserve exact state and return to results",
+      "journeyTitle": "S4 catalog common and advanced controls preserve exact state and return to results",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 402,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S4 migrated pages retain no-JS evidence, print, reflow and accessible collection navigation",
+      "journeyTitle": "S4 migrated pages retain no-JS evidence, print, reflow and accessible collection navigation",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 6058,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S5 judged search tasks and exact canonical destinations retain evidence context",
+      "journeyTitle": "S5 judged search tasks and exact canonical destinations retain evidence context",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1612,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S5 search URL filters reload history invalid state and empty recovery remain usable",
+      "journeyTitle": "S5 search URL filters reload history invalid state and empty recovery remain usable",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 941,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S5 search populated facets keyboard loading failure and pagination recover",
+      "journeyTitle": "S5 search populated facets keyboard loading failure and pagination recover",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 2890,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / S5 search reflows with accessible controls and keeps no-JS print browse recovery",
+      "journeyTitle": "S5 search reflows with accessible controls and keeps no-JS print browse recovery",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1161,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Sticky masthead keeps navigation and evidence anchors visible",
+      "journeyTitle": "Sticky masthead keeps navigation and evidence anchors visible",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 538,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Responsive masthead menu preserves keyboard and no-JS navigation",
+      "journeyTitle": "Responsive masthead menu preserves keyboard and no-JS navigation",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 835,
+      "annotations": []
+    },
+    {
+      "title": " / chromium / e2e.spec.ts / Source availability promises match supplied material across reading and search",
+      "journeyTitle": "Source availability promises match supplied material across reading and search",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 1798,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S2 registry locate controls restore history and reveal directly linked evidence",
+      "journeyTitle": "S2 registry locate controls restore history and reveal directly linked evidence",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 2364,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S2 contextual references remain complete without JavaScript and reflow across review widths",
+      "journeyTitle": "S2 contextual references remain complete without JavaScript and reflow across review widths",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 10713,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S2 contextual evidence round trips retain exact anchors and keyboard history",
+      "journeyTitle": "S2 contextual evidence round trips retain exact anchors and keyboard history",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1455,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Walkthrough preserves timing, scenario state, history and the recorded verdict",
+      "journeyTitle": "Walkthrough preserves timing, scenario state, history and the recorded verdict",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 479,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Walkthrough accessible controls, small-screen reading and invalid URL recovery",
+      "journeyTitle": "Walkthrough accessible controls, small-screen reading and invalid URL recovery",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1704,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Walkthrough retains exact source and research context without JavaScript",
+      "journeyTitle": "Walkthrough retains exact source and research context without JavaScript",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 238,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Home → Atlas → claim → source reading journey @representative",
+      "journeyTitle": "Home → Atlas → claim → source reading journey @representative",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 646,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Representative automated accessibility, 320px reflow, reduced motion @representative",
+      "journeyTitle": "Representative automated accessibility, 320px reflow, reduced motion @representative",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 2620,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Representative reading and tables with JavaScript disabled @representative",
+      "journeyTitle": "Representative reading and tables with JavaScript disabled @representative",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 973,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Complete publication routes, synthetic boundaries and record gates",
+      "journeyTitle": "Complete publication routes, synthetic boundaries and record gates",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 539,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Delivery discrepancy and publication scopes remain contextual without JavaScript",
+      "journeyTitle": "Delivery discrepancy and publication scopes remain contextual without JavaScript",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1470,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Catalog filters persist across history and expose reset and no results",
+      "journeyTitle": "Catalog filters persist across history and expose reset and no results",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 792,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Pagefind production index searches outcome evidence and empty results",
+      "journeyTitle": "Pagefind production index searches outcome evidence and empty results",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 579,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Chart enhancements retain HTML tables and reset the complete recorded set",
+      "journeyTitle": "Chart enhancements retain HTML tables and reset the complete recorded set",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1178,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / All case and secondary page templates pass automated accessibility",
+      "journeyTitle": "All case and secondary page templates pass automated accessibility",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 24899,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Optional chart and search load failures preserve useful reading",
+      "journeyTitle": "Optional chart and search load failures preserve useful reading",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 421,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Keyboard skip link, mobile menu, 404 and print remain usable",
+      "journeyTitle": "Keyboard skip link, mobile menu, 404 and print remain usable",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 288,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Research Atlas gives six independent entrances and engineering state survives history",
+      "journeyTitle": "Research Atlas gives six independent entrances and engineering state survives history",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 972,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / M1 Home and engineering remain accessible across the review viewports",
+      "journeyTitle": "M1 Home and engineering remain accessible across the review viewports",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 3452,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / M1 static explanation and exact source remain usable without enhancement",
+      "journeyTitle": "M1 static explanation and exact source remain usable without enhancement",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 496,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Price Bridge synchronizes bounded repair states, source and immutable historical gates",
+      "journeyTitle": "Price Bridge synchronizes bounded repair states, source and immutable historical gates",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 743,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / M2 engineering traces preserve typed missingness, retained records and case-specific paths",
+      "journeyTitle": "M2 engineering traces preserve typed missingness, retained records and case-specific paths",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 476,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / M2 Bridge and engineering support responsive source inspection and automated accessibility",
+      "journeyTitle": "M2 Bridge and engineering support responsive source inspection and automated accessibility",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 3815,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / M2 complete arguments and source remain readable without JavaScript or module loading",
+      "journeyTitle": "M2 complete arguments and source remain readable without JavaScript or module loading",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 772,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S3 pilot decision briefs preserve gates and contextual keyboard history",
+      "journeyTitle": "S3 pilot decision briefs preserve gates and contextual keyboard history",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1519,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S3 pilot retains complete no-JS reference and direct anchors in light print",
+      "journeyTitle": "S3 pilot retains complete no-JS reference and direct anchors in light print",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1362,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S3 light pilot reflows with enlarged text and accessible controls",
+      "journeyTitle": "S3 light pilot reflows with enlarged text and accessible controls",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 4730,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Comprehension pilot preserves local claim context, determining fold inputs and the static Bridge mechanism",
+      "journeyTitle": "Comprehension pilot preserves local claim context, determining fold inputs and the static Bridge mechanism",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1046,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Research presentation compares saved measures with keyboard, URL history and exact claim recovery",
+      "journeyTitle": "Research presentation compares saved measures with keyboard, URL history and exact claim recovery",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 849,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Research presentation retains figures, fold conditions and full reference without JavaScript and in print",
+      "journeyTitle": "Research presentation retains figures, fold conditions and full reference without JavaScript and in print",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 658,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Research presentation opening and distributed figures reflow with accessible navigation",
+      "journeyTitle": "Research presentation opening and distributed figures reflow with accessible navigation",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 4412,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Optional Bridge lazy import failure preserves static reading without an unhandled error",
+      "journeyTitle": "Optional Bridge lazy import failure preserves static reading without an unhandled error",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 308,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S4 six investigations connect reading chapters, exact figures and complete references",
+      "journeyTitle": "S4 six investigations connect reading chapters, exact figures and complete references",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1034,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S4 catalog common and advanced controls preserve exact state and return to results",
+      "journeyTitle": "S4 catalog common and advanced controls preserve exact state and return to results",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1265,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S4 migrated pages retain no-JS evidence, print, reflow and accessible collection navigation",
+      "journeyTitle": "S4 migrated pages retain no-JS evidence, print, reflow and accessible collection navigation",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 11143,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S5 judged search tasks and exact canonical destinations retain evidence context",
+      "journeyTitle": "S5 judged search tasks and exact canonical destinations retain evidence context",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1721,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S5 search URL filters reload history invalid state and empty recovery remain usable",
+      "journeyTitle": "S5 search URL filters reload history invalid state and empty recovery remain usable",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1063,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S5 search populated facets keyboard loading failure and pagination recover",
+      "journeyTitle": "S5 search populated facets keyboard loading failure and pagination recover",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 2646,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / S5 search reflows with accessible controls and keeps no-JS print browse recovery",
+      "journeyTitle": "S5 search reflows with accessible controls and keeps no-JS print browse recovery",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1392,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Sticky masthead keeps navigation and evidence anchors visible",
+      "journeyTitle": "Sticky masthead keeps navigation and evidence anchors visible",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 880,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Responsive masthead menu preserves keyboard and no-JS navigation",
+      "journeyTitle": "Responsive masthead menu preserves keyboard and no-JS navigation",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 1876,
+      "annotations": []
+    },
+    {
+      "title": " / firefox / e2e.spec.ts / Source availability promises match supplied material across reading and search",
+      "journeyTitle": "Source availability promises match supplied material across reading and search",
+      "project": "firefox",
+      "status": "passed",
+      "durationMs": 2185,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S2 registry locate controls restore history and reveal directly linked evidence",
+      "journeyTitle": "S2 registry locate controls restore history and reveal directly linked evidence",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 5692,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S2 contextual references remain complete without JavaScript and reflow across review widths",
+      "journeyTitle": "S2 contextual references remain complete without JavaScript and reflow across review widths",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 9991,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S2 contextual evidence round trips retain exact anchors and keyboard history",
+      "journeyTitle": "S2 contextual evidence round trips retain exact anchors and keyboard history",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 2149,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Walkthrough preserves timing, scenario state, history and the recorded verdict",
+      "journeyTitle": "Walkthrough preserves timing, scenario state, history and the recorded verdict",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 607,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Walkthrough accessible controls, small-screen reading and invalid URL recovery",
+      "journeyTitle": "Walkthrough accessible controls, small-screen reading and invalid URL recovery",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1548,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Walkthrough retains exact source and research context without JavaScript",
+      "journeyTitle": "Walkthrough retains exact source and research context without JavaScript",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 282,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Home → Atlas → claim → source reading journey @representative",
+      "journeyTitle": "Home → Atlas → claim → source reading journey @representative",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 991,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Representative automated accessibility, 320px reflow, reduced motion @representative",
+      "journeyTitle": "Representative automated accessibility, 320px reflow, reduced motion @representative",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1607,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Representative reading and tables with JavaScript disabled @representative",
+      "journeyTitle": "Representative reading and tables with JavaScript disabled @representative",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 340,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Complete publication routes, synthetic boundaries and record gates",
+      "journeyTitle": "Complete publication routes, synthetic boundaries and record gates",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 494,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Delivery discrepancy and publication scopes remain contextual without JavaScript",
+      "journeyTitle": "Delivery discrepancy and publication scopes remain contextual without JavaScript",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1914,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Catalog filters persist across history and expose reset and no results",
+      "journeyTitle": "Catalog filters persist across history and expose reset and no results",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 731,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Pagefind production index searches outcome evidence and empty results",
+      "journeyTitle": "Pagefind production index searches outcome evidence and empty results",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 676,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Chart enhancements retain HTML tables and reset the complete recorded set",
+      "journeyTitle": "Chart enhancements retain HTML tables and reset the complete recorded set",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1379,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / All case and secondary page templates pass automated accessibility",
+      "journeyTitle": "All case and secondary page templates pass automated accessibility",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 16773,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Optional chart and search load failures preserve useful reading",
+      "journeyTitle": "Optional chart and search load failures preserve useful reading",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 542,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Keyboard skip link, mobile menu, 404 and print remain usable",
+      "journeyTitle": "Keyboard skip link, mobile menu, 404 and print remain usable",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 298,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Research Atlas gives six independent entrances and engineering state survives history",
+      "journeyTitle": "Research Atlas gives six independent entrances and engineering state survives history",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1536,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / M1 Home and engineering remain accessible across the review viewports",
+      "journeyTitle": "M1 Home and engineering remain accessible across the review viewports",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 2128,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / M1 static explanation and exact source remain usable without enhancement",
+      "journeyTitle": "M1 static explanation and exact source remain usable without enhancement",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 645,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Price Bridge synchronizes bounded repair states, source and immutable historical gates",
+      "journeyTitle": "Price Bridge synchronizes bounded repair states, source and immutable historical gates",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 601,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / M2 engineering traces preserve typed missingness, retained records and case-specific paths",
+      "journeyTitle": "M2 engineering traces preserve typed missingness, retained records and case-specific paths",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 503,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / M2 Bridge and engineering support responsive source inspection and automated accessibility",
+      "journeyTitle": "M2 Bridge and engineering support responsive source inspection and automated accessibility",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 2943,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / M2 complete arguments and source remain readable without JavaScript or module loading",
+      "journeyTitle": "M2 complete arguments and source remain readable without JavaScript or module loading",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 980,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S3 pilot decision briefs preserve gates and contextual keyboard history",
+      "journeyTitle": "S3 pilot decision briefs preserve gates and contextual keyboard history",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1629,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S3 pilot retains complete no-JS reference and direct anchors in light print",
+      "journeyTitle": "S3 pilot retains complete no-JS reference and direct anchors in light print",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1093,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S3 light pilot reflows with enlarged text and accessible controls",
+      "journeyTitle": "S3 light pilot reflows with enlarged text and accessible controls",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 2926,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Comprehension pilot preserves local claim context, determining fold inputs and the static Bridge mechanism",
+      "journeyTitle": "Comprehension pilot preserves local claim context, determining fold inputs and the static Bridge mechanism",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1409,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Research presentation compares saved measures with keyboard, URL history and exact claim recovery",
+      "journeyTitle": "Research presentation compares saved measures with keyboard, URL history and exact claim recovery",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1315,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Research presentation retains figures, fold conditions and full reference without JavaScript and in print",
+      "journeyTitle": "Research presentation retains figures, fold conditions and full reference without JavaScript and in print",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 832,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Research presentation opening and distributed figures reflow with accessible navigation",
+      "journeyTitle": "Research presentation opening and distributed figures reflow with accessible navigation",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 2589,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Optional Bridge lazy import failure preserves static reading without an unhandled error",
+      "journeyTitle": "Optional Bridge lazy import failure preserves static reading without an unhandled error",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 323,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S4 six investigations connect reading chapters, exact figures and complete references",
+      "journeyTitle": "S4 six investigations connect reading chapters, exact figures and complete references",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1343,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S4 catalog common and advanced controls preserve exact state and return to results",
+      "journeyTitle": "S4 catalog common and advanced controls preserve exact state and return to results",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1061,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S4 migrated pages retain no-JS evidence, print, reflow and accessible collection navigation",
+      "journeyTitle": "S4 migrated pages retain no-JS evidence, print, reflow and accessible collection navigation",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 8196,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S5 judged search tasks and exact canonical destinations retain evidence context",
+      "journeyTitle": "S5 judged search tasks and exact canonical destinations retain evidence context",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 2187,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S5 search URL filters reload history invalid state and empty recovery remain usable",
+      "journeyTitle": "S5 search URL filters reload history invalid state and empty recovery remain usable",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1190,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S5 search populated facets keyboard loading failure and pagination recover",
+      "journeyTitle": "S5 search populated facets keyboard loading failure and pagination recover",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 2691,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / S5 search reflows with accessible controls and keeps no-JS print browse recovery",
+      "journeyTitle": "S5 search reflows with accessible controls and keeps no-JS print browse recovery",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1449,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Sticky masthead keeps navigation and evidence anchors visible",
+      "journeyTitle": "Sticky masthead keeps navigation and evidence anchors visible",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1200,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Responsive masthead menu preserves keyboard and no-JS navigation",
+      "journeyTitle": "Responsive masthead menu preserves keyboard and no-JS navigation",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 1158,
+      "annotations": []
+    },
+    {
+      "title": " / webkit / e2e.spec.ts / Source availability promises match supplied material across reading and search",
+      "journeyTitle": "Source availability promises match supplied material across reading and search",
+      "project": "webkit",
+      "status": "passed",
+      "durationMs": 2413,
+      "annotations": []
+    }
+  ]
+}

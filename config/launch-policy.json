@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 2,
+  "id": "bounded-initial-launch-2026-11-02",
+  "status": "retained-bounded-policy-projection",
+  "scope": "existing-six-case-static-publication",
+  "preservePendingStates": true,
+  "noEffectivenessClaim": true,
+  "mandatory": [
+    "material-rights",
+    "complete-build",
+    "source-output-binding",
+    "three-engine-browser-journeys",
+    "output-integrity",
+    "public-metadata",
+    "exact-release-authorization"
+  ],
+  "deferred": {
+    "scientific": "Independent scientific review is unavailable; existing pending/stale records and dependency digests remain unresolved. This initial publication does not certify research validity.",
+    "human": "Independent unfamiliar-reader sessions are unavailable. No comprehension, effectiveness or usability-benefit claim is permitted.",
+    "manual": "Human assistive, genuine zoom, physical-device, complete print and actual Safari/Edge acceptance remain pending/stale. Automated engines do not establish these checks.",
+    "performance": "Historical performance evidence is stale. Fresh supported lab measurements will be attempted and recorded separately; field/device acceptance and unavailable measurements remain deferred."
+  },
+  "completion": "Complete actual reviews under docs/PUBLICATION_ACCEPTANCE.md and docs/S6_ACCEPTANCE_REVIEW.md, with original methods and dependency/byte bindings. Deferral changes release eligibility only, not acceptance status. New research/evidence/rights and unrelated safeguards are outside this exception.",
+  "authority": {
+    "verification": "retained-local-record-required-before-release"
+  }
+}

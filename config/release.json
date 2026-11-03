@@ -18,6 +18,12 @@
     "profiles": [],
     "resume": null
   },
-  "hosting": null,
-  "launchPolicy": null
+  "hosting": {
+    "provider": "Render",
+    "type": "static",
+    "serviceId": "srv-dbk7dngu01pc73990vpg",
+    "repository": "sumnlikeshane/ardorlite",
+    "branch": "main"
+  },
+  "launchPolicy": "bounded-initial-launch-2026-11-02"
 }

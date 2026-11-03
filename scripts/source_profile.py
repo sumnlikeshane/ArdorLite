@@ -1,8 +1,6 @@
-"""Explicit engineering-only public-source profile; never deployment authority.
+"""Required public-site metadata/omission contract; original audit stays external.
 
-Private builds keep their original capture/supplement verification. The public
-profile verifies an exact metadata projection, omission signatures and the full
-unchanged frozen snapshot instead. It cannot attest to absent original inputs.
+No fallback reads private inputs. Build success never supplies release authority.
 """
 import hashlib
 import json
@@ -12,16 +10,14 @@ import re
 
 def public_profile(root: Path):
     path = root / 'config/source-profile.json'
-    if not path.exists():
-        return None
-    if path.is_symlink():
-        raise ValueError('Symlink source profile')
+    if (root / 'config').is_symlink() or not path.is_file() or path.is_symlink():
+        raise ValueError('Missing or symlink public-site input contract')
     data = json.loads(path.read_text())
-    if data.get('schemaVersion') != 1 or data.get('profile') != 'public-source' or data.get('deploymentEligible') is not False:
-        raise ValueError('Invalid engineering-only source profile')
+    if set(data) != {'schemaVersion', 'profile', 'metadata', 'omittedPrivateInputs', 'originalInputVerification', 'reviewAcceptance'} or data.get('schemaVersion') != 2 or data.get('profile') != 'public-site' or data.get('originalInputVerification') != 'absent-not-verified':
+        raise ValueError('Invalid public-site input contract')
     for relative, digest in data['metadata'].items():
         file = root / relative
-        if relative not in {'src/content/public-provenance.json', 'config/omitted-content-signatures.json'} or file.is_symlink() or hashlib.sha256(file.read_bytes()).hexdigest() != digest:
+        if relative not in {'src/content/public-provenance.json', 'config/omitted-content-signatures.json'} or any(p.is_symlink() for p in [file,*file.parents] if p.is_relative_to(root)) or hashlib.sha256(file.read_bytes()).hexdigest() != digest:
             raise ValueError('Changed public provenance/signature projection')
     if set(data['metadata']) != {'src/content/public-provenance.json', 'config/omitted-content-signatures.json'}:
         raise ValueError('Incomplete public-source metadata')
@@ -32,7 +28,11 @@ def public_profile(root: Path):
     if set(data['omittedPrivateInputs']) != required:
         raise ValueError('Incomplete private-input omission inventory')
     for relative in required:
-        if (root / relative).exists() or (root / relative).is_symlink():
+        relative_path = Path(relative)
+        if relative_path.is_absolute() or '..' in relative_path.parts or '\\' in relative:
+            raise ValueError('Unsafe private omission path')
+        path = root / relative
+        if path.exists() or any(p.is_symlink() for p in [path, *path.parents] if p.is_relative_to(root)):
             raise ValueError(f'Private input present in public source: {relative}')
     if json.loads((root / 'config/release.json').read_text()).get('mode') != 'public':
         raise ValueError('Public source must build the public edition')
@@ -40,10 +40,9 @@ def public_profile(root: Path):
 
 
 def capture_manifest(root, path):
-    if public_profile(root):
-        data = json.loads((root / 'src/content/public-provenance.json').read_text())
-        return data['walkthrough'] if path == 'src/content/walkthrough-source.json' else data['manifests'][path]
-    return json.loads((root / path).read_text())
+    public_profile(root)
+    data = json.loads((root / 'src/content/public-provenance.json').read_text())
+    return data['walkthrough'] if path == 'src/content/walkthrough-source.json' else data['manifests'][path]
 
 
 def signature_errors(root, texts):

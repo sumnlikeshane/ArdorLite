@@ -16,7 +16,7 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 35
     env:
       PYTHONDONTWRITEBYTECODE: '1'
       PYTHONOPTIMIZE: '0'
@@ -36,6 +36,10 @@ jobs:
           run_install: false
       - run: ./scripts/run.sh install --frozen-lockfile
       - run: ./scripts/run.sh build
+      - run: ./scripts/run.sh exec playwright install --with-deps chromium firefox webkit
+      - run: ./scripts/run.sh test:e2e
+      - run: ./scripts/run.sh exec node scripts/search_acceptance.mjs
+      - run: python3.12 -B scripts/technical_check.py
 
   secrets:
     name: secrets

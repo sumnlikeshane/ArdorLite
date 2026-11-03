@@ -50,33 +50,8 @@ def restricted_public_content_errors(root: Path, texts: list[str]) -> list[str]:
     source manifests themselves are immutable and are not a deployment allowlist.
     """
     texts = [variant for text in texts for variant in disclosure_variants(text)]
-    if public_profile(root):
-        return signature_errors(root, texts)
-    selected = read_json(root / 'config/experience-sources.json')
-    manifests = ['src/content/walkthrough-source.json', *selected['manifests']]
-    errors = []
-    for manifest in manifests:
-        for excerpt in read_json(root / manifest)['excerpts']:
-            code = excerpt.get('text', excerpt.get('code', ''))
-            candidates = {normalized(code), normalized(json.dumps(code, ensure_ascii=False)[1:-1])}
-            lines = code.splitlines()
-            candidates.update(normalized(' '.join(lines[i:i+3])) for i in range(max(0, len(lines)-2))
-                              if len(normalized(' '.join(lines[i:i+3]))) >= 100)
-            if any(candidate and any(candidate in text for text in texts) for candidate in candidates):
-                errors.append(f'Restricted local-only source contents exposed: {manifest}/{excerpt["id"]}')
-    for descriptor in read_json(root / 'config/evidence-supplements.json')['supplements']:
-        supplement = read_json(root / descriptor['path'])
-        for row in supplement['rows']:
-            for field, raw in row['rates'].items():
-                displays = (raw, f'{Decimal(raw) * 100:.4f}%')
-                if any(value in text for value in displays for text in texts):
-                    errors.append(f'Restricted local-only supplement value exposed: {row["period"]["id"]}.{field}')
-    local_context = root / 'src/content/local-publication-context.json'
-    if local_context.is_file():
-        for key, value in read_json(local_context).items():
-            if any(normalized(value) in text for text in texts):
-                errors.append(f'Restricted local-only explanation exposed: {key}')
-    return errors
+    public_profile(root)
+    return signature_errors(root, texts)
 
 
 # Reader-facing copy only. Historical exports/source notices remain byte-preserved;

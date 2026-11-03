@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sourceDigest": "ca99998704f8c02f16ca171cd6702b874328c2bb5830c9dc83581e58be286822",
+  "artifactIdentity": "0579900bf4dc11504b740b2460a10650082d93f6e69f68193b7b07cc33964548",
+  "releaseConfigSha256": "36cc6cc233109141a190751a512a8b46ce8bf534f69238ec5458602164ad8a9e",
+  "inputContractSha256": "b268ab7df78a7f1486c30ecf425f8482b77173013636ca72cb877d8305a549b4",
+  "browser": {
+    "path": "receipts/browser-results.json",
+    "sha256": "aaaa378fc34946d7a03043e19c776a647927c22c72c835c2f203e31620488e6a"
+  },
+  "search": {
+    "path": "receipts/search-acceptance.json",
+    "sha256": "d247e05769d6986fe03006473c227f23f1beb850ec860e78b7ce1ee1f4cad4b5"
+  },
+  "privateAudit": {
+    "schemaVersion": 1,
+    "status": "passed",
+    "sourceDigest": "ca99998704f8c02f16ca171cd6702b874328c2bb5830c9dc83581e58be286822",
+    "projectionSha256": "158384f5ec40912eb04d4ba093e1e740a2844798d6b31a8a41f29d5e31c447f5",
+    "inputContractSha256": "b268ab7df78a7f1486c30ecf425f8482b77173013636ca72cb877d8305a549b4",
+    "privateInventorySha256": "a923fd9cbe0594ec54e1c84c23ab2fddeaf32f8c1a2b45de1fb8863162ebc03e",
+    "auditRecordSha256": "2ac25537d987fa1aa0883ec182a692dca699b3de90d4b0b7e629539ac73ece51",
+    "toolSha256": "67e81a45eca89937a2de5b7b572e476ca714814c16f23499ffafc954d57bf465",
+    "checks": [
+      "capture-integrity",
+      "supplement-approval-integrity",
+      "public-projection-equality",
+      "omission-signature-equality",
+      "bounded-policy-authority",
+      "material-rights-authority",
+      "private-regressions"
+    ],
+    "originalInputVerification": "retained-capture-supplement-integrity",
+    "checkedAt": "2026-11-03T08:51:43.821795+00:00"
+  },
+  "ownerApproval": {
+    "verification": "external-protected-binding-required"
+  }
+}

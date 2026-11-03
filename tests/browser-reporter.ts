@@ -71,6 +71,7 @@ export default class BrowserReporter implements Reporter {
     });
     const unchanged = artifactIdentity === this.initialIdentity;
     const report = {schemaVersion: 1, checkedAt: new Date().toISOString(), status: unchanged ? result.status : 'output-changed-during-review',
+      sourceDigest: JSON.parse(readFileSync('receipts/clean-build.json', 'utf8')).sourceDigest,
       artifactIdentity, engines: [...new Set(this.tests.map(t => String(t.project)))],
       coverage: complete ? 'production journeys' : representative ? 'representative Home and Atlas only' : 'partial browser journeys',
       expectedJourneysPerEngine: EXPECTED_JOURNEYS.length,
