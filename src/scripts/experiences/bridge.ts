@@ -37,7 +37,7 @@ function initializeBridge(root: HTMLElement): void {
     for (const span of frame.activeSourceSpans) {
       const panel = required<HTMLElement>(`[data-excerpt-id="${span.excerptId}"]`);
       labels.push(`${span.excerptId} · original lines ${span.lineStart}–${span.lineEnd}`);
-      const item = document.createElement('li'); const link = document.createElement('a'); link.href = `#${span.excerptId}`; link.textContent = `Exact ${span.excerptId} and provenance`; item.append(link); links.push(item);
+      const item = document.createElement('li'); const link = document.createElement('a'); link.href = `#${span.excerptId}`; link.textContent = root.dataset.publicationScope === "public" ? `Source metadata for ${span.excerptId}` : `Exact ${span.excerptId} and provenance`; item.append(link); links.push(item);
       const remaining = 14 - previewLines.length;
       if (remaining > 0) {
         const lines = [...panel.querySelectorAll<HTMLElement>('[data-source-line]')].filter(line => Number(line.dataset.sourceLine) >= span.lineStart && Number(line.dataset.sourceLine) <= span.lineEnd).slice(0, remaining);

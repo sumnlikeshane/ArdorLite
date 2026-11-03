@@ -1,19 +1,20 @@
 ---
-import { isPublicPublication, restrictedSourceNotice } from '../../lib/publication/scope';
-import type { ReadingExcerpt } from '../../lib/experiences/captures';
+import { restrictedSourceNotice } from '../../lib/publication/scope';
+import { sourceTextAvailable, type ReadingExcerpt } from '../../lib/experiences/captures';
 import { evidenceCrosswalk } from '../../lib/evidence/crosswalk';
 interface Props { excerpt: ReadingExcerpt; }
 const { excerpt } = Astro.props;
+const supplied = sourceTextAvailable(excerpt);
 const lines = 'text' in excerpt ? excerpt.text.slice(0, -1).split('\n') : [];
 const frozenSource = evidenceCrosswalk.outgoing('excerpt', excerpt.id, 'excerpt-source')[0]?.to;
 ---
 <details id={excerpt.id} class="exp-source" data-source-panel data-excerpt-id={excerpt.id}>
-  <summary><span>Inspect original source</span><span class="exp-source-symbol">{excerpt.symbol}</span></summary>
+  <summary><span>{supplied ? 'Inspect original source' : 'Inspect source metadata'}</span><span class="exp-source-symbol">{excerpt.symbol}</span></summary>
   <div class="exp-source-body" id={`${excerpt.id}-capture`} tabindex="-1">
     <p class="exp-source-context"><strong>{excerpt.repositoryLabel}</strong> · <code>{excerpt.path}</code><br />{excerpt.versionContext}</p>
-    <p class="exp-source-note">Exact captured Python · source lines {excerpt.lineStart}–{excerpt.lineEnd}. The browser explanation does not execute this Python.</p>
-    {frozenSource && <p class="exp-source-note"><a href={frozenSource.href}>Reviewed source identity: {frozenSource.id}</a>. File path and hash match; capture and historical execution remain separate.</p>}
-    {isPublicPublication ? <p data-public-source-omitted>{restrictedSourceNotice}</p> : <pre class="exp-source-code" aria-label={`Original source ${excerpt.path}, lines ${excerpt.lineStart} to ${excerpt.lineEnd}`}><code>{lines.map((line, index) => <span class="exp-code-line" data-source-line={excerpt.lineStart + index}>{line}{'\n'}</span>)}</code></pre>}
+    <p class="exp-source-note">{supplied ? 'Exact captured Python' : 'Capture metadata only; original text is omitted and is not reverified here'} · source lines {excerpt.lineStart}–{excerpt.lineEnd}. The browser explanation uses an independent synthetic adaptation.</p>
+    {frozenSource && <p class="exp-source-note"><a href={frozenSource.href}>Reviewed source identity: {frozenSource.id}</a>. {supplied ? 'File path and hash match; capture and historical execution remain separate.' : 'Recorded path and full-file hash agree with the reviewed source metadata; original bytes are absent and are not reverified here.'}</p>}
+    {!supplied ? <p data-public-source-omitted>{restrictedSourceNotice}</p> : <pre class="exp-source-code" aria-label={`Original source ${excerpt.path}, lines ${excerpt.lineStart} to ${excerpt.lineEnd}`}><code>{lines.map((line, index) => <span class="exp-code-line" data-source-line={excerpt.lineStart + index}>{line}{'\n'}</span>)}</code></pre>}
     <dl class="exp-provenance">
       <dt>Capture</dt><dd>{excerpt.capturedAt} · {excerpt.normalization}</dd>
       <dt>File SHA-256</dt><dd><code>{excerpt.sha256}</code></dd>

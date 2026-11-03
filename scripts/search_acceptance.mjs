@@ -1,5 +1,6 @@
+import {writeSearchReceipt} from './search_receipt.mjs';
 /** Production Pagefind ranking, exhaustive identities and scoped cold-search lab. */
-import {readFile,writeFile,stat} from 'node:fs/promises';
+import {readFile,stat} from 'node:fs/promises';
 import {resolve,extname} from 'node:path';
 import {createServer} from 'node:http';
 import {chromium} from '@playwright/test';
@@ -24,7 +25,7 @@ try {
  },{tasks,exact,ranking:searchRanking});
  const report={schemaVersion:1,checkedAt:new Date().toISOString(),artifactIdentity:JSON.parse(await readFile('receipts/output-audit.json','utf8')).artifactIdentity,...observations};
  report.status=observations.judgments.every(t=>t.passed&&!t.duplicates.length)&&observations.identities.every(t=>t.passed)?'passed':'failed';
- const destination=process.env.ARDOR_SEARCH_RECEIPT??'receipts/implementation/2026-11-02-s5-search-acceptance.json';await writeFile(destination,JSON.stringify(report,null,2)+'\n');
+ const destination=process.env.ARDOR_SEARCH_RECEIPT??'receipts/search-acceptance.json';await writeSearchReceipt(destination,report);
  console.log('Judged tasks',observations.judgments.filter(t=>t.passed).length,'/',tasks.length,'Exact identities',observations.identities.filter(t=>t.passed).length,'/',exact.length);
  for(const t of observations.judgments.filter(t=>!t.passed))console.log('FAIL',t.query,'rank',t.rank,t.topTen.slice(0,3).map(t=>t.url));
  console.log('Identity failures',observations.identities.filter(t=>!t.passed).slice(0,15));

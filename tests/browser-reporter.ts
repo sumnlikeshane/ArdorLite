@@ -3,6 +3,7 @@ import {mkdirSync, readFileSync, writeFileSync} from 'node:fs';
 
 // Explicit journey identities prevent a duplicated or unrelated test from filling a coverage gap.
 const EXPECTED_JOURNEYS = [
+  'Source availability promises match supplied material across reading and search',
   'Sticky masthead keeps navigation and evidence anchors visible',
   'Responsive masthead menu preserves keyboard and no-JS navigation',
   'S5 judged search tasks and exact canonical destinations retain evidence context',

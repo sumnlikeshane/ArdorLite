@@ -1,5 +1,6 @@
+import {writeSearchReceipt} from './search_receipt.mjs';
 /** Scoped production search payload and interaction lab. */
-import {readFile,writeFile,stat} from 'node:fs/promises';
+import {readFile,stat} from 'node:fs/promises';
 import {resolve,extname} from 'node:path';
 import {createServer} from 'node:http';
 import {chromium} from '@playwright/test';
@@ -29,5 +30,5 @@ try {
  samples.push({run:run+1,readyMs:ready,firstQueryAutomationWallMs:firstQueryWallMs,...data,allPagefindRequests:[...served],allPagefindBodyBytes:served.reduce((sum,r)=>sum+r.encodedBodySize,0)});await context.close();}
  const sorted=samples.flatMap(s=>s.durations).sort((a,b)=>a-b);const median=values=>values.sort((a,b)=>a-b)[Math.floor(values.length/2)];
  const report={schemaVersion:1,checkedAt:new Date().toISOString(),artifactIdentity:JSON.parse(await readFile('receipts/output-audit.json','utf8')).artifactIdentity,method:'Chromium on macOS, 390x844 viewport, cold contexts, disabled cache, 4x CPU, 150ms latency, 1.6Mbps down/750kbps up. Warmed 20 changes per run measured from input event to matching result plus two animation frames; cold query is separate automation wall time. All Pagefind body bytes are counted by the isolated HTTP server, including worker requests; main-thread Resource Timing alone omits worker fetches. Local lab, not field INP or a physical-device/zoom result.',runs:3,medianLCP:median(samples.map(s=>s.lcp)),maxCLS:Math.max(...samples.map(s=>s.cls)),warmChanges:sorted.length,warmP95Ms:sorted[Math.ceil(sorted.length*.95)-1],samples};
- await writeFile(process.env.ARDOR_SEARCH_PERFORMANCE_RECEIPT??'receipts/implementation/2026-11-02-s5-search-performance.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({medianLCP:report.medianLCP,maxCLS:report.maxCLS,warmP95Ms:report.warmP95Ms,readyMs:samples.map(s=>s.readyMs),coldQueryAutomationMs:samples.map(s=>s.firstQueryAutomationWallMs),pagefindBytes:samples.map(s=>s.allPagefindBodyBytes)}));
+ await writeSearchReceipt(process.env.ARDOR_SEARCH_PERFORMANCE_RECEIPT??'receipts/search-performance.json',report);console.log(JSON.stringify({medianLCP:report.medianLCP,maxCLS:report.maxCLS,warmP95Ms:report.warmP95Ms,readyMs:samples.map(s=>s.readyMs),coldQueryAutomationMs:samples.map(s=>s.firstQueryAutomationWallMs),pagefindBytes:samples.map(s=>s.allPagefindBodyBytes)}));
 }finally{await browser.close();await new Promise(r=>server.close(r));}

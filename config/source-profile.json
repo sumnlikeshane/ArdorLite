@@ -3,7 +3,7 @@
   "profile": "public-source",
   "deploymentEligible": false,
   "metadata": {
-    "src/content/public-provenance.json": "eb22ea892d59ad945f558e12588e8b5f923b634f171491214b9a0dbd0c7d2204",
+    "src/content/public-provenance.json": "158384f5ec40912eb04d4ba093e1e740a2844798d6b31a8a41f29d5e31c447f5",
     "config/omitted-content-signatures.json": "35ae05cf601032eac1da08b184122d9335eff8ea3d16e4e9279915c4c53c8540"
   },
   "omittedPrivateInputs": [

@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
-import { isPublicSource } from '../publication/scope';
+import { isPublicPublication, isPublicSource } from '../publication/scope';
 import { SourceExcerptSchema } from './schema';
 import { validateSourceManifest } from './provenance';
 const root = fileURLToPath(new URL('../../../', import.meta.url));
@@ -11,6 +11,9 @@ const {text: omittedTextSchema, ...metadataShape} = SourceExcerptSchema.shape;
 export const PublicExcerptSchema = z.object(metadataShape).extend({contentOmitted:z.literal(true)}).strict().refine(value=>value.lineEnd>=value.lineStart,'Reversed source line range');
 const publicData = isPublicSource ? read('src/content/public-provenance.json') : null;
 export type ReadingExcerpt = z.infer<typeof SourceExcerptSchema> | z.infer<typeof PublicExcerptSchema>;
+export function sourceTextAvailable(excerpt: {text?: string; code?: string; contentOmitted?: true}, publicEdition = isPublicPublication): boolean {
+  return !publicEdition && excerpt.contentOmitted !== true && Boolean(excerpt.text?.trim() || excerpt.code?.trim());
+}
 export function readingManifest(path:string): {excerpts: ReadingExcerpt[]} {
   if (!isPublicSource) return validateSourceManifest(read(path));
   if (existsSync(resolve(root,path))) throw new Error('Private capture present in public-source profile');
